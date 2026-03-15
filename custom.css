@@ -60,6 +60,8 @@
     --callout-notes-gray-dark: #2C2C2E;
 
 
+
+    
     /* Border radiuses */
     --edge-panel-radius: 0px;
     --m-panel-radius: 20px;
@@ -98,6 +100,108 @@
     --glass-active-dark-border-hover: rgba(252, 184, 39, 0.46);
 
 }
+
+/* ============================================================
+   МАЙСТЕР-ПАЛІТРА ANYTYPE (Текст, Виділення, Теги)
+   Apple HIG Edition
+   ============================================================ */
+
+/* --- ЗАДАЄМО КОЛЬОРИ (У форматі RGB для гнучкості прозорості) --- */
+html:not(.themeDark) {
+    --c-grey:   142, 142, 147;
+    --c-yellow: 224, 153, 0;    /* Трохи затемнений жовтий, щоб текст читався на білому фоні */
+    --c-orange: 255, 149, 0;
+    --c-red:    255, 59, 48;
+    --c-pink:   255, 45, 85;
+    --c-purple: 175, 82, 222;
+    --c-blue:   0, 122, 255;
+    --c-ice:    50, 173, 230;
+    --c-teal:   0, 199, 190;
+    --c-lime:   52, 199, 89;
+}
+
+html.themeDark {
+    --c-grey:   152, 152, 157;
+    --c-yellow: 255, 214, 10;
+    --c-orange: 255, 159, 10;
+    --c-red:    255, 69, 58;
+    --c-pink:   255, 55, 95;
+    --c-purple: 191, 90, 242;
+    --c-blue:   10, 132, 255;
+    --c-ice:    100, 210, 255;
+    --c-teal:   99, 230, 226;
+    --c-lime:   48, 209, 88;
+}
+
+/* =========================================
+   1. КОЛІР ТЕКСТУ (Text Color)
+   100% насиченість для ідеальної читабельності
+   ========================================= */
+.textColor-grey   { color: rgb(var(--c-grey)) !important; }
+.textColor-yellow { color: rgb(var(--c-yellow)) !important; }
+.textColor-orange { color: rgb(var(--c-orange)) !important; }
+.textColor-red    { color: rgb(var(--c-red)) !important; }
+.textColor-pink   { color: rgb(var(--c-pink)) !important; }
+.textColor-purple { color: rgb(var(--c-purple)) !important; }
+.textColor-blue   { color: rgb(var(--c-blue)) !important; }
+.textColor-ice    { color: rgb(var(--c-ice)) !important; }
+.textColor-teal   { color: rgb(var(--c-teal)) !important; }
+.textColor-lime   { color: rgb(var(--c-lime)) !important; }
+
+/* =========================================
+   2. ВИДІЛЕННЯ ТЕКСТУ (Background Highlights)
+   15% прозорості (0.15) — виглядає як маркер, текст ідеально видно
+   ========================================= */
+.bgColor-grey   { background-color: rgba(var(--c-grey), 0.15) !important; }
+.bgColor-yellow { background-color: rgba(var(--c-yellow), 0.15) !important; }
+.bgColor-orange { background-color: rgba(var(--c-orange), 0.15) !important; }
+.bgColor-red    { background-color: rgba(var(--c-red), 0.15) !important; }
+.bgColor-pink   { background-color: rgba(var(--c-pink), 0.15) !important; }
+.bgColor-purple { background-color: rgba(var(--c-purple), 0.15) !important; }
+.bgColor-blue   { background-color: rgba(var(--c-blue), 0.15) !important; }
+.bgColor-ice    { background-color: rgba(var(--c-ice), 0.15) !important; }
+.bgColor-teal   { background-color: rgba(var(--c-teal), 0.15) !important; }
+.bgColor-lime   { background-color: rgba(var(--c-lime), 0.15) !important; }
+
+/* =========================================
+   3. ГЛОБАЛЬНІ ТЕГИ (tagItem)
+   Надає всім тегам в Anytype стилістику Apple-чіпсів
+   ========================================= */
+/* Колір тексту тегу */
+.tagColor-grey   { color: rgb(var(--c-grey)) !important; }
+.tagColor-yellow { color: rgb(var(--c-yellow)) !important; }
+.tagColor-orange { color: rgb(var(--c-orange)) !important; }
+.tagColor-red    { color: rgb(var(--c-red)) !important; }
+.tagColor-pink   { color: rgb(var(--c-pink)) !important; }
+.tagColor-purple { color: rgb(var(--c-purple)) !important; }
+.tagColor-blue   { color: rgb(var(--c-blue)) !important; }
+.tagColor-ice    { color: rgb(var(--c-ice)) !important; }
+.tagColor-teal   { color: rgb(var(--c-teal)) !important; }
+.tagColor-lime   { color: rgb(var(--c-lime)) !important; }
+
+/* Фон тегу (пасивний стан: 10% прозорості) */
+.tagItem.tagColor-grey   { background-color: rgba(var(--c-grey), 0.1) !important; }
+.tagItem.tagColor-yellow { background-color: rgba(var(--c-yellow), 0.1) !important; }
+.tagItem.tagColor-orange { background-color: rgba(var(--c-orange), 0.1) !important; }
+.tagItem.tagColor-red    { background-color: rgba(var(--c-red), 0.1) !important; }
+.tagItem.tagColor-pink   { background-color: rgba(var(--c-pink), 0.1) !important; }
+.tagItem.tagColor-purple { background-color: rgba(var(--c-purple), 0.1) !important; }
+.tagItem.tagColor-blue   { background-color: rgba(var(--c-blue), 0.1) !important; }
+.tagItem.tagColor-ice    { background-color: rgba(var(--c-ice), 0.1) !important; }
+.tagItem.tagColor-teal   { background-color: rgba(var(--c-teal), 0.1) !important; }
+.tagItem.tagColor-lime   { background-color: rgba(var(--c-lime), 0.1) !important; }
+
+/* Фон тегу при наведенні миші (20% прозорості — стає яскравішим) */
+.tagItem.tagColor-grey:hover   { background-color: rgba(var(--c-grey), 0.2) !important; }
+.tagItem.tagColor-yellow:hover { background-color: rgba(var(--c-yellow), 0.2) !important; }
+.tagItem.tagColor-orange:hover { background-color: rgba(var(--c-orange), 0.2) !important; }
+.tagItem.tagColor-red:hover    { background-color: rgba(var(--c-red), 0.2) !important; }
+.tagItem.tagColor-pink:hover   { background-color: rgba(var(--c-pink), 0.2) !important; }
+.tagItem.tagColor-purple:hover { background-color: rgba(var(--c-purple), 0.2) !important; }
+.tagItem.tagColor-blue:hover   { background-color: rgba(var(--c-blue), 0.2) !important; }
+.tagItem.tagColor-ice:hover    { background-color: rgba(var(--c-ice), 0.2) !important; }
+.tagItem.tagColor-teal:hover   { background-color: rgba(var(--c-teal), 0.2) !important; }
+.tagItem.tagColor-lime:hover   { background-color: rgba(var(--c-lime), 0.2) !important; }
 /* ==========================================================
    MACOS LIGHT GRAY: ABSOLUTE OVERRIDE (Тільки світла тема)
    ========================================================== */
@@ -3868,8 +3972,6 @@ html.themeDark input:focus {
     border-bottom: 2px solid var(--divider-dark) !important;
 }
 */
-
-
 /* --- TAGS (CHIPS) — UNIFIED CANONICAL STYLES --- */
 .tagItem {
     display: inline-flex !important;
@@ -3898,7 +4000,12 @@ html.themeDark input:focus {
     padding-right: 24px !important;
 }
 
-.tagItem:not(:hover) {
+/* --- ПАСИВНИЙ СТАН (Сірий та чорно-білий) --- */
+/* Застосовуємо ТІЛЬКИ якщо: 
+   1. Немає наведення (:not(:hover))
+   2. ТЕГ НЕ знаходиться в рядку з класом .hover або .isSelected (:not(:is(...))) 
+*/
+.tagItem:not(:hover):not(:is(.item.hover *, .item.isSelected *)) {
     background-color: rgba(0, 0, 0, 0.04) !important;
     color: #666666 !important;
     border: 1px solid var(--glass-border-light) !important;
@@ -3908,21 +4015,26 @@ html.themeDark input:focus {
     filter: grayscale(100%) opacity(0.7) !important;
 }
 
-html.themeDark .tagItem:not(:hover) {
+html.themeDark .tagItem:not(:hover):not(:is(.item.hover *, .item.isSelected *)) {
     background-color: rgba(255, 255, 255, 0.06) !important;
     color: #a0a0a5 !important;
     border: 1px solid var(--glass-border-dark) !important;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2) !important;
 }
 
-.tagItem:hover {
+/* --- АКТИВНИЙ СТАН: ПРИ НАВЕДЕННІ ТА ПРИ ВІДКРИТОМУ МЕНЮ (.isSelected / .hover) --- */
+.tagItem:hover,
+.item.hover .tagItem,
+.item.isSelected .tagItem {
     border-color: transparent !important;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08) !important;
     filter: grayscale(0%) opacity(1) !important;
     transform: translateY(-0.5px) !important;
 }
 
-html.themeDark .tagItem:hover {
+html.themeDark .tagItem:hover,
+html.themeDark .item.hover .tagItem,
+html.themeDark .item.isSelected .tagItem {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3) !important;
 }
 
@@ -3930,6 +4042,7 @@ html.themeDark .tagItem:hover {
     box-shadow: 0 0 0 transparent !important;
 }
 
+/* --- ВНУТРІШНІ ЕЛЕМЕНТИ (Текст та іконки) --- */
 .tagItem .inner,
 .tagItem .element {
     display: inline-block !important;
@@ -3971,18 +4084,31 @@ html.themeDark .tagItem:hover {
     display: none !important;
 }
 
-.tagItem:not(:hover) .tagRemove,
-.tagItem:not(:hover) .icon.objectRemove,
-.tagItem:not(:hover) .remove {
+/* Іконки видалення в пасивному стані */
+.tagItem:not(:hover):not(:is(.item.hover *, .item.isSelected *)) .tagRemove,
+.tagItem:not(:hover):not(:is(.item.hover *, .item.isSelected *)) .icon.objectRemove,
+.tagItem:not(:hover):not(:is(.item.hover *, .item.isSelected *)) .remove {
     filter: grayscale(100%) !important;
 }
 
+/* Іконки видалення в активному стані */
 .tagItem:hover .tagRemove,
 .tagItem:hover .icon.objectRemove,
 .tagItem:hover .remove,
 .tagItem:hover [class*="remove"],
-.tagItem:hover .iconObject.c20:has(svg) {
+.tagItem:hover .iconObject.c20:has(svg),
+.item.hover .tagItem .tagRemove,
+.item.hover .tagItem .icon.objectRemove,
+.item.hover .tagItem .remove,
+.item.hover .tagItem [class*="remove"],
+.item.hover .tagItem .iconObject.c20:has(svg),
+.item.isSelected .tagItem .tagRemove,
+.item.isSelected .tagItem .icon.objectRemove,
+.item.isSelected .tagItem .remove,
+.item.isSelected .tagItem [class*="remove"],
+.item.isSelected .tagItem .iconObject.c20:has(svg) {
     opacity: 0.85 !important;
+    filter: grayscale(0%) !important;
 }
 
 .tagItem .tagRemove:hover,
@@ -3992,13 +4118,6 @@ html.themeDark .tagItem:hover {
     background-color: rgba(0, 0, 0, 0.1) !important;
     border-radius: 50% !important;
 }
-
-html.themeDark .tagItem .tagRemove:hover,
-html.themeDark .tagItem .icon.objectRemove:hover,
-html.themeDark .tagItem .remove:hover {
-    background-color: rgba(255, 255, 255, 0.2) !important;
-}
-
 
 /* --- ФІКС ВІДСТУПІВ У RELATIONS (Властивості об'єктів) --- */
 .cell .element .flex, 
@@ -5392,3 +5511,347 @@ html.themeDark #dataviewControlsSideRight .icon:hover,
 html.themeDark [id^="button-dataview-"]:hover {
     background-color: rgba(255, 255, 255, 0.1) !important;
 }
+
+/* 1. Гарантовано показуємо контейнер кнопок при наведенні на рядок */
+.menuDataviewOptionList .item .buttons {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 28px !important;
+    min-width: 28px !important;
+    opacity: 0 !important; /* Ховаємо, поки не навели мишку */
+    transition: opacity 0.2s ease !important;
+}
+
+/* Показуємо контейнер при наведенні */
+.menuDataviewOptionList .item:hover .buttons {
+    opacity: 1 !important;
+}
+
+/* 2. Малюємо власну іконку "більше" (три крапки) */
+.menuDataviewOptionList .item .buttons .icon.more {
+    display: block !important;
+    visibility: visible !important;
+    width: 20px !important;
+    height: 20px !important;
+    
+    /* Задаємо колір іконки */
+    background-color: #8e8e93 !important; /* Базовий сірий колір (iOS стиль) */
+    background-image: none !important; /* Вбиваємо старий бекграунд, якщо він поламаний */
+    
+    /* Вставляємо кастомне SVG-зображення як маску */
+    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='1'/%3E%3Ccircle cx='19' cy='12' r='1'/%3E%3Ccircle cx='5' cy='12' r='1'/%3E%3C/svg%3E") !important;
+    -webkit-mask-size: 16px !important;
+    -webkit-mask-repeat: no-repeat !important;
+    -webkit-mask-position: center !important;
+    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='1'/%3E%3Ccircle cx='19' cy='12' r='1'/%3E%3Ccircle cx='5' cy='12' r='1'/%3E%3C/svg%3E") !important;
+    
+    cursor: pointer !important;
+    border-radius: 4px !important;
+    transition: background-color 0.2s ease !important;
+}
+
+/* 3. Ефект при наведенні саме на іконку (робимо її темнішою/світлішою) */
+.menuDataviewOptionList .item .buttons .icon.more:hover {
+    background-color: #1c1c1e !important; 
+}
+
+/* Адаптація для темної теми */
+html.themeDark .menuDataviewOptionList .item .buttons .icon.more {
+    background-color: #98989d !important;
+}
+
+html.themeDark .menuDataviewOptionList .item .buttons .icon.more:hover {
+    background-color: #ffffff !important;
+}
+
+/* =========================================
+   РЕДАГУВАННЯ СТАТУСУ: Фікс прокрутки та кольори
+   ========================================= */
+
+/* 1. Прибираємо непотрібну смугу прокрутки (scrollbar) у фрейма */
+.menuDataviewOptionEdit,
+.menuDataviewOptionEdit .content {
+    overflow: hidden !important;
+}
+
+/* 2. Налаштовуємо сітку для кольорів, щоб вони гарно стояли */
+.menuDataviewOptionEdit .section.colorPicker .items {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 8px !important; /* Відстань між кружечками */
+    justify-content: center !important;
+    padding: 4px !important;
+}
+
+/* 3. Робимо кнопки вибору кольору абсолютно круглими */
+.menuDataviewOptionEdit .section.colorPicker .item.color {
+    width: 24px !important;
+    height: 24px !important;
+    border-radius: 50% !important; /* Робимо коло */
+    min-width: unset !important; /* Скидаємо прямокутну ширину Anytype */
+    margin: 0 !important;
+    border: 1px solid rgba(0, 0, 0, 0.05) !important; /* Легкий контур, щоб світлі кольори не зливалися */
+    transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+}
+
+html.themeDark .menuDataviewOptionEdit .section.colorPicker .item.color {
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+/* 4. Гарний "скляний" ефект для АКТИВНОГО (selected) кольору */
+.menuDataviewOptionEdit .section.colorPicker .item.color.selected {
+    transform: scale(1.1) !important; /* Трішки збільшуємо активний */
+    /* Створюємо напівпрозоре скляне кільце навколо кружечка */
+    box-shadow: 0 0 0 4px var(--element-border-light-hover), 0 2px 6px rgba(0,0,0,0.1) !important;
+}
+
+html.themeDark .menuDataviewOptionEdit .section.colorPicker .item.color.selected {
+    box-shadow: 0 0 0 4px var(--element-border-dark-hover), 0 2px 6px rgba(0,0,0,0.4) !important;
+}
+
+/* 5. Легкий ефект при наведенні на інші кольори */
+.menuDataviewOptionEdit .section.colorPicker .item.color:hover:not(.selected) {
+    transform: scale(1.05) !important;
+    box-shadow: 0 0 0 2px var(--element-border-light-hover) !important;
+}
+
+html.themeDark .menuDataviewOptionEdit .section.colorPicker .item.color:hover:not(.selected) {
+    box-shadow: 0 0 0 2px var(--element-border-dark-hover) !important;
+}
+
+
+
+/* =========================================
+   КАНБАН ДОШКА: Кольорові підкладки колонок
+   ========================================= */
+
+/* 1. Шапка колонки (верхня частина підкладки) */
+.viewBoard .column .head .bgColor {
+    border-top-left-radius: 16px !important;
+    border-top-right-radius: 16px !important;
+    opacity: 0.5 !important; /* Підвищуємо контрастність (за замовчуванням вона дуже бліда) */
+    transition: opacity 0.3s ease !important;
+}
+
+/* 2. Тіло колонки (нижня частина підкладки) */
+.viewBoard .column .body .bg .bgColor {
+    border-bottom-left-radius: 16px !important;
+    border-bottom-right-radius: 16px !important;
+    opacity: 0.5 !important; /* Тіло робимо ледь світлішим за шапку для візуального об'єму */
+    transition: opacity 0.3s ease !important;
+}
+
+/* 3. Адаптація контрастності для ТЕМНОЇ ТЕМИ */
+html.themeDark .viewBoard .column .head .bgColor {
+    opacity: 0.5 !important; /* У темній темі кольори потребують трохи більшої непрозорості */
+}
+
+html.themeDark .viewBoard .column .body .bg .bgColor {
+    opacity: 0.5 !important;
+}
+
+/* 4. Ефект взаємодії (Опціонально, але виглядає круто) 
+   Трохи підсвічуємо колонку, коли ви наводите на неї мишку */
+.viewBoard .column:hover .head .bgColor {
+    opacity: 1 !important;
+}
+.viewBoard .column:hover .body .bg .bgColor {
+    opacity: 1 !important;
+}
+
+html.themeDark .viewBoard .column:hover .head .bgColor {
+    opacity: 1 !important;
+}
+html.themeDark .viewBoard .column:hover .body .bg .bgColor {
+    opacity: 1 !important;
+}
+
+/* =========================================
+   КАНБАН ДОШКА: Напівпрозорі картки (Glassmorphism)
+   Застосовується ТІЛЬКИ до колонок з кольоровою підкладкою (.column.withColor)
+   ========================================= */
+
+/* --- СВІТЛА ТЕМА --- */
+html:not(.themeDark) .viewBoard .column.withColor .card.isPage {
+    background-color: rgba(255, 255, 255, 0.65) !important; 
+    border: 1px solid rgba(255, 255, 255, 0.75) !important; 
+    box-shadow: 
+        inset 0 1px 2px rgba(255, 255, 255, 0.0), 
+        0 10px 28px rgba(0, 0, 0, 0.00) !important;
+    backdrop-filter: blur(16px) saturate(150%) contrast(105%) !important; 
+    -webkit-backdrop-filter: blur(16px) saturate(150%) contrast(105%) !important;
+    isolation: isolate;
+    transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.22s ease, border-color 0.22s ease, box-shadow 0.25s ease, backdrop-filter 0.2s ease !important;
+}
+
+html:not(.themeDark) .viewBoard .column.withColor .card.isPage:hover {
+    background-color: rgba(255, 255, 255, 0.92) !important; 
+    transform: scale(1.03) !important;
+    border: 1px solid #ffffff !important; 
+    box-shadow: 
+        inset 0 1px 3px rgba(255, 255, 255, 1), 
+        0 16px 36px rgba(0, 0, 0, 0.14) !important; 
+    backdrop-filter: blur(24px) saturate(200%) contrast(115%) !important; 
+    -webkit-backdrop-filter: blur(24px) saturate(200%) contrast(115%) !important;
+    z-index: 10 !important;
+}
+
+/* --- ТЕМНА ТЕМА --- */
+html.themeDark .viewBoard .column.withColor .card.isPage {
+    background: rgba(42, 42, 46, 0.32) !important;
+    border: var(--glass-panel-border-dark) !important;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.00), 0 12px 30px rgba(0, 0, 0, 0.0) !important;
+    backdrop-filter: var(--glass-blur) !important;
+    -webkit-backdrop-filter: var(--glass-blur) !important;
+    isolation: isolate;
+    transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.22s ease, border-color 0.22s ease, box-shadow 0.25s ease, backdrop-filter 0.2s ease !important;
+}
+
+html.themeDark .viewBoard .column.withColor .card.isPage:hover {
+    background: rgba(255, 255, 255, 0.12) !important; 
+    transform: scale(1.03) !important;
+    border: 1px solid rgba(255, 255, 255, 0.15) !important; 
+    box-shadow: 
+        inset 0 1px 1px rgba(255, 255, 255, 0.25), 
+        0 14px 32px rgba(0, 0, 0, 0.4) !important; 
+    backdrop-filter: blur(20px) saturate(130%) !important; 
+    -webkit-backdrop-filter: blur(20px) saturate(130%) !important;
+    z-index: 10 !important;
+}
+
+/* =========================================
+   КАНБАН ДОШКА: Кнопка "Додати" (Скляна + Кольоровий Hover)
+   Застосовується ТІЛЬКИ до колонок з підкладкою (.column.withColor)
+   ========================================= */
+
+/* --- БАЗОВИЙ СТАН (Елегантне напівпрозоре скло) --- */
+html:not(.themeDark) .viewBoard .column.withColor .card.add {
+    background-color: rgba(255, 255, 255, 0.5) !important;
+    border: 1px solid rgba(255, 255, 255, 0.6) !important;
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
+}
+
+html.themeDark .blocks .block.blockDataview .viewContent.viewBoard .column.withColor .card.add {
+    background: rgba(42, 42, 46, 0.4) !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    backdrop-filter: blur(16px) !important;
+    -webkit-backdrop-filter: blur(16px) !important;
+}
+
+/* ЗАГАЛЬНІ ЕФЕКТИ ПРИ ХОВЕРІ (Плавність Apple) */
+.viewBoard .column.withColor .card.add:hover {
+    opacity: 1 !important;
+    transform: translateY(-1px) scale(1.01) !important; /* Більш спокійна анімація */
+    backdrop-filter: blur(20px) saturate(120%) !important; /* М'якіша насиченість */
+    -webkit-backdrop-filter: blur(20px) saturate(120%) !important;
+    z-index: 10 !important;
+}
+
+/* =========================================
+   ДИНАМІЧНІ КОЛЬОРИ (Світла тема - macOS Style)
+   Легке кольорове тонування (10%), ледь помітна кольорова рамка (25%) і м'яка нейтральна тінь
+   ========================================= */
+html:not(.themeDark) .viewBoard .column.withColor:has(.bgColor-grey) .card.add:hover   { background-color: rgba(158, 158, 158, 0.1) !important; border-color: rgba(158, 158, 158, 0.25) !important; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04) !important; }
+html:not(.themeDark) .viewBoard .column.withColor:has(.bgColor-yellow) .card.add:hover { background-color: rgba(255, 193, 7, 0.1) !important;   border-color: rgba(255, 193, 7, 0.3) !important;   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04) !important; }
+html:not(.themeDark) .viewBoard .column.withColor:has(.bgColor-orange) .card.add:hover { background-color: rgba(255, 152, 0, 0.1) !important;   border-color: rgba(255, 152, 0, 0.3) !important;   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04) !important; }
+html:not(.themeDark) .viewBoard .column.withColor:has(.bgColor-red) .card.add:hover    { background-color: rgba(244, 67, 54, 0.08) !important;  border-color: rgba(244, 67, 54, 0.25) !important;  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04) !important; }
+html:not(.themeDark) .viewBoard .column.withColor:has(.bgColor-pink) .card.add:hover   { background-color: rgba(233, 30, 99, 0.08) !important;  border-color: rgba(233, 30, 99, 0.25) !important;  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04) !important; }
+html:not(.themeDark) .viewBoard .column.withColor:has(.bgColor-purple) .card.add:hover { background-color: rgba(156, 39, 176, 0.08) !important; border-color: rgba(156, 39, 176, 0.25) !important; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04) !important; }
+html:not(.themeDark) .viewBoard .column.withColor:has(.bgColor-blue) .card.add:hover   { background-color: rgba(3, 169, 244, 0.1) !important;   border-color: rgba(3, 169, 244, 0.25) !important;  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04) !important; }
+html:not(.themeDark) .viewBoard .column.withColor:has(.bgColor-ice) .card.add:hover    { background-color: rgba(0, 188, 212, 0.1) !important;   border-color: rgba(0, 188, 212, 0.25) !important;  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04) !important; }
+html:not(.themeDark) .viewBoard .column.withColor:has(.bgColor-teal) .card.add:hover   { background-color: rgba(0, 150, 136, 0.1) !important;   border-color: rgba(0, 150, 136, 0.25) !important;  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04) !important; }
+html:not(.themeDark) .viewBoard .column.withColor:has(.bgColor-lime) .card.add:hover   { background-color: rgba(139, 195, 74, 0.1) !important;  border-color: rgba(139, 195, 74, 0.3) !important;  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04) !important; }
+
+/* =========================================
+   ДИНАМІЧНІ КОЛЬОРИ (Темна тема - macOS Style)
+   Легкий відтінок (15%), напівпрозора рамка і блік по верхній грані (inset біла тінь)
+   ========================================= */
+html.themeDark .blocks .block.blockDataview .viewContent.viewBoard .column.withColor:has(.bgColor-grey) .card.add:hover   { background-color: rgba(158, 158, 158, 0.15) !important; border-color: rgba(158, 158, 158, 0.3) !important; box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06), 0 6px 16px rgba(0, 0, 0, 0.2) !important; }
+html.themeDark .blocks .block.blockDataview .viewContent.viewBoard .column.withColor:has(.bgColor-yellow) .card.add:hover { background-color: rgba(255, 193, 7, 0.15) !important;   border-color: rgba(255, 193, 7, 0.3) !important;   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06), 0 6px 16px rgba(0, 0, 0, 0.2) !important; }
+html.themeDark .blocks .block.blockDataview .viewContent.viewBoard .column.withColor:has(.bgColor-orange) .card.add:hover { background-color: rgba(255, 152, 0, 0.15) !important;   border-color: rgba(255, 152, 0, 0.3) !important;   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06), 0 6px 16px rgba(0, 0, 0, 0.2) !important; }
+html.themeDark .blocks .block.blockDataview .viewContent.viewBoard .column.withColor:has(.bgColor-red) .card.add:hover    { background-color: rgba(244, 67, 54, 0.15) !important;   border-color: rgba(244, 67, 54, 0.3) !important;   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06), 0 6px 16px rgba(0, 0, 0, 0.2) !important; }
+html.themeDark .blocks .block.blockDataview .viewContent.viewBoard .column.withColor:has(.bgColor-pink) .card.add:hover   { background-color: rgba(233, 30, 99, 0.15) !important;   border-color: rgba(233, 30, 99, 0.3) !important;   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06), 0 6px 16px rgba(0, 0, 0, 0.2) !important; }
+html.themeDark .blocks .block.blockDataview .viewContent.viewBoard .column.withColor:has(.bgColor-purple) .card.add:hover { background-color: rgba(171, 71, 188, 0.15) !important;  border-color: rgba(171, 71, 188, 0.3) !important;  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06), 0 6px 16px rgba(0, 0, 0, 0.2) !important; }
+html.themeDark .blocks .block.blockDataview .viewContent.viewBoard .column.withColor:has(.bgColor-blue) .card.add:hover   { background-color: rgba(3, 169, 244, 0.15) !important;   border-color: rgba(3, 169, 244, 0.3) !important;   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06), 0 6px 16px rgba(0, 0, 0, 0.2) !important; }
+html.themeDark .blocks .block.blockDataview .viewContent.viewBoard .column.withColor:has(.bgColor-ice) .card.add:hover    { background-color: rgba(0, 188, 212, 0.15) !important;   border-color: rgba(0, 188, 212, 0.3) !important;   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06), 0 6px 16px rgba(0, 0, 0, 0.2) !important; }
+html.themeDark .blocks .block.blockDataview .viewContent.viewBoard .column.withColor:has(.bgColor-teal) .card.add:hover   { background-color: rgba(0, 150, 136, 0.15) !important;   border-color: rgba(0, 150, 136, 0.3) !important;   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06), 0 6px 16px rgba(0, 0, 0, 0.2) !important; }
+html.themeDark .blocks .block.blockDataview .viewContent.viewBoard .column.withColor:has(.bgColor-lime) .card.add:hover   { background-color: rgba(139, 195, 74, 0.15) !important;  border-color: rgba(139, 195, 74, 0.3) !important;  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06), 0 6px 16px rgba(0, 0, 0, 0.2) !important; }
+
+
+/* =========================================
+   КАНБАН ДОШКА: Заголовок колонки (Тег без фону, ЗАВЖДИ КОЛЬОРОВИЙ)
+   Застосовується ТІЛЬКИ до колонок з підкладкою (.column.withColor)
+   ========================================= */
+
+/* --- 1. Базовий стан: Без фону, opacity 0.8 --- */
+.blocks .blockDataview .viewBoard .column.withColor .head .tagItem {
+    background: transparent !important;
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    
+    /* Знімаємо глобальний чорно-білий фільтр */
+    filter: none !important; 
+    
+    /* Робимо злегка прозорим до наведення */
+    opacity: 0.8 !important; 
+    
+    /* Фіксуємо позицію та точку збільшення */
+    transform: scale(1) translateY(0) !important;
+    transform-origin: left center !important; 
+    
+    transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.2s ease !important;
+}
+
+/* --- 2. Повертаємо рідні кольори тексту (Перебиваємо ваш глобальний сірий) --- */
+.blocks .blockDataview .viewBoard .column.withColor .head .tagItem.tagColor-grey   { color: rgb(var(--c-grey)) !important; }
+.blocks .blockDataview .viewBoard .column.withColor .head .tagItem.tagColor-yellow { color: rgb(var(--c-yellow)) !important; }
+.blocks .blockDataview .viewBoard .column.withColor .head .tagItem.tagColor-orange { color: rgb(var(--c-orange)) !important; }
+.blocks .blockDataview .viewBoard .column.withColor .head .tagItem.tagColor-red    { color: rgb(var(--c-red)) !important; }
+.blocks .blockDataview .viewBoard .column.withColor .head .tagItem.tagColor-pink   { color: rgb(var(--c-pink)) !important; }
+.blocks .blockDataview .viewBoard .column.withColor .head .tagItem.tagColor-purple { color: rgb(var(--c-purple)) !important; }
+.blocks .blockDataview .viewBoard .column.withColor .head .tagItem.tagColor-blue   { color: rgb(var(--c-blue)) !important; }
+.blocks .blockDataview .viewBoard .column.withColor .head .tagItem.tagColor-ice    { color: rgb(var(--c-ice)) !important; }
+.blocks .blockDataview .viewBoard .column.withColor .head .tagItem.tagColor-teal   { color: rgb(var(--c-teal)) !important; }
+.blocks .blockDataview .viewBoard .column.withColor .head .tagItem.tagColor-lime   { color: rgb(var(--c-lime)) !important; }; }
+
+/* --- 3. ХОВЕР СТАН: Яскравість 100%, плавний зум 1.03 --- */
+.blocks .blockDataview .viewBoard .column.withColor .head .tagItem:hover,
+html.themeDark .blocks .blockDataview .viewBoard .column.withColor .head .tagItem:hover {
+    background: transparent !important;
+    background-color: transparent !important;
+    opacity: 1 !important; 
+    transform: scale(1.03) translateY(0) !important; }
+
+    /* ============================================================
+   КАНБАН ДОШКА: Палітра кольорів підкладки (RGBA 0.5)
+   Кольори відповідають тексту заголовків, але з 50% прозорістю
+   ============================================================ */
+
+/* --- СВІТЛА ТЕМА (Глибокі відтінки, 50% opacity) --- */
+html:not(.themeDark) .viewBoard .column.withColor .bgColor.bgColor-grey   { background-color: rgba(117, 117, 117, 0.5) !important; } /* #757575 */
+html:not(.themeDark) .viewBoard .column.withColor .bgColor.bgColor-yellow { background-color: rgba(245, 127, 23, 0.5) !important; }  /* #f57f17 */
+html:not(.themeDark) .viewBoard .column.withColor .bgColor.bgColor-orange { background-color: rgba(239, 108, 0, 0.5) !important; }   /* #ef6c00 */
+html:not(.themeDark) .viewBoard .column.withColor .bgColor.bgColor-red    { background-color: rgba(211, 47, 47, 0.5) !important; }   /* #d32f2f */
+html:not(.themeDark) .viewBoard .column.withColor .bgColor.bgColor-pink   { background-color: rgba(194, 24, 91, 0.5) !important; }   /* #c2185b */
+html:not(.themeDark) .viewBoard .column.withColor .bgColor.bgColor-purple { background-color: rgba(123, 31, 162, 0.5) !important; }  /* #7b1fa2 */
+html:not(.themeDark) .viewBoard .column.withColor .bgColor.bgColor-blue   { background-color: rgba(2, 136, 209, 0.5) !important; }   /* #0288d1 */
+html:not(.themeDark) .viewBoard .column.withColor .bgColor.bgColor-ice    { background-color: rgba(0, 151, 167, 0.5) !important; }   /* #0097a7 */
+html:not(.themeDark) .viewBoard .column.withColor .bgColor.bgColor-teal   { background-color: rgba(0, 121, 107, 0.5) !important; }   /* #00796b */
+html:not(.themeDark) .viewBoard .column.withColor .bgColor.bgColor-lime   { background-color: rgba(104, 159, 56, 0.5) !important; }  /* #689f38 */
+
+/* --- ТЕМНА ТЕМА (М'які пастельні відтінки, 50% opacity) --- */
+html.themeDark .viewBoard .column.withColor .bgColor.bgColor-grey   { background-color: rgba(189, 189, 189, 0.5) !important; } /* #bdbdbd */
+html.themeDark .viewBoard .column.withColor .bgColor.bgColor-yellow { background-color: rgba(255, 213, 79, 0.5) !important; }  /* #ffd54f */
+html.themeDark .viewBoard .column.withColor .bgColor.bgColor-orange { background-color: rgba(255, 183, 77, 0.5) !important; }  /* #ffb74d */
+html.themeDark .viewBoard .column.withColor .bgColor.bgColor-red    { background-color: rgba(229, 115, 115, 0.5) !important; }  /* #e57373 */
+html.themeDark .viewBoard .column.withColor .bgColor.bgColor-pink   { background-color: rgba(240, 98, 146, 0.5) !important; }  /* #f06292 */
+html.themeDark .viewBoard .column.withColor .bgColor.bgColor-purple { background-color: rgba(186, 104, 200, 0.5) !important; } /* #ba68c8 */
+html.themeDark .viewBoard .column.withColor .bgColor.bgColor-blue   { background-color: rgba(79, 195, 247, 0.5) !important; }   /* #4fc3f7 */
+html.themeDark .viewBoard .column.withColor .bgColor.bgColor-ice    { background-color: rgba(77, 208, 225, 0.5) !important; }   /* #4dd0e1 */
+html.themeDark .viewBoard .column.withColor .bgColor.bgColor-teal   { background-color: rgba(77, 182, 172, 0.5) !important; }   /* #4db6ac */
+html.themeDark .viewBoard .column.withColor .bgColor.bgColor-lime   { background-color: rgba(174, 213, 129, 0.5) !important; }  /* #aed581 */
