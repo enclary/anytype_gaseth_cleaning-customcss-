@@ -5674,11 +5674,9 @@ html.themeDark .viewBoard .column:hover .body .bg .bgColor {
 
 /* --- СВІТЛА ТЕМА --- */
 html:not(.themeDark) .viewBoard .column.withColor .card.isPage {
-    background-color: rgba(255, 255, 255, 0.65) !important; 
+    background-color: rgba(255, 255, 255, 0.25) !important; 
     border: 1px solid rgba(255, 255, 255, 0.75) !important; 
-    box-shadow: 
-        inset 0 1px 2px rgba(255, 255, 255, 0.0), 
-        0 10px 28px rgba(0, 0, 0, 0.00) !important;
+
     backdrop-filter: blur(16px) saturate(150%) contrast(105%) !important; 
     -webkit-backdrop-filter: blur(16px) saturate(150%) contrast(105%) !important;
     isolation: isolate;
@@ -5686,12 +5684,10 @@ html:not(.themeDark) .viewBoard .column.withColor .card.isPage {
 }
 
 html:not(.themeDark) .viewBoard .column.withColor .card.isPage:hover {
-    background-color: rgba(255, 255, 255, 0.92) !important; 
+    background-color: rgba(255, 255, 255, 0.80) !important; 
     transform: scale(1.03) !important;
     border: 1px solid #ffffff !important; 
-    box-shadow: 
-        inset 0 1px 3px rgba(255, 255, 255, 1), 
-        0 16px 36px rgba(0, 0, 0, 0.14) !important; 
+
     backdrop-filter: blur(24px) saturate(200%) contrast(115%) !important; 
     -webkit-backdrop-filter: blur(24px) saturate(200%) contrast(115%) !important;
     z-index: 10 !important;
@@ -5701,7 +5697,6 @@ html:not(.themeDark) .viewBoard .column.withColor .card.isPage:hover {
 html.themeDark .viewBoard .column.withColor .card.isPage {
     background: rgba(42, 42, 46, 0.32) !important;
     border: var(--glass-panel-border-dark) !important;
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.00), 0 12px 30px rgba(0, 0, 0, 0.0) !important;
     backdrop-filter: var(--glass-blur) !important;
     -webkit-backdrop-filter: var(--glass-blur) !important;
     isolation: isolate;
@@ -5712,9 +5707,7 @@ html.themeDark .viewBoard .column.withColor .card.isPage:hover {
     background: rgba(255, 255, 255, 0.12) !important; 
     transform: scale(1.03) !important;
     border: 1px solid rgba(255, 255, 255, 0.15) !important; 
-    box-shadow: 
-        inset 0 1px 1px rgba(255, 255, 255, 0.25), 
-        0 14px 32px rgba(0, 0, 0, 0.4) !important; 
+
     backdrop-filter: blur(20px) saturate(130%) !important; 
     -webkit-backdrop-filter: blur(20px) saturate(130%) !important;
     z-index: 10 !important;
@@ -5747,7 +5740,10 @@ html.themeDark .blocks .block.blockDataview .viewContent.viewBoard .column.withC
     backdrop-filter: blur(20px) saturate(120%) !important; /* М'якіша насиченість */
     -webkit-backdrop-filter: blur(20px) saturate(120%) !important;
     z-index: 10 !important;
+box-shadow: none !important; /* Прибираємо тінь, щоб не було надмірного ефекту */
 }
+
+
 
 /* =========================================
    ДИНАМІЧНІ КОЛЬОРИ (Світла тема - macOS Style)
@@ -5833,10 +5829,10 @@ html.themeDark .blocks .blockDataview .viewBoard .column.withColor .head .tagIte
    ============================================================ */
 
 /* --- СВІТЛА ТЕМА (Глибокі відтінки, 50% opacity) --- */
-html:not(.themeDark) .viewBoard .column.withColor .bgColor.bgColor-grey   { background-color: rgba(117, 117, 117, 0.5) !important; } /* #757575 */
-html:not(.themeDark) .viewBoard .column.withColor .bgColor.bgColor-yellow { background-color: rgba(245, 127, 23, 0.5) !important; }  /* #f57f17 */
-html:not(.themeDark) .viewBoard .column.withColor .bgColor.bgColor-orange { background-color: rgba(239, 108, 0, 0.5) !important; }   /* #ef6c00 */
-html:not(.themeDark) .viewBoard .column.withColor .bgColor.bgColor-red    { background-color: rgba(211, 47, 47, 0.5) !important; }   /* #d32f2f */
+html:not(.themeDark) .viewBoard .column.withColor .bgColor.bgColor-grey   { background-color: rgba(117, 117, 117, 0.2) !important; } /* #757575 */
+html:not(.themeDark) .viewBoard .column.withColor .bgColor.bgColor-yellow { background-color: rgba(245, 127, 23, 0.2) !important; }  /* #f57f17 */
+html:not(.themeDark) .viewBoard .column.withColor .bgColor.bgColor-orange { background-color: rgba(239, 108, 0, 0.2) !important; }   /* #ef6c00 */
+html:not(.themeDark) .viewBoard .column.withColor .bgColor.bgColor-red    { background-color: rgba(211, 47, 47, 0.2) !important; }   /* #d32f2f */
 html:not(.themeDark) .viewBoard .column.withColor .bgColor.bgColor-pink   { background-color: rgba(194, 24, 91, 0.5) !important; }   /* #c2185b */
 html:not(.themeDark) .viewBoard .column.withColor .bgColor.bgColor-purple { background-color: rgba(123, 31, 162, 0.5) !important; }  /* #7b1fa2 */
 html:not(.themeDark) .viewBoard .column.withColor .bgColor.bgColor-blue   { background-color: rgba(2, 136, 209, 0.5) !important; }   /* #0288d1 */
