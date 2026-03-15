@@ -1,5 +1,5 @@
 # Custom CSS Theme for Anytype
-
+![Preview of the theme](./cover.jpg)
 Hi, I'm **gaseth**! 
 
 A few people asked me to share my custom styles for Anytype, so here they are. 
