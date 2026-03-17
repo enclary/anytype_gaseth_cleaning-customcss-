@@ -5186,6 +5186,124 @@ html:not(.themeDark) .widget.widgetView .tabs .tab.active {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04) !important;
 }
 
+
+/* ============================================================
+   WIDGET TREE (DOWN TOWN REPOSE & OTHERS) — CANONICAL STYLE
+   ============================================================ */
+
+/* 1. ГЛОБАЛЬНА ПАНЕЛЬ ВІДЖЕТА */
+.widget.widgetTree {
+    border-radius: 20px !important;
+    overflow: hidden !important;
+    isolation: isolate !important;
+    position: relative !important;
+    transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.22s ease, border-color 0.22s ease, box-shadow 0.25s ease !important;
+}
+
+/* Світла тема: Glassmorphism */
+html:not(.themeDark) .widget.widgetTree {
+    background-color: rgba(255, 255, 255, 0.40) !important;
+    border: 1px solid rgba(255, 255, 255, 0.42) !important;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.52), 0 10px 28px rgba(0, 0, 0, 0.06) !important;
+    backdrop-filter: var(--glass-blur) !important;
+    -webkit-backdrop-filter: var(--glass-blur) !important;
+}
+
+/* Темна тема: Deep Frost */
+html.themeDark .widget.widgetTree {
+    background: rgba(42, 42, 46, 0.32) !important;
+    border: var(--glass-panel-border-dark) !important;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05), 0 12px 30px rgba(0, 0, 0, 0.28) !important;
+    backdrop-filter: var(--glass-blur) !important;
+    -webkit-backdrop-filter: var(--glass-blur) !important;
+}
+
+/* Ефект наведення на весь віджет */
+.widget.widgetTree:hover {
+    transform: scale(1.01) !important;
+    z-index: 20 !important;
+}
+
+/* 2. ШАПКА ВІДЖЕТА (Header) */
+.widget.widgetTree .head {
+    display: flex !important;
+    align-items: center !important;
+    padding: 9px 12px 1px !important;
+    min-height: 50px !important;
+    background: transparent !important;
+}
+
+.widget.widgetTree .head .side.left .name span {
+    padding-left: 12px !important;
+    font-weight: 600 !important;
+    letter-spacing: -0.2px !important;
+    color: inherit !important;
+}
+
+/* 3. КНОПКА ПЛЮС (Стиль Apple Pill) */
+.widget.widgetTree .head .side.right .iconWrap.create {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 32px !important;
+    height: 32px !important;
+    border-radius: 50% !important;
+    opacity: 0.5 !important;
+    cursor: pointer !important;
+    transition: all 0.22s ease !important;
+}
+
+html:not(.themeDark) .widget.widgetTree .head .side.right .iconWrap.create {
+    background-color: var(--glass-item-bg-light) !important;
+    border: 1px solid var(--glass-item-border-light) !important;
+}
+
+html.themeDark .widget.widgetTree .head .side.right .iconWrap.create {
+    background: rgba(26, 26, 30, 0.52) !important;
+    border: var(--glass-panel-border-dark) !important;
+}
+
+.widget.widgetTree .head .side.right .iconWrap.create:hover {
+    opacity: 1 !important;
+    transform: scale(1.1) !important;
+}
+
+/* 4. ЕЛЕМЕНТИ ДЕРЕВА (Items) */
+.widget.widgetTree .item .inner {
+    margin: 2px 8px !important;
+    border-radius: 12px !important;
+    padding: 4px 8px !important;
+    transition: background-color 0.2s ease, transform 0.2s ease !important;
+    background: transparent !important;
+    border: 1px solid transparent !important;
+}
+
+/* Ховер на рядки в дереві */
+.widget.widgetTree .item:hover > .inner,
+.widget.widgetTree .item:hover > .dropTarget > .inner {
+    border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+html:not(.themeDark) .widget.widgetTree .item:hover > .inner {
+    background: rgba(0, 0, 0, 0.04) !important;
+}
+
+html.themeDark .widget.widgetTree .item:hover > .inner {
+    background: rgba(255, 255, 255, 0.05) !important;
+}
+
+/* 5. ІКОНКИ ОБ'ЄКТІВ (Squircle) */
+.widget.widgetTree .iconObject.c20,
+.widget.widgetTree .iconImage.c20 {
+    border-radius: 6px !important;
+}
+
+/* Приховуємо стандартні кнопки Anytype у рядках, якщо вони заважають лаконічності */
+.widget.widgetTree .item .buttons {
+    display: none !important;
+}
+
+
 .buttonWrap.withSelect:has(#button-dataview-add-record) {
     display: inline-flex !important;
     align-items: stretch !important;
