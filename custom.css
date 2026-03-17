@@ -108,8 +108,8 @@
 
 /* --- ЗАДАЄМО КОЛЬОРИ (У форматі RGB для гнучкості прозорості) --- */
 html:not(.themeDark) {
-    --c-grey:   142, 142, 147;
-    --c-yellow: 243, 225, 107;    /* Трохи затемнений жовтий, щоб текст читався на білому фоні */
+    --c-grey:   66, 66, 69;
+    --c-yellow: 210, 170, 0;  
     --c-orange: 255, 149, 0;
     --c-red:    255, 59, 48;
     --c-pink:   255, 45, 85;
@@ -117,7 +117,7 @@ html:not(.themeDark) {
     --c-blue:   0, 122, 255;
     --c-ice:    50, 173, 230;
     --c-teal:   0, 199, 190;
-    --c-lime:   52, 199, 89;
+    --c-lime:   29, 122, 70;
 }
 
 html.themeDark {
@@ -193,7 +193,7 @@ html.themeDark {
 
 /* Фон тегу при наведенні миші (20% прозорості — стає яскравішим) */
 .tagItem.tagColor-grey:hover   { background-color: rgba(var(--c-grey), 0.2) !important; }
-.tagItem.tagColor-yellow:hover { background-color: rgba(var(--c-yellow), 0.2) !important; }
+.tagItem.tagColor-yellow:hover { background-color: rgba(var(--c-yellow), 0.1) !important; }
 .tagItem.tagColor-orange:hover { background-color: rgba(var(--c-orange), 0.2) !important; }
 .tagItem.tagColor-red:hover    { background-color: rgba(var(--c-red), 0.2) !important; }
 .tagItem.tagColor-pink:hover   { background-color: rgba(var(--c-pink), 0.2) !important; }
