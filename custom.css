@@ -1,11 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
 
 /* --- 1. ГЛОБАЛЬНІ НАЛАШТУВАННЯ (MIMICS CRAFT DOCS / APPLE NOTES) --- */
 :root {
-    --font-family-main: "SF Pro Display", "Inter", "-apple-system", "BlinkMacSystemFont", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-   
-   
-   
-       /* Document Backgrounds */
+    --font-family-main: "Nunito Sans", sans-serif;
+
+
+
+    /* Document Backgrounds */
     --app-bg-light: #ffffff;
     --app-bg-dark: #121214;
     --card-bg-light: #ffffff;
@@ -22,13 +23,15 @@
     --header-pill-bg-light-hover: rgba(239, 239, 244, 0.92);
     --header-pill-border-light: rgba(0, 0, 0, 0.07);
     --header-pill-bg-dark: rgba(26, 26, 30, 0.75);
-   
-   
-   
-       /* Callouts */
+    --header-pill-border-dark: rgba(255, 255, 255, 0.12);
 
-/* LIGHT MODE: Світлі, соковиті, але не "ядовиті" */
-    --callout-notes-default-light: #F2F2F7; /* System Gray 6 */
+
+
+    /* Callouts */
+
+    /* LIGHT MODE: Світлі, соковиті, але не "ядовиті" */
+    --callout-notes-default-light: #F2F2F7;
+    /* System Gray 6 */
     --callout-notes-red-light: #FFEBEE;
     --callout-notes-orange-light: #FFF2E0;
     --callout-notes-yellow-light: #FFF9C4;
@@ -61,12 +64,12 @@
 
 
 
-    
+
     /* Border radiuses */
     --edge-panel-radius: 0px;
     --m-panel-radius: 20px;
     --l-panel-radius: 24px;
-        --xl-panel-radius: 28px;
+    --xl-panel-radius: 28px;
     --xxl-panel-radius: 32px;
     --rounded-panel-radius: 9999px;
 
@@ -108,175 +111,584 @@
 
 /* --- ЗАДАЄМО КОЛЬОРИ (У форматі RGB для гнучкості прозорості) --- */
 html:not(.themeDark) {
-    --c-grey:   66, 66, 69;
-    --c-yellow: 210, 170, 0;  
+    --c-grey: 66, 66, 69;
+    --c-yellow: 210, 170, 0;
     --c-orange: 255, 149, 0;
-    --c-red:    255, 59, 48;
-    --c-pink:   255, 45, 85;
+    --c-red: 255, 59, 48;
+    --c-pink: 255, 45, 85;
     --c-purple: 175, 82, 222;
-    --c-blue:   0, 122, 255;
-    --c-ice:    50, 173, 230;
-    --c-teal:   0, 199, 190;
-    --c-lime:   29, 122, 70;
+    --c-blue: 0, 122, 255;
+    --c-ice: 50, 173, 230;
+    --c-teal: 0, 199, 190;
+    --c-lime: 29, 122, 70;
 }
 
 html.themeDark {
-    --c-grey:   152, 152, 157;
+    --c-grey: 152, 152, 157;
     --c-yellow: 255, 214, 10;
     --c-orange: 255, 159, 10;
-    --c-red:    255, 69, 58;
-    --c-pink:   255, 55, 95;
+    --c-red: 255, 69, 58;
+    --c-pink: 255, 55, 95;
     --c-purple: 191, 90, 242;
-    --c-blue:   10, 132, 255;
-    --c-ice:    100, 210, 255;
-    --c-teal:   99, 230, 226;
-    --c-lime:   48, 209, 88;
+    --c-blue: 10, 132, 255;
+    --c-ice: 100, 210, 255;
+    --c-teal: 99, 230, 226;
+    --c-lime: 48, 209, 88;
 }
 
 /* =========================================
    1. КОЛІР ТЕКСТУ (Text Color)
    100% насиченість для ідеальної читабельності
    ========================================= */
-.textColor-grey   { color: rgb(var(--c-grey)) !important; }
-.textColor-yellow { color: rgb(var(--c-yellow)) !important; }
-.textColor-orange { color: rgb(var(--c-orange)) !important; }
-.textColor-red    { color: rgb(var(--c-red)) !important; }
-.textColor-pink   { color: rgb(var(--c-pink)) !important; }
-.textColor-purple { color: rgb(var(--c-purple)) !important; }
-.textColor-blue   { color: rgb(var(--c-blue)) !important; }
-.textColor-ice    { color: rgb(var(--c-ice)) !important; }
-.textColor-teal   { color: rgb(var(--c-teal)) !important; }
-.textColor-lime   { color: rgb(var(--c-lime)) !important; }
+.textColor-grey {
+    color: rgb(var(--c-grey)) !important;
+}
+
+.textColor-yellow {
+    color: rgb(var(--c-yellow)) !important;
+}
+
+.textColor-orange {
+    color: rgb(var(--c-orange)) !important;
+}
+
+.textColor-red {
+    color: rgb(var(--c-red)) !important;
+}
+
+.textColor-pink {
+    color: rgb(var(--c-pink)) !important;
+}
+
+.textColor-purple {
+    color: rgb(var(--c-purple)) !important;
+}
+
+.textColor-blue {
+    color: rgb(var(--c-blue)) !important;
+}
+
+.textColor-ice {
+    color: rgb(var(--c-ice)) !important;
+}
+
+.textColor-teal {
+    color: rgb(var(--c-teal)) !important;
+}
+
+.textColor-lime {
+    color: rgb(var(--c-lime)) !important;
+}
 
 /* =========================================
    2. ВИДІЛЕННЯ ТЕКСТУ (Background Highlights)
    15% прозорості (0.15) — виглядає як маркер, текст ідеально видно
    ========================================= */
-.bgColor-grey   { background-color: rgba(var(--c-grey), 0.15) !important; }
-.bgColor-yellow { background-color: rgba(var(--c-yellow), 0.15) !important; }
-.bgColor-orange { background-color: rgba(var(--c-orange), 0.15) !important; }
-.bgColor-red    { background-color: rgba(var(--c-red), 0.15) !important; }
-.bgColor-pink   { background-color: rgba(var(--c-pink), 0.15) !important; }
-.bgColor-purple { background-color: rgba(var(--c-purple), 0.15) !important; }
-.bgColor-blue   { background-color: rgba(var(--c-blue), 0.15) !important; }
-.bgColor-ice    { background-color: rgba(var(--c-ice), 0.15) !important; }
-.bgColor-teal   { background-color: rgba(var(--c-teal), 0.15) !important; }
-.bgColor-lime   { background-color: rgba(var(--c-lime), 0.15) !important; }
+.bgColor-grey {
+    background-color: rgba(var(--c-grey), 0.15) !important;
+}
+
+.bgColor-yellow {
+    background-color: rgba(var(--c-yellow), 0.15) !important;
+}
+
+.bgColor-orange {
+    background-color: rgba(var(--c-orange), 0.15) !important;
+}
+
+.bgColor-red {
+    background-color: rgba(var(--c-red), 0.15) !important;
+}
+
+.bgColor-pink {
+    background-color: rgba(var(--c-pink), 0.15) !important;
+}
+
+.bgColor-purple {
+    background-color: rgba(var(--c-purple), 0.15) !important;
+}
+
+.bgColor-blue {
+    background-color: rgba(var(--c-blue), 0.15) !important;
+}
+
+.bgColor-ice {
+    background-color: rgba(var(--c-ice), 0.15) !important;
+}
+
+.bgColor-teal {
+    background-color: rgba(var(--c-teal), 0.15) !important;
+}
+
+.bgColor-lime {
+    background-color: rgba(var(--c-lime), 0.15) !important;
+}
 
 /* =========================================
    3. ГЛОБАЛЬНІ ТЕГИ (tagItem)
    Надає всім тегам в Anytype стилістику Apple-чіпсів
    ========================================= */
 /* Колір тексту тегу */
-.tagColor-grey   { color: rgb(var(--c-grey)) !important; }
-.tagColor-yellow { color: rgb(var(--c-yellow)) !important; }
-.tagColor-orange { color: rgb(var(--c-orange)) !important; }
-.tagColor-red    { color: rgb(var(--c-red)) !important; }
-.tagColor-pink   { color: rgb(var(--c-pink)) !important; }
-.tagColor-purple { color: rgb(var(--c-purple)) !important; }
-.tagColor-blue   { color: rgb(var(--c-blue)) !important; }
-.tagColor-ice    { color: rgb(var(--c-ice)) !important; }
-.tagColor-teal   { color: rgb(var(--c-teal)) !important; }
-.tagColor-lime   { color: rgb(var(--c-lime)) !important; }
+.tagColor-grey {
+    color: rgb(var(--c-grey)) !important;
+}
+
+.tagColor-yellow {
+    color: rgb(var(--c-yellow)) !important;
+}
+
+.tagColor-orange {
+    color: rgb(var(--c-orange)) !important;
+}
+
+.tagColor-red {
+    color: rgb(var(--c-red)) !important;
+}
+
+.tagColor-pink {
+    color: rgb(var(--c-pink)) !important;
+}
+
+.tagColor-purple {
+    color: rgb(var(--c-purple)) !important;
+}
+
+.tagColor-blue {
+    color: rgb(var(--c-blue)) !important;
+}
+
+.tagColor-ice {
+    color: rgb(var(--c-ice)) !important;
+}
+
+.tagColor-teal {
+    color: rgb(var(--c-teal)) !important;
+}
+
+.tagColor-lime {
+    color: rgb(var(--c-lime)) !important;
+}
 
 /* Фон тегу (пасивний стан: 10% прозорості) */
-.tagItem.tagColor-grey   { background-color: rgba(var(--c-grey), 0.1) !important; }
-.tagItem.tagColor-yellow { background-color: rgba(var(--c-yellow), 0.1) !important; }
-.tagItem.tagColor-orange { background-color: rgba(var(--c-orange), 0.1) !important; }
-.tagItem.tagColor-red    { background-color: rgba(var(--c-red), 0.1) !important; }
-.tagItem.tagColor-pink   { background-color: rgba(var(--c-pink), 0.1) !important; }
-.tagItem.tagColor-purple { background-color: rgba(var(--c-purple), 0.1) !important; }
-.tagItem.tagColor-blue   { background-color: rgba(var(--c-blue), 0.1) !important; }
-.tagItem.tagColor-ice    { background-color: rgba(var(--c-ice), 0.1) !important; }
-.tagItem.tagColor-teal   { background-color: rgba(var(--c-teal), 0.1) !important; }
-.tagItem.tagColor-lime   { background-color: rgba(var(--c-lime), 0.1) !important; }
+.tagItem.tagColor-grey {
+    background-color: rgba(var(--c-grey), 0.1) !important;
+}
+
+.tagItem.tagColor-yellow {
+    background-color: rgba(var(--c-yellow), 0.1) !important;
+}
+
+.tagItem.tagColor-orange {
+    background-color: rgba(var(--c-orange), 0.1) !important;
+}
+
+.tagItem.tagColor-red {
+    background-color: rgba(var(--c-red), 0.1) !important;
+}
+
+.tagItem.tagColor-pink {
+    background-color: rgba(var(--c-pink), 0.1) !important;
+}
+
+.tagItem.tagColor-purple {
+    background-color: rgba(var(--c-purple), 0.1) !important;
+}
+
+.tagItem.tagColor-blue {
+    background-color: rgba(var(--c-blue), 0.1) !important;
+}
+
+.tagItem.tagColor-ice {
+    background-color: rgba(var(--c-ice), 0.1) !important;
+}
+
+.tagItem.tagColor-teal {
+    background-color: rgba(var(--c-teal), 0.1) !important;
+}
+
+.tagItem.tagColor-lime {
+    background-color: rgba(var(--c-lime), 0.1) !important;
+}
 
 /* Фон тегу при наведенні миші (20% прозорості — стає яскравішим) */
-.tagItem.tagColor-grey:hover   { background-color: rgba(var(--c-grey), 0.2) !important; }
-.tagItem.tagColor-yellow:hover { background-color: rgba(var(--c-yellow), 0.1) !important; }
-.tagItem.tagColor-orange:hover { background-color: rgba(var(--c-orange), 0.2) !important; }
-.tagItem.tagColor-red:hover    { background-color: rgba(var(--c-red), 0.2) !important; }
-.tagItem.tagColor-pink:hover   { background-color: rgba(var(--c-pink), 0.2) !important; }
-.tagItem.tagColor-purple:hover { background-color: rgba(var(--c-purple), 0.2) !important; }
-.tagItem.tagColor-blue:hover   { background-color: rgba(var(--c-blue), 0.2) !important; }
-.tagItem.tagColor-ice:hover    { background-color: rgba(var(--c-ice), 0.2) !important; }
-.tagItem.tagColor-teal:hover   { background-color: rgba(var(--c-teal), 0.2) !important; }
-.tagItem.tagColor-lime:hover   { background-color: rgba(var(--c-lime), 0.2) !important; }
+.tagItem.tagColor-grey:hover {
+    background-color: rgba(var(--c-grey), 0.2) !important;
+}
 
-    /* ============================================================
+.tagItem.tagColor-yellow:hover {
+    background-color: rgba(var(--c-yellow), 0.1) !important;
+}
+
+.tagItem.tagColor-orange:hover {
+    background-color: rgba(var(--c-orange), 0.2) !important;
+}
+
+.tagItem.tagColor-red:hover {
+    background-color: rgba(var(--c-red), 0.2) !important;
+}
+
+.tagItem.tagColor-pink:hover {
+    background-color: rgba(var(--c-pink), 0.2) !important;
+}
+
+.tagItem.tagColor-purple:hover {
+    background-color: rgba(var(--c-purple), 0.2) !important;
+}
+
+.tagItem.tagColor-blue:hover {
+    background-color: rgba(var(--c-blue), 0.2) !important;
+}
+
+.tagItem.tagColor-ice:hover {
+    background-color: rgba(var(--c-ice), 0.2) !important;
+}
+
+.tagItem.tagColor-teal:hover {
+    background-color: rgba(var(--c-teal), 0.2) !important;
+}
+
+.tagItem.tagColor-lime:hover {
+    background-color: rgba(var(--c-lime), 0.2) !important;
+}
+
+/* ============================================================
    КАНБАН ДОШКА: Палітра кольорів підкладки (RGBA 0.5)
    Кольори відповідають тексту заголовків, але з 50% прозорістю
    ============================================================ */
 
-   /* --- 1. Colored Board TagItem Colors--- */
-.blocks .blockDataview .viewBoard .column.withColor .head .tagItem.tagColor-grey   { color: rgb(var(--c-grey)) !important; }
-.blocks .blockDataview .viewBoard .column.withColor .head .tagItem.tagColor-yellow { color: rgb(var(--c-yellow)) !important; }
-.blocks .blockDataview .viewBoard .column.withColor .head .tagItem.tagColor-orange { color: rgb(var(--c-orange)) !important; }
-.blocks .blockDataview .viewBoard .column.withColor .head .tagItem.tagColor-red    { color: rgb(var(--c-red)) !important; }
-.blocks .blockDataview .viewBoard .column.withColor .head .tagItem.tagColor-pink   { color: rgb(var(--c-pink)) !important; }
-.blocks .blockDataview .viewBoard .column.withColor .head .tagItem.tagColor-purple { color: rgb(var(--c-purple)) !important; }
-.blocks .blockDataview .viewBoard .column.withColor .head .tagItem.tagColor-blue   { color: rgb(var(--c-blue)) !important; }
-.blocks .blockDataview .viewBoard .column.withColor .head .tagItem.tagColor-ice    { color: rgb(var(--c-ice)) !important; }
-.blocks .blockDataview .viewBoard .column.withColor .head .tagItem.tagColor-teal   { color: rgb(var(--c-teal)) !important; }
-.blocks .blockDataview .viewBoard .column.withColor .head .tagItem.tagColor-lime   { color: rgb(var(--c-lime)) !important; }; 
+/* --- 1. Colored Board TagItem Colors--- */
+.blocks .blockDataview .viewBoard .column.withColor .head .tagItem.tagColor-grey {
+    color: rgb(var(--c-grey)) !important;
+}
+
+.blocks .blockDataview .viewBoard .column.withColor .head .tagItem.tagColor-yellow {
+    color: rgb(var(--c-yellow)) !important;
+}
+
+.blocks .blockDataview .viewBoard .column.withColor .head .tagItem.tagColor-orange {
+    color: rgb(var(--c-orange)) !important;
+}
+
+.blocks .blockDataview .viewBoard .column.withColor .head .tagItem.tagColor-red {
+    color: rgb(var(--c-red)) !important;
+}
+
+.blocks .blockDataview .viewBoard .column.withColor .head .tagItem.tagColor-pink {
+    color: rgb(var(--c-pink)) !important;
+}
+
+.blocks .blockDataview .viewBoard .column.withColor .head .tagItem.tagColor-purple {
+    color: rgb(var(--c-purple)) !important;
+}
+
+.blocks .blockDataview .viewBoard .column.withColor .head .tagItem.tagColor-blue {
+    color: rgb(var(--c-blue)) !important;
+}
+
+.blocks .blockDataview .viewBoard .column.withColor .head .tagItem.tagColor-ice {
+    color: rgb(var(--c-ice)) !important;
+}
+
+.blocks .blockDataview .viewBoard .column.withColor .head .tagItem.tagColor-teal {
+    color: rgb(var(--c-teal)) !important;
+}
+
+.blocks .blockDataview .viewBoard .column.withColor .head .tagItem.tagColor-lime {
+    color: rgb(var(--c-lime)) !important;
+}
+
 
 /* --- Colored Board - Light Theme Background Color --- */
-html:not(.themeDark) .viewBoard .column.withColor .bgColor.bgColor-grey   { background-color: rgba(142, 142, 147, 0.3) !important; }
-html:not(.themeDark) .viewBoard .column.withColor .bgColor.bgColor-yellow { background-color: rgba(255, 236, 139, 0.5) !important; }
-html:not(.themeDark) .viewBoard .column.withColor .bgColor.bgColor-orange { background-color: rgba(255, 149, 0, 0.3) !important; }
-html:not(.themeDark) .viewBoard .column.withColor .bgColor.bgColor-red    { background-color: rgba(255, 59, 48, 0.3) !important; }
-html:not(.themeDark) .viewBoard .column.withColor .bgColor.bgColor-pink   { background-color: rgba(255, 45, 85, 0.3) !important; }
-html:not(.themeDark) .viewBoard .column.withColor .bgColor.bgColor-purple { background-color: rgba(175, 82, 222, 0.3) !important; }
-html:not(.themeDark) .viewBoard .column.withColor .bgColor.bgColor-blue   { background-color: rgba(0, 122, 255, 0.3) !important; }
-html:not(.themeDark) .viewBoard .column.withColor .bgColor.bgColor-ice    { background-color: rgba(90, 200, 250, 0.3) !important; }
-html:not(.themeDark) .viewBoard .column.withColor .bgColor.bgColor-teal   { background-color: #dffff4 !important; }
-html:not(.themeDark) .viewBoard .column.withColor .bgColor.bgColor-lime   { background-color: #c7eabb !important; }
+html:not(.themeDark) .viewBoard .column.withColor .bgColor.bgColor-grey {
+    background-color: rgba(142, 142, 147, 0.3) !important;
+}
+
+html:not(.themeDark) .viewBoard .column.withColor .bgColor.bgColor-yellow {
+    background-color: rgba(255, 236, 139, 0.5) !important;
+}
+
+html:not(.themeDark) .viewBoard .column.withColor .bgColor.bgColor-orange {
+    background-color: rgba(255, 149, 0, 0.3) !important;
+}
+
+html:not(.themeDark) .viewBoard .column.withColor .bgColor.bgColor-red {
+    background-color: rgba(255, 59, 48, 0.3) !important;
+}
+
+html:not(.themeDark) .viewBoard .column.withColor .bgColor.bgColor-pink {
+    background-color: rgba(255, 45, 85, 0.3) !important;
+}
+
+html:not(.themeDark) .viewBoard .column.withColor .bgColor.bgColor-purple {
+    background-color: rgba(175, 82, 222, 0.3) !important;
+}
+
+html:not(.themeDark) .viewBoard .column.withColor .bgColor.bgColor-blue {
+    background-color: rgba(0, 122, 255, 0.3) !important;
+}
+
+html:not(.themeDark) .viewBoard .column.withColor .bgColor.bgColor-ice {
+    background-color: rgba(90, 200, 250, 0.3) !important;
+}
+
+html:not(.themeDark) .viewBoard .column.withColor .bgColor.bgColor-teal {
+    background-color: #dffff4 !important;
+}
+
+html:not(.themeDark) .viewBoard .column.withColor .bgColor.bgColor-lime {
+    background-color: #c7eabb !important;
+}
 
 /* --- Colored Board - Dark Theme Background Color --- */
-html.themeDark .viewBoard .column.withColor .bgColor.bgColor-grey   { background-color: rgba(109, 109, 109, 0.5) !important; }
-html.themeDark .viewBoard .column.withColor .bgColor.bgColor-yellow { background-color: rgba(255, 205, 80, 0.40) !important; }
-html.themeDark .viewBoard .column.withColor .bgColor.bgColor-orange { background-color: rgba(255, 135, 70, 0.40) !important; }
-html.themeDark .viewBoard .column.withColor .bgColor.bgColor-red    { background-color: rgba(220, 80, 90, 0.45) !important; }
-html.themeDark .viewBoard .column.withColor .bgColor.bgColor-pink   { background-color: rgba(240, 110, 170, 0.35) !important; }
-html.themeDark .viewBoard .column.withColor .bgColor.bgColor-purple { background-color: rgba(140, 100, 230, 0.35) !important; }
-html.themeDark .viewBoard .column.withColor .bgColor.bgColor-blue   { background-color: rgba(70, 140, 230, 0.45) !important; }
-html.themeDark .viewBoard .column.withColor .bgColor.bgColor-ice    { background-color: rgba(120, 190, 200, 0.55) !important; }
-html.themeDark .viewBoard .column.withColor .bgColor.bgColor-teal   { background-color: rgba(100, 210, 180, 0.45) !important; }
-html.themeDark .viewBoard .column.withColor .bgColor.bgColor-lime   { background-color: rgba(140, 255, 120, 0.35) !important; }
+html.themeDark .viewBoard .column.withColor .bgColor.bgColor-grey {
+    background-color: rgba(109, 109, 109, 0.5) !important;
+}
+
+html.themeDark .viewBoard .column.withColor .bgColor.bgColor-yellow {
+    background-color: rgba(255, 205, 80, 0.40) !important;
+}
+
+html.themeDark .viewBoard .column.withColor .bgColor.bgColor-orange {
+    background-color: rgba(255, 135, 70, 0.40) !important;
+}
+
+html.themeDark .viewBoard .column.withColor .bgColor.bgColor-red {
+    background-color: rgba(220, 80, 90, 0.45) !important;
+}
+
+html.themeDark .viewBoard .column.withColor .bgColor.bgColor-pink {
+    background-color: rgba(240, 110, 170, 0.35) !important;
+}
+
+html.themeDark .viewBoard .column.withColor .bgColor.bgColor-purple {
+    background-color: rgba(140, 100, 230, 0.35) !important;
+}
+
+html.themeDark .viewBoard .column.withColor .bgColor.bgColor-blue {
+    background-color: rgba(70, 140, 230, 0.45) !important;
+}
+
+html.themeDark .viewBoard .column.withColor .bgColor.bgColor-ice {
+    background-color: rgba(120, 190, 200, 0.55) !important;
+}
+
+html.themeDark .viewBoard .column.withColor .bgColor.bgColor-teal {
+    background-color: rgba(100, 210, 180, 0.45) !important;
+}
+
+html.themeDark .viewBoard .column.withColor .bgColor.bgColor-lime {
+    background-color: rgba(140, 255, 120, 0.35) !important;
+}
 
 /* =========================================
    Colored Board - Add button Light (Світла тема - macOS Style)
    Легке кольорове тонування (10%), ледь помітна кольорова рамка (25%) і м'яка нейтральна тінь
    ========================================= */
-html:not(.themeDark) .viewBoard .column.withColor:has(.bgColor-grey) .card.add:hover   { background-color: rgba(158, 158, 158, 0.1) !important; border-color: rgba(158, 158, 158, 0.25) !important;  }
-html:not(.themeDark) .viewBoard .column.withColor:has(.bgColor-yellow) .card.add:hover { background-color: rgba(255, 193, 7, 0.1) !important;   border-color: rgba(255, 193, 7, 0.3) !important;   }
-html:not(.themeDark) .viewBoard .column.withColor:has(.bgColor-orange) .card.add:hover { background-color: rgba(255, 152, 0, 0.1) !important;   border-color: rgba(255, 152, 0, 0.3) !important;   }
-html:not(.themeDark) .viewBoard .column.withColor:has(.bgColor-red) .card.add:hover    { background-color: rgba(244, 67, 54, 0.08) !important;  border-color: rgba(244, 67, 54, 0.25) !important;  }
-html:not(.themeDark) .viewBoard .column.withColor:has(.bgColor-pink) .card.add:hover   { background-color: rgba(233, 30, 99, 0.08) !important;  border-color: rgba(233, 30, 99, 0.25) !important;  }
-html:not(.themeDark) .viewBoard .column.withColor:has(.bgColor-purple) .card.add:hover { background-color: rgba(156, 39, 176, 0.08) !important; border-color: rgba(156, 39, 176, 0.25) !important; }
-html:not(.themeDark) .viewBoard .column.withColor:has(.bgColor-blue) .card.add:hover   { background-color: rgba(3, 169, 244, 0.1) !important;   border-color: rgba(3, 169, 244, 0.25) !important;  }
-html:not(.themeDark) .viewBoard .column.withColor:has(.bgColor-ice) .card.add:hover    { background-color: rgba(0, 188, 212, 0.1) !important;   border-color: rgba(0, 188, 212, 0.25) !important;  }
-html:not(.themeDark) .viewBoard .column.withColor:has(.bgColor-teal) .card.add:hover   { background-color: rgba(0, 150, 136, 0.1) !important;   border-color: rgba(0, 150, 136, 0.25) !important;  }
-html:not(.themeDark) .viewBoard .column.withColor:has(.bgColor-lime) .card.add:hover   { background-color: rgba(139, 195, 74, 0.1) !important;  border-color: rgba(139, 195, 74, 0.3) !important;  }
+html:not(.themeDark) .viewBoard .column.withColor:has(.bgColor-grey) .card.add:hover {
+    background-color: rgba(158, 158, 158, 0.1) !important;
+    border-color: rgba(158, 158, 158, 0.25) !important;
+}
+
+html:not(.themeDark) .viewBoard .column.withColor:has(.bgColor-yellow) .card.add:hover {
+    background-color: rgba(255, 193, 7, 0.1) !important;
+    border-color: rgba(255, 193, 7, 0.3) !important;
+}
+
+html:not(.themeDark) .viewBoard .column.withColor:has(.bgColor-orange) .card.add:hover {
+    background-color: rgba(255, 152, 0, 0.1) !important;
+    border-color: rgba(255, 152, 0, 0.3) !important;
+}
+
+html:not(.themeDark) .viewBoard .column.withColor:has(.bgColor-red) .card.add:hover {
+    background-color: rgba(244, 67, 54, 0.08) !important;
+    border-color: rgba(244, 67, 54, 0.25) !important;
+}
+
+html:not(.themeDark) .viewBoard .column.withColor:has(.bgColor-pink) .card.add:hover {
+    background-color: rgba(233, 30, 99, 0.08) !important;
+    border-color: rgba(233, 30, 99, 0.25) !important;
+}
+
+html:not(.themeDark) .viewBoard .column.withColor:has(.bgColor-purple) .card.add:hover {
+    background-color: rgba(156, 39, 176, 0.08) !important;
+    border-color: rgba(156, 39, 176, 0.25) !important;
+}
+
+html:not(.themeDark) .viewBoard .column.withColor:has(.bgColor-blue) .card.add:hover {
+    background-color: rgba(3, 169, 244, 0.1) !important;
+    border-color: rgba(3, 169, 244, 0.25) !important;
+}
+
+html:not(.themeDark) .viewBoard .column.withColor:has(.bgColor-ice) .card.add:hover {
+    background-color: rgba(0, 188, 212, 0.1) !important;
+    border-color: rgba(0, 188, 212, 0.25) !important;
+}
+
+html:not(.themeDark) .viewBoard .column.withColor:has(.bgColor-teal) .card.add:hover {
+    background-color: rgba(0, 150, 136, 0.1) !important;
+    border-color: rgba(0, 150, 136, 0.25) !important;
+}
+
+html:not(.themeDark) .viewBoard .column.withColor:has(.bgColor-lime) .card.add:hover {
+    background-color: rgba(139, 195, 74, 0.1) !important;
+    border-color: rgba(139, 195, 74, 0.3) !important;
+}
 
 /* =========================================
    Colored Board - Add button Dark (Темна тема - macOS Style)
    Легкий відтінок (15%), напівпрозора рамка і блік по верхній грані (inset біла тінь)
    ========================================= */
-html.themeDark .blocks .block.blockDataview .viewContent.viewBoard .column.withColor:has(.bgColor-grey) .card.add:hover   { background-color: rgba(158, 158, 158, 0.15) !important; border-color: rgba(158, 158, 158, 0.3) !important;}
-html.themeDark .blocks .block.blockDataview .viewContent.viewBoard .column.withColor:has(.bgColor-yellow) .card.add:hover { background-color: rgba(255, 193, 7, 0.15) !important;   border-color: rgba(255, 193, 7, 0.3) !important;  }
-html.themeDark .blocks .block.blockDataview .viewContent.viewBoard .column.withColor:has(.bgColor-orange) .card.add:hover { background-color: rgba(255, 152, 0, 0.15) !important;   border-color: rgba(255, 152, 0, 0.3) !important;  }
-html.themeDark .blocks .block.blockDataview .viewContent.viewBoard .column.withColor:has(.bgColor-red) .card.add:hover    { background-color: rgba(244, 67, 54, 0.15) !important;   border-color: rgba(244, 67, 54, 0.3) !important;  }
-html.themeDark .blocks .block.blockDataview .viewContent.viewBoard .column.withColor:has(.bgColor-pink) .card.add:hover   { background-color: rgba(233, 30, 99, 0.15) !important;   border-color: rgba(233, 30, 99, 0.3) !important;  }
-html.themeDark .blocks .block.blockDataview .viewContent.viewBoard .column.withColor:has(.bgColor-purple) .card.add:hover { background-color: rgba(171, 71, 188, 0.15) !important;  border-color: rgba(171, 71, 188, 0.3) !important; }
-html.themeDark .blocks .block.blockDataview .viewContent.viewBoard .column.withColor:has(.bgColor-blue) .card.add:hover   { background-color: rgba(3, 169, 244, 0.15) !important;   border-color: rgba(3, 169, 244, 0.3) !important;  }
-html.themeDark .blocks .block.blockDataview .viewContent.viewBoard .column.withColor:has(.bgColor-ice) .card.add:hover    { background-color: rgba(0, 188, 212, 0.15) !important;   border-color: rgba(0, 188, 212, 0.3) !important;  }
-html.themeDark .blocks .block.blockDataview .viewContent.viewBoard .column.withColor:has(.bgColor-teal) .card.add:hover   { background-color: rgba(0, 150, 136, 0.15) !important;   border-color: rgba(0, 150, 136, 0.3) !important;  }
-html.themeDark .blocks .block.blockDataview .viewContent.viewBoard .column.withColor:has(.bgColor-lime) .card.add:hover   { background-color: rgba(139, 195, 74, 0.15) !important;  border-color: rgba(139, 195, 74, 0.3) !important; }
+html.themeDark .blocks .block.blockDataview .viewContent.viewBoard .column.withColor:has(.bgColor-grey) .card.add:hover {
+    background-color: rgba(158, 158, 158, 0.15) !important;
+    border-color: rgba(158, 158, 158, 0.3) !important;
+}
+
+html.themeDark .blocks .block.blockDataview .viewContent.viewBoard .column.withColor:has(.bgColor-yellow) .card.add:hover {
+    background-color: rgba(255, 193, 7, 0.15) !important;
+    border-color: rgba(255, 193, 7, 0.3) !important;
+}
+
+html.themeDark .blocks .block.blockDataview .viewContent.viewBoard .column.withColor:has(.bgColor-orange) .card.add:hover {
+    background-color: rgba(255, 152, 0, 0.15) !important;
+    border-color: rgba(255, 152, 0, 0.3) !important;
+}
+
+html.themeDark .blocks .block.blockDataview .viewContent.viewBoard .column.withColor:has(.bgColor-red) .card.add:hover {
+    background-color: rgba(244, 67, 54, 0.15) !important;
+    border-color: rgba(244, 67, 54, 0.3) !important;
+}
+
+html.themeDark .blocks .block.blockDataview .viewContent.viewBoard .column.withColor:has(.bgColor-pink) .card.add:hover {
+    background-color: rgba(233, 30, 99, 0.15) !important;
+    border-color: rgba(233, 30, 99, 0.3) !important;
+}
+
+html.themeDark .blocks .block.blockDataview .viewContent.viewBoard .column.withColor:has(.bgColor-purple) .card.add:hover {
+    background-color: rgba(171, 71, 188, 0.15) !important;
+    border-color: rgba(171, 71, 188, 0.3) !important;
+}
+
+html.themeDark .blocks .block.blockDataview .viewContent.viewBoard .column.withColor:has(.bgColor-blue) .card.add:hover {
+    background-color: rgba(3, 169, 244, 0.15) !important;
+    border-color: rgba(3, 169, 244, 0.3) !important;
+}
+
+html.themeDark .blocks .block.blockDataview .viewContent.viewBoard .column.withColor:has(.bgColor-ice) .card.add:hover {
+    background-color: rgba(0, 188, 212, 0.15) !important;
+    border-color: rgba(0, 188, 212, 0.3) !important;
+}
+
+html.themeDark .blocks .block.blockDataview .viewContent.viewBoard .column.withColor:has(.bgColor-teal) .card.add:hover {
+    background-color: rgba(0, 150, 136, 0.15) !important;
+    border-color: rgba(0, 150, 136, 0.3) !important;
+}
+
+html.themeDark .blocks .block.blockDataview .viewContent.viewBoard .column.withColor:has(.bgColor-lime) .card.add:hover {
+    background-color: rgba(139, 195, 74, 0.15) !important;
+    border-color: rgba(139, 195, 74, 0.3) !important;
+}
 
 
+/* Тотальна примусова заміна шрифту для всіх текстових блоків */
+div.block div.editable.value,
+div.block div.placeholder,
+div[contenteditable="true"] {
+    font-family: "Nunito Sans", sans-serif !important;
+}
 
+/* --- Заголовки (Title) --- */
+div.block.textTitle div.editable.value,
+div.block.textTitle div.placeholder {
+    font-size: 32px !important;
+    font-weight: 900 !important;
+    /* Надпотужний для Nunito Sans */
+    line-height: 1.2 !important;
+}
 
+/* --- H1 та Великі колапси --- */
+div.block.textHeader1 div.editable.value,
+div.block.textToggleHeader1 div.editable.value,
+div.block.textHeader1 div.placeholder {
+    font-size: 28px !important;
+    font-weight: 800 !important;
+    /* Дуже жирний */
+    line-height: 1.25 !important;
+}
+
+/* --- H2 та звичайні колапси --- */
+div.block.textHeader2 div.editable.value,
+div.block.textToggleHeader2 div.editable.value,
+div.block.textHeader2 div.placeholder {
+    font-size: 22px !important;
+    font-weight: 700 !important;
+    /* Упевнений Bold */
+    line-height: 1.3 !important;
+}
+
+/* --- H3 та міні-колапси --- */
+div.block.textHeader3 div.editable.value,
+div.block.textToggleHeader3 div.editable.value,
+div.block.textHeader3 div.placeholder {
+    font-size: 20px !important;
+    font-weight: 700 !important;
+    /* Упевнений Bold */
+    line-height: 1.35 !important;
+}
+
+/* --- Звичайний текст, списки, міні-колапси без заголовка --- */
+div.block.textParagraph div.editable.value,
+div.block.textToggle div.editable.value,
+div.block.textBulleted div.editable.value,
+div.block.textNumbered div.editable.value,
+div.block.textCallout div.editable.value,
+div.block.textQuote div.editable.value,
+div.block.textParagraph div.placeholder,
+div.block.textCallout div.placeholder,
+div.block.textQuote div.placeholder {
+    font-size: 16px !important;
+    /* Еталонний розмір для читання (як в Apple Notes) */
+    font-weight: 400;
+    /* Прибираємо !important, щоб повернути адаптивність */
+    line-height: 1.6 !important;
+    /* Трохи більше простору між рядками */
+    letter-spacing: -0.022em !important;
+    /* Фірмовий трекінг Apple для 17px */
+    -webkit-font-smoothing: auto !important;
+    /* Робить шрифт трохи "щільнішим", прибирає зайву тонкість */
+}
+
+/* --- Таблиці: Ультимативна адаптивна жирність і 17px --- */
+/* 1. Скидаємо ЖИРНІСТЬ для ВСІХ елементів у будь-якій таблиці */
+.table *,
+.blockTable *,
+.row.isHeader *,
+.cell.isHeader * {
+    font-weight: 400 !important;
+}
+
+/* 2. Дозволяємо ТІЛЬКИ ручне виділення (markupbold) робити текст жирним */
+.table markupbold,
+.blockTable markupbold,
+.table .cell div.editable.value markupbold {
+    font-weight: 700 !important;
+}
+
+/* 3. Встановлюємо розмір 17px для текстових блоків у таблиці */
+.table .cell div.editable.value,
+.table .cell .block.textParagraph div.editable.value,
+.table .cell .block.textParagraph div.placeholder {
+    font-size: 17px !important;
+}
+
+/* --- Маркери списків --- */
+span.markerInner,
+div.markerToggle {
+    font-family: "Nunito Sans", sans-serif !important;
+    font-size: 17px !important;
+    line-height: 1.6 !important;
+    margin-top: 2px !important;
+    /* Вирівнюємо маркери відносно збільшеного тексту */
+}
 
 /* ==========================================================
    MACOS LIGHT GRAY: ABSOLUTE OVERRIDE (Тільки світла тема)
@@ -292,7 +704,7 @@ html:not(.themeDark) .pageMain {
     background: #ffffff !important;
     background-color: #ffffff !important;
     background-image: none !important;
-    
+
 }
 
 html:not(.themeDark) #header,
@@ -335,8 +747,8 @@ html:not(.themeDark) .CollectionView {
 /* 3. Опціонально: робимо самі картки Канбану білими для контрасту (як у macOS) */
 html:not(.themeDark) .boardCard {
     background: #ffffff !important;
-    border: 1px solid rgba(0,0,0,0.05) !important;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.05) !important;
+    border: 1px solid rgba(0, 0, 0, 0.05) !important;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05) !important;
 }
 
 body,
@@ -378,9 +790,9 @@ html.themeDark #main {
     background: transparent !important;
     background-color: transparent !important;
     padding-top: 8px !important;
-  
+
     padding-bottom: 8px !important;
-    
+
 }
 
 /* ============================================================
@@ -476,13 +888,37 @@ html.themeDark .header.mainObject .side.center .path {
     min-width: 0 !important;
 }
 
+#header.mainObject .side.left,
+.header.mainObject .side.left {
+    grid-column: 1 !important;
+    grid-row: 1 !important;
+    justify-self: start !important;
+    z-index: 5 !important;
+}
+
+#header.mainObject .side.right,
+.header.mainObject .side.right {
+    grid-column: 3 !important;
+    grid-row: 1 !important;
+    justify-self: end !important;
+    justify-content: flex-end !important;
+    z-index: 5 !important;
+}
+
 #header.mainObject .side.center,
 .header.mainObject .side.center {
     display: flex !important;
     justify-content: center !important;
     justify-self: center !important;
-    width: 100% !important;
-    min-width: 0 !important;
+    grid-column: 1 / -1 !important;
+    grid-row: 1 !important;
+    width: auto !important;
+    pointer-events: none !important;
+    z-index: 2 !important;
+}
+
+#header.mainObject .side.center>* {
+    pointer-events: auto !important;
 }
 
 #header.mainObject .side.center .path,
@@ -762,17 +1198,17 @@ html.themeDark .header.mainObject .label.btn:hover {
 
 /* Головний контейнер */
 #menuSearchText.menuSearchText {
-    background: rgba(255, 255, 255, 0.55); 
+    background: rgba(255, 255, 255, 0.55);
     backdrop-filter: blur(18px) saturate(160%);
     -webkit-backdrop-filter: blur(18px) saturate(160%);
-    
+
     border-radius: 14px;
     padding: 6px 12px;
-    
-    box-shadow: 
+
+    box-shadow:
         0 4px 14px -2px rgba(0, 0, 0, 0.06),
         0 0 1px 0 rgba(0, 0, 0, 0.15);
-    
+
     /* Твоя змінна для зовнішньої рамки */
     border: 1px solid var(--glass-border-light, rgba(255, 255, 255, 0.42));
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -782,7 +1218,7 @@ html.themeDark #menuSearchText.menuSearchText {
     background: rgba(30, 30, 32, 0.65);
     /* Твоя змінна для зовнішньої рамки (темна тема) */
     border: 1px solid var(--glass-border-dark, rgba(255, 255, 255, 0.08));
-    box-shadow: 
+    box-shadow:
         0 4px 20px rgba(0, 0, 0, 0.3),
         0 0 1px 0 rgba(255, 255, 255, 0.1);
 }
@@ -803,9 +1239,11 @@ html.themeDark #menuSearchText.menuSearchText {
     display: flex;
     align-items: center;
     justify-content: center;
-    opacity: 0.6; 
-    pointer-events: none; /* Забороняємо взаємодію, щоб не було хаверів */
+    opacity: 0.6;
+    pointer-events: none;
+    /* Забороняємо взаємодію, щоб не було хаверів */
 }
+
 /* --- Стан "Вимкнено" для іконок --- */
 
 /* 1. Якщо Anytype сам додає клас disabled */
@@ -820,14 +1258,16 @@ html.themeDark #menuSearchText.menuSearchText {
       навіть якщо Anytype забув додати клас disabled */
 #menuSearchText:has(.input.input-text:placeholder-shown) .arrowWrapper .icon {
     opacity: 0.3 !important;
-    pointer-events: none !important; /* Відключає будь-які ховери та кліки */
+    pointer-events: none !important;
+    /* Відключає будь-які ховери та кліки */
     filter: none !important;
 }
+
 /* --- Input Field (Загальні стилі) --- */
 #menuSearchText .input.input-text {
     background: transparent;
     /* Прозорий бордер, щоб уникнути подвійних рамок */
-    border: 1px solid transparent; 
+    border: 1px solid transparent;
     border-radius: 10px;
     font-size: 15px;
     padding: 6px 10px;
@@ -837,11 +1277,13 @@ html.themeDark #menuSearchText.menuSearchText {
 
 /* --- Світла тема: пасивний стан --- */
 html:not(.themeDark) #menuSearchText .input.input-text {
-    color: #1d1d1f !important; /* Жорсткий темний колір для контрасту */
+    color: #1d1d1f !important;
+    /* Жорсткий темний колір для контрасту */
 }
 
 html:not(.themeDark) #menuSearchText .input.input-text::placeholder {
-    color: #86868b !important; /* Нормальний колір підказки */
+    color: #86868b !important;
+    /* Нормальний колір підказки */
 }
 
 /* --- Темна тема: пасивний стан --- */
@@ -852,16 +1294,17 @@ html.themeDark #menuSearchText .input.input-text {
 /* --- Світла тема: активний стан (Focus) --- */
 html:not(.themeDark) #menuSearchText .input.input-text:focus {
     background: rgba(255, 255, 255, 0.8);
-    color: #000000 !important; /* Абсолютно чорний при кліку */
-    border-color: rgba(0, 122, 255, 0.4); 
-    box-shadow: 0 0 0 3px rgba(0, 122, 255, 0.15); 
+    color: #000000 !important;
+    /* Абсолютно чорний при кліку */
+    border-color: rgba(0, 122, 255, 0.4);
+    box-shadow: 0 0 0 3px rgba(0, 122, 255, 0.15);
 }
 
 /* --- Темна тема: активний стан (Focus) --- */
 html.themeDark #menuSearchText .input.input-text:focus {
-    background: rgba(40, 40, 40, 0.8); 
+    background: rgba(40, 40, 40, 0.8);
     color: #ffffff;
-    border-color: rgba(255, 255, 255, 0.15); 
+    border-color: rgba(255, 255, 255, 0.15);
     box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.05);
 }
 
@@ -887,20 +1330,23 @@ html.themeDark #menuSearchText .icon:not(.search):hover {
 
 /* --- Світла тема: пасивний стан --- */
 html:not(.themeDark) #menuSearchText .input.input-text {
-    color: #3a3a3c !important; /* М'який графітовий замість жорсткого чорного */
+    color: #3a3a3c !important;
+    /* М'який графітовий замість жорсткого чорного */
 }
 
 /* Колір плейсхолдера (тексту підказки) залишаємо світлішим */
 html:not(.themeDark) #menuSearchText .input.input-text::placeholder {
-    color: #8e8e93 !important; /* Класичний епплівський колір плейсхолдера */
+    color: #8e8e93 !important;
+    /* Класичний епплівський колір плейсхолдера */
 }
 
 /* --- Світла тема: активний стан (Focus) --- */
 html:not(.themeDark) #menuSearchText .input.input-text:focus {
     background: rgba(255, 255, 255, 0.6);
-    color: #2c2c2e !important; /* Трохи темніший за пасивний, але БЕЗ чистого #000000 */
-    border-color: rgba(0, 122, 255, 0.4); 
-    box-shadow: 0 0 0 3px rgba(0, 122, 255, 0.15); 
+    color: #2c2c2e !important;
+    /* Трохи темніший за пасивний, але БЕЗ чистого #000000 */
+    border-color: rgba(0, 122, 255, 0.4);
+    box-shadow: 0 0 0 3px rgba(0, 122, 255, 0.15);
 }
 
 
@@ -917,20 +1363,22 @@ html:not(.themeDark) #menuSearchText .input.input-text:focus {
     background: var(--glass-item-bg-light, rgba(255, 255, 255, 0.48)) !important;
     backdrop-filter: var(--glass-blur, blur(20px)) !important;
     -webkit-backdrop-filter: var(--glass-blur, blur(20px)) !important;
-    
-    border-radius: var(--m-panel-radius) ; /* Трохи менший радіус для системних кнопок */
+
+    border-radius: var(--m-panel-radius);
+    /* Трохи менший радіус для системних кнопок */
     padding: 6px 14px !important;
     height: 32px !important;
     min-height: 32px !important;
-    
+
     /* Об'єм за допомогою бордерів та тіней */
     border: 1px solid var(--glass-border-light, rgba(255, 255, 255, 0.42)) !important;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important;
-    
-    box-shadow: 
-        inset 0 1px 0 rgba(255, 255, 255, 0.5), /* Світло зверху */
+
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.5),
+        /* Світло зверху */
         0 2px 6px rgba(0, 0, 0, 0.04) !important;
-        
+
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
@@ -951,7 +1399,7 @@ html.themeDark .headSimple .side.right .button.blank.c28 {
     background: rgba(255, 255, 255, 0.06) !important;
     border: 1px solid var(--glass-border-dark, rgba(255, 255, 255, 0.08)) !important;
     border-bottom: 1px solid rgba(0, 0, 0, 0.3) !important;
-    box-shadow: 
+    box-shadow:
         inset 0 1px 0 rgba(255, 255, 255, 0.05),
         0 4px 12px rgba(0, 0, 0, 0.2) !important;
 }
@@ -964,7 +1412,7 @@ html.themeDark .headSimple .side.right .button.blank.c28 .txt {
 .headSimple .side.right .button.blank.c28:hover {
     background: var(--glass-item-bg-light-hover, rgba(255, 255, 255, 0.72)) !important;
     transform: translateY(-0.5px) !important;
-    box-shadow: 
+    box-shadow:
         inset 0 1px 0 rgba(255, 255, 255, 0.6),
         0 4px 12px rgba(0, 0, 0, 0.08) !important;
 }
@@ -993,7 +1441,7 @@ html.themeDark .headSimple .side.right .button.blank.c28:hover {
 .toolbar,
 .actionBar,
 .editorControls {
-padding: 0px !important;
+    padding: 0px !important;
     /* Soft huge Craft radius */
     border: none !important;
     transform: translateZ(0) !important;
@@ -1290,30 +1738,30 @@ html.themeDark .blockText.textCallout>.wrapContent:not(.bgColor) {
     box-shadow: none !important;
 }
 
-.blockText.textCallout > .wrapContent > .children {
+.blockText.textCallout>.wrapContent>.children {
     margin-left: 0 !important;
     width: 100% !important;
     padding-left: 0 !important;
     box-sizing: border-box !important;
 }
 
-.blockText.textCallout > .wrapContent > .children > .block > .wrapMenu {
+.blockText.textCallout>.wrapContent>.children>.block>.wrapMenu {
     width: 48px !important;
     flex-basis: 48px !important;
     display: block !important;
 }
 
-.blockText.textCallout > .wrapContent > .children > .block > .wrapContent {
+.blockText.textCallout>.wrapContent>.children>.block>.wrapContent {
     width: calc(100% - 48px) !important;
 }
 
-.blockText.textCallout > .wrapContent > .children > .block.blockText.textParagraph > .wrapContent.bgColor > .selectionTarget > .dropTarget,
-.blockText.textCallout > .wrapContent > .children > .block.blockText.textHeader > .wrapContent.bgColor > .selectionTarget > .dropTarget {
+.blockText.textCallout>.wrapContent>.children>.block.blockText.textParagraph>.wrapContent.bgColor>.selectionTarget>.dropTarget,
+.blockText.textCallout>.wrapContent>.children>.block.blockText.textHeader>.wrapContent.bgColor>.selectionTarget>.dropTarget {
     padding-left: 0 !important;
     padding-right: 0 !important;
 }
 
-.blockText.textCallout > .wrapContent > .children > .block > .wrapContent > .emptyToggle {
+.blockText.textCallout>.wrapContent>.children>.block>.wrapContent>.emptyToggle {
     margin-left: 14px !important;
 }
 
@@ -1354,7 +1802,7 @@ html:not(.themeDark) .widget.widgetLink:hover {
     transform: scale(1.04) !important;
     border-color: rgba(0, 0, 0, 0.06) !important;
     box-shadow: none !important;
-        border: 1px solid rgba(0, 0, 0, 0.05) !important;
+    border: 1px solid rgba(0, 0, 0, 0.05) !important;
 
 }
 
@@ -1365,7 +1813,7 @@ html.themeDark .widget.widgetLink:hover {
 
     border-color: rgba(255, 255, 255, 0.08) !important;
     box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.05), 0 8px 20px rgba(0, 0, 0, 0.28) !important;
-    
+
     box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.05), 0 8px 20px rgba(0, 0, 0, 0.28) !important;
 }
 
@@ -1400,8 +1848,8 @@ html.themeDark .widget.widgetLink:hover {
     transition: none !important;
 }
 
-.widget.widgetLink > .dropTarget.targetHead.isOver .sides::after,
-.widget.widgetLink > .dropTarget.targetHead.isOver.middle .sides::after {
+.widget.widgetLink>.dropTarget.targetHead.isOver .sides::after,
+.widget.widgetLink>.dropTarget.targetHead.isOver.middle .sides::after {
     content: none !important;
     display: none !important;
     opacity: 0 !important;
@@ -1417,13 +1865,13 @@ html.themeDark .widget.widgetLink:hover {
 .widget.widgetLink .head .headerIcon {
     transition: none !important;
     animation: none !important;
-    
+
 }
 
 .widget.widgetLink .head .iconWrap.collapse,
 .widget.widgetLink .head .headerIcon {
     transition: none !important;
-    
+
 }
 
 .widget.widgetLink .head .clickable:hover .iconWrap.collapse,
@@ -1467,8 +1915,8 @@ html:not(.themeDark) .widget.widgetView .head .side.left .iconWrap.collapse {
     -webkit-backdrop-filter: var(--glass-blur) !important;
     border: 1px solid rgba(255, 255, 255, 0.42) !important;
     box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.52), 0 6px 18px rgba(0, 0, 0, 0.05) !important;
-    
-    }
+
+}
 
 html.themeDark .widget.widgetLink .head .iconWrap.collapse,
 html.themeDark .widget.widgetView .head .side.left .iconWrap.collapse {
@@ -1538,7 +1986,7 @@ html.themeDark .widget.widgetLink:hover .name span {
 .head .iconObject.isSpaceView.withImage .iconImage,
 #sidebarPageVault .item .iconObject.isSpaceView.withImage,
 #sidebarPageVault .item .iconObject.isSpaceView.withImage .iconImage {
-    
+
     border-radius: 0 !important;
 }
 
@@ -1598,17 +2046,17 @@ div#pageWrapper:has(#sidebarPageVault) {
 
 html:not(.themeDark) #sidebarPageVault {
     background-color: var(--glass-panel-bg-light) !important;
-backdrop-filter: var(--glass-panel-blur) !important;
--webkit-backdrop-filter: var(--glass-panel-blur) !important;
+    backdrop-filter: var(--glass-panel-blur) !important;
+    -webkit-backdrop-filter: var(--glass-panel-blur) !important;
 
-/* Периметр (світлий) */
-border: var(--glass-panel-border-light) !important;
+    /* Периметр (світлий) */
+    border: var(--glass-panel-border-light) !important;
 
-/* Права межа (чіткіший розділювач) */
-border-right: var(--glass-panel-border-right-light) !important;
+    /* Права межа (чіткіший розділювач) */
+    border-right: var(--glass-panel-border-right-light) !important;
 
-/* Додатковий блиск на гранях для ефекту товстого скла */
-box-shadow: var(--glass-panel-shadow) !important;
+    /* Додатковий блиск на гранях для ефекту товстого скла */
+    box-shadow: var(--glass-panel-shadow) !important;
     padding-top: 0px !important;
 }
 
@@ -1698,7 +2146,7 @@ html.themeDark #sidebarPageVault .separator .inner {
 
 .widgetObject .item::before,
 .items .item::before,
-.widgetSpace .spaceData > .buttons .item::before {
+.widgetSpace .spaceData>.buttons .item::before {
     display: none !important;
 }
 
@@ -1758,7 +2206,7 @@ html.themeDark .sidebar .sidebarPage.pageWidget .widgetSection.section-type {
     -webkit-backdrop-filter: var(--glass-blur) !important;
 }
 
-.sidebar .sidebarPage.pageWidget .widgetSection.section-type > .nameWrap {
+.sidebar .sidebarPage.pageWidget .widgetSection.section-type>.nameWrap {
     display: flex !important;
     align-items: center !important;
     justify-content: space-between !important;
@@ -1766,7 +2214,7 @@ html.themeDark .sidebar .sidebarPage.pageWidget .widgetSection.section-type {
     padding: 2px !important;
 }
 
-.sidebar .sidebarPage.pageWidget .widgetSection.section-type > .nameWrap .name {
+.sidebar .sidebarPage.pageWidget .widgetSection.section-type>.nameWrap .name {
     flex: 1 1 auto !important;
     min-width: 0 !important;
     padding: 8px 10px !important;
@@ -1777,79 +2225,79 @@ html.themeDark .sidebar .sidebarPage.pageWidget .widgetSection.section-type {
     transition: background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease, color 0.2s ease !important;
 }
 
-html:not(.themeDark) .sidebar .sidebarPage.pageWidget .widgetSection.section-type > .nameWrap .name {
+html:not(.themeDark) .sidebar .sidebarPage.pageWidget .widgetSection.section-type>.nameWrap .name {
     background: rgba(255, 255, 255, 0.36) !important;
     border: 1px solid rgba(255, 255, 255, 0.35) !important;
     box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.38) !important;
-     color: rgba(43, 43, 45, 0.5) !important;
+    color: rgba(43, 43, 45, 0.5) !important;
 
 }
 
-html:not(.themeDark) .sidebar .sidebarPage.pageWidget .widgetSection.section-type > .nameWrap .name:hover {
+html:not(.themeDark) .sidebar .sidebarPage.pageWidget .widgetSection.section-type>.nameWrap .name:hover {
     background: rgba(255, 255, 255, 0.48) !important;
     border: 1px solid rgba(255, 255, 255, 0.46) !important;
     box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.52), 0 6px 16px rgba(0, 0, 0, 0.04) !important;
     color: rgba(43, 43, 45, 0.78) !important;
 }
 
-html:not(.themeDark) .sidebar .sidebarPage.pageWidget .widgetSection.section-type.isOpen > .nameWrap .name,
-html:not(.themeDark) .sidebar .sidebarPage.pageWidget .widgetSection.section-type > .nameWrap.active .name {
+html:not(.themeDark) .sidebar .sidebarPage.pageWidget .widgetSection.section-type.isOpen>.nameWrap .name,
+html:not(.themeDark) .sidebar .sidebarPage.pageWidget .widgetSection.section-type>.nameWrap.active .name {
     background: rgba(255, 255, 255, 0.24) !important;
     border: 1px solid rgba(255, 255, 255, 0.35) !important;
     box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.38) !important;
-        color: rgba(43, 43, 45, 0.8) !important;
+    color: rgba(43, 43, 45, 0.8) !important;
 
 }
 
-html:not(.themeDark) .sidebar .sidebarPage.pageWidget .widgetSection.section-type.isOpen > .nameWrap .name:hover,
-html:not(.themeDark) .sidebar .sidebarPage.pageWidget .widgetSection.section-type > .nameWrap.active .name:hover {
+html:not(.themeDark) .sidebar .sidebarPage.pageWidget .widgetSection.section-type.isOpen>.nameWrap .name:hover,
+html:not(.themeDark) .sidebar .sidebarPage.pageWidget .widgetSection.section-type>.nameWrap.active .name:hover {
     background: rgba(255, 255, 255, 0.32) !important;
     border: 1px solid rgba(255, 255, 255, 0.42) !important;
     box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.46), 0 6px 16px rgba(0, 0, 0, 0.04) !important;
     color: rgba(43, 43, 45, 0.88) !important;
 }
 
-html.themeDark .sidebar .sidebarPage.pageWidget .widgetSection.section-type > .nameWrap .name {
+html.themeDark .sidebar .sidebarPage.pageWidget .widgetSection.section-type>.nameWrap .name {
     background: rgba(255, 255, 255, 0.04) !important;
     border: 1px solid rgba(255, 255, 255, 0.06) !important;
     color: rgba(255, 255, 255, 0.62) !important;
-    
+
 }
 
-html.themeDark .sidebar .sidebarPage.pageWidget .widgetSection.section-type > .nameWrap .name:hover {
+html.themeDark .sidebar .sidebarPage.pageWidget .widgetSection.section-type>.nameWrap .name:hover {
     background: rgba(255, 255, 255, 0.07) !important;
     border: 1px solid rgba(255, 255, 255, 0.1) !important;
     box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05), 0 6px 16px rgba(0, 0, 0, 0.18) !important;
     color: rgba(255, 255, 255, 0.78) !important;
 }
 
-html.themeDark .sidebar .sidebarPage.pageWidget .widgetSection.section-type.isOpen > .nameWrap .name,
-html.themeDark .sidebar .sidebarPage.pageWidget .widgetSection.section-type > .nameWrap.active .name {
+html.themeDark .sidebar .sidebarPage.pageWidget .widgetSection.section-type.isOpen>.nameWrap .name,
+html.themeDark .sidebar .sidebarPage.pageWidget .widgetSection.section-type>.nameWrap.active .name {
     background: rgba(255, 255, 255, 0.08) !important;
     border: 1px solid rgba(255, 255, 255, 0.06) !important;
     color: rgba(255, 255, 255, 0.82) !important;
-    
+
 }
 
-html.themeDark .sidebar .sidebarPage.pageWidget .widgetSection.section-type.isOpen > .nameWrap .name:hover,
-html.themeDark .sidebar .sidebarPage.pageWidget .widgetSection.section-type > .nameWrap.active .name:hover {
+html.themeDark .sidebar .sidebarPage.pageWidget .widgetSection.section-type.isOpen>.nameWrap .name:hover,
+html.themeDark .sidebar .sidebarPage.pageWidget .widgetSection.section-type>.nameWrap.active .name:hover {
     background: rgba(255, 255, 255, 0.11) !important;
     border: 1px solid rgba(255, 255, 255, 0.11) !important;
     box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06), 0 6px 16px rgba(0, 0, 0, 0.18) !important;
     color: rgba(255, 255, 255, 0.92) !important;
 }
 
-.sidebar .sidebarPage.pageWidget .widgetSection.section-type > .nameWrap .name .icon.arrow {
+.sidebar .sidebarPage.pageWidget .widgetSection.section-type>.nameWrap .name .icon.arrow {
     margin-right: 2px !important;
     transition: transform 0.2s cubic-bezier(0.22, 1, 0.36, 1) !important;
 }
 
-.sidebar .sidebarPage.pageWidget .widgetSection.section-type > .nameWrap .buttons {
+.sidebar .sidebarPage.pageWidget .widgetSection.section-type>.nameWrap .buttons {
     opacity: 1 !important;
     gap: 6px !important;
 }
 
-.sidebar .sidebarPage.pageWidget .widgetSection.section-type > .nameWrap .buttons .button.blank.c28 {
+.sidebar .sidebarPage.pageWidget .widgetSection.section-type>.nameWrap .buttons .button.blank.c28 {
     display: inline-flex !important;
     align-items: center !important;
     gap: 6px !important;
@@ -1862,54 +2310,54 @@ html.themeDark .sidebar .sidebarPage.pageWidget .widgetSection.section-type > .n
     transition: background-color 0.22s ease, border-color 0.22s ease, box-shadow 0.22s ease !important;
 }
 
-.sidebar .sidebarPage.pageWidget .widgetSection.section-type > .nameWrap .buttons .button.blank.c28 .txt {
+.sidebar .sidebarPage.pageWidget .widgetSection.section-type>.nameWrap .buttons .button.blank.c28 .txt {
     line-height: 1 !important;
     white-space: nowrap !important;
 }
 
-html:not(.themeDark) .sidebar .sidebarPage.pageWidget .widgetSection.section-type > .nameWrap .buttons .button.blank.c28 {
+html:not(.themeDark) .sidebar .sidebarPage.pageWidget .widgetSection.section-type>.nameWrap .buttons .button.blank.c28 {
     background: rgba(255, 255, 255, 0.62) !important;
     border: 1px solid rgba(255, 255, 255, 0.48) !important;
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05) !important;
     color: rgba(43, 43, 45, 0.5) !important;
 }
 
-html:not(.themeDark) .sidebar .sidebarPage.pageWidget .widgetSection.section-type > .nameWrap .buttons .button.blank.c28:hover {
+html:not(.themeDark) .sidebar .sidebarPage.pageWidget .widgetSection.section-type>.nameWrap .buttons .button.blank.c28:hover {
     background: var(--glass-active-light-hover) !important;
     border-color: var(--glass-active-light-border-hover) !important;
     box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.24) !important;
     color: #ffffff !important;
 }
 
-html:not(.themeDark) .sidebar .sidebarPage.pageWidget .widgetSection.section-type > .nameWrap .buttons .button.blank.c28:hover .icon.plus {
+html:not(.themeDark) .sidebar .sidebarPage.pageWidget .widgetSection.section-type>.nameWrap .buttons .button.blank.c28:hover .icon.plus {
     filter: brightness(0) invert(1) !important;
 }
 
-html.themeDark .sidebar .sidebarPage.pageWidget .widgetSection.section-type > .nameWrap .buttons .button.blank.c28 {
+html.themeDark .sidebar .sidebarPage.pageWidget .widgetSection.section-type>.nameWrap .buttons .button.blank.c28 {
     background: rgba(255, 255, 255, 0.06) !important;
     border: var(--glass-panel-border-dark) !important;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.22) !important;
     color: rgba(255, 255, 255, 0.88) !important;
 }
 
-html.themeDark .sidebar .sidebarPage.pageWidget .widgetSection.section-type > .nameWrap .buttons .button.blank.c28:hover {
+html.themeDark .sidebar .sidebarPage.pageWidget .widgetSection.section-type>.nameWrap .buttons .button.blank.c28:hover {
     background: var(--glass-active-dark-hover) !important;
     border-color: var(--glass-active-dark-border-hover) !important;
     box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.12) !important;
     color: #ffffff !important;
 }
 
-html.themeDark .sidebar .sidebarPage.pageWidget .widgetSection.section-type > .nameWrap .buttons .button.blank.c28:hover .icon.plus {
+html.themeDark .sidebar .sidebarPage.pageWidget .widgetSection.section-type>.nameWrap .buttons .button.blank.c28:hover .icon.plus {
     filter: brightness(0) invert(1) !important;
 }
 
-.sidebar .sidebarPage.pageWidget .widgetSection.section-type > .items {
+.sidebar .sidebarPage.pageWidget .widgetSection.section-type>.items {
     gap: 6px 0 !important;
     padding: 0 !important;
 }
 
-.sidebar .sidebarPage.pageWidget .widgetSection.section-type > .items > .widget.widgetObject,
-.sidebar .sidebarPage.pageWidget .widgetSection.section-type > .items > .widget.widgetObject:hover {
+.sidebar .sidebarPage.pageWidget .widgetSection.section-type>.items>.widget.widgetObject,
+.sidebar .sidebarPage.pageWidget .widgetSection.section-type>.items>.widget.widgetObject:hover {
     margin: 0 !important;
     background: transparent !important;
     border: none !important;
@@ -2438,7 +2886,7 @@ html:not(.themeDark) #popupSearch-innerWrap .items .item.isSelected {
     line-height: 0 !important;
 }
 
-.blocks .block.blockTable .scrollWrap > .inner {
+.blocks .block.blockTable .scrollWrap>.inner {
     display: inline-block !important;
     min-width: 0 !important;
     width: max-content !important;
@@ -2472,11 +2920,11 @@ html.themeDark .blocks .block.blockTable .table {
     border-right: none !important;
 }
 
-.blocks .block.blockTable .row + .row .cell {
+.blocks .block.blockTable .row+.row .cell {
     border-top: 1px solid rgba(0, 0, 0, 0.07) !important;
 }
 
-html.themeDark .blocks .block.blockTable .row + .row .cell {
+html.themeDark .blocks .block.blockTable .row+.row .cell {
     border-top: var(--glass-panel-border-dark) !important;
 }
 
@@ -2726,8 +3174,8 @@ html.themeDark .blocks .block.blockTable .plusButton.active .icon {
     border-radius: 24px !important;
 }
 
-#sidebarPageWidget > .head,
-#sidebarPageWidget > #head {
+#sidebarPageWidget>.head,
+#sidebarPageWidget>#head {
     margin-top: 0 !important;
     padding-top: 0 !important;
 }
@@ -2774,7 +3222,7 @@ html.themeDark #sidebar {
     padding-bottom: 0 !important;
 }
 
-#sidebarPageVault.isMinimal > #head {
+#sidebarPageVault.isMinimal>#head {
     min-height: 0 !important;
     height: 0 !important;
     padding: 0 !important;
@@ -2806,11 +3254,11 @@ html.themeDark #sidebar {
     transform: none !important;
 }
 
-#sidebarPageVault.isMinimal .ReactVirtualized__Grid__innerScrollContainer > .item.add + .item.spaceData {
+#sidebarPageVault.isMinimal .ReactVirtualized__Grid__innerScrollContainer>.item.add+.item.spaceData {
     top: 40px !important;
 }
 
-#sidebarPageVault.isMinimal .ReactVirtualized__Grid__innerScrollContainer > .item.add + .item.spaceData + .item.spaceData {
+#sidebarPageVault.isMinimal .ReactVirtualized__Grid__innerScrollContainer>.item.add+.item.spaceData+.item.spaceData {
     top: 84px !important;
 }
 
@@ -3046,11 +3494,11 @@ html.themeDark div.blockText.textQuote>.wrapContent::after {
     color: rgba(255, 255, 255, 0.7) !important;
 }
 
-html:not(.themeDark) div.blockText.textQuote > .wrapContent {
+html:not(.themeDark) div.blockText.textQuote>.wrapContent {
     background-color: rgba(0, 0, 0, 0.05) !important;
 }
 
-html:not(.themeDark) div.blockText.textQuote > .wrapContent::before {
+html:not(.themeDark) div.blockText.textQuote>.wrapContent::before {
     background-color: rgba(0, 0, 0, 0.1) !important;
 }
 
@@ -3059,9 +3507,9 @@ html:not(.themeDark) div.blockText.textQuote > .wrapContent::before {
 
 /* --- 16. МОДИФІКАЦІЯ СКРОЛБАРУ (STYLISH & DYNAMIC) --- */
 ::-webkit-scrollbar {
-    width: 14px !important;
+    width: 12px !important;
     /* macOS gives wide clickable area, but thumb is thin */
-    height: 14px !important;
+    height: 12px !important;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -3093,9 +3541,7 @@ html.themeDark ::-webkit-scrollbar-thumb:hover {
 
 
 /* --- ВІДСТУП ДЛЯ ТИТУЛУ СТОРІНКИ --- */
-.ctitle {
-
-}
+.ctitle {}
 
 .editableWrap:has(.ctitle),
 .editableWrap:has(#value.ctitle) {
@@ -3107,9 +3553,7 @@ html.themeDark ::-webkit-scrollbar-thumb:hover {
 
 }
 
-.editorWrapper.isType .headSimple.isType {
-
-}
+.editorWrapper.isType .headSimple.isType {}
 
 .editorWrapper.isType .headSimple.isType .editableWrap.title,
 .editorWrapper.isType .headSimple.isType .editableWrap:has(.ctitle),
@@ -3204,7 +3648,7 @@ html.themeDark :is(.context-menu, .dropdown, .menu, .menu-container, .modal, .po
 }
 
 /* Inner elements inside popups must NOT be glass themselves (chain effect removal) */
-:is(.context-menu, .dropdown, .menu, .menu-container, .popup) > * {
+:is(.context-menu, .dropdown, .menu, .menu-container, .popup)>* {
     backdrop-filter: none !important;
     -webkit-backdrop-filter: none !important;
     background: transparent !important;
@@ -3240,17 +3684,20 @@ html.themeDark :is(.context-menu, .dropdown, .menu, .menu-container, .modal, .po
 
 /* 2. Жорстко форсуємо заокруглення ВСІХ 4-х кутів для контейнера та картинки */
 .blockCover .wrap,
-.blockCover .wrap > .cover {
+.blockCover .wrap>.cover {
     border-radius: 32px !important;
-    border-bottom-left-radius: 32px !important; /* Перебиваємо дефолтні 0px */
-    border-bottom-right-radius: 32px !important; /* Перебиваємо дефолтні 0px */
+    border-bottom-left-radius: 32px !important;
+    /* Перебиваємо дефолтні 0px */
+    border-bottom-right-radius: 32px !important;
+    /* Перебиваємо дефолтні 0px */
 }
 
 /* 3. Налаштування самої картинки */
-.blockCover .wrap > .cover {
+.blockCover .wrap>.cover {
     display: block !important;
     min-height: 400px !important;
-    margin-top: 0 !important; /* ВАЖЛИВО: прибираємо відступ звідси, бо він є на батьку */
+    margin-top: 0 !important;
+    /* ВАЖЛИВО: прибираємо відступ звідси, бо він є на батьку */
 }
 
 /* The button bar: strip sitting at the bottom of the cover */
@@ -3506,6 +3953,7 @@ html.themeDark .blockText.textCallout>.wrapContent.bgColor.bgColor-gray {
     flex-shrink: 0 !important;
     margin-top: 2px !important;
 }
+
 /* ==========================================================
    KANBAN CARD (.card.isPage) — Laconic & Minimalist
    ========================================================== */
@@ -3523,33 +3971,34 @@ html.themeDark .blockText.textCallout>.wrapContent.bgColor.bgColor-gray {
 /* 2. ГОЛОВНИЙ БЛОК КАРТКИ (Твій дизайн) */
 .card.isPage {
     background-color: var(--glass-panel-bg-light) !important;
-backdrop-filter: var(--glass-panel-blur) !important;
--webkit-backdrop-filter: var(--glass-panel-blur) !important;
+    backdrop-filter: var(--glass-panel-blur) !important;
+    -webkit-backdrop-filter: var(--glass-panel-blur) !important;
 
-/* Периметр (світлий) */
-border: var(--glass-panel-border-light) !important;
+    /* Периметр (світлий) */
+    border: var(--glass-panel-border-light) !important;
 
-/* Права межа (чіткіший розділювач) */
-border-right: var(--glass-panel-border-right-light) !important;
+    /* Права межа (чіткіший розділювач) */
+    border-right: var(--glass-panel-border-right-light) !important;
 
-/* Додатковий блиск на гранях для ефекту товстого скла */
-box-shadow: var(--glass-panel-shadow) !important;    border-radius: 20px !important;
+    /* Додатковий блиск на гранях для ефекту товстого скла */
+    box-shadow: var(--glass-panel-shadow) !important;
+    border-radius: 20px !important;
 
-    
+
     /* Робимо рамку тільки через тінь (inset) */
-  
-        
+
+
     transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease !important;
     cursor: pointer !important;
-    
+
     /* Важливо: обрізаємо контент по кутах, щоб внутрішні блоки не стирчали */
-    overflow: hidden !important; 
+    overflow: hidden !important;
 }
 
 /* Ховер ефект */
 .card.isPage:hover {
     background: #f8f8fb !important;
-    box-shadow: 
+    box-shadow:
         inset 0 0 0 1px var(--element-border-light-hover),
         0 8px 20px rgba(0, 0, 0, 0.06) !important;
     transform: translateY(-1.5px) !important;
@@ -3559,15 +4008,15 @@ box-shadow: var(--glass-panel-shadow) !important;    border-radius: 20px !import
 html.themeDark .card.isPage {
     background: var(--element-color-dark) !important;
     border: none !important;
-    box-shadow: 
-    inset 0 0 0 1px var(--element-border-dark),
+    box-shadow:
+        inset 0 0 0 1px var(--element-border-dark),
         0 4px 12px rgba(0, 0, 0, 0.22) !important;
 }
 
 html.themeDark .card.isPage:hover {
     background: #232326 !important;
-    box-shadow: 
-    inset 0 0 0 1px var(--element-border-dark-hover),
+    box-shadow:
+        inset 0 0 0 1px var(--element-border-dark-hover),
         0 8px 24px rgba(0, 0, 0, 0.32) !important;
 }
 
@@ -3689,8 +4138,8 @@ html.themeDark .blocks .block.blockDataview .viewContent.viewGallery .card.add:h
 /* Gallery cards: prevent hover zoom from being clipped by virtualized wrappers */
 .blocks .block.blockDataview .viewContent.viewGallery,
 .blocks .block.blockDataview .viewContent.viewGallery .galleryWrap,
-.blocks .block.blockDataview .viewContent.viewGallery .galleryWrap > div,
-.blocks .block.blockDataview .viewContent.viewGallery .galleryWrap > div > div,
+.blocks .block.blockDataview .viewContent.viewGallery .galleryWrap>div,
+.blocks .block.blockDataview .viewContent.viewGallery .galleryWrap>div>div,
 .blocks .block.blockDataview .viewContent.viewGallery .ReactVirtualized__Grid,
 .blocks .block.blockDataview .viewContent.viewGallery .ReactVirtualized__Grid__innerScrollContainer,
 .blocks .block.blockDataview .viewContent.viewGallery .row {
@@ -3711,7 +4160,7 @@ html.themeDark .blocks .block.blockDataview .viewContent.viewGallery .card.add:h
     display: none !important;
 }
 
-.blocks .block.blockDataview .dataviewControls.viewList > .sides > .side {
+.blocks .block.blockDataview .dataviewControls.viewList>.sides>.side {
     padding-top: 8px !important;
     padding-bottom: 8px !important;
 }
@@ -3804,8 +4253,8 @@ html.themeDark .blocks .block.blockDataview .viewContent.viewList .row.add .btn:
     margin-top: 0 !important;
 }
 
-.blocks .block.blockDataview .viewContent.viewGrid .row.add > .selectionTarget,
-.blocks .block.blockDataview .viewContent.viewGrid .row.add > .dropTarget > .selectionTarget {
+.blocks .block.blockDataview .viewContent.viewGrid .row.add>.selectionTarget,
+.blocks .block.blockDataview .viewContent.viewGrid .row.add>.dropTarget>.selectionTarget {
     display: flex !important;
     align-items: center !important;
     min-height: 48px !important;
@@ -3934,7 +4383,8 @@ html.themeDark .card.isPage .cellContent.c-name .name {
 
 .card.isPage .cellContent.c-object .wrap {
     display: flex !important;
-    flex-wrap: wrap !important; /* Дозволяємо тегам переноситись, якщо їх багато */
+    flex-wrap: wrap !important;
+    /* Дозволяємо тегам переноситись, якщо їх багато */
     gap: 4px !important;
 }
 
@@ -3944,17 +4394,17 @@ html.themeDark .card.isPage .cellContent.c-name .name {
     align-items: center !important;
     gap: 4px !important;
     max-width: 100% !important;
-    
+
     background: rgba(255, 255, 255, 0.42) !important;
     border: 1px solid rgba(255, 255, 255, 0.58) !important;
     border-radius: var(--rounded-panel-radius) !important;
-    
+
     padding: 2px 6px !important;
     font-size: 12px !important;
     font-weight: 500 !important;
     color: rgba(66, 66, 72, 0.86) !important;
     overflow: hidden !important;
-    
+
     transition: all 0.15s ease !important;
 }
 
@@ -4000,7 +4450,8 @@ html.themeDark .card.isPage .cellContent.c-object .element:hover {
 .card.isPage .cellContent.c-object .iconObject.c16 .iconImage {
     width: 16px !important;
     height: 16px !important;
-    border-radius: 9999px !important; /* Робимо їх ідеально круглими */
+    border-radius: 9999px !important;
+    /* Робимо їх ідеально круглими */
     object-fit: cover !important;
 }
 
@@ -4008,28 +4459,33 @@ html.themeDark .card.isPage .cellContent.c-object .element:hover {
 .card.isPage .icon.objectRemove {
     display: none !important;
 }
+
 /* --- ПРИБИРАЄМО ТУПІ БОРДЕРИ ТА OUTLINE ПРИ ФОКУСІ --- */
-input:focus, 
-textarea:focus, 
-select:focus, 
+input:focus,
+textarea:focus,
+select:focus,
 [contenteditable="true"]:focus,
 .focusable:focus {
     outline: none !important;
     border-color: transparent !important;
-    box-shadow: none !important; /* Прибираємо синє або сіре світіння */
+    box-shadow: none !important;
+    /* Прибираємо синє або сіре світіння */
 }
 
 /* Замість бордера додаємо м'яку зміну фону, щоб було зрозуміло, де ми пишемо */
-input, textarea, select {
+input,
+textarea,
+select {
     border: none !important;
     transition: background-color 0.2s ease !important;
 }
 
-input:focus, textarea:focus {
+input:focus,
+textarea:focus {
     background-color: var(--hover-light) !important;
 }
 
-html.themeDark input:focus, 
+html.themeDark input:focus,
 html.themeDark textarea:focus {
     background-color: var(--hover-dark) !important;
 }
@@ -4193,31 +4649,33 @@ html.themeDark .item.isSelected .tagItem {
 }
 
 /* --- ФІКС ВІДСТУПІВ У RELATIONS (Властивості об'єктів) --- */
-.cell .element .flex, 
+.cell .element .flex,
 .cellContent .element .flex {
-    gap: 10px !important; /* М'який відступ між іконкою, текстом і хрестиком */
+    gap: 10px !important;
+    /* М'який відступ між іконкою, текстом і хрестиком */
 }
 
 /* Робимо іконку в цих полях трохи акуратнішою */
 .cell .element .iconObject.c20,
 .cell .element .iconImage.c20 {
-    border-radius: 6px !important; 
+    border-radius: 6px !important;
     box-shadow: none !important;
 }
 
 /* Легке візуальне вирівнювання тексту */
 .cell .element .name span {
-    font-weight: 500 !important; /* Material You любить medium начерк для списків */
+    font-weight: 500 !important;
+    /* Material You любить medium начерк для списків */
     letter-spacing: -0.01em !important;
 }
 
 /* --- RELATION CELL FIX: NO CLIP + SCALE --- */
 
-.cell.c-object, 
+.cell.c-object,
 .cellContent.c-object,
 .cellContent .wrap {
     /* Дозволяємо контенту виходити за межі комірки */
-    overflow: visible !important; 
+    overflow: visible !important;
 }
 
 .cell.c-object .element {
@@ -4225,16 +4683,17 @@ html.themeDark .item.isSelected .tagItem {
     display: inline-flex !important;
     align-items: center !important;
     will-change: transform;
-    
+
     /* Дешеве рішення: додаємо мікро-паддінг, щоб scale мав куди рости */
-    padding: 2px 4px !important; 
+    padding: 2px 4px !important;
     position: relative !important;
     z-index: 1 !important;
 }
 
 .cell.c-object .element:hover {
     transform: scale(1.05) !important;
-    z-index: 10 !important; /* Піднімаємо над іншими рядками */
+    z-index: 10 !important;
+    /* Піднімаємо над іншими рядками */
     cursor: pointer !important;
 }
 
@@ -4264,7 +4723,7 @@ html.themeDark .item.isSelected .tagItem {
 }
 
 /* 2. Дозволяємо вихід за межі (щоб scale не обрізався) */
-.cellContent.c-select, 
+.cellContent.c-select,
 .cellContent.isSelect,
 .cellContent.c-select .wrap,
 .cellContent.isSelect .wrap,
@@ -4296,12 +4755,12 @@ html.themeDark .item.isSelected .tagItem {
 
 
 /* Контейнер у таблицях — просто потік елементів */
-.cell.dataviewCell .over, 
+.cell.dataviewCell .over,
 .cell.c-select .over {
     display: flex !important;
     flex-wrap: nowrap !important;
     overflow: hidden !important;
-}   
+}
 
 .blocks .block.blockDataview .viewContent.viewGrid .cell.c-object,
 .blocks .block.blockDataview .viewContent.viewGrid .cell.c-object .over,
@@ -4357,19 +4816,20 @@ html.themeDark .item.isSelected .tagItem {
     display: inline-flex !important;
     align-items: center !important;
     justify-content: center !important;
-    gap: 8px !important; /* Відступ між іконкою плюса та текстом */
-    
+    gap: 8px !important;
+    /* Відступ між іконкою плюса та текстом */
+
     /* 2. Геометрія пігулки */
     height: 32px !important;
     padding: 0 16px !important;
     border-radius: var(--rounded-panel-radius) !important;
-    
+
     /* 3. macOS Glassmorphism Стиль */
     background: var(--glass-bg-light) !important;
     border: 1px solid var(--glass-border-light) !important;
     backdrop-filter: var(--glass-blur) !important;
     -webkit-backdrop-filter: var(--glass-blur) !important;
-    
+
     /* 4. Текст */
     font-size: 13px !important;
     font-weight: 500 !important;
@@ -4386,14 +4846,15 @@ html.themeDark .btn {
 }
 
 /* Вирівнювання іконки "+" всередині кнопки */
-.btn .icon.plus, 
+.btn .icon.plus,
 .btn .icon {
     width: 16px !important;
     height: 16px !important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
-    margin: 0 !important; /* Скидаємо криві відступи */
+    margin: 0 !important;
+    /* Скидаємо криві відступи */
     padding: 0 !important;
 }
 
@@ -4435,24 +4896,24 @@ html.themeDark .btn:hover {
 }
 
 /* Спільна геометрія для блоку дій у Space: однакова в обох темах */
-.widgetSpace .spaceData > .buttons {
+.widgetSpace .spaceData>.buttons {
     display: flex !important;
     flex-direction: column !important;
     gap: 2px !important;
     border-radius: 20px !important;
     padding: 6px !important;
-       transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.22s ease, border-color 0.22s ease, box-shadow 0.25s ease !important;
+    transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.22s ease, border-color 0.22s ease, box-shadow 0.25s ease !important;
     isolation: isolate !important;
 
 }
 
 /* Використовуємо точну ієрархію, щоб стилізувати тільки блок у Space */
-html:not(.themeDark) .widgetSpace .spaceData > .buttons {
+html:not(.themeDark) .widgetSpace .spaceData>.buttons {
     background-color: transparent !important;
     backdrop-filter: none !important;
     -webkit-backdrop-filter: none !important;
     box-shadow: none !important;
-        background-color: rgba(255, 255, 255, 0.40) !important;
+    background-color: rgba(255, 255, 255, 0.40) !important;
     border: 1px solid rgba(255, 255, 255, 0.42) !important;
     box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.52), 0 10px 28px rgba(0, 0, 0, 0.06) !important;
     backdrop-filter: var(--glass-blur) !important;
@@ -4460,7 +4921,7 @@ html:not(.themeDark) .widgetSpace .spaceData > .buttons {
 }
 
 /* Темна тема */
-html.themeDark .widgetSpace .spaceData > .buttons {
+html.themeDark .widgetSpace .spaceData>.buttons {
     background: rgba(42, 42, 46, 0.32) !important;
     border: var(--glass-panel-border-dark) !important;
     box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05), 0 12px 30px rgba(0, 0, 0, 0.28) !important;
@@ -4471,11 +4932,10 @@ html.themeDark .widgetSpace .spaceData > .buttons {
 }
 
 /* Ховер на весь віджет (твій скейл) */
-html:not(.themeDark) .widgetSpace .spaceData > .buttons:hover {
-}
+html:not(.themeDark) .widgetSpace .spaceData>.buttons:hover {}
 
 /* Елементи всередині (Створити / Пошук) */
-.widgetSpace .spaceData > .buttons .item {
+.widgetSpace .spaceData>.buttons .item {
     height: 40px !important;
     display: flex !important;
     align-items: center !important;
@@ -4492,7 +4952,7 @@ html:not(.themeDark) .widgetSpace .spaceData > .buttons:hover {
     transition: background-color 0.22s ease, border-color 0.22s ease, box-shadow 0.22s ease, transform 0.22s ease !important;
 }
 
-.widgetSpace .spaceData > .buttons .item .icon {
+.widgetSpace .spaceData>.buttons .item .icon {
     width: 20px !important;
     height: 20px !important;
     min-width: 20px !important;
@@ -4502,7 +4962,7 @@ html:not(.themeDark) .widgetSpace .spaceData > .buttons:hover {
     flex-shrink: 0 !important;
 }
 
-.widgetSpace .spaceData > .buttons .item .label {
+.widgetSpace .spaceData>.buttons .item .label {
     padding-left: 12px !important;
     font-weight: 500 !important;
     letter-spacing: -0.2px !important;
@@ -4510,13 +4970,13 @@ html:not(.themeDark) .widgetSpace .spaceData > .buttons:hover {
     flex: 1 1 auto !important;
 }
 
-.widgetSpace .spaceData > .buttons .item .icon.arrow.withBackground {
+.widgetSpace .spaceData>.buttons .item .icon.arrow.withBackground {
     margin-left: 12px !important;
 }
 
-html:not(.themeDark) .widgetSpace .spaceData > .buttons .item:hover,
-html:not(.themeDark) .widgetSpace .spaceData > .buttons .item.hover,
-html:not(.themeDark) .widgetSpace .spaceData > .buttons .item.active {
+html:not(.themeDark) .widgetSpace .spaceData>.buttons .item:hover,
+html:not(.themeDark) .widgetSpace .spaceData>.buttons .item.hover,
+html:not(.themeDark) .widgetSpace .spaceData>.buttons .item.active {
     background-color: var(--glass-item-bg-light-hover) !important;
     backdrop-filter: var(--glass-blur) !important;
     -webkit-backdrop-filter: var(--glass-blur) !important;
@@ -4524,9 +4984,9 @@ html:not(.themeDark) .widgetSpace .spaceData > .buttons .item.active {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04) !important;
 }
 
-html.themeDark .widgetSpace .spaceData > .buttons .item:hover,
-html.themeDark .widgetSpace .spaceData > .buttons .item.hover,
-html.themeDark .widgetSpace .spaceData > .buttons .item.active {
+html.themeDark .widgetSpace .spaceData>.buttons .item:hover,
+html.themeDark .widgetSpace .spaceData>.buttons .item.hover,
+html.themeDark .widgetSpace .spaceData>.buttons .item.active {
     background: rgba(32, 32, 36, 0.82) !important;
     border: var(--glass-panel-border-dark) !important;
     box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.05), 0 6px 16px rgba(0, 0, 0, 0.24) !important;
@@ -4542,7 +5002,7 @@ html.themeDark .widgetSpace .spaceData > .buttons .item.active {
 /* WIDGET VIEW LISTS — HEADER + COMPACT ITEMS */
 .widget.widgetView {
     border-radius: 20px !important;
-    overflow: hidden !important;
+    overflow: clip !important;
     isolation: isolate !important;
     position: relative !important;
     transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.22s ease, border-color 0.22s ease, box-shadow 0.25s ease !important;
@@ -4600,15 +5060,19 @@ html.themeDark .widget.widgetView.isPreview.active {
 }
 
 html:not(.themeDark) .widget.widgetView:not(.isPreview):not(.isClosed) {
-    background-color: rgba(255, 255, 255, 0.5) !important;
-    border-color: rgba(255, 255, 255, 0.28) !important;
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.34) !important;
+    background-color: rgba(255, 255, 255, 0.50) !important;
+    border: 1px solid rgba(255, 255, 255, 0.42) !important;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.52), 0 10px 28px rgba(0, 0, 0, 0.06) !important;
+    backdrop-filter: var(--glass-blur) !important;
+    -webkit-backdrop-filter: var(--glass-blur) !important;
 }
 
 html.themeDark .widget.widgetView:not(.isPreview):not(.isClosed) {
-    background-color: rgba(42, 42, 46, 0.50) !important;
-    border-color: rgba(255, 255, 255, 0.00) !important;
-    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18) !important;
+    background: rgba(42, 42, 46, 0.40) !important;
+    border: var(--glass-panel-border-dark) !important;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05), 0 12px 30px rgba(0, 0, 0, 0.28) !important;
+    backdrop-filter: var(--glass-blur) !important;
+    -webkit-backdrop-filter: var(--glass-blur) !important;
 }
 
 .widget.widgetView.isPreview .viewList .body .ReactVirtualized__Grid__innerScrollContainer {
@@ -5004,7 +5468,7 @@ html.themeDark .widget.widgetView .viewTimeline .body .item.active::before {
     transition: background-color 0.22s ease, border-color 0.22s ease, box-shadow 0.22s ease !important;
 }
 
-.widget.widgetView:not(.isPreview) .body.isCompact + #button-show-all {
+.widget.widgetView:not(.isPreview) .body.isCompact+#button-show-all {
     margin-top: 0 !important;
     margin-bottom: 0 !important;
 }
@@ -5279,16 +5743,16 @@ html.themeDark .widget.widgetTree .head .side.right .iconWrap.create {
 }
 
 /* Ховер на рядки в дереві */
-.widget.widgetTree .item:hover > .inner,
-.widget.widgetTree .item:hover > .dropTarget > .inner {
+.widget.widgetTree .item:hover>.inner,
+.widget.widgetTree .item:hover>.dropTarget>.inner {
     border-color: rgba(255, 255, 255, 0.1) !important;
 }
 
-html:not(.themeDark) .widget.widgetTree .item:hover > .inner {
+html:not(.themeDark) .widget.widgetTree .item:hover>.inner {
     background: rgba(0, 0, 0, 0.04) !important;
 }
 
-html.themeDark .widget.widgetTree .item:hover > .inner {
+html.themeDark .widget.widgetTree .item:hover>.inner {
     background: rgba(255, 255, 255, 0.05) !important;
 }
 
@@ -5436,13 +5900,15 @@ html.themeDark .buttonWrap.withSelect #button-dataview-add-record-select.active 
 .item .buttons {
     display: none !important;
 }
+
 /* ============================================================
    AUTH PIN SCREEN — iOS 26 / macOS Tahoe Style
    ============================================================ */
 
 .pageAuthPinCheck .frame {
     width: min(620px, calc(100vw - 48px)) !important;
-    padding: 40px 0 !important; /* Додав вертикальні відступи */
+    padding: 40px 0 !important;
+    /* Додав вертикальні відступи */
     background: transparent !important;
     border: 0 !important;
     box-shadow: none !important;
@@ -5452,9 +5918,11 @@ html.themeDark .buttonWrap.withSelect #button-dataview-add-record-select.active 
 
 /* --- TITLE --- */
 .pageAuthPinCheck .title {
-    font-size: 26px !important; /* Трохи менше, але виразніше */
+    font-size: 26px !important;
+    /* Трохи менше, але виразніше */
     line-height: 1.2 !important;
-    letter-spacing: -0.04em !important; /* Фірмове стиснення Apple */
+    letter-spacing: -0.04em !important;
+    /* Фірмове стиснення Apple */
     font-weight: 700 !important;
     color: var(--element-color-dark) !important;
     text-align: center !important;
@@ -5475,27 +5943,29 @@ html.themeDark .pageAuthPinCheck .title {
 /* --- INDIVIDUAL INPUT UNIT --- */
 .pageAuthPinCheck .pin .input {
     width: 100% !important;
-    height: 90px !important; /* Трохи компактніше для елегантності */
+    height: 90px !important;
+    /* Трохи компактніше для елегантності */
     border-radius: var(--m-panel-radius, 18px) !important;
-    
+
     /* Світла тема: Рідке скло */
     background: var(--glass-bg-light, rgba(255, 255, 255, 0.75)) !important;
     backdrop-filter: var(--glass-blur, blur(24px)) !important;
     -webkit-backdrop-filter: var(--glass-blur, blur(24px)) !important;
-    
+
     border: 1px solid var(--glass-border-light) !important;
-    
+
     /* Складний ефект: Зовнішня тінь + Внутрішній блік зверху */
-    box-shadow: 
-        inset 0 1px 1px rgba(255, 255, 255, 0.6), 
+    box-shadow:
+        inset 0 1px 1px rgba(255, 255, 255, 0.6),
         0 4px 12px rgba(0, 0, 0, 0.04) !important;
-        
+
     color: var(--element-color-dark) !important;
     font-size: 32px !important;
     font-weight: 600 !important;
     text-align: center !important;
-    caret-color: #007AFF !important; /* Синій курсор Apple */
-    
+    caret-color: #007AFF !important;
+    /* Синій курсор Apple */
+
     transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1) !important;
 }
 
@@ -5504,9 +5974,9 @@ html.themeDark .pageAuthPinCheck .pin .input {
     background: var(--glass-bg-dark, rgba(30, 30, 32, 0.75)) !important;
     border: 1px solid var(--glass-border-dark) !important;
     color: #ffffff !important;
-    
-    box-shadow: 
-        inset 0 1px 1px rgba(255, 255, 255, 0.1), 
+
+    box-shadow:
+        inset 0 1px 1px rgba(255, 255, 255, 0.1),
         0 8px 24px rgba(0, 0, 0, 0.3) !important;
 }
 
@@ -5527,11 +5997,12 @@ html.themeDark .pageAuthPinCheck .pin .input:hover {
 .pageAuthPinCheck .pin .input.isFocused {
     background: #ffffff !important;
     border-color: #007AFF !important;
-    transform: scale(1.02) !important; /* Легке збільшення замість зміщення */
-    
+    transform: scale(1.02) !important;
+    /* Легке збільшення замість зміщення */
+
     /* М'яке блакитне сяйво (Halo effect) */
-    box-shadow: 
-        0 0 0 4px rgba(0, 122, 255, 0.15), 
+    box-shadow:
+        0 0 0 4px rgba(0, 122, 255, 0.15),
         0 12px 28px rgba(0, 0, 0, 0.08) !important;
     outline: none !important;
 }
@@ -5540,8 +6011,8 @@ html.themeDark .pageAuthPinCheck .pin .input:focus,
 html.themeDark .pageAuthPinCheck .pin .input.isFocused {
     background: #1c1c1e !important;
     border-color: #0A84FF !important;
-    box-shadow: 
-        0 0 0 4px rgba(10, 132, 255, 0.2), 
+    box-shadow:
+        0 0 0 4px rgba(10, 132, 255, 0.2),
         0 14px 32px rgba(0, 0, 0, 0.4) !important;
 }
 
@@ -5565,7 +6036,7 @@ html.themeDark .pageAuthPinCheck .pin .input.isFocused {
         border-radius: 14px !important;
     }
 }
-        
+
 /* --- Universal Big Icon Style (iOS 26 / macOS Tahoe) --- */
 /* ============================================================
    SHARED STYLES (Спільне для всіх великих іконок)
@@ -5595,7 +6066,10 @@ html.themeDark .pageAuthPinCheck .pin .input.isFocused {
 .iconObject.c128::after {
     content: "" !important;
     position: absolute !important;
-    top: 0; left: 0; right: 0; bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     border-radius: var(--m-panel-radius, 22%) !important;
     border: 1px solid rgba(255, 255, 255, 0.0) !important;
     pointer-events: none !important;
@@ -5614,15 +6088,18 @@ html.themeDark .pageAuthPinCheck .pin .input.isFocused {
    ============================================================ */
 
 .iconObject.c64 {
-    margin-top: 12px !important; /* Наприклад, для середньої іконки */
+    margin-top: 12px !important;
+    /* Наприклад, для середньої іконки */
 }
 
 .iconObject.c96 {
-    margin-top: 40px !important; /* Для великої іконки сторінки */
+    margin-top: 40px !important;
+    /* Для великої іконки сторінки */
 }
 
 .iconObject.c128 {
-    margin-top: 18px !important; /* Для супер-великої іконки */
+    margin-top: 18px !important;
+    /* Для супер-великої іконки */
 }
 
 /* ============================================================
@@ -5634,19 +6111,19 @@ html.themeDark .pageAuthPinCheck .pin .input.isFocused {
     width: 32px !important;
     height: 32px !important;
     min-width: 32px !important;
-    
+
     /* Центруємо іконку всередині, не змінюючи її власні стилі */
     display: inline-flex !important;
     align-items: center !important;
     justify-content: center !important;
-    
+
     /* Форма хавера */
     border-radius: 50% !important;
-    
+
     /* Скидаємо лише те, що заважає колу */
     padding: 0 !important;
     margin: 0 2px !important;
-    
+
     /* Фон у спокої прозорий */
     background-color: transparent !important;
     transition: background-color 0.2s ease !important;
@@ -5709,7 +6186,8 @@ html.themeDark [id^="button-dataview-"]:hover {
     justify-content: center !important;
     width: 28px !important;
     min-width: 28px !important;
-    opacity: 0 !important; /* Ховаємо, поки не навели мишку */
+    opacity: 0 !important;
+    /* Ховаємо, поки не навели мишку */
     transition: opacity 0.2s ease !important;
 }
 
@@ -5724,18 +6202,20 @@ html.themeDark [id^="button-dataview-"]:hover {
     visibility: visible !important;
     width: 20px !important;
     height: 20px !important;
-    
+
     /* Задаємо колір іконки */
-    background-color: #8e8e93 !important; /* Базовий сірий колір (iOS стиль) */
-    background-image: none !important; /* Вбиваємо старий бекграунд, якщо він поламаний */
-    
+    background-color: #8e8e93 !important;
+    /* Базовий сірий колір (iOS стиль) */
+    background-image: none !important;
+    /* Вбиваємо старий бекграунд, якщо він поламаний */
+
     /* Вставляємо кастомне SVG-зображення як маску */
     -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='1'/%3E%3Ccircle cx='19' cy='12' r='1'/%3E%3Ccircle cx='5' cy='12' r='1'/%3E%3C/svg%3E") !important;
     -webkit-mask-size: 16px !important;
     -webkit-mask-repeat: no-repeat !important;
     -webkit-mask-position: center !important;
     mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='1'/%3E%3Ccircle cx='19' cy='12' r='1'/%3E%3Ccircle cx='5' cy='12' r='1'/%3E%3C/svg%3E") !important;
-    
+
     cursor: pointer !important;
     border-radius: 4px !important;
     transition: background-color 0.2s ease !important;
@@ -5743,7 +6223,7 @@ html.themeDark [id^="button-dataview-"]:hover {
 
 /* 3. Ефект при наведенні саме на іконку (робимо її темнішою/світлішою) */
 .menuDataviewOptionList .item .buttons .icon.more:hover {
-    background-color: #1c1c1e !important; 
+    background-color: #1c1c1e !important;
 }
 
 /* Адаптація для темної теми */
@@ -5769,7 +6249,8 @@ html.themeDark .menuDataviewOptionList .item .buttons .icon.more:hover {
 .menuDataviewOptionEdit .section.colorPicker .items {
     display: flex !important;
     flex-wrap: wrap !important;
-    gap: 8px !important; /* Відстань між кружечками */
+    gap: 8px !important;
+    /* Відстань між кружечками */
     justify-content: center !important;
     padding: 4px !important;
 }
@@ -5778,10 +6259,13 @@ html.themeDark .menuDataviewOptionList .item .buttons .icon.more:hover {
 .menuDataviewOptionEdit .section.colorPicker .item.color {
     width: 24px !important;
     height: 24px !important;
-    border-radius: 50% !important; /* Робимо коло */
-    min-width: unset !important; /* Скидаємо прямокутну ширину Anytype */
+    border-radius: 50% !important;
+    /* Робимо коло */
+    min-width: unset !important;
+    /* Скидаємо прямокутну ширину Anytype */
     margin: 0 !important;
-    border: 1px solid rgba(0, 0, 0, 0.05) !important; /* Легкий контур, щоб світлі кольори не зливалися */
+    border: 1px solid rgba(0, 0, 0, 0.05) !important;
+    /* Легкий контур, щоб світлі кольори не зливалися */
     transition: transform 0.2s ease, box-shadow 0.2s ease !important;
 }
 
@@ -5791,13 +6275,14 @@ html.themeDark .menuDataviewOptionEdit .section.colorPicker .item.color {
 
 /* 4. Гарний "скляний" ефект для АКТИВНОГО (selected) кольору */
 .menuDataviewOptionEdit .section.colorPicker .item.color.selected {
-    transform: scale(1.1) !important; /* Трішки збільшуємо активний */
+    transform: scale(1.1) !important;
+    /* Трішки збільшуємо активний */
     /* Створюємо напівпрозоре скляне кільце навколо кружечка */
-    box-shadow: 0 0 0 4px var(--element-border-light-hover), 0 2px 6px rgba(0,0,0,0.1) !important;
+    box-shadow: 0 0 0 4px var(--element-border-light-hover), 0 2px 6px rgba(0, 0, 0, 0.1) !important;
 }
 
 html.themeDark .menuDataviewOptionEdit .section.colorPicker .item.color.selected {
-    box-shadow: 0 0 0 4px var(--element-border-dark-hover), 0 2px 6px rgba(0,0,0,0.4) !important;
+    box-shadow: 0 0 0 4px var(--element-border-dark-hover), 0 2px 6px rgba(0, 0, 0, 0.4) !important;
 }
 
 /* 5. Легкий ефект при наведенні на інші кольори */
@@ -5820,7 +6305,8 @@ html.themeDark .menuDataviewOptionEdit .section.colorPicker .item.color:hover:no
 .viewBoard .column .head .bgColor {
     border-top-left-radius: 16px !important;
     border-top-right-radius: 16px !important;
-    opacity: 1 !important; /* Підвищуємо контрастність (за замовчуванням вона дуже бліда) */
+    opacity: 1 !important;
+    /* Підвищуємо контрастність (за замовчуванням вона дуже бліда) */
     transition: opacity 0.3s ease !important;
 }
 
@@ -5828,13 +6314,15 @@ html.themeDark .menuDataviewOptionEdit .section.colorPicker .item.color:hover:no
 .viewBoard .column .body .bg .bgColor {
     border-bottom-left-radius: 16px !important;
     border-bottom-right-radius: 16px !important;
-    opacity: 1 !important; /* Тіло робимо ледь світлішим за шапку для візуального об'єму */
+    opacity: 1 !important;
+    /* Тіло робимо ледь світлішим за шапку для візуального об'єму */
     transition: opacity 0.3s ease !important;
 }
 
 /* 3. Адаптація контрастності для ТЕМНОЇ ТЕМИ */
 html.themeDark .viewBoard .column .head .bgColor {
-    opacity: 1 !important; /* У темній темі кольори потребують трохи більшої непрозорості */
+    opacity: 1 !important;
+    /* У темній темі кольори потребують трохи більшої непрозорості */
 }
 
 html.themeDark .viewBoard .column .body .bg .bgColor {
@@ -5846,6 +6334,7 @@ html.themeDark .viewBoard .column .body .bg .bgColor {
 .viewBoard .column:hover .head .bgColor {
     opacity: 1 !important;
 }
+
 .viewBoard .column:hover .body .bg .bgColor {
     opacity: 1 !important;
 }
@@ -5853,6 +6342,7 @@ html.themeDark .viewBoard .column .body .bg .bgColor {
 html.themeDark .viewBoard .column:hover .head .bgColor {
     opacity: 1 !important;
 }
+
 html.themeDark .viewBoard .column:hover .body .bg .bgColor {
     opacity: 1 !important;
 }
@@ -5864,17 +6354,17 @@ html.themeDark .viewBoard .column:hover .body .bg .bgColor {
 
 /* --- СВІТЛА ТЕМА --- */
 html:not(.themeDark) .viewBoard .column.withColor .card.isPage {
-    background-color: rgba(255, 255, 255, 0.55) !important; 
-    border: 1px solid rgba(255, 255, 255, 0.25) !important; 
+    background-color: rgba(255, 255, 255, 0.55) !important;
+    border: 1px solid rgba(255, 255, 255, 0.25) !important;
 
     isolation: isolate;
     transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.22s ease, border-color 0.22s ease, box-shadow 0.25s ease, backdrop-filter 0.2s ease !important;
 }
 
 html:not(.themeDark) .viewBoard .column.withColor .card.isPage:hover {
-    background-color: rgba(255, 255, 255, 0.75) !important; 
+    background-color: rgba(255, 255, 255, 0.75) !important;
     transform: scale(1.03) !important;
-    border: 0px solid rgba(255, 255, 255, 0.0) !important; 
+    border: 0px solid rgba(255, 255, 255, 0.0) !important;
 
 
     z-index: 10 !important;
@@ -5891,11 +6381,11 @@ html.themeDark .viewBoard .column.withColor .card.isPage {
 }
 
 html.themeDark .viewBoard .column.withColor .card.isPage:hover {
-    background: rgba(255, 255, 255, 0.12) !important; 
+    background: rgba(255, 255, 255, 0.12) !important;
     transform: scale(1.03) !important;
-    border: 0px solid rgba(255, 255, 255, 0.15) !important; 
+    border: 0px solid rgba(255, 255, 255, 0.15) !important;
 
-    backdrop-filter: blur(20px) saturate(130%) !important; 
+    backdrop-filter: blur(20px) saturate(130%) !important;
     -webkit-backdrop-filter: blur(20px) saturate(130%) !important;
     z-index: 10 !important;
 }
@@ -5922,11 +6412,14 @@ html.themeDark .blocks .block.blockDataview .viewContent.viewBoard .column.withC
 /* ЗАГАЛЬНІ ЕФЕКТИ ПРИ ХОВЕРІ (Плавність Apple) */
 .viewBoard .column.withColor .card.add:hover {
     opacity: 1 !important;
-    transform: translateY(-1px) scale(1.01) !important; /* Більш спокійна анімація */
-    backdrop-filter: blur(20px) saturate(120%) !important; /* М'якіша насиченість */
+    transform: translateY(-1px) scale(1.01) !important;
+    /* Більш спокійна анімація */
+    backdrop-filter: blur(20px) saturate(120%) !important;
+    /* М'якіша насиченість */
     -webkit-backdrop-filter: blur(20px) saturate(120%) !important;
     z-index: 10 !important;
-box-shadow: none !important; /* Прибираємо тінь, щоб не було надмірного ефекту */
+    box-shadow: none !important;
+    /* Прибираємо тінь, щоб не було надмірного ефекту */
 }
 
 /* СПІЛЬНА БАЗА ДЛЯ ІКОНОК (Add & More) */
@@ -5943,16 +6436,16 @@ box-shadow: none !important; /* Прибираємо тінь, щоб не бу�
     border-radius: 50% !important;
     width: 24px !important;
     height: 24px !important;
-    
+
     /* Анімації */
-    transition: 
-        opacity 0.2s ease, 
-        transform 0.15s cubic-bezier(0.2, 0, 0, 1), 
+    transition:
+        opacity 0.2s ease,
+        transform 0.15s cubic-bezier(0.2, 0, 0, 1),
         background-color 0.2s ease,
         backdrop-filter 0.2s ease !important;
 
     /* Світла тема (за замовчуванням): робимо іконку чорною */
-    filter: brightness(0) !important; 
+    filter: brightness(0) !important;
     opacity: 0.2 !important;
 }
 
@@ -5967,12 +6460,14 @@ html.themeDark .viewBoard .column.withColor .head .icon.more {
 .viewBoard .column.withColor .icon.add:hover,
 .viewBoard .column.withColor .head .icon.more:hover {
     opacity: 0.7 !important;
-    background-color: rgba(0, 0, 0, 0.05) !important; /* Легка тінь для світлої */
+    background-color: rgba(0, 0, 0, 0.05) !important;
+    /* Легка тінь для світлої */
 }
 
 html.themeDark .viewBoard .column.withColor .icon.add:hover,
 html.themeDark .viewBoard .column.withColor .head .icon.more:hover {
-    background-color: rgba(255, 255, 255, 0.15) !important; /* Світлий відблиск для темної */
+    background-color: rgba(255, 255, 255, 0.15) !important;
+    /* Світлий відблиск для темної */
 }
 
 /* 4. СТАН ПРИ НАТИСКАННІ */
@@ -5988,6 +6483,7 @@ html.themeDark .viewBoard .column.withColor .icon.add,
 html.themeDark .viewBoard .column.withColor .head .icon.more {
     opacity: 0.4 !important;
 }
+
 html.themeDark .viewBoard .column.withColor .icon.add:hover,
 html.themeDark .viewBoard .column.withColor .head .icon.more:hover {
     opacity: 1 !important;
@@ -5997,6 +6493,7 @@ html.themeDark .viewBoard .column.withColor .head .icon.more:hover {
 .viewBoard .column.withColor .head .icon.more {
     background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='m27.9996662 22.2 2.6132495 3.9198743c.9621719 1.4432578.5721747 3.3932439-.8710831 4.3554158-.5159208.3439472-1.1221068.5274855-1.7421664.5274855-1.73458 0-3.140735-1.4061549-3.140735-3.140735 0-.6200596.1835383-1.2262456.5274855-1.7421663zm-5.1861788-12.83119422c4.4910294 4.49102932 6.6764277 9.84225252 4.7238062 11.79487402-.1409463.1409463-.2996006.2603318-.4743613.3588458l-11.2859854 7.9273491c-1.9300694 1.4301953-4.5934806 1.2808401-6.35036118-.3267591l-.16200166-.1549809-6.05042559-6.0504256c-1.69862095-1.6986209-1.94278878-4.3550186-.61783908-6.3202401l.12881455-.1821643 8.04691746-11.14655466c.1023446-.18285504.2268435-.34880774.3741741-.49613834 1.9526215-1.95262145 7.1762326.10516473 11.6672619 4.59619408zm5.1861788 16.43696982-.9491489 1.4234991c-.099939.1499085-.1625907.3207994-.1836538.4984668l-.0079323.1342991c0 .6300106.5107245 1.140735 1.140735 1.140735.2252096 0 .4453803-.0666623.632766-.1915861.5242004-.349467.6658499-1.0577144.3163829-1.5819148zm-17.2809224-17.04429882-6.37941578 8.83460112c-.849536 1.1464612-.77020153 2.7241714.16738123 3.7784306l.12166278.1289871 6.05042557 6.0504256c1.0089809 1.0089808 2.5811919 1.1626559 3.7801168.3772826l9.0811485-6.3774237c-2.3428022-.7078688-5.2127092-2.5289724-7.7976433-5.1139065-2.5696096-2.5696096-4.3426417-5.3790464-5.0236758-7.67839682zm1.8852557-2.61104977-.1369925.18869214c-.1529673.38962924-.0896715 1.28391391.4217633 2.5821715.7494529 1.90245745 2.2660792 4.10258565 4.2678629 6.10436935 3.5792427 3.5792427 7.6081813 5.3335805 8.7754925 4.8475925l.2153702-.1531105.0232414-.0258727c.7112184-.951876-1.0366015-5.176388-4.7714635-8.91125-2.0017836-2.00178364-4.2019119-3.51840989-6.1043693-4.26786283-1.4389022-.56684024-2.3815629-.58318529-2.690905-.36472946z' fill='white' stroke='white' stroke-width='1.2' stroke-linejoin='round'/%3E%3C/svg%3E") !important;
 }
+
 .viewBoard .column.withColor .icon.add {
     background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4 12H20M12 4V20' stroke='white' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") !important;
 }
@@ -6019,17 +6516,18 @@ html.themeDark .viewBoard .column.withColor .head .icon.more:hover {
     box-shadow: none !important;
     backdrop-filter: none !important;
     -webkit-backdrop-filter: none !important;
-    font-weight: 600 !important; /* Трохи жирніше для кращої читабельності */
+    font-weight: 600 !important;
+    /* Трохи жирніше для кращої читабельності */
     /* Знімаємо глобальний чорно-білий фільтр */
-    filter: none !important; 
-    
+    filter: none !important;
+
     /* Робимо злегка прозорим до наведення */
-    opacity: 0.8 !important; 
-    
+    opacity: 0.8 !important;
+
     /* Фіксуємо позицію та точку збільшення */
     transform: scale(1) translateY(0) !important;
-    transform-origin: left center !important; 
-    
+    transform-origin: left center !important;
+
     transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.2s ease !important;
 }
 
@@ -6041,8 +6539,1093 @@ html.themeDark .viewBoard .column.withColor .head .icon.more:hover {
 html.themeDark .blocks .blockDataview .viewBoard .column.withColor .head .tagItem:hover {
     background: transparent !important;
     background-color: transparent !important;
-    opacity: 1 !important; 
-    transform: scale(1.03) translateY(0) !important; }
+    opacity: 1 !important;
+    transform: scale(1.03) translateY(0) !important;
+}
 
+/* =========================================
+   DATAVIEW TABLE: ЗАБОРОНА СТИСКАННЯ ТЕГІВ
+   Теги не повинні зменшуватись, зайві ховаються (overflow)
+   ========================================= */
+.cell.c-select.isMultiSelect .wrap .over {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    overflow: hidden !important;
+    align-items: center !important;
+    gap: 4px !important;
+}
 
-    
+.cell.c-select.isMultiSelect .wrap .over .tagItem {
+    flex-shrink: 0 !important;
+    max-width: none !important;
+}
+
+.cell.c-select.isMultiSelect .wrap .over .tagItem .inner {
+    white-space: nowrap !important;
+}
+
+/* =========================================
+   WIDGET VIEW: "SEE ALL" BUTTON FIX
+   Забезпечуємо, щоб кнопка "See All" завжди була внизу списку
+   ========================================= */
+/* =========================================
+   WIDGET VIEW: PERFECTED "SEE ALL" BUTTON FIX
+   ========================================= */
+
+/* Задаємо напрямок колонки, але НЕ чіпаємо display (щоб не зламати приховування/відкриття віджета) */
+.contentWrapper .innerWrap.viewList,
+.widget+.contentWrapper .innerWrap {
+    flex-direction: column !important;
+}
+
+/* Прибираємо розтягування і ховаємо тільки те, що вилазить у закритому/компактному стані */
+body .widgetView .body.isCompact {
+    overflow: hidden !important;
+}
+
+/* Перебиваємо користувацький position: absolute з custom.css, повертаючи кнопку в нормальний потік нижче контенту
+   + Додаємо дизайн преміум-кнопки (Glassmorphism) */
+body .widget.widgetView #button-show-all,
+body .widget.widgetView #button-show-all.button,
+body .widget.widgetView #button-show-all.button.blank,
+body .widget.widgetView .button.blank#button-show-all {
+    position: relative !important;
+    bottom: auto !important;
+    left: auto !important;
+    right: auto !important;
+    transform: none !important;
+    margin: 8px 0 12px !important;
+    z-index: 10 !important;
+    flex: 0 0 auto !important;
+    width: 100% !important;
+    background: transparent !important;
+    background-color: transparent !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    padding: 8px 0 !important;
+    transition: opacity 0.2s ease !important;
+    opacity: 0.55 !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+body .widget.widgetView #button-show-all::before,
+body .widget.widgetView #button-show-all::after {
+    display: none !important;
+    background: transparent !important;
+    content: none !important;
+}
+
+body .widget.widgetView #button-show-all .txt {
+    font-size: 13px !important;
+    font-weight: 500 !important;
+    letter-spacing: 0 !important;
+}
+
+html:not(.themeDark) body .widget.widgetView #button-show-all .txt {
+    color: rgba(0, 0, 0, 0.65) !important;
+}
+
+html.themeDark body .widget.widgetView #button-show-all .txt {
+    color: rgba(255, 255, 255, 0.6) !important;
+}
+
+body .widget.widgetView #button-show-all:hover {
+    background: transparent !important;
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    transform: none !important;
+    opacity: 1 !important;
+}
+
+html:not(.themeDark) body .widget.widgetView #button-show-all:hover .txt {
+    color: rgba(0, 0, 0, 0.9) !important;
+}
+
+html.themeDark body .widget.widgetView #button-show-all:hover .txt {
+    color: rgba(255, 255, 255, 0.9) !important;
+}
+
+/* Повноцінно ховаємо кнопку "+ Нова сторінка" у DataView Галереї,
+   бо її логіка сітки в AnyType зламана, і вона зайва. */
+html body #app .viewGallery .card.add,
+.ReactVirtualized__Grid__innerScrollContainer .card.add,
+body .viewGallery .card.add {
+    display: none !important;
+    position: absolute !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+
+    width: 0 !important;
+    height: 0 !important;
+    min-width: 0 !important;
+    min-height: 0 !important;
+    max-width: 0 !important;
+    max-height: 0 !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+}
+
+/* Прибираємо будь-які розпірки, що також можуть додавати висоту в порталі вимірювання */
+.ReactVirtualized__Grid__innerScrollContainer .card.add::before,
+.ReactVirtualized__Grid__innerScrollContainer .card.add::after,
+body .viewGallery .card.add::before,
+body .viewGallery .card.add::after {
+    display: none !important;
+    content: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+/* === ADDED DYNAMICALLY FOR RECENT EDITS === */
+.sidebar .sidebarPage.pageWidget .widgetSection.section-recentedit {
+    padding: 4px !important;
+    padding-top: 6px !important;
+    border-radius: 22px !important;
+    box-sizing: border-box !important;
+    transition: background-color 0.22s ease, border-color 0.22s ease, box-shadow 0.25s ease !important;
+}
+
+html:not(.themeDark) .sidebar .sidebarPage.pageWidget .widgetSection.section-recentedit {
+    background-color: rgba(255, 255, 255, 0.4) !important;
+    border: 1px solid rgba(255, 255, 255, 0.42) !important;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.52), 0 10px 28px rgba(0, 0, 0, 0.06) !important;
+    backdrop-filter: var(--glass-blur) !important;
+    -webkit-backdrop-filter: var(--glass-blur) !important;
+}
+
+html.themeDark .sidebar .sidebarPage.pageWidget .widgetSection.section-recentedit {
+    background: rgba(42, 42, 46, 0.32) !important;
+    border: var(--glass-panel-border-dark) !important;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05), 0 12px 30px rgba(0, 0, 0, 0.28) !important;
+    backdrop-filter: var(--glass-blur) !important;
+    -webkit-backdrop-filter: var(--glass-blur) !important;
+}
+
+.sidebar .sidebarPage.pageWidget .widgetSection.section-recentedit>.nameWrap {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+
+}
+
+.sidebar .sidebarPage.pageWidget .widgetSection.section-recentedit>.nameWrap .name {
+    flex: 1 1 auto !important;
+    min-width: 0 !important;
+    padding: 8px 10px !important;
+    border-radius: 16px !important;
+    font-size: 13px !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.01em !important;
+    transition: background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease, color 0.2s ease !important;
+}
+
+html:not(.themeDark) .sidebar .sidebarPage.pageWidget .widgetSection.section-recentedit>.nameWrap .name {
+    background: rgba(255, 255, 255, 0.36) !important;
+    border: 1px solid rgba(255, 255, 255, 0.35) !important;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.38) !important;
+    color: rgba(43, 43, 45, 0.5) !important;
+
+}
+
+html:not(.themeDark) .sidebar .sidebarPage.pageWidget .widgetSection.section-recentedit>.nameWrap .name:hover {
+    background: rgba(255, 255, 255, 0.48) !important;
+    border: 1px solid rgba(255, 255, 255, 0.46) !important;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.52), 0 6px 16px rgba(0, 0, 0, 0.04) !important;
+    color: rgba(43, 43, 45, 0.78) !important;
+}
+
+html:not(.themeDark) .sidebar .sidebarPage.pageWidget .widgetSection.section-recentedit.isOpen>.nameWrap .name,
+html:not(.themeDark) .sidebar .sidebarPage.pageWidget .widgetSection.section-recentedit>.nameWrap.active .name {
+    background: rgba(255, 255, 255, 0.24) !important;
+    border: 1px solid rgba(255, 255, 255, 0.35) !important;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.38) !important;
+    color: rgba(43, 43, 45, 0.8) !important;
+
+}
+
+html:not(.themeDark) .sidebar .sidebarPage.pageWidget .widgetSection.section-recentedit.isOpen>.nameWrap .name:hover,
+html:not(.themeDark) .sidebar .sidebarPage.pageWidget .widgetSection.section-recentedit>.nameWrap.active .name:hover {
+    background: rgba(255, 255, 255, 0.32) !important;
+    border: 1px solid rgba(255, 255, 255, 0.42) !important;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.46), 0 6px 16px rgba(0, 0, 0, 0.04) !important;
+    color: rgba(43, 43, 45, 0.88) !important;
+}
+
+html.themeDark .sidebar .sidebarPage.pageWidget .widgetSection.section-recentedit>.nameWrap .name {
+    background: rgba(255, 255, 255, 0.04) !important;
+    border: 1px solid rgba(255, 255, 255, 0.06) !important;
+    color: rgba(255, 255, 255, 0.62) !important;
+
+}
+
+html.themeDark .sidebar .sidebarPage.pageWidget .widgetSection.section-recentedit>.nameWrap .name:hover {
+    background: rgba(255, 255, 255, 0.07) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05), 0 6px 16px rgba(0, 0, 0, 0.18) !important;
+    color: rgba(255, 255, 255, 0.78) !important;
+}
+
+html.themeDark .sidebar .sidebarPage.pageWidget .widgetSection.section-recentedit.isOpen>.nameWrap .name,
+html.themeDark .sidebar .sidebarPage.pageWidget .widgetSection.section-recentedit>.nameWrap.active .name {
+    background: rgba(255, 255, 255, 0.08) !important;
+    border: 1px solid rgba(255, 255, 255, 0.06) !important;
+    color: rgba(255, 255, 255, 0.82) !important;
+
+}
+
+html.themeDark .sidebar .sidebarPage.pageWidget .widgetSection.section-recentedit.isOpen>.nameWrap .name:hover,
+html.themeDark .sidebar .sidebarPage.pageWidget .widgetSection.section-recentedit>.nameWrap.active .name:hover {
+    background: rgba(255, 255, 255, 0.11) !important;
+    border: 1px solid rgba(255, 255, 255, 0.11) !important;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06), 0 6px 16px rgba(0, 0, 0, 0.18) !important;
+    color: rgba(255, 255, 255, 0.92) !important;
+}
+
+.sidebar .sidebarPage.pageWidget .widgetSection.section-recentedit>.nameWrap .name .icon.arrow {
+    margin-right: 2px !important;
+    transition: transform 0.2s cubic-bezier(0.22, 1, 0.36, 1) !important;
+}
+
+.sidebar .sidebarPage.pageWidget .widgetSection.section-recentedit>.nameWrap .buttons {
+    opacity: 1 !important;
+    gap: 6px !important;
+}
+
+.sidebar .sidebarPage.pageWidget .widgetSection.section-recentedit>.nameWrap .buttons .button.blank.c28 {
+    display: inline-flex !important;
+    align-items: center !important;
+    border-radius: 999px !important;
+    font-size: 12px !important;
+    font-weight: 600 !important;
+    line-height: 1 !important;
+    transition: background-color 0.22s ease, border-color 0.22s ease, box-shadow 0.22s ease !important;
+}
+
+.sidebar .sidebarPage.pageWidget .widgetSection.section-recentedit>.nameWrap .buttons .button.blank.c28 .txt {
+    line-height: 1 !important;
+    white-space: nowrap !important;
+}
+
+html:not(.themeDark) .sidebar .sidebarPage.pageWidget .widgetSection.section-recentedit>.nameWrap .buttons .button.blank.c28 {
+    background: rgba(255, 255, 255, 0.62) !important;
+    border: 1px solid rgba(255, 255, 255, 0.48) !important;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05) !important;
+    color: rgba(43, 43, 45, 0.0) !important;
+}
+
+html:not(.themeDark) .sidebar .sidebarPage.pageWidget .widgetSection.section-recentedit>.nameWrap .buttons .button.blank.c28:hover {
+    background: var(--glass-active-light-hover) !important;
+    border-color: var(--glass-active-light-border-hover) !important;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.24) !important;
+    color: #ffffff !important;
+}
+
+html:not(.themeDark) .sidebar .sidebarPage.pageWidget .widgetSection.section-recentedit>.nameWrap .buttons .button.blank.c28:hover .icon.plus {
+    filter: brightness(0) invert(1) !important;
+}
+
+html.themeDark .sidebar .sidebarPage.pageWidget .widgetSection.section-recentedit>.nameWrap .buttons .button.blank.c28 {
+    background: rgba(255, 255, 255, 0.00) !important;
+    border: var(--glass-panel-border-dark) !important;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.0) !important;
+    color: rgba(255, 255, 255, 0.88) !important;
+}
+
+html.themeDark .sidebar .sidebarPage.pageWidget .widgetSection.section-recentedit>.nameWrap .buttons .button.blank.c28:hover {
+    background: var(--glass-active-dark-hover) !important;
+    border-color: var(--glass-active-dark-border-hover) !important;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.0) !important;
+    color: #ffffff !important;
+}
+
+html.themeDark .sidebar .sidebarPage.pageWidget .widgetSection.section-recentedit>.nameWrap .buttons .button.blank.c28:hover .icon.plus {
+    filter: brightness(0) invert(1) !important;
+}
+
+.sidebar .sidebarPage.pageWidget .widgetSection.section-recentedit>.items {
+    gap: 6px 0 !important;
+    padding: 0 !important;
+}
+
+.sidebar .sidebarPage.pageWidget .widgetSection.section-recentedit>.items>.widget.widgetObject,
+.sidebar .sidebarPage.pageWidget .widgetSection.section-recentedit>.items>.widget.widgetObject:hover {
+    margin: 0 !important;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+.sidebar .sidebarPage.pageWidget .widgetSection.section-recentedit .widget.widgetObject .contentWrapper {
+    padding: 2px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 4px !important;
+}
+
+.sidebar .sidebarPage.pageWidget .widgetSection.section-recentedit .widget.widgetObject .item {
+    height: 38px !important;
+    padding: 0 10px !important;
+    border-radius: 16px !important;
+    border: 1px solid transparent !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    transform: none !important;
+}
+
+html:not(.themeDark) .sidebar .sidebarPage.pageWidget .widgetSection.section-recentedit .widget.widgetObject .item {
+    background: transparent !important;
+    border-color: transparent !important;
+    box-shadow: none !important;
+}
+
+html:not(.themeDark) .sidebar .sidebarPage.pageWidget .widgetSection.section-recentedit .widget.widgetObject .item:hover,
+html:not(.themeDark) .sidebar .sidebarPage.pageWidget .widgetSection.section-recentedit .widget.widgetObject .item.active {
+    background: rgba(255, 255, 255, 0.72) !important;
+    border-color: rgba(255, 255, 255, 0.58) !important;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.52), 0 6px 18px rgba(0, 0, 0, 0.05) !important;
+}
+
+html.themeDark .sidebar .sidebarPage.pageWidget .widgetSection.section-recentedit .widget.widgetObject .item {
+    background: transparent !important;
+    border-color: transparent !important;
+}
+
+html.themeDark .sidebar .sidebarPage.pageWidget .widgetSection.section-recentedit .widget.widgetObject .item:hover,
+html.themeDark .sidebar .sidebarPage.pageWidget .widgetSection.section-recentedit .widget.widgetObject .item.active {
+    background: rgba(255, 255, 255, 0.08) !important;
+    border-color: rgba(255, 255, 255, 0.1) !important;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.22) !important;
+}
+
+.sidebar .sidebarPage.pageWidget .widgetSection.section-recentedit .widget.widgetObject .item .side.left {
+    gap: 0 8px !important;
+}
+
+.sidebar .sidebarPage.pageWidget .widgetSection.section-recentedit .widget.widgetObject .item .side.left .name {
+    font-size: 13px !important;
+    font-weight: 600 !important;
+}
+
+.sidebar .sidebarPage.pageWidget .widgetSection.section-recentedit .widget.widgetObject .item .side.left .icon,
+.sidebar .sidebarPage.pageWidget .widgetSection.section-recentedit .widget.widgetObject .item .side.left .iconObject {
+    border-radius: 10px !important;
+}
+
+.sidebar .sidebarPage.pageWidget .widgetSection.section-recentedit .widget.widgetObject .item .buttons .icon {
+    border-radius: 999px !important;
+}
+
+html:not(.themeDark) .sidebar .sidebarPage.pageWidget .widgetSection.section-recentedit .widget.widgetObject .item .buttons .icon {
+    background-color: rgba(255, 255, 255, 0.46) !important;
+}
+
+html.themeDark .sidebar .sidebarPage.pageWidget .widgetSection.section-recentedit .widget.widgetObject .item .buttons .icon {
+    background-color: rgba(255, 255, 255, 0.06) !important;
+}
+
+/* === AUTO-GENERATED WIDGET TREE STYLES === */
+.widget.widgetTree .head .side.left .iconWrap.collapse {
+    width: 24px !important;
+    height: 24px !important;
+    min-width: 24px !important;
+    min-height: 24px !important;
+    border-radius: var(--rounded-panel-radius) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    box-sizing: border-box !important;
+}
+
+html:not(.themeDark) .widget.widgetTree .head .side.left .iconWrap.collapse {
+    background: rgba(255, 255, 255, 0.30) !important;
+    background-color: rgba(255, 255, 255, 0.30) !important;
+    backdrop-filter: var(--glass-blur) !important;
+    -webkit-backdrop-filter: var(--glass-blur) !important;
+    border: 1px solid rgba(255, 255, 255, 0.42) !important;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.52), 0 6px 18px rgba(0, 0, 0, 0.05) !important;
+}
+
+html.themeDark .widget.widgetTree .head .side.left .iconWrap.collapse {
+    background: rgba(26, 26, 30, 0.52) !important;
+    background-color: rgba(26, 26, 30, 0.52) !important;
+    backdrop-filter: var(--glass-blur) !important;
+    -webkit-backdrop-filter: var(--glass-blur) !important;
+    border: var(--glass-panel-border-dark) !important;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06), 0 8px 22px rgba(0, 0, 0, 0.22) !important;
+}
+
+.widgetTree .body.isCompact .item .inner {
+    border-radius: 14px !important;
+    background: transparent !important;
+    border: 1px solid transparent !important;
+    transition: background-color 0.22s ease, border-color 0.22s ease, box-shadow 0.22s ease, transform 0.25s cubic-bezier(0.2, 0.8, 0.2, 1) !important;
+}
+
+html:not(.themeDark) .widgetTree .body.isCompact .item.active .inner {
+    background-color: var(--glass-item-bg-light-hover) !important;
+    backdrop-filter: blur(22px) saturate(180%) brightness(1.03) !important;
+    -webkit-backdrop-filter: blur(22px) saturate(180%) brightness(1.03) !important;
+    border: 1px solid var(--glass-item-border-light) !important;
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.52), var(--glass-item-shadow-light) !important;
+}
+
+html.themeDark .widgetTree .body.isCompact .item:hover .inner {
+    background-color: rgba(255, 255, 255, 0.03) !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2) !important;
+}
+
+.widget.widgetTree {
+    border-radius: 20px !important;
+    overflow: clip !important;
+    isolation: isolate !important;
+    position: relative !important;
+    transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.22s ease, border-color 0.22s ease, box-shadow 0.25s ease !important;
+}
+
+html:not(.themeDark) .widget.widgetTree {
+    background-color: rgba(255, 255, 255, 0.40) !important;
+    border: 1px solid rgba(255, 255, 255, 0.42) !important;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.52), 0 10px 28px rgba(0, 0, 0, 0.06) !important;
+    backdrop-filter: var(--glass-blur) !important;
+    -webkit-backdrop-filter: var(--glass-blur) !important;
+}
+
+html.themeDark .widget.widgetTree {
+    background: rgba(42, 42, 46, 0.32) !important;
+    border: var(--glass-panel-border-dark) !important;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05), 0 12px 30px rgba(0, 0, 0, 0.28) !important;
+    backdrop-filter: var(--glass-blur) !important;
+    -webkit-backdrop-filter: var(--glass-blur) !important;
+}
+
+html:not(.themeDark) .widget.widgetTree:hover {
+    background-color: #fff !important;
+    transform: scale(1.01) !important;
+    box-shadow: none !important;
+    z-index: 20 !important;
+}
+
+html.themeDark .widget.widgetTree:hover {
+    background: rgba(32, 32, 36, 0.82) !important;
+    transform: scale(1.01) !important;
+    border-color: rgba(255, 255, 255, 0.08) !important;
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.05), 0 8px 20px rgba(0, 0, 0, 0.28) !important;
+    z-index: 20 !important;
+}
+
+html:not(.themeDark) .widget.widgetTree.isPreview.active {
+    background-color: #f2f2f7 !important;
+    transform: none !important;
+    border-color: rgba(0, 0, 0, 0.05) !important;
+    box-shadow: none !important;
+    z-index: 20 !important;
+}
+
+html.themeDark .widget.widgetTree.isPreview.active {
+    background: rgba(26, 26, 30, 0.75) !important;
+    transform: none !important;
+    border-color: rgba(255, 255, 255, 0.03) !important;
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.04), 0 4px 14px rgba(0, 0, 0, 0.22) !important;
+    z-index: 20 !important;
+}
+
+html:not(.themeDark) .widget.widgetTree:not(.isPreview):not(.isClosed) {
+    background-color: rgba(255, 255, 255, 0.50) !important;
+    border: 1px solid rgba(255, 255, 255, 0.42) !important;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.52), 0 10px 28px rgba(0, 0, 0, 0.06) !important;
+    backdrop-filter: var(--glass-blur) !important;
+    -webkit-backdrop-filter: var(--glass-blur) !important;
+}
+
+html.themeDark .widget.widgetTree:not(.isPreview):not(.isClosed) {
+    background: rgba(42, 42, 46, 0.40) !important;
+    border: var(--glass-panel-border-dark) !important;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05), 0 12px 30px rgba(0, 0, 0, 0.28) !important;
+    backdrop-filter: var(--glass-blur) !important;
+    -webkit-backdrop-filter: var(--glass-blur) !important;
+}
+
+.widget.widgetTree.isPreview .viewList .body .ReactVirtualized__Grid__innerScrollContainer {
+    padding-top: 8px !important;
+    box-sizing: border-box !important;
+}
+
+.widget.widgetTree.isPreview .viewList .body .item {
+    box-sizing: border-box !important;
+    padding: 0 !important;
+}
+
+.widget.widgetTree.isPreview .viewList .body .item .dropTarget {
+    display: flex !important;
+    align-items: center !important;
+    height: 100% !important;
+    min-height: 28px !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+    border-radius: 0 !important;
+}
+
+.widget.widgetTree.isPreview .viewList .body .item .inner {
+    height: 100% !important;
+    min-height: 0 !important;
+    margin: 0 !important;
+    padding: 0 8px !important;
+    box-sizing: border-box !important;
+    border: 1px solid transparent !important;
+    border-radius: 99999px !important;
+}
+
+.widget.widgetTree.isPreview #button-show-all {
+    display: none !important;
+}
+
+.widget.widgetTree .innerWrap.viewList {
+    background: transparent !important;
+}
+
+.widget.widgetTree .body.isCompact {
+    margin: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+.widget.widgetTree .head {
+    display: flex !important;
+    align-items: center !important;
+    padding: 9px 6px 1px !important;
+    min-height: 50px !important;
+    box-sizing: border-box !important;
+    margin-bottom: 0 !important;
+}
+
+.widget.widgetTree .head .sides {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 12px !important;
+    width: 100% !important;
+    min-height: 40px !important;
+    height: 40px !important;
+}
+
+.widget.widgetTree .head .sides.active {
+    background: transparent !important;
+    background-color: transparent !important;
+    box-shadow: none !important;
+}
+
+.widget.widgetTree .head .sides.active::after {
+    opacity: 0 !important;
+    background: transparent !important;
+    background-color: transparent !important;
+}
+
+.widget.widgetTree .head .side.left {
+    min-width: 0 !important;
+    flex: 1 1 auto !important;
+}
+
+.widget.widgetTree .head .side.left .iconAnimationWrapper {
+    display: flex !important;
+    align-items: center !important;
+    min-width: 0 !important;
+}
+
+.widget.widgetTree .head .side.left .clickable {
+    display: flex !important;
+    align-items: center !important;
+    min-height: 40px !important;
+    height: 40px !important;
+    box-sizing: border-box !important;
+    padding: 0 8px 0 2px !important;
+    border-radius: 14px !important;
+}
+
+.widget.widgetTree .head .side.left .clickable:hover::after {
+    background: transparent !important;
+    background-color: transparent !important;
+    border-color: transparent !important;
+    box-shadow: none !important;
+}
+
+.widget.widgetTree .head .side.left .iconAnimationWrapper {
+    gap: 8px !important;
+}
+
+.widget.widgetTree .head .side.left .iconWrap.collapse {
+    width: 20px !important;
+    height: 20px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-shrink: 0 !important;
+}
+
+.widget.widgetTree .head .side.left .headerIcon .iconImage {
+    width: 20px !important;
+    height: 20px !important;
+    border-radius: 8px !important;
+    flex-shrink: 0 !important;
+}
+
+.widget.widgetTree .head .side.left .name {
+    display: flex !important;
+    align-items: center !important;
+    min-width: 0 !important;
+}
+
+.widget.widgetTree .head .side.left .name span {
+    display: block !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    white-space: nowrap !important;
+    padding-left: 12px !important;
+    font-weight: 600 !important;
+    letter-spacing: -0.2px !important;
+    opacity: 1 !important;
+    transition: color 0.2s ease !important;
+}
+
+html:not(.themeDark) .widget.widgetTree .head .side.left .name span {
+    color: rgba(0, 0, 0, 0.7) !important;
+}
+
+html.themeDark .widget.widgetTree .head .side.left .name span {
+    color: rgba(255, 255, 255, 0.7) !important;
+}
+
+html:not(.themeDark) .widget.widgetTree:hover .head .side.left .name span {
+    color: rgba(0, 0, 0, 1) !important;
+}
+
+html.themeDark .widget.widgetTree:hover .head .side.left .name span {
+    color: rgba(255, 255, 255, 1) !important;
+}
+
+.widget.widgetTree .head .side.right {
+    display: flex !important;
+    align-items: center !important;
+    flex-shrink: 0 !important;
+    min-height: 40px !important;
+    height: 40px !important;
+}
+
+.widget.widgetTree.isPreview .head .filterWrapper {
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    width: 100% !important;
+    min-width: 0 !important;
+}
+
+.widget.widgetTree.isPreview .head .filterWrapper .side.left {
+    flex: 1 1 auto !important;
+    min-width: 0 !important;
+}
+
+.widget.widgetTree.isPreview .head .filterWrapper .side.right {
+    flex: 0 0 auto !important;
+}
+
+.widget.widgetTree.isPreview .head .filterWrapper .filter .filterInputWrap {
+    width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+}
+
+.widget.widgetTree.isPreview .head .filterWrapper .filter .input {
+    width: 100% !important;
+    min-width: 0 !important;
+}
+
+.widget.widgetTree .head .filterWrapper .filter .line {
+    display: none !important;
+}
+
+.widget.widgetTree.isPreview .head #button-object-create {
+    flex-shrink: 0 !important;
+}
+
+.widget.widgetTree.isPreview #viewSelect {
+    margin-top: 12px !important;
+}
+
+.widget.widgetTree .body.isCompact {
+    padding-top: 0 !important;
+    padding-bottom: 4px !important;
+}
+
+.widget.widgetTree .body.isCompact .item {
+    margin: 3px 0 !important;
+}
+
+.widget.widgetTree .body.isCompact .item:last-child {
+    margin-bottom: 8px !important;
+}
+
+.widget.widgetTree .body.isCompact .item .dropTarget {
+    padding: 0 !important;
+}
+
+.widget.widgetTree .body.isCompact .item .inner {
+    min-height: 36px !important;
+    display: flex !important;
+    align-items: center !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    padding: 0 8px 0 4px !important;
+    border-radius: 99999px !important;
+    border: 1px solid transparent !important;
+    transition: background-color 0.22s ease, border-color 0.22s ease, box-shadow 0.22s ease !important;
+}
+
+html.themeDark .widget.widgetTree .body.isCompact .item.active .dropTarget {
+    background: transparent !important;
+    background-color: transparent !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    border-color: transparent !important;
+    box-shadow: none !important;
+}
+
+html:not(.themeDark) .widget.widgetTree .body.isCompact .item.selected .inner {
+    background: rgba(255, 255, 255, 0.22) !important;
+    background-color: rgba(255, 255, 255, 0.22) !important;
+    border-color: rgba(255, 255, 255, 0.24) !important;
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.18) !important;
+}
+
+html.themeDark .widget.widgetTree .body.isCompact .item.selected .inner {
+    background: rgba(255, 255, 255, 0.025) !important;
+    background-color: rgba(255, 255, 255, 0.025) !important;
+    border-color: rgba(255, 255, 255, 0.045) !important;
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.03) !important;
+}
+
+.widget.widgetTree .body.isCompact .item .iconObject.c20 .iconImage {
+    width: 24px !important;
+    height: 24px !important;
+    border-radius: 8px !important;
+    flex-shrink: 0 !important;
+}
+
+html.themeDark .widget.widgetTree .body.isCompact .item.selected {
+    background: transparent !important;
+    background-color: transparent !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    border-color: transparent !important;
+    box-shadow: none !important;
+    transform: none !important;
+}
+
+html.themeDark .widget.widgetTree .body.isCompact .item::after {
+    content: none !important;
+    display: none !important;
+    opacity: 0 !important;
+    background: transparent !important;
+    background-color: transparent !important;
+    box-shadow: none !important;
+}
+
+html.themeDark .widget.widgetTree .viewTimeline .body .item.active::before {
+    content: none !important;
+    display: none !important;
+    opacity: 0 !important;
+    background: transparent !important;
+    background-color: transparent !important;
+    box-shadow: none !important;
+}
+
+.widget.widgetTree .body.isCompact .item .iconObject.c20 .iconImage {
+    width: 20px !important;
+    height: 20px !important;
+    border-radius: 8px !important;
+    flex-shrink: 0 !important;
+}
+
+.widget.widgetTree .body.isCompact .item .info {
+    min-width: 0 !important;
+    flex: 1 1 auto !important;
+}
+
+.widget.widgetTree .body.isCompact .item .info .name span {
+    display: block !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    white-space: nowrap !important;
+    padding-left: 10px !important;
+    font-weight: 500 !important;
+    letter-spacing: -0.2px !important;
+}
+
+.widget.widgetTree #button-show-all {
+    min-height: 0 !important;
+    padding: 0 8px !important;
+    margin: 0 !important;
+    border-radius: 12px !important;
+    display: flex;
+    position: absolute !important;
+    left: 8px !important;
+    right: 8px !important;
+    bottom: 10px !important;
+    align-self: auto !important;
+    flex: none !important;
+    width: auto !important;
+    align-items: center !important;
+    justify-content: center !important;
+    z-index: 2 !important;
+    transition: background-color 0.22s ease, border-color 0.22s ease, box-shadow 0.22s ease !important;
+}
+
+.widget.widgetTree:not(.isPreview) .body.isCompact+#button-show-all {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+.widget.widgetTree #button-show-all .txt {
+    font-size: 12px !important;
+    font-weight: 600 !important;
+    letter-spacing: -0.15px !important;
+}
+
+html:not(.themeDark) .widget.widgetTree #button-show-all {
+    background-color: var(--glass-item-bg-light) !important;
+    border: 1px solid var(--glass-item-border-light) !important;
+    box-shadow: var(--glass-item-shadow-light) !important;
+}
+
+html:not(.themeDark) .widget.widgetTree #button-show-all:hover {
+    background-color: var(--glass-item-bg-light-hover) !important;
+}
+
+html.themeDark .widget.widgetTree #button-show-all {
+    background: rgba(26, 26, 30, 0.75) !important;
+    border: 1px solid rgba(255, 255, 255, 0.03) !important;
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.04), 0 4px 14px rgba(0, 0, 0, 0.22) !important;
+}
+
+html.themeDark .widget.widgetTree #button-show-all:hover {
+    background: rgba(32, 32, 36, 0.82) !important;
+    border-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+.widget.widgetTree.isPreview .viewList .body .item .dropTarget {
+    background: transparent !important;
+    background-color: transparent !important;
+    border-color: transparent !important;
+    box-shadow: none !important;
+    transform: none !important;
+    transition: none !important;
+}
+
+.widget.widgetTree.isPreview .viewList .body .item.hover::after {
+    content: none !important;
+    display: none !important;
+    opacity: 0 !important;
+}
+
+.widget.widgetTree.isPreview .viewList .body .item .inner {
+    position: relative !important;
+    z-index: 2 !important;
+    width: 100% !important;
+    display: flex !important;
+    align-items: center !important;
+    background: transparent !important;
+    background-color: transparent !important;
+    border: 1px solid transparent !important;
+    box-shadow: none !important;
+    transition: background-color 0.22s ease, border-color 0.22s ease, box-shadow 0.22s ease !important;
+}
+
+html:not(.themeDark) .widget.widgetTree.isPreview .viewList .body .item .dropTarget:hover .inner {
+    background: rgba(255, 255, 255, 0.22) !important;
+    background-color: rgba(255, 255, 255, 0.22) !important;
+    border-color: rgba(255, 255, 255, 0.24) !important;
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.18) !important;
+}
+
+html.themeDark .widget.widgetTree.isPreview .viewList .body .item .dropTarget:hover .inner {
+    background: rgba(255, 255, 255, 0.025) !important;
+    background-color: rgba(255, 255, 255, 0.025) !important;
+    border-color: rgba(255, 255, 255, 0.045) !important;
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.03) !important;
+}
+
+.widgetTree .head .side.right .buttons {
+    background: transparent !important;
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    min-height: 40px !important;
+}
+
+.widgetTree .head .side.right .iconWrap.create {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 32px !important;
+    height: 32px !important;
+    flex-shrink: 0 !important;
+    border-radius: var(--rounded-panel-radius) !important;
+    opacity: 0.5 !important;
+    transition: transform 0.22s ease, background-color 0.22s ease, border-color 0.22s ease, box-shadow 0.22s ease !important;
+    cursor: pointer !important;
+}
+
+html:not(.themeDark) .widgetTree .head .side.right .iconWrap.create {
+    background-color: var(--glass-item-bg-light) !important;
+    backdrop-filter: var(--glass-blur) !important;
+    -webkit-backdrop-filter: var(--glass-blur) !important;
+    border: 1px solid var(--glass-item-border-light) !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04) !important;
+}
+
+html.themeDark .widgetTree .head .side.right .iconWrap.create {
+    background: rgba(26, 26, 30, 0.52) !important;
+    backdrop-filter: var(--glass-blur) !important;
+    -webkit-backdrop-filter: var(--glass-blur) !important;
+    border: var(--glass-panel-border-dark) !important;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06), 0 8px 22px rgba(0, 0, 0, 0.22) !important;
+}
+
+html:not(.themeDark) .widgetTree .head .side.right .iconWrap.create.active {
+    opacity: 1 !important;
+    transform: scale(1.1) !important;
+    background-color: var(--glass-active-light-hover) !important;
+    border-color: var(--glass-active-light-border-hover) !important;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.28) !important;
+}
+
+html:not(.themeDark) .widgetTree .head .side.right .iconWrap.create.active .icon {
+    filter: brightness(0) invert(1) !important;
+    opacity: 1 !important;
+}
+
+html.themeDark .widgetTree .head .side.right .iconWrap.create.active {
+    opacity: 1 !important;
+    transform: scale(1.1) !important;
+    background-color: var(--glass-active-dark-hover) !important;
+    border-color: var(--glass-active-dark-border-hover) !important;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.12) !important;
+}
+
+.widget.widgetTree .tabs .tab {
+    border-radius: 9999px !important;
+    border: 1px solid transparent !important;
+    transition: background-color 0.22s ease, border-color 0.22s ease, box-shadow 0.22s ease, color 0.18s ease !important;
+}
+
+html:not(.themeDark) .widget.widgetTree .tabs .tab.active {
+    background-color: var(--glass-item-bg-light-hover) !important;
+    backdrop-filter: var(--glass-blur) !important;
+    -webkit-backdrop-filter: var(--glass-blur) !important;
+    border-color: var(--glass-item-border-light) !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04) !important;
+}
+
+body .widgetTree .body.isCompact {
+    overflow: hidden !important;
+}
+
+body .widget.widgetTree #button-show-all {
+    position: relative !important;
+    bottom: auto !important;
+    left: auto !important;
+    right: auto !important;
+    transform: none !important;
+    margin: 16px auto 16px !important;
+    z-index: 10 !important;
+    flex: 0 0 auto !important;
+    width: max-content !important;
+
+    background: rgba(255, 255, 255, 0.4) !important;
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.5) !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05), inset 0 1px 1px rgba(255, 255, 255, 0.8) !important;
+    border-radius: 99px !important;
+    padding: 6px 20px !important;
+    transition: all 0.25s cubic-bezier(0.2, 0.8, 0.2, 1) !important;
+}
+
+body .widget.widgetTree #button-show-all .txt {
+    font-weight: 600 !important;
+    color: rgba(0, 0, 0, 0.75) !important;
+}
+
+body .widget.widgetTree #button-show-all:hover {
+    background: rgba(255, 255, 255, 0.6) !important;
+    border-color: rgba(255, 255, 255, 0.8) !important;
+    transform: scale(1.02) !important;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08), inset 0 1px 1px rgba(255, 255, 255, 0.9) !important;
+}
+
+html.themeDark body .widget.widgetTree #button-show-all {
+    background: rgba(255, 255, 255, 0.08) !important;
+    border: 1px solid rgba(255, 255, 255, 0.12) !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2), inset 0 1px 1px rgba(255, 255, 255, 0.05) !important;
+}
+
+html.themeDark body .widget.widgetTree #button-show-all .txt {
+    color: rgba(255, 255, 255, 0.85) !important;
+}
+
+html.themeDark body .widget.widgetTree #button-show-all:hover {
+    background: rgba(255, 255, 255, 0.15) !important;
+    border-color: rgba(255, 255, 255, 0.25) !important;
+}
+
+/* ============================================================ */
+/* widgetView у режимі isPreview (відкрито через "See All")      */
+/* Всередині #sidebarPageWidget — без фону і бордеру            */
+/* ============================================================ */
+
+#sidebarPageWidget .widget.widgetView.isPreview,
+#sidebarPageWidget .widget.widgetView.isPreview:hover,
+#sidebarPageWidget .widget.widgetView.isPreview.hover,
+#sidebarPageWidget .widget.widgetView.isPreview.active {
+    background: transparent !important;
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    transform: none !important;
+    border-radius: 0 !important;
+}
+
+/* Також прибираємо стиль на contentWrapper щоб не було залишкових відступів */
+#sidebarPageWidget .widget.widgetView.isPreview #wrapper.contentWrapper {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+/* ============================================================ */
+/* Gallery card — відступи між cellContent елементами           */
+/* ============================================================ */
+
+.viewGallery .cardContent .inner {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 4px !important;
+}
+
+/* Невеликий відступ від назви (першого cellContent) до решти */
+.viewGallery .cardContent .inner .cellContent+.cellContent {
+    margin-top: 2px !important;
+}
