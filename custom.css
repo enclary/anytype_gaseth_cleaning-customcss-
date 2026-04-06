@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
 
-/* --- 1. ГЛОБАЛЬНІ НАЛАШТУВАННЯ (MIMICS CRAFT DOCS / APPLE NOTES) --- */
+
 :root {
     --font-family-main: "Nunito Sans", sans-serif;
 
@@ -599,7 +599,7 @@ div[contenteditable="true"] {
 /* --- Заголовки (Title) --- */
 div.block.textTitle div.editable.value,
 div.block.textTitle div.placeholder {
-    font-size: 32px !important;
+    font-size: 28px !important;
     font-weight: 900 !important;
     /* Надпотужний для Nunito Sans */
     line-height: 1.2 !important;
@@ -609,8 +609,8 @@ div.block.textTitle div.placeholder {
 div.block.textHeader1 div.editable.value,
 div.block.textToggleHeader1 div.editable.value,
 div.block.textHeader1 div.placeholder {
-    font-size: 28px !important;
-    font-weight: 800 !important;
+    font-size: 24px !important;
+    font-weight: 900 !important;
     /* Дуже жирний */
     line-height: 1.25 !important;
 }
@@ -619,8 +619,8 @@ div.block.textHeader1 div.placeholder {
 div.block.textHeader2 div.editable.value,
 div.block.textToggleHeader2 div.editable.value,
 div.block.textHeader2 div.placeholder {
-    font-size: 22px !important;
-    font-weight: 700 !important;
+    font-size: 20px !important;
+    font-weight: 900 !important;
     /* Упевнений Bold */
     line-height: 1.3 !important;
 }
@@ -629,8 +629,8 @@ div.block.textHeader2 div.placeholder {
 div.block.textHeader3 div.editable.value,
 div.block.textToggleHeader3 div.editable.value,
 div.block.textHeader3 div.placeholder {
-    font-size: 20px !important;
-    font-weight: 700 !important;
+    font-size: 18px !important;
+    font-weight: 900 !important;
     /* Упевнений Bold */
     line-height: 1.35 !important;
 }
@@ -646,7 +646,7 @@ div.block.textParagraph div.placeholder,
 div.block.textCallout div.placeholder,
 div.block.textQuote div.placeholder {
     font-size: 16px !important;
-    /* Еталонний розмір для читання (як в Apple Notes) */
+    /* Еталонний розмір для читання  */
     font-weight: 400;
     /* Прибираємо !important, щоб повернути адаптивність */
     line-height: 1.6 !important;
@@ -677,14 +677,14 @@ div.block.textQuote div.placeholder {
 .table .cell div.editable.value,
 .table .cell .block.textParagraph div.editable.value,
 .table .cell .block.textParagraph div.placeholder {
-    font-size: 17px !important;
+    font-size: 16px !important;
 }
 
 /* --- Маркери списків --- */
 span.markerInner,
 div.markerToggle {
     font-family: "Nunito Sans", sans-serif !important;
-    font-size: 17px !important;
+    font-size: 16px !important;
     line-height: 1.6 !important;
     margin-top: 2px !important;
     /* Вирівнюємо маркери відносно збільшеного тексту */
@@ -3600,7 +3600,7 @@ html.themeDark .editorWrapper.isType .headSimple.isType .side.right .button.blan
 }
 
 /* ==========================================================
-   CRAFT DOCS CARD SECTIONS (layoutDiv blocks as Cards)
+   CARD SECTIONS (layoutDiv blocks as Cards)
    Target: .blockLayout.layoutDiv inside the editor
    ========================================================== */
 
@@ -3797,7 +3797,7 @@ html.themeDark #elements.editorControlElements #button-layout .icon.layout {
 
 
 /* ============================================================
-   CALLOUTS — Apple Notes Pastel Palette (Світла тема)
+   CALLOUTS — Pastel Palette (Світла тема)
    Warmer, paper-like tints instead of pure system accent washes
    ============================================================ */
 
@@ -3874,7 +3874,7 @@ html.themeDark #elements.editorControlElements #button-layout .icon.layout {
 
 
 /* ============================================================
-   CALLOUTS — Apple Notes Pastel Palette (Темна тема)
+   CALLOUTS — Pastel Palette (Темна тема)
    ============================================================ */
 
 /* DEFAULT — warm charcoal paper */
@@ -4019,6 +4019,7 @@ html.themeDark .card.isPage:hover {
         inset 0 0 0 1px var(--element-border-dark-hover),
         0 8px 24px rgba(0, 0, 0, 0.32) !important;
 }
+
 /* ==========================================================================
    1. СПІЛЬНА СТРУКТУРА (Форма, розмір, іконка для ВСІХ кнопок)
    ========================================================================== */
@@ -4032,7 +4033,7 @@ html.themeDark .card.isPage:hover {
     margin-left: auto !important;
     margin-right: auto !important;
     border-radius: 18px !important;
-    
+
     will-change: transform, box-shadow !important;
     transition: transform 0.28s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.28s cubic-bezier(0.22, 1, 0.36, 1), background-color 0.28s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.28s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.22s ease, backdrop-filter 0.3s ease !important;
 }
@@ -5935,7 +5936,7 @@ html.themeDark .buttonWrap.withSelect #button-dataview-add-record-select.active 
     line-height: 1.2 !important;
     letter-spacing: -0.04em !important;
     /* Фірмове стиснення Apple */
-    font-weight: 700 !important;
+    font-weight: 900 !important;
     color: var(--element-color-dark) !important;
     text-align: center !important;
 }
@@ -6370,16 +6371,18 @@ html.themeDark .viewBoard .column:hover .body .bg .bgColor {
 
 /* --- СВІТЛА ТЕМА (Базовий стан) --- */
 html:not(.themeDark) .viewBoard .column.withColor .card.isPage {
-    background-color: rgba(255, 255, 255, 0.45) !important; /* Трохи прозоріше для кращого скла */
-    border: 1px solid rgba(255, 255, 255, 0.4) !important; /* Світлий відблиск на краях */
-    
+    background-color: rgba(255, 255, 255, 0.45) !important;
+    /* Трохи прозоріше для кращого скла */
+    border: 1px solid rgba(255, 255, 255, 0.4) !important;
+    /* Світлий відблиск на краях */
+
     /* Додаємо ефект матового скла */
     backdrop-filter: blur(16px) saturate(150%) !important;
     -webkit-backdrop-filter: blur(16px) saturate(150%) !important;
-    
+
     /* Тіні вимкнено за замовчуванням */
     box-shadow: none !important;
-    
+
     isolation: isolate;
     transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, backdrop-filter 0.3s ease !important;
 }
@@ -6387,10 +6390,11 @@ html:not(.themeDark) .viewBoard .column.withColor .card.isPage {
 /* --- СВІТЛА ТЕМА (Ховер) --- */
 html:not(.themeDark) .viewBoard .column.withColor .card.isPage:hover {
     background-color: rgba(255, 255, 255, 0.65) !important;
-    transform: scale(1.02) translateY(-2px) !important; /* Легке підняття і масштаб */
-    
+    transform: scale(1.02) translateY(-2px) !important;
+    /* Легке підняття і масштаб */
+
     /* Не прибираємо рамку (щоб не було стрибків макета), а робимо її яскравішою */
-    border-color: rgba(255, 255, 255, 0.8) !important; 
+    border-color: rgba(255, 255, 255, 0.8) !important;
 
     /* Додаємо м'яку, багатошарову "яблучну" тінь тільки тут */
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.04) !important;
@@ -6403,24 +6407,26 @@ html:not(.themeDark) .viewBoard .column.withColor .card.isPage:hover {
 /* --- ТЕМНА ТЕМА (Базовий стан) --- */
 html.themeDark .viewBoard .column.withColor .card.isPage {
     background: rgba(42, 42, 46, 0.3) !important;
-    border: 1px solid rgba(255, 255, 255, 0.08) !important; /* Замінив змінну на статичне значення для консистентності, можете повернути var(--glass-panel-border-dark) якщо треба */
-    
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    /* Замінив змінну на статичне значення для консистентності, можете повернути var(--glass-panel-border-dark) якщо треба */
+
     /* Скломорфізм */
     backdrop-filter: blur(16px) saturate(150%) !important;
     -webkit-backdrop-filter: blur(16px) saturate(150%) !important;
-    
+
     /* Тіні вимкнено */
     box-shadow: none !important;
-    
+
     isolation: isolate;
     transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, backdrop-filter 0.3s ease !important;
 }
 
 /* --- ТЕМНА ТЕМА (Ховер) --- */
 html.themeDark .viewBoard .column.withColor .card.isPage:hover {
-    background: rgba(255, 255, 255, 0.08) !important; /* Світліший, скляний відблиск замість глухого сірого */
+    background: rgba(255, 255, 255, 0.08) !important;
+    /* Світліший, скляний відблиск замість глухого сірого */
     transform: scale(1.02) translateY(-2px) !important;
-    
+
     border-color: rgba(255, 255, 255, 0.15) !important;
 
     /* Тінь тільки при наведенні (трохи інтенсивніша, щоб її було видно на темному) */
@@ -6430,6 +6436,7 @@ html.themeDark .viewBoard .column.withColor .card.isPage:hover {
     -webkit-backdrop-filter: blur(20px) saturate(160%) !important;
     z-index: 10 !important;
 }
+
 /* =========================================
    КАНБАН ДОШКА: Кнопка "Додати" (Скляна + Кольоровий Hover)
    Застосовується ТІЛЬКИ до колонок з підкладкою (.column.withColor)
@@ -6444,10 +6451,11 @@ html.themeDark .viewBoard .column.withColor .card.isPage:hover {
 
 /* Світла тема - База (Скло) */
 html:not(.themeDark) .blocks .block.blockDataview .viewContent.viewBoard .column.withColor .card.add {
-    background-color: rgba(255, 255, 255, 0.45) !important; 
+    background-color: rgba(255, 255, 255, 0.45) !important;
     border: 1px solid rgba(255, 255, 255, 0.6) !important;
-    opacity: 1 !important; /* Перебиваємо стандартну прозорість */
-    
+    opacity: 1 !important;
+    /* Перебиваємо стандартну прозорість */
+
     backdrop-filter: blur(16px) saturate(150%) !important;
     -webkit-backdrop-filter: blur(16px) saturate(150%) !important;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.00) !important;
@@ -6458,7 +6466,7 @@ html:not(.themeDark) .blocks .block.blockDataview .viewContent.viewBoard .column
     background-color: rgba(255, 255, 255, 0.6) !important;
     border-color: rgba(255, 255, 255, 0.8) !important;
     transform: translateY(-2px) scale(1.01) !important;
-    
+
     backdrop-filter: blur(24px) saturate(180%) !important;
     -webkit-backdrop-filter: blur(24px) saturate(180%) !important;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05) !important;
@@ -6466,10 +6474,10 @@ html:not(.themeDark) .blocks .block.blockDataview .viewContent.viewBoard .column
 
 /* Темна тема - База (Скло) */
 html.themeDark .blocks .block.blockDataview .viewContent.viewBoard .column.withColor .card.add {
-    background-color: rgba(30, 30, 35, 0.4) !important; 
+    background-color: rgba(30, 30, 35, 0.4) !important;
     border: 1px solid rgba(255, 255, 255, 0.1) !important;
     opacity: 1 !important;
-    
+
     backdrop-filter: blur(16px) saturate(150%) !important;
     -webkit-backdrop-filter: blur(16px) saturate(150%) !important;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.0) !important;
@@ -6480,11 +6488,12 @@ html.themeDark .blocks .block.blockDataview .viewContent.viewBoard .column.withC
     background-color: rgba(50, 50, 55, 0.5) !important;
     border-color: rgba(255, 255, 255, 0.15) !important;
     transform: translateY(-2px) scale(1.01) !important;
-    
+
     backdrop-filter: blur(24px) saturate(180%) !important;
     -webkit-backdrop-filter: blur(24px) saturate(180%) !important;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1) !important;
 }
+
 /* ==========================================================================
    2. ІКОНКИ В ШАПЦІ ТА КОЛОНЦІ (.icon.add та .icon.more)
    ========================================================================== */
@@ -6502,7 +6511,7 @@ html.themeDark .blocks .block.blockDataview .viewContent.viewBoard .column.withC
     border-radius: 50% !important;
     width: 24px !important;
     height: 24px !important;
-    
+
     /* Сховані за замовчуванням */
     opacity: 0 !important;
     filter: brightness(0) !important;
@@ -6519,7 +6528,7 @@ html.themeDark .blocks .block.blockDataview .viewContent.viewBoard .column.withC
 html.themeDark .viewBoard .column.withColor .icon.add,
 html.themeDark .viewBoard .column.withColor .head .icon.more {
     filter: brightness(0) invert(1) !important;
-    opacity: 0 !important; 
+    opacity: 0 !important;
 }
 
 /* 2.3. Поява іконок при наведенні курсора на БУДЬ-ЯКЕ місце колонки */
@@ -7696,4 +7705,95 @@ html.themeDark body .widget.widgetTree #button-show-all:hover {
 /* Невеликий відступ від назви (першого cellContent) до решти */
 .viewGallery .cardContent .inner .cellContent+.cellContent {
     margin-top: 2px !important;
+}
+
+/* ============================================================ */
+/* Збільшуємо товщину для жирного тексту (bold)                 */
+/* ============================================================ */
+markupbold {
+    font-weight: 700 !important;
+    -webkit-text-stroke: 0.3px currentColor !important;
+    /* Додаткова обводка, на випадок якщо 900 недостатньо товсто для обраного шрифту */
+}
+
+/* ============================================================ */
+/* Стилізація головного титулу під вигляд H2 (#value)           */
+/* ============================================================ */
+#value.editable.isReadonly,
+#editor-title.editable.isReadonly {
+    font-size: 24px !important;
+    /* Відповідає стандартному розміру H2 */
+    font-weight: 900 !important;
+    /* Напівжирний шрифт як у H2 */
+    line-height: 1.3 !important;
+
+    letter-spacing: -0.5px !important;
+}
+
+/* ============================================================ */
+/* Оптимізація таблиць (усунення overflow та зменшення шрифту)  */
+/* ============================================================ */
+
+/* Дозволяємо прокрутку замість виходу контенту за межі екрану */
+.table {
+    max-width: 100% !important;
+    overflow-x: auto !important;
+}
+
+/* Запобігаємо переповненню всередині самих клітинок */
+.table .cell,
+.table .wrapContent {
+    overflow-wrap: break-word !important;
+    word-break: break-word !important;
+    white-space: normal !important;
+}
+
+/* Обмеження розміру шрифту всередині таблиці до комфортного (не більше 17px) */
+.table .value,
+.table .editable,
+.table .blockText,
+.table markupbold {
+    font-size: 16px !important;
+    line-height: 1.4 !important;
+}
+
+/* ============================================================ */
+/* Фон прев'ю-елементів у списку шаблонів (Dataview Templates)  */
+/* ============================================================ */
+
+/* 1. Усунення "відступів батьківського контейнера" */
+.menuDataviewTemplateList .item {
+    padding: 0 !important;
+    background-color: transparent !important;
+    box-shadow: none !important;
+}
+
+/* 2. Вимикаємо неестетичний стандартний hover на .item */
+.menuDataviewTemplateList .item:hover,
+.menuDataviewTemplateList .item.active {
+    background-color: transparent !important;
+    box-shadow: none !important;
+    border-color: transparent !important;
+}
+
+/* 3. Базова заливка 50% для самої картки */
+html:not(.themeDark) .menuDataviewTemplateList .item .previewObject {
+    background-color: rgba(255, 255, 255, 0.5) !important;
+    transition: background-color 0.15s ease !important;
+}
+
+html.themeDark .menuDataviewTemplateList .item .previewObject {
+    background-color: rgba(18, 18, 20, 0.5) !important;
+    transition: background-color 0.15s ease !important;
+}
+
+/* 4. Естетичний hover-ефект безпосередньо на самій картці (щоб не було "огризків") */
+html:not(.themeDark) .menuDataviewTemplateList .item:hover .previewObject {
+    background-color: rgba(255, 255, 255, 0.9) !important;
+    /* Яскравіше при наведенні */
+}
+
+html.themeDark .menuDataviewTemplateList .item:hover .previewObject {
+    background-color: rgba(30, 30, 35, 0.85) !important;
+    /* Яскравіше при наведенні */
 }
