@@ -1,8 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
-
+/* --- 1. ГЛОБАЛЬНІ НАЛАШТУВАННЯ (MIMICS CRAFT DOCS / APPLE NOTES) --- */
 :root {
-    --font-family-main: "Nunito Sans", sans-serif;
+    --font-family-main: 'Inter', sans-serif;
 
 
 
@@ -12,7 +12,7 @@
     --card-bg-light: #ffffff;
     --card-bg-dark: #1e1e20;
     --element-color-light: #F6F6F7;
-    --element-color-dark: #1d1d1f;
+    --element-color-dark: rgba(29, 29, 31, 0.5);
     --element-border-light: rgba(255, 255, 255, 0.3);
     --element-border-dark: rgba(255, 255, 255, 0.05);
     --element-border-light-hover: rgba(0, 0, 0, 0.07);
@@ -593,7 +593,7 @@ html.themeDark .blocks .block.blockDataview .viewContent.viewBoard .column.withC
 div.block div.editable.value,
 div.block div.placeholder,
 div[contenteditable="true"] {
-    font-family: "Nunito Sans", sans-serif !important;
+    font-family: 'Inter', sans-serif !important;
 }
 
 /* --- Заголовки (Title) --- */
@@ -601,24 +601,29 @@ div.block.textTitle div.editable.value,
 div.block.textTitle div.placeholder {
     font-size: 28px !important;
     font-weight: 900 !important;
-    /* Надпотужний для Nunito Sans */
     line-height: 1.2 !important;
 }
 
 /* --- H1 та Великі колапси --- */
-div.block.textHeader1 div.editable.value,
-div.block.textToggleHeader1 div.editable.value,
-div.block.textHeader1 div.placeholder {
+div.block.textHeader1>div.wrapContent>div.selectionTarget div.editable.value,
+div.block.textToggleHeader1>div.wrapContent>div.selectionTarget div.editable.value,
+div.block.textHeader1>div.wrapContent>div.selectionTarget div.placeholder,
+div.block.textToggleHeader1>div.wrapContent>div.selectionTarget div.placeholder {
     font-size: 24px !important;
-    font-weight: 900 !important;
+    font-weight: 600 !important;
     /* Дуже жирний */
     line-height: 1.25 !important;
 }
 
-/* --- H2 та звичайні колапси --- */
-div.block.textHeader2 div.editable.value,
-div.block.textToggleHeader2 div.editable.value,
-div.block.textHeader2 div.placeholder {
+/* --- H2, звичайні колапси та Заголовки баз даних (dataviewHead) --- */
+div.block.textHeader2>div.wrapContent>div.selectionTarget div.editable.value,
+div.block.textToggleHeader2>div.wrapContent>div.selectionTarget div.editable.value,
+div.block.textHeader2>div.wrapContent>div.selectionTarget div.placeholder,
+div.block.textToggleHeader2>div.wrapContent>div.selectionTarget div.placeholder,
+#dataviewControls .dataviewHead #value,
+#dataviewControls .dataviewHead #placeholder,
+div.dataviewHead div.editableWrap div.editable,
+div.dataviewHead div.editableWrap div.placeholder {
     font-size: 20px !important;
     font-weight: 900 !important;
     /* Упевнений Bold */
@@ -626,9 +631,10 @@ div.block.textHeader2 div.placeholder {
 }
 
 /* --- H3 та міні-колапси --- */
-div.block.textHeader3 div.editable.value,
-div.block.textToggleHeader3 div.editable.value,
-div.block.textHeader3 div.placeholder {
+div.block.textHeader3>div.wrapContent>div.selectionTarget div.editable.value,
+div.block.textToggleHeader3>div.wrapContent>div.selectionTarget div.editable.value,
+div.block.textHeader3>div.wrapContent>div.selectionTarget div.placeholder,
+div.block.textToggleHeader3>div.wrapContent>div.selectionTarget div.placeholder {
     font-size: 18px !important;
     font-weight: 900 !important;
     /* Упевнений Bold */
@@ -636,17 +642,20 @@ div.block.textHeader3 div.placeholder {
 }
 
 /* --- Звичайний текст, списки, міні-колапси без заголовка --- */
-div.block.textParagraph div.editable.value,
-div.block.textToggle div.editable.value,
-div.block.textBulleted div.editable.value,
-div.block.textNumbered div.editable.value,
-div.block.textCallout div.editable.value,
-div.block.textQuote div.editable.value,
-div.block.textParagraph div.placeholder,
-div.block.textCallout div.placeholder,
-div.block.textQuote div.placeholder {
+div.block.textParagraph>div.wrapContent>div.selectionTarget div.editable.value,
+div.block.textToggle>div.wrapContent>div.selectionTarget div.editable.value,
+div.block.textBulleted>div.wrapContent>div.selectionTarget div.editable.value,
+div.block.textNumbered>div.wrapContent>div.selectionTarget div.editable.value,
+div.block.textCallout>div.wrapContent>div.selectionTarget div.editable.value,
+div.block.textQuote>div.wrapContent>div.selectionTarget div.editable.value,
+div.block.textParagraph>div.wrapContent>div.selectionTarget div.placeholder,
+div.block.textToggle>div.wrapContent>div.selectionTarget div.placeholder,
+div.block.textBulleted>div.wrapContent>div.selectionTarget div.placeholder,
+div.block.textNumbered>div.wrapContent>div.selectionTarget div.placeholder,
+div.block.textCallout>div.wrapContent>div.selectionTarget div.placeholder,
+div.block.textQuote>div.wrapContent>div.selectionTarget div.placeholder {
     font-size: 16px !important;
-    /* Еталонний розмір для читання  */
+    /* Еталонний розмір для читання (як в Apple Notes) */
     font-weight: 400;
     /* Прибираємо !important, щоб повернути адаптивність */
     line-height: 1.6 !important;
@@ -670,10 +679,9 @@ div.block.textQuote div.placeholder {
 .table markupbold,
 .blockTable markupbold,
 .table .cell div.editable.value markupbold {
-    font-weight: 700 !important;
+    font-weight: 600 !important;
 }
 
-/* 3. Встановлюємо розмір 17px для текстових блоків у таблиці */
 .table .cell div.editable.value,
 .table .cell .block.textParagraph div.editable.value,
 .table .cell .block.textParagraph div.placeholder {
@@ -683,10 +691,9 @@ div.block.textQuote div.placeholder {
 /* --- Маркери списків --- */
 span.markerInner,
 div.markerToggle {
-    font-family: "Nunito Sans", sans-serif !important;
+    font-family: 'Inter', sans-serif !important;
     font-size: 16px !important;
     line-height: 1.6 !important;
-    margin-top: 2px !important;
     /* Вирівнюємо маркери відносно збільшеного тексту */
 }
 
@@ -694,17 +701,32 @@ div.markerToggle {
    MACOS LIGHT GRAY: ABSOLUTE OVERRIDE (Тільки світла тема)
    ========================================================== */
 
-/* 1. Головний фон сторінки — білий */
+/* 1. Головний фон сторінки — світлий */
 html:not(.themeDark) body,
 html:not(.themeDark) #app,
 html:not(.themeDark) .layout,
 html:not(.themeDark) .mainWrapper,
 html:not(.themeDark) #page,
 html:not(.themeDark) .pageMain {
-    background: #ffffff !important;
-    background-color: #ffffff !important;
+    background: #fff !important;
+    background-color: #fff !important;
     background-image: none !important;
+    border-radius: 0px !important;
+    padding: 0px !important
+}
 
+/* 1. Головний фон сторінки — темний */
+html.themeDark body,
+html.themeDark #app,
+html.themeDark .layout,
+html.themeDark .mainWrapper,
+html.themeDark #page,
+html.themeDark .pageMain {
+    background: #0F0F0F !important;
+    background-color: #0F0F0F !important;
+    background-image: none !important;
+    border-radius: 0px !important;
+    padding: 0px !important
 }
 
 html:not(.themeDark) #header,
@@ -725,7 +747,20 @@ html:not(.themeDark) .sidebarPage,
 html:not(.themeDark) #sidebar,
 html:not(.themeDark) .any-sidebar {
     background: transparent !important;
-    background-color: transparent !important;
+    background-color: #fff !important;
+    background-image: none !important;
+}
+
+/* 1.1. Сайдбарне меню — світло-сірий фон */
+html.themeDark .navigationBar,
+html.themeDark .sidebar,
+html.themeDark .sidebarWrapper,
+html.themeDark #sidebarPageWidget,
+html.themeDark .sidebarPage,
+html.themeDark #sidebar,
+html.themeDark .any-sidebar {
+    background: transparent !important;
+    background-color: #0F0F0F !important;
     background-image: none !important;
 }
 
@@ -1524,19 +1559,28 @@ html.themeDark :is(.context-menu, .dropdown, .menu-container, .modal, .popover, 
     box-shadow: inset 0 0 0 1px var(--glass-border-dark), 0 16px 48px rgba(0, 0, 0, 0.4), 0 4px 16px rgba(0, 0, 0, 0.2) !important;
 }
 
-/* Context Menu Items Hover */
-:is(.popup, .popover, .dropdown, .context-menu, .menu, .menu-container, .wrapMenu) .item {
-    border-radius: 14px !important;
+/* Context Menu Items Hover & Spacing */
+:is(.popup, .popover, .dropdown, .context-menu, .menu, .menu-container, .wrapMenu) .item,
+#popupSearch-innerWrap .ReactVirtualized__List .item {
+    border-radius: 10px !important;
     background: transparent !important;
     border: 1px solid transparent !important;
     box-shadow: none !important;
+    margin-left: 8px !important;
+    margin-right: 8px !important;
+    width: calc(100% - 16px) !important;
 }
 
 html:not(.themeDark) :is(.popup, .popover, .dropdown, .context-menu, .menu, .menu-container, .wrapMenu) .item:hover,
 html:not(.themeDark) :is(.popup, .popover, .dropdown, .context-menu, .menu, .menu-container, .wrapMenu) .item.hover,
 html:not(.themeDark) :is(.popup, .popover, .dropdown, .context-menu, .menu, .menu-container, .wrapMenu) .item.active,
 html:not(.themeDark) :is(.popup, .popover, .dropdown, .context-menu, .menu, .menu-container, .wrapMenu) .item.selected,
-html:not(.themeDark) :is(.popup, .popover, .dropdown, .context-menu, .menu, .menu-container, .wrapMenu) .item.isSelected {
+html:not(.themeDark) :is(.popup, .popover, .dropdown, .context-menu, .menu, .menu-container, .wrapMenu) .item.isSelected,
+html:not(.themeDark) #popupSearch-innerWrap .ReactVirtualized__List .item:hover,
+html:not(.themeDark) #popupSearch-innerWrap .ReactVirtualized__List .item.hover,
+html:not(.themeDark) #popupSearch-innerWrap .ReactVirtualized__List .item.active,
+html:not(.themeDark) #popupSearch-innerWrap .ReactVirtualized__List .item.selected,
+html:not(.themeDark) #popupSearch-innerWrap .ReactVirtualized__List .item.isSelected {
     background: var(--glass-item-bg-light-hover) !important;
     backdrop-filter: var(--glass-blur) !important;
     -webkit-backdrop-filter: var(--glass-blur) !important;
@@ -1546,30 +1590,21 @@ html:not(.themeDark) :is(.popup, .popover, .dropdown, .context-menu, .menu, .men
 }
 
 /* Заборонено scale у попапах — елементи обрізаються краями overflow:hidden */
-.popup .item,
-.popover .item,
-.dropdown .item,
-.context-menu .item,
-.menu .item,
-.menu-container .item,
-.wrapMenu .item {
+:is(.popup, .popover, .dropdown, .context-menu, .menu, .menu-container, .wrapMenu) .item,
+#popupSearch-innerWrap .ReactVirtualized__List .item {
     transform: none !important;
     transition: background-color 0.15s ease, color 0.15s ease !important;
 }
 
-.popup .item:hover,
-.popover .item:hover,
-.dropdown .item:hover,
-.context-menu .item:hover,
-.menu .item:hover,
-.menu-container .item:hover,
-.wrapMenu .item:hover {
+:is(.popup, .popover, .dropdown, .context-menu, .menu, .menu-container, .wrapMenu) .item:hover,
+#popupSearch-innerWrap .ReactVirtualized__List .item:hover {
     transform: none !important;
 }
 
-html.themeDark .menu .item:hover,
-html.themeDark .dropdown .item:hover,
-html.themeDark .context-menu .item:hover {
+html.themeDark :is(.popup, .popover, .dropdown, .context-menu, .menu, .menu-container, .wrapMenu) .item:hover,
+html.themeDark :is(.popup, .popover, .dropdown, .context-menu, .menu, .menu-container, .wrapMenu) .item.hover,
+html.themeDark #popupSearch-innerWrap .ReactVirtualized__List .item:hover,
+html.themeDark #popupSearch-innerWrap .ReactVirtualized__List .item.hover {
     background-color: rgba(255, 255, 255, 0.05) !important;
     /* Soft Dark Hover */
 }
@@ -1617,6 +1652,8 @@ html.themeDark #sidebar {
     object-fit: cover !important;
     transition: none !important;
     transform: none !important;
+
+
 }
 
 img,
@@ -1627,19 +1664,47 @@ img,
     will-change: transform;
 }
 
+/* --- blockMedia Image: Glassmorphism Border --- */
+.block.blockMedia.isImage .wrap {
+    border-radius: var(--xxl-panel-radius) !important;
+    overflow: hidden !important;
+    padding: 2px !important;
+    background: var(--glass-bg-light) !important;
+    backdrop-filter: var(--glass-blur) !important;
+    -webkit-backdrop-filter: var(--glass-blur) !important;
+    border: 1px solid rgba(0, 0, 0, 0.08) !important;
+    box-shadow:
+        var(--glass-shadow),
+        inset 0 1px 0 rgba(255, 255, 255, 0.72) !important;
+}
+
+.block.blockMedia.isImage .wrap .mediaImage {
+    border-radius: calc(var(--xxl-panel-radius) - 4px) !important;
+    display: block !important;
+    width: 100% !important;
+}
+
+html.themeDark .block.blockMedia.isImage .wrap {
+    background: var(--glass-bg-dark) !important;
+    border: 1px solid var(--glass-border-dark) !important;
+    box-shadow:
+        var(--glass-shadow),
+        inset 0 1px 0 rgba(255, 255, 255, 0.10) !important;
+}
+
+
 /* ========================================= */
 /* --- 1. ГОЛОВНА КОРОБКА КАЛЛАУТА --- */
 /* ========================================= */
 
 .blockText.textCallout>.wrapContent {
     border-radius: var(--xxl-panel-radius) !important;
-    border: none !important;
-    border-left: none !important;
+    border: 1px solid var(--glass-border-light) !important;
     outline: none !important;
     outline-offset: 0 !important;
     backdrop-filter: var(--glass-blur) !important;
     -webkit-backdrop-filter: var(--glass-blur) !important;
-    box-shadow: none !important;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6) !important;
     overflow: hidden !important;
     margin: 6px 0 !important;
     padding: 16px 20px 16px 16px !important;
@@ -1650,7 +1715,8 @@ img,
 }
 
 html.themeDark .blockText.textCallout>.wrapContent {
-    box-shadow: none !important;
+    border: 1px solid var(--glass-border-dark) !important;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1) !important;
 }
 
 .blockText.textCallout>.wrapContent:not(.bgColor) {
@@ -2585,31 +2651,7 @@ html.themeDark .editorControls .btn.white.withIcon {
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06), 0 2px 4px rgba(0, 0, 0, 0.02) !important;
 }
 
-html.themeDark .editorControls .btn.white.withIcon:hover {
-    background: #323234 !important;
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2) !important;
-}
 
-.editorControls #button-layout .icon.layout {
-    width: 20px !important;
-    height: 20px !important;
-    background-size: 20px 20px !important;
-    background-position: center !important;
-    background-repeat: no-repeat !important;
-}
-
-html:not(.themeDark) .editorControls #button-layout .icon.layout {
-    filter: none !important;
-    opacity: 1 !important;
-    background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAyMCAyMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMTAgMThDMTQuNDE4MyAxOCAxOCAxNC40MTgzIDE4IDEwQzE4IDUuNTgxNzIgMTQuNDE4MyAyIDEwIDJDNS41ODE3MiAyIDIgNS41ODE3MiAyIDEwQzIgMTQuNDE4MyA1LjU4MTcyIDE4IDEwIDE4Wk01Ljk5OTAyIDEwLjk2NzhDNi41NTEzMSAxMC45Njc4IDYuOTk5MDIgMTAuNTIwMSA2Ljk5OTAyIDkuOTY3NzdDNi45OTkwMiA5LjQxNTQ5IDYuNTUxMzEgOC45Njc3NyA1Ljk5OTAyIDguOTY3NzdDNS40NDY3NCA4Ljk2Nzc3IDQuOTk5MDIgOS40MTU0OSA0Ljk5OTAyIDkuOTY3NzdDNC45OTkwMiAxMC41MjAxIDUuNDQ2NzQgMTAuOTY3OCA1Ljk5OTAyIDEwLjk2NzhaTTkuOTk5MDIgMTAuOTY3OEMxMC41NTEzIDEwLjk2NzggMTAuOTk5IDEwLjUyMDEgMTAuOTk5IDkuOTY3NzdDMTAuOTk5IDkuNDE1NDkgMTAuNTUxMyA4Ljk2Nzc3IDkuOTk5MDIgOC45Njc3N0M5LjQ0Njc0IDguOTY3NzcgOC45OTkwMiA5LjQxNTQ5IDguOTk5MDIgOS45Njc3N0M4Ljk5OTAyIDEwLjUyMDEgOS40NDY3NCAxMC45Njc4IDkuOTk5MDIgMTAuOTY3OFpNMTQuOTk5IDkuOTY3NzdDMTQuOTk5IDEwLjUyMDEgMTQuNTUxMyAxMC45Njc4IDEzLjk5OSAxMC45Njc4QzEzLjQ0NjcgMTAuOTY3OCAxMi45OTkgMTAuNTIwMSAxMi45OTkgOS45Njc3N0MxMi45OTkgOS40MTU0OSAxMy40NDY3IDguOTY3NzcgMTMuOTk5IDguOTY3NzdDMTQuNTUxMyA4Ljk2Nzc3IDE0Ljk5OSA5LjQxNTQ5IDE0Ljk5OSA5Ljk2Nzc3WiIgZmlsbD0iIzhFOEU5MyIvPg0KPC9zdmc+") !important;
-}
-
-html:not(.themeDark) .editorControls #button-layout:hover .icon.layout,
-html:not(.themeDark) .editorControls #button-layout.hover .icon.layout {
-    filter: none !important;
-    opacity: 1 !important;
-    background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAyMCAyMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMTAgMThDMTQuNDE4MyAxOCAxOCAxNC40MTgzIDE4IDEwQzE4IDUuNTgxNzIgMTQuNDE4MyAyIDEwIDJDNS41ODE3MiAyIDIgNS41ODE3MiAyIDEwQzIgMTQuNDE4MyA1LjU4MTcyIDE4IDEwIDE4Wk01Ljk5OTAyIDEwLjk2NzhDNi41NTEzMSAxMC45Njc4IDYuOTk5MDIgMTAuNTIwMSA2Ljk5OTAyIDkuOTY3NzdDNi45OTkwMiA5LjQxNTQ5IDYuNTUxMzEgOC45Njc3NyA1Ljk5OTAyIDguOTY3NzdDNS40NDY3NCA4Ljk2Nzc3IDQuOTk5MDIgOS40MTU0OSA0Ljk5OTAyIDkuOTY3NzdDNC45OTkwMiAxMC41MjAxIDUuNDQ2NzQgMTAuOTY3OCA1Ljk5OTAyIDEwLjk2NzhaTTkuOTk5MDIgMTAuOTY3OEMxMC41NTEzIDEwLjk2NzggMTAuOTk5IDEwLjUyMDEgMTAuOTk5IDkuOTY3NzdDMTAuOTk5IDkuNDE1NDkgMTAuNTUxMyA4Ljk2Nzc3IDkuOTk5MDIgOC45Njc3N0M5LjQ0Njc0IDguOTY3NzcgOC45OTkwMiA5LjQxNTQ5IDguOTk5MDIgOS45Njc3N0M4Ljk5OTAyIDEwLjUyMDEgOS40NDY3NCAxMC45Njc4IDkuOTk5MDIgMTAuOTY3OFpNMTQuOTk5IDkuOTY3NzdDMTQuOTk5IDEwLjUyMDEgMTQuNTUxMyAxMC45Njc4IDEzLjk5OSAxMC45Njc4QzEzLjQ0NjcgMTAuOTY3OCAxMi45OTkgMTAuNTIwMSAxMi45OTkgOS45Njc3N0MxMi45OTkgOS40MTU0OSAxMy40NDY3IDguOTY3NzcgMTMuOTk5IDguOTY3NzdDMTQuNTUxMyA4Ljk2Nzc3IDE0Ljk5OSA5LjQxNTQ5IDE0Ljk5OSA5Ljk2Nzc3WiIgZmlsbD0iIzYzNjM2NiIvPg0KPC9zdmc+") !important;
-}
 
 /* --- 8. ВИКЛЮЧЕННЯ: ПОП-АП ВІКНО ПЕРЕГЛЯДУ ЗОБРАЖЕНЬ --- */
 /* Броньований селектор: перебиває будь-які глобальні заокруглення */
@@ -2621,6 +2663,7 @@ body .swiper-zoom-container img {
 
     /* Deeper shadow */
     transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1) !important;
+
 }
 
 #popupPreview-innerWrap,
@@ -3417,7 +3460,8 @@ div.blockText.textQuote>.wrapContent {
     padding: 24px 84px 24px 60px !important;
     margin: 6px 0 !important;
     background-color: rgba(120, 120, 128, 0.05) !important;
-    border: 0px solid var(--glass-border-light) !important;
+    border: 1px solid var(--glass-border-light) !important;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6) !important;
     backdrop-filter: var(--glass-blur) !important;
     -webkit-backdrop-filter: var(--glass-blur) !important;
     overflow: visible !important;
@@ -3483,6 +3527,8 @@ div.blockText.textQuote .line {
 
 html.themeDark div.blockText.textQuote>.wrapContent {
     background-color: rgba(255, 255, 255, 0.05) !important;
+    border: 1px solid var(--glass-border-dark) !important;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1) !important;
 }
 
 html.themeDark div.blockText.textQuote>.wrapContent::before {
@@ -3600,7 +3646,7 @@ html.themeDark .editorWrapper.isType .headSimple.isType .side.right .button.blan
 }
 
 /* ==========================================================
-   CARD SECTIONS (layoutDiv blocks as Cards)
+   CRAFT DOCS CARD SECTIONS (layoutDiv blocks as Cards)
    Target: .blockLayout.layoutDiv inside the editor
    ========================================================== */
 
@@ -3690,6 +3736,16 @@ html.themeDark :is(.context-menu, .dropdown, .menu, .menu-container, .modal, .po
     /* Перебиваємо дефолтні 0px */
     border-bottom-right-radius: 32px !important;
     /* Перебиваємо дефолтні 0px */
+    background-size: cover !important;
+}
+
+/* Скломорфний бордер для контейнера каверу */
+html:not(.themeDark) .blockCover .wrap {
+    border: 1px solid var(--glass-item-border-light) !important;
+}
+
+html.themeDark .blockCover .wrap {
+    border: 1px solid var(--glass-border-dark) !important;
 }
 
 /* 3. Налаштування самої картинки */
@@ -3698,6 +3754,15 @@ html.themeDark :is(.context-menu, .dropdown, .menu, .menu-container, .modal, .po
     min-height: 400px !important;
     margin-top: 0 !important;
     /* ВАЖЛИВО: прибираємо відступ звідси, бо він є на батьку */
+}
+
+#cover {
+    object-fit: cover !important;
+    width: 100% !important;
+    height: 100% !important;
+    /* Або вкажіть конкретну висоту, наприклад 300px чи 30vh */
+    transform: none !important;
+    object-position: center !important;
 }
 
 /* The button bar: strip sitting at the bottom of the cover */
@@ -3765,28 +3830,69 @@ html.themeDark #elements.editorControlElements .btn:hover {
     box-shadow: 0 10px 28px rgba(0, 0, 0, 0.34), inset 0 1px 0 rgba(255, 255, 255, 0.06) !important;
 }
 
-.elements.editorControlElements #button-layout .icon.layout,
-#elements.editorControlElements #button-layout .icon.layout {
+/* =========================================
+   БАЗОВИЙ СТИЛЬ: ТРАФАРЕТ (МАСКА) ІКОНКИ
+   ========================================= */
+/* Додаємо селектор .editorControlElements для режиму обкладинки */
+.editorControls #button-layout .icon.layout,
+.editorControlElements #button-layout .icon.layout {
     width: 20px !important;
     height: 20px !important;
     display: block !important;
-    background-color: transparent !important;
-    background-position: center !important;
-    background-repeat: no-repeat !important;
-    background-size: 20px 20px !important;
-    background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAyMCAyMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMTAgMThDMTQuNDE4MyAxOCAxOCAxNC40MTgzIDE4IDEwQzE4IDUuNTgxNzIgMTQuNDE4MyAyIDEwIDJDNS41ODE3MiAyIDIgNS41ODE3MiAyIDEwQzIgMTQuNDE4MyA1LjU4MTcyIDE4IDEwIDE4Wk01Ljk5OTAyIDEwLjk2NzhDNi41NTEzMSAxMC45Njc4IDYuOTk5MDIgMTAuNTIwMSA2Ljk5OTAyIDkuOTY3NzdDNi45OTkwMiA5LjQxNTQ5IDYuNTUxMzEgOC45Njc3NyA1Ljk5OTAyIDguOTY3NzdDNS40NDY3NCA4Ljk2Nzc3IDQuOTk5MDIgOS40MTU0OSA0Ljk5OTAyIDkuOTY3NzdDNC45OTkwMiAxMC41MjAxIDUuNDQ2NzQgMTAuOTY3OCA1Ljk5OTAyIDEwLjk2NzhaTTkuOTk5MDIgMTAuOTY3OEMxMC41NTEzIDEwLjk2NzggMTAuOTk5IDEwLjUyMDEgMTAuOTk5IDkuOTY3NzdDMTAuOTk5IDkuNDE1NDkgMTAuNTUxMyA4Ljk2Nzc3IDkuOTk5MDIgOC45Njc3N0M5LjQ0Njc0IDguOTY3NzcgOC45OTkwMiA5LjQxNTQ5IDguOTk5MDIgOS45Njc3N0M4Ljk5OTAyIDEwLjUyMDEgOS40NDY3NCAxMC45Njc4IDkuOTk5MDIgMTAuOTY3OFpNMTQuOTk5IDkuOTY3NzdDMTQuOTk5IDEwLjUyMDEgMTQuNTUxMyAxMC45Njc4IDEzLjk5OSAxMC45Njc4QzEzLjQ0NjcgMTAuOTY3OCAxMi45OTkgMTAuNTIwMSAxMi45OTkgOS45Njc3N0MxMi45OTkgOS40MTU0OSAxMy40NDY3IDguOTY3NzcgMTMuOTk5IDguOTY3NzdDMTQuNTUxMyA4Ljk2Nzc3IDE0Ljk5OSA5LjQxNTQ5IDE0Ljk5OSA5Ljk2Nzc3WiIgZmlsbD0iIzI1MjUyNSIvPg0KPC9zdmc+") !important;
+
+    -webkit-mask-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAyMCAyMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMTAgMThDMTQuNDE4MyAxOCAxOCAxNC40MTgzIDE4IDEwQzE4IDUuNTgxNzIgMTQuNDE4MyAyIDEwIDJDNS41ODE3MiAyIDIgNS41ODE3MiAyIDEwQzIgMTQuNDE4MyA1LjU4MTcyIDE4IDEwIDE4Wk01Ljk5OTAyIDEwLjk2NzhDNi41NTEzMSAxMC45Njc4IDYuOTk5MDIgMTAuNTIwMSA2Ljk5OTAyIDkuOTY3NzdDNi45OTkwMiA5LjQxNTQ5IDYuNTUxMzEgOC45Njc3NyA1Ljk5OTAyIDguOTY3NzdDNS40NDY3NCA4Ljk2Nzc3IDQuOTk5MDIgOS40MTU0OSA0Ljk5OTAyIDkuOTY3NzdDNC45OTkwMiAxMC41MjAxIDUuNDQ2NzQgMTAuOTY3OCA1Ljk5OTAyIDEwLjk2NzhaTTkuOTk5MDIgMTAuOTY3OEMxMC41NTEzIDEwLjk2NzggMTAuOTk5IDEwLjUyMDEgMTAuOTk5IDkuOTY3NzdDMTAuOTk5IDkuNDE1NDkgMTAuNTUxMyA4Ljk2Nzc3IDkuOTk5MDIgOC45Njc3N0M5LjQ0Njc0IDguOTY3NzcgOC45OTkwMiA5LjQxNTQ5IDguOTk5MDIgOS45Njc3N0M4Ljk5OTAyIDEwLjUyMDEgOS40NDY3NCAxMC45Njc4IDkuOTk5MDIgMTAuOTY3OFpNMTQuOTk5IDkuOTY3NzdDMTQuOTk5IDEwLjUyMDEgMTQuNTUxMyAxMC45Njc4IDEzLjk5OSAxMC45Njc4QzEzLjQ0NjcgMTAuOTY3OCAxMi45OTkgMTAuNTIwMSAxMi45OTkgOS45Njc3N0MxMi45OTkgOS40MTU0OSAxMy40NDY3IDguOTY3NzcgMTMuOTk5IDguOTY3NzdDMTQuNTUxMyA4Ljk2Nzc3IDE0Ljk5OSA5LjQxNTQ5IDE0Ljk5OSA5Ljk2Nzc3WiIgZmlsbD0iIzAwMDAwMCIvPg0KPC9zdmc+") !important;
+    mask-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAyMCAyMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMTAgMThDMTQuNDE4MyAxOCAxOCAxNC40MTgzIDE4IDEwQzE4IDUuNTgxNzIgMTQuNDE4MyAyIDEwIDJDNS41ODE3MiAyIDIgNS41ODE3MiAyIDEwQzIgMTQuNDE4MyA1LjU4MTcyIDE4IDEwIDE4Wk01Ljk5OTAyIDEwLjk2NzhDNi41NTEzMSAxMC45Njc4IDYuOTk5MDIgMTAuNTIwMSA2Ljk5OTAyIDkuOTY3NzdDNi45OTkwMiA5LjQxNTQ5IDYuNTUxMzEgOC45Njc3NyA1Ljk5OTAyIDguOTY3NzdDNS40NDY3NCA4Ljk2Nzc3IDQuOTk5MDIgOS40MTU0OSA0Ljk5OTAyIDkuOTY3NzdDNC45OTkwMiAxMC41MjAxIDUuNDQ2NzQgMTAuOTY3OCA1Ljk5OTAyIDEwLjk2NzhaTTkuOTk5MDIgMTAuOTY3OEMxMC41NTEzIDEwLjk2NzggMTAuOTk5IDEwLjUyMDEgMTAuOTk5IDkuOTY3NzdDMTAuOTk5IDkuNDE1NDkgMTAuNTUxMyA4Ljk2Nzc3IDkuOTk5MDIgOC45Njc3N0M5LjQ0Njc0IDguOTY3NzcgOC45OTkwMiA5LjQxNTQ5IDguOTk5MDIgOS45Njc3N0M4Ljk5OTAyIDEwLjUyMDEgOS40NDY3NCAxMC45Njc4IDkuOTk5MDIgMTAuOTY3OFpNMTQuOTk5IDkuOTY3NzdDMTQuOTk5IDEwLjUyMDEgMTQuNTUxMyAxMC45Njc4IDEzLjk5OSAxMC45Njc4QzEzLjQ0NjcgMTAuOTY3OCAxMi45OTkgMTAuNTIwMSAxMi45OTkgOS45Njc3N0MxMi45OTkgOS40MTU0OSAxMy40NDY3IDguOTY3NzcgMTMuOTk5IDguOTY3NzdDMTQuNTUxMyA4Ljk2Nzc3IDE0Ljk5OSA5LjQxNTQ5IDE0Ljk5OSA5Ljk2Nzc3WiIgZmlsbD0iIzAwMDAwMCIvPg0KPC9zdmc+") !important;
+
+    -webkit-mask-size: 20px 20px !important;
+    mask-size: 20px 20px !important;
+    -webkit-mask-position: center !important;
+    mask-position: center !important;
+    -webkit-mask-repeat: no-repeat !important;
+    mask-repeat: no-repeat !important;
+
+    background-image: none !important;
     border: 0 !important;
     border-radius: 0 !important;
     box-shadow: none !important;
-    filter: none !important;
-    opacity: 1 !important;
 }
 
-html.themeDark .elements.editorControlElements #button-layout .icon.layout,
-html.themeDark #elements.editorControlElements #button-layout .icon.layout {
-    background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAyMCAyMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMTAgMThDMTQuNDE4MyAxOCAxOCAxNC40MTgzIDE4IDEwQzE4IDUuNTgxNzIgMTQuNDE4MyAyIDEwIDJDNS41ODE3MiAyIDIgNS41ODE3MiAyIDEwQzIgMTQuNDE4MyA1LjU4MTcyIDE4IDEwIDE4Wk01Ljk5OTAyIDEwLjk2NzhDNi41NTEzMSAxMC45Njc4IDYuOTk5MDIgMTAuNTIwMSA2Ljk5OTAyIDkuOTY3NzdDNi45OTkwMiA5LjQxNTQ5IDYuNTUxMzEgOC45Njc3NyA1Ljk5OTAyIDguOTY3NzdDNS40NDY3NCA4Ljk2Nzc3IDQuOTk5MDIgOS40MTU0OSA0Ljk5OTAyIDkuOTY3NzdDNC45OTkwMiAxMC41MjAxIDUuNDQ2NzQgMTAuOTY3OCA1Ljk5OTAyIDEwLjk2NzhaTTkuOTk5MDIgMTAuOTY3OEMxMC41NTEzIDEwLjk2NzggMTAuOTk5IDEwLjUyMDEgMTAuOTk5IDkuOTY3NzdDMTAuOTk5IDkuNDE1NDkgMTAuNTUxMyA4Ljk2Nzc3IDkuOTk5MDIgOC45Njc3N0M5LjQ0Njc0IDguOTY3NzcgOC45OTkwMiA5LjQxNTQ5IDguOTk5MDIgOS45Njc3N0M4Ljk5OTAyIDEwLjUyMDEgOS40NDY3NCAxMC45Njc4IDkuOTk5MDIgMTAuOTY3OFpNMTQuOTk5IDkuOTY3NzdDMTQuOTk5IDEwLjUyMDEgMTQuNTUxMyAxMC45Njc4IDEzLjk5OSAxMC45Njc4QzEzLjQ0NjcgMTAuOTY3OCAxMi45OTkgMTAuNTIwMSAxMi45OTkgOS45Njc3N0MxMi45OTkgOS40MTU0OSAxMy40NDY3IDguOTY3NzcgMTMuOTk5IDguOTY3NzdDMTQuNTUxMyA4Ljk2Nzc3IDE0Ljk5OSA5LjQxNTQ5IDE0Ljk5OSA5Ljk2Nzc3WiIgZmlsbD0iI2RmZGRkMyIvPg0KPC9zdmc+") !important;
+/* =========================================
+   ТЕМНА ТЕМА: КОЛЬОРИ
+   ========================================= */
+html.themeDark .editorControls #button-layout .icon.layout,
+html.themeDark .editorControlElements #button-layout .icon.layout {
+    background-color: #dfddd3 !important;
 }
 
+html.themeDark .editorControls #button-layout:hover .icon.layout,
+html.themeDark .editorControls #button-layout.hover .icon.layout,
+html.themeDark .editorControlElements #button-layout:hover .icon.layout,
+html.themeDark .editorControlElements #button-layout.hover .icon.layout {
+    background-color: #f2f1ec !important;
+}
+
+html.themeDark .editorControls #button-layout.hover,
+html.themeDark .editorControls #button-layout:hover,
+html.themeDark .editorControlElements #button-layout.hover,
+html.themeDark .editorControlElements #button-layout:hover {
+    background: #2c2c2e !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* =========================================
+   СВІТЛА ТЕМА: КОЛЬОРИ
+   ========================================= */
+html:not(.themeDark) .editorControls #button-layout .icon.layout,
+html:not(.themeDark) .editorControlElements #button-layout .icon.layout {
+    background-color: #8E8E93 !important;
+}
+
+html:not(.themeDark) .editorControls #button-layout:hover .icon.layout,
+html:not(.themeDark) .editorControls #button-layout.hover .icon.layout,
+html:not(.themeDark) .editorControlElements #button-layout:hover .icon.layout,
+html:not(.themeDark) .editorControlElements #button-layout.hover .icon.layout {
+    background-color: #636366 !important;
+}
 
 /* ==========================================================
    CALLOUT BLOCKS — BEAUTIFUL PASTEL PALETTE
@@ -3797,7 +3903,7 @@ html.themeDark #elements.editorControlElements #button-layout .icon.layout {
 
 
 /* ============================================================
-   CALLOUTS — Pastel Palette (Світла тема)
+   CALLOUTS — Apple Notes Pastel Palette (Світла тема)
    Warmer, paper-like tints instead of pure system accent washes
    ============================================================ */
 
@@ -3874,12 +3980,13 @@ html.themeDark #elements.editorControlElements #button-layout .icon.layout {
 
 
 /* ============================================================
-   CALLOUTS — Pastel Palette (Темна тема)
+   CALLOUTS — Apple Notes Pastel Palette (Темна тема)
    ============================================================ */
 
 /* DEFAULT — warm charcoal paper */
 html.themeDark .blockText.textCallout>.wrapContent:not([class*="bgColor"]) {
     background: var(--callout-notes-default-dark) !important;
+
 }
 
 /* RED — muted wine */
@@ -4568,16 +4675,9 @@ html.themeDark .tagItem:not(:hover):not(:is(.item.hover *, .item.isSelected *)) 
 .tagItem:hover,
 .item.hover .tagItem,
 .item.isSelected .tagItem {
-    border-color: transparent !important;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08) !important;
+    border: 1px solid transparent !important;
+    box-shadow: none !important;
     filter: grayscale(0%) opacity(1) !important;
-    transform: translateY(-0.5px) !important;
-}
-
-html.themeDark .tagItem:hover,
-html.themeDark .item.hover .tagItem,
-html.themeDark .item.isSelected .tagItem {
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3) !important;
 }
 
 .tagItem.isSelect {
@@ -4704,7 +4804,6 @@ html.themeDark .item.isSelected .tagItem {
 }
 
 .cell.c-object .element:hover {
-    transform: scale(1.05) !important;
     z-index: 10 !important;
     /* Піднімаємо над іншими рядками */
     cursor: pointer !important;
@@ -4755,7 +4854,6 @@ html.themeDark .item.isSelected .tagItem {
 /* 4. Сама активація збільшення при ховері на контент */
 .cellContent.isSelect .tagItem:hover,
 .cellContent.c-object .element:hover {
-    transform: scale(1.05) !important;
     z-index: 10 !important;
     cursor: pointer !important;
 }
@@ -6611,25 +6709,59 @@ html.themeDark .viewBoard .column.withColor:hover .head .icon.more:hover {
 
 
 
-/* --- 3. ХОВЕР СТАН: Яскравість 100%, плавний зум 1.03 --- */
+/* --- 3. ХОВЕР СТАН: Яскравість 100% --- */
 .blocks .blockDataview .viewBoard .column.withColor .head .tagItem:hover,
 html.themeDark .blocks .blockDataview .viewBoard .column.withColor .head .tagItem:hover {
     background: transparent !important;
     background-color: transparent !important;
     opacity: 1 !important;
-    transform: scale(1.03) translateY(0) !important;
 }
 
 /* =========================================
-   DATAVIEW TABLE: ЗАБОРОНА СТИСКАННЯ ТЕГІВ
-   Теги не повинні зменшуватись, зайві ховаються (overflow)
+   КАНБАН ДОШКА: Теги всередині карток
+   Нейтралізуємо кольорові теги, щоб вони не конфліктували з фоном колонки
    ========================================= */
+/* СВІТЛА ТЕМА: Пасивний стан */
+.viewBoard .column.withColor .body .tagItem {
+    background-color: rgba(0, 0, 0, 0.04) !important;
+    color: #666666 !important;
+}
+
+/* СВІТЛА ТЕМА: Ховер (М'якший контраст, текст "вбирає" фон) */
+.viewBoard .column.withColor .body .tagItem:hover {
+    background-color: rgba(0, 0, 0, 0.05) !important;
+    color: rgba(0, 0, 0, 0.7) !important;
+    mix-blend-mode: multiply !important;
+}
+
+/* ТЕМНА ТЕМА: Пасивний стан */
+html.themeDark .viewBoard .column.withColor .body .tagItem {
+    background-color: rgba(255, 255, 255, 0.06) !important;
+    color: #a0a0a5 !important;
+}
+
+/* ТЕМНА ТЕМА: Ховер (Світлий напівпрозорий текст, сатурація фону) */
+html.themeDark .viewBoard .column.withColor .body .tagItem:hover {
+    background-color: rgba(255, 255, 255, 0.08) !important;
+    color: rgba(255, 255, 255, 0.8) !important;
+    mix-blend-mode: overlay !important;
+}
+
+/* Загальне правило: дозволяємо перенесення тегів у блоках на сторінці */
 .cell.c-select.isMultiSelect .wrap .over {
     display: flex !important;
-    flex-wrap: nowrap !important;
-    overflow: hidden !important;
+    flex-wrap: wrap !important;
     align-items: center !important;
     gap: 4px !important;
+}
+
+/* DATAVIEW TABLE: ЗАБОРОНА СТИСКАННЯ ТЕГІВ
+   В таблицях теги йдуть в один ряд, зайві ховаються (overflow) */
+.blockDataview .cell.c-select.isMultiSelect .wrap .over,
+.table .cell.c-select.isMultiSelect .wrap .over,
+[id^="dataviewCell-"] .cellContent .wrap .over {
+    flex-wrap: nowrap !important;
+    overflow: hidden !important;
 }
 
 .cell.c-select.isMultiSelect .wrap .over .tagItem {
@@ -6764,8 +6896,8 @@ body .viewGallery .card.add::after {
 
 /* === ADDED DYNAMICALLY FOR RECENT EDITS === */
 .sidebar .sidebarPage.pageWidget .widgetSection.section-recentedit {
-    padding: 4px !important;
-    padding-top: 6px !important;
+    padding: 3px !important;
+
     border-radius: 22px !important;
     box-sizing: border-box !important;
     transition: background-color 0.22s ease, border-color 0.22s ease, box-shadow 0.25s ease !important;
@@ -6797,7 +6929,9 @@ html.themeDark .sidebar .sidebarPage.pageWidget .widgetSection.section-recentedi
 .sidebar .sidebarPage.pageWidget .widgetSection.section-recentedit>.nameWrap .name {
     flex: 1 1 auto !important;
     min-width: 0 !important;
-    padding: 8px 10px !important;
+    padding: 4px 6px !important;
+    padding-top: 10px !important;
+    padding-bottom: 8px !important;
     border-radius: 16px !important;
     font-size: 13px !important;
     font-weight: 600 !important;
@@ -6805,67 +6939,25 @@ html.themeDark .sidebar .sidebarPage.pageWidget .widgetSection.section-recentedi
     transition: background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease, color 0.2s ease !important;
 }
 
-html:not(.themeDark) .sidebar .sidebarPage.pageWidget .widgetSection.section-recentedit>.nameWrap .name {
-    background: rgba(255, 255, 255, 0.36) !important;
-    border: 1px solid rgba(255, 255, 255, 0.35) !important;
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.38) !important;
-    color: rgba(43, 43, 45, 0.5) !important;
+html:not(.themeDark) .sidebar .sidebarPage.pageWidget .widgetSection.section-recentedit>.nameWrap .name {}
 
-}
-
-html:not(.themeDark) .sidebar .sidebarPage.pageWidget .widgetSection.section-recentedit>.nameWrap .name:hover {
-    background: rgba(255, 255, 255, 0.48) !important;
-    border: 1px solid rgba(255, 255, 255, 0.46) !important;
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.52), 0 6px 16px rgba(0, 0, 0, 0.04) !important;
-    color: rgba(43, 43, 45, 0.78) !important;
-}
+html:not(.themeDark) .sidebar .sidebarPage.pageWidget .widgetSection.section-recentedit>.nameWrap .name:hover {}
 
 html:not(.themeDark) .sidebar .sidebarPage.pageWidget .widgetSection.section-recentedit.isOpen>.nameWrap .name,
-html:not(.themeDark) .sidebar .sidebarPage.pageWidget .widgetSection.section-recentedit>.nameWrap.active .name {
-    background: rgba(255, 255, 255, 0.24) !important;
-    border: 1px solid rgba(255, 255, 255, 0.35) !important;
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.38) !important;
-    color: rgba(43, 43, 45, 0.8) !important;
-
-}
+html:not(.themeDark) .sidebar .sidebarPage.pageWidget .widgetSection.section-recentedit>.nameWrap.active .name {}
 
 html:not(.themeDark) .sidebar .sidebarPage.pageWidget .widgetSection.section-recentedit.isOpen>.nameWrap .name:hover,
-html:not(.themeDark) .sidebar .sidebarPage.pageWidget .widgetSection.section-recentedit>.nameWrap.active .name:hover {
-    background: rgba(255, 255, 255, 0.32) !important;
-    border: 1px solid rgba(255, 255, 255, 0.42) !important;
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.46), 0 6px 16px rgba(0, 0, 0, 0.04) !important;
-    color: rgba(43, 43, 45, 0.88) !important;
-}
+html:not(.themeDark) .sidebar .sidebarPage.pageWidget .widgetSection.section-recentedit>.nameWrap.active .name:hover {}
 
-html.themeDark .sidebar .sidebarPage.pageWidget .widgetSection.section-recentedit>.nameWrap .name {
-    background: rgba(255, 255, 255, 0.04) !important;
-    border: 1px solid rgba(255, 255, 255, 0.06) !important;
-    color: rgba(255, 255, 255, 0.62) !important;
+html.themeDark .sidebar .sidebarPage.pageWidget .widgetSection.section-recentedit>.nameWrap .name {}
 
-}
-
-html.themeDark .sidebar .sidebarPage.pageWidget .widgetSection.section-recentedit>.nameWrap .name:hover {
-    background: rgba(255, 255, 255, 0.07) !important;
-    border: 1px solid rgba(255, 255, 255, 0.1) !important;
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05), 0 6px 16px rgba(0, 0, 0, 0.18) !important;
-    color: rgba(255, 255, 255, 0.78) !important;
-}
+html.themeDark .sidebar .sidebarPage.pageWidget .widgetSection.section-recentedit>.nameWrap .name:hover {}
 
 html.themeDark .sidebar .sidebarPage.pageWidget .widgetSection.section-recentedit.isOpen>.nameWrap .name,
-html.themeDark .sidebar .sidebarPage.pageWidget .widgetSection.section-recentedit>.nameWrap.active .name {
-    background: rgba(255, 255, 255, 0.08) !important;
-    border: 1px solid rgba(255, 255, 255, 0.06) !important;
-    color: rgba(255, 255, 255, 0.82) !important;
-
-}
+html.themeDark .sidebar .sidebarPage.pageWidget .widgetSection.section-recentedit>.nameWrap.active .name {}
 
 html.themeDark .sidebar .sidebarPage.pageWidget .widgetSection.section-recentedit.isOpen>.nameWrap .name:hover,
-html.themeDark .sidebar .sidebarPage.pageWidget .widgetSection.section-recentedit>.nameWrap.active .name:hover {
-    background: rgba(255, 255, 255, 0.11) !important;
-    border: 1px solid rgba(255, 255, 255, 0.11) !important;
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06), 0 6px 16px rgba(0, 0, 0, 0.18) !important;
-    color: rgba(255, 255, 255, 0.92) !important;
-}
+html.themeDark .sidebar .sidebarPage.pageWidget .widgetSection.section-recentedit>.nameWrap.active .name:hover {}
 
 .sidebar .sidebarPage.pageWidget .widgetSection.section-recentedit>.nameWrap .name .icon.arrow {
     margin-right: 2px !important;
@@ -7796,4 +7888,302 @@ html:not(.themeDark) .menuDataviewTemplateList .item:hover .previewObject {
 html.themeDark .menuDataviewTemplateList .item:hover .previewObject {
     background-color: rgba(30, 30, 35, 0.85) !important;
     /* Яскравіше при наведенні */
+}
+
+/* ============================================================ */
+/* Горизонтальна лінія — "Широка пілюля"                      */
+/* ============================================================ */
+
+div[data-type="div"] .line {
+    height: 4px !important;
+    border-radius: 9999px !important;
+    border: none !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+html:not(.themeDark) div[data-type="div"] .line {
+    background-color: rgba(60, 60, 67, 0.1) !important;
+}
+
+html.themeDark div[data-type="div"] .line {
+    background-color: rgba(235, 235, 245, 0.18) !important;
+}
+
+/* ============================================================ */
+/* Крапковий розділювач (Dots Divider)                          */
+/* ============================================================ */
+
+div[data-type="div"] {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    margin-top: 0 !important;
+    padding-bottom: 4px !important;
+    min-height: 30px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+div[data-type="div"] .wrap {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    min-height: unset !important;
+    height: 100% !important;
+    width: 100% !important;
+}
+
+div[data-type="div"] .dots {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 8px !important;
+    width: 100% !important;
+    height: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    line-height: 0 !important;
+}
+
+div[data-type="div"] .dots .dot {
+    display: block !important;
+    width: 6px !important;
+    height: 6px !important;
+    border-radius: 50% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    position: static !important;
+    box-sizing: border-box !important;
+}
+
+html:not(.themeDark) div[data-type="div"] .dots .dot {
+    background-color: rgba(60, 60, 67, 0.4) !important;
+}
+
+html.themeDark div[data-type="div"] .dots .dot {
+    background-color: rgba(235, 235, 245, 0.4) !important;
+}
+
+
+.blocks .block.blockText.textToggleHeader3 {
+    padding: 4px 0px 0px 0px !important;
+}
+
+
+
+/* ============================================================
+   ANYTYPE GLASSMORPHISM — ABSOLUTE VERSION
+   Збереження кольору користувача + Чіткість тексту
+   ============================================================ */
+
+/* 1. БАЗОВИЙ КОНТЕЙНЕР (Геометрія та Анімація) */
+.linkCard {
+    position: relative !important;
+    border-radius: var(--l-panel-radius) !important;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1) !important;
+    /* Запобігає розмиттю тексту при масштабуванні */
+    backface-visibility: hidden;
+    transform: translateZ(0);
+}
+
+/* 2. ШАР ЕФЕКТУ СКЛА (.sides) */
+.linkCard .sides {
+    border-radius: var(--l-panel-radius) !important;
+    backdrop-filter: var(--glass-blur) !important;
+    -webkit-backdrop-filter: var(--glass-blur) !important;
+    overflow: hidden !important;
+    border: none !important;
+    transition: all 0.3s ease !important;
+}
+
+/* 3. ЛОГІКА ТЕМ (Через класи Anytype) */
+
+/* Світла тема: якщо кольору НЕМАЄ — використовуємо легкий сірий для контрасту */
+html:not(.themeDark) .linkCard .sides:not(.withBgColor) {
+    background-color: rgba(242, 242, 247, 0.7) !important;
+    box-shadow:
+        inset 0 0 0 1px rgba(0, 0, 0, 0.08),
+        0 4px 12px rgba(0, 0, 0, 0.03) !important;
+}
+
+/* Темна тема: якщо кольору НЕМАЄ */
+html.themeDark .linkCard .sides:not(.withBgColor) {
+    background-color: var(--glass-bg-dark) !important;
+    box-shadow:
+        inset 0 0 0 1px var(--glass-border-dark),
+        0 8px 24px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* 4. ЛОГІКА КОЛЬОРОВИХ КАРТОК (.withBgColor) */
+/* Ми НЕ пишемо background-color, щоб не перебивати Anytype */
+.linkCard .sides.withBgColor .side[class*="bgColor-"] {
+    /* Робимо фон напівпрозорим для роботи блюру, зберігаючи колір */
+    filter: opacity(0.8) saturate(1.2) !important;
+    border: none !important;
+}
+
+/* Додаємо контур кольоровим карткам */
+html:not(.themeDark) .linkCard .sides.withBgColor {
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1) !important;
+}
+
+html.themeDark .linkCard .sides.withBgColor {
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.15) !important;
+}
+
+/* 5. ХОВЕР (Скромний та чіткий) */
+.linkCard:hover {
+    transform: scale(1.010) !important;
+}
+
+.linkCard:hover .sides {
+    /* Підсилюємо межу та тінь при наведенні */
+    box-shadow:
+        inset 0 0 0 1px var(--glass-item-border-light),
+        0 12px 28px rgba(0, 0, 0, 0.1) !important;
+}
+
+html.themeDark .linkCard:hover .sides {
+    box-shadow:
+        inset 0 0 0 1px rgba(255, 255, 255, 0.25),
+        0 15px 35px rgba(0, 0, 0, 0.35) !important;
+}
+
+/* 6. ФІКС ТЕКСТУ ТА ІКОНОК (Прибираємо "димку") */
+.linkCard .name,
+.linkCard .item,
+.linkCard .iconObject {
+    position: relative;
+    z-index: 10;
+    /* Повертаємо 100% чіткість тексту, що знаходиться всередині фільтрованого блоку */
+    filter: none !important;
+    opacity: 1 !important;
+    /* Технічний хак для різкості шрифтів на склі */
+    -webkit-font-smoothing: subpixel-antialiased;
+    text-shadow: 0 0 0.1px rgba(0, 0, 0, 0.01);
+}
+
+.linkCard .iconImage,
+.linkCard .iconObject,
+.linkCard .iconObject img {
+    border-radius: 0px !important;
+    mask-image: none !important;
+    -webkit-mask-image: none !important;
+}
+
+/* 7. ОЧИЩЕННЯ ВНУТРІШНІХ СТИЛІВ */
+.linkCard .relationItem,
+.linkCard .focusable,
+.linkCard .side:not([class*="bgColor-"]) {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+/* Фізичний блік зверху для ефекту скляної панелі */
+.linkCard::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: var(--l-panel-radius);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: 5;
+    opacity: 0.6;
+}
+
+/* Робимо зовнішні контейнери невидимими, щоб не було "картки в картці" */
+.blocks .block.blockDataview .viewContent.viewGallery .card.isHuman,
+.blocks .block.blockDataview .viewContent.viewGallery .card.isHuman .selectionTarget,
+.blocks .block.blockDataview .viewContent.viewGallery .card.isHuman .dropTarget,
+.blocks .block.blockDataview .viewContent.viewGallery .card.isHuman .cardContent {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    /* Уніфікуємо відступи */
+}
+
+/* Весь дизайн зосереджуємо тільки на .inner */
+.card.isHuman .inner {
+    border-radius: var(--l-panel-radius) !important;
+    transition: background-color 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease, transform 0.18s ease !important;
+    padding: 18px !important;
+    /* Внутрішній відступ для контенту */
+
+    /* Базовий стан: Світла тема */
+    background: var(--element-color-light) !important;
+    border: 1px solid var(--element-border-light) !important;
+}
+
+/* Базовий стан: Темна тема */
+html.themeDark .card.isHuman .inner {
+    background: var(--element-color-dark) !important;
+    border: 1px solid var(--element-border-dark) !important;
+}
+
+/* HOVER стан для всієї картки */
+.card.isHuman:hover {
+    transform: translateY(-2px) scale(1.01) !important;
+}
+
+/* Ефект скла на .inner при наведенні (Світла тема) */
+html:not(.themeDark) .card.isHuman:hover .inner {
+    background: var(--glass-bg-light) !important;
+    backdrop-filter: var(--glass-blur) !important;
+    -webkit-backdrop-filter: var(--glass-blur) !important;
+    border: 1px solid var(--element-border-light-hover) !important;
+    box-shadow: var(--glass-shadow) !important;
+}
+
+/* Ефект скла на .inner при наведенні (Темна тема) */
+html.themeDark .card.isHuman:hover .inner {
+    background: var(--glass-bg-dark) !important;
+    backdrop-filter: var(--glass-blur) !important;
+    -webkit-backdrop-filter: var(--glass-blur) !important;
+    border: 1px solid var(--element-border-dark-hover) !important;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25) !important;
+    /* Трохи густіша тінь для темної */
+
+}
+
+/* Базовий стан — готуємо браузер до плавного рендеру */
+.card.isHuman {
+    transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1) !important;
+    will-change: transform !important;
+}
+
+/* Ховер — плавне "спливання" та збільшення */
+.card.isHuman:hover {
+    /* Зменшив scale до 1.015, щоб не було "стрибка" пікселів, 
+       але залишив відчуття об'єму */
+    transform: translateY(-4px) scale(1.010) !important;
+    z-index: 10 !important;
+}
+
+/* --- Світла тема (база) --- */
+.card.isHuman .name {
+    opacity: 0.8 !important;
+    transition: opacity 0.4s cubic-bezier(0.2, 0.8, 0.2, 1) !important;
+}
+
+/* --- Темна тема (база) --- */
+html.themeDark .card.isHuman .name {
+    opacity: 0.6 !important;
+}
+
+/* --- Ховер (універсальний) --- */
+/* Додаємо html.themeDark і сюди, щоб перебити базовий стан темної теми */
+.card.isHuman:hover .name,
+html.themeDark .card.isHuman:hover .name {
+    opacity: 1 !important;
 }
