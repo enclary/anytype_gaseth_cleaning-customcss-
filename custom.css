@@ -4,6 +4,17 @@
 :root {
     --font-family-main: 'Inter', sans-serif;
 
+    /* Derived common literals (used to replace repeated raw values) */
+    --white: #ffffff;
+    --black: #000000;
+    --muted-black-05: rgba(0, 0, 0, 0.05);
+    --muted-black-04: rgba(0, 0, 0, 0.04);
+    --muted-black-06: rgba(0, 0, 0, 0.06);
+    --muted-white-42: rgba(255, 255, 255, 0.42);
+    --muted-white-52: rgba(255, 255, 255, 0.52);
+    --muted-white-72: rgba(255, 255, 255, 0.72);
+    --muted-white-78: rgba(255, 255, 255, 0.78);
+
 
 
     /* Document Backgrounds */
@@ -708,8 +719,8 @@ html:not(.themeDark) .layout,
 html:not(.themeDark) .mainWrapper,
 html:not(.themeDark) #page,
 html:not(.themeDark) .pageMain {
-    background: #fff !important;
-    background-color: #fff !important;
+    background: var(--white) !important;
+    background-color: var(--white) !important;
     background-image: none !important;
     border-radius: 0px !important;
     padding: 0px !important
@@ -722,8 +733,8 @@ html.themeDark .layout,
 html.themeDark .mainWrapper,
 html.themeDark #page,
 html.themeDark .pageMain {
-    background: #0F0F0F !important;
-    background-color: #0F0F0F !important;
+    background: #121214 !important;
+    background-color: #121214 !important;
     background-image: none !important;
     border-radius: 0px !important;
     padding: 0px !important
@@ -760,7 +771,7 @@ html.themeDark .sidebarPage,
 html.themeDark #sidebar,
 html.themeDark .any-sidebar {
     background: transparent !important;
-    background-color: #0F0F0F !important;
+    background-color: #121214 !important;
     background-image: none !important;
 }
 
@@ -781,7 +792,7 @@ html:not(.themeDark) .CollectionView {
 
 /* 3. Опціонально: робимо самі картки Канбану білими для контрасту (як у macOS) */
 html:not(.themeDark) .boardCard {
-    background: #ffffff !important;
+    background: var(--white) !important;
     border: 1px solid rgba(0, 0, 0, 0.05) !important;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05) !important;
 }
@@ -790,9 +801,8 @@ body,
 html.bodyMain,
 #root {
     font-family: var(--font-family-main);
-    -webkit-font-smoothing: antialiased;
-    background-color: var(--app-bg-light) !important;
-    background-image: none !important;
+
+    /* Document Backgrounds */
 }
 
 html.themeDark body,
@@ -1055,7 +1065,7 @@ html:not(.themeDark) .header.mainObject .side.center .path .name span {
     border-radius: var(--rounded-panel-radius) !important;
     background: linear-gradient(180deg, rgba(255, 255, 255, 0.82) 0%, rgba(246, 246, 248, 0.92) 100%) !important;
     border: 1px solid rgba(0, 0, 0, 0.07) !important;
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.72), 0 8px 20px rgba(0, 0, 0, 0.05) !important;
+    box-shadow: inset 0 1px 0 var(--muted-white-72), 0 8px 20px var(--muted-black-05) !important;
     backdrop-filter: blur(16px) saturate(180%) brightness(1.02) !important;
     -webkit-backdrop-filter: blur(16px) saturate(180%) brightness(1.02) !important;
     transition: background-color 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease, transform 0.18s ease !important;
@@ -1849,8 +1859,8 @@ html.themeDark .blockText.textCallout>.wrapContent:not(.bgColor) {
 
 html:not(.themeDark) .widget.widgetLink {
     background-color: rgba(255, 255, 255, 0.40) !important;
-    border: 1px solid rgba(255, 255, 255, 0.42) !important;
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.52), 0 10px 28px rgba(0, 0, 0, 0.06) !important;
+    border: 1px solid var(--muted-white-42) !important;
+    box-shadow: inset 0 1px 0 var(--muted-white-52), 0 10px 28px var(--muted-black-06) !important;
     backdrop-filter: var(--glass-blur) !important;
     -webkit-backdrop-filter: var(--glass-blur) !important;
 }
@@ -2233,6 +2243,10 @@ html:not(.themeDark) .sidebarPage .item.selected {
     box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.52), var(--glass-item-shadow-light) !important;
 }
 
+.sidebar .sidebarPage>.body {
+    padding: 0 8px 20px;
+}
+
 html.themeDark .widgetObject .item:hover,
 html.themeDark .items .item:hover,
 html.themeDark .widgetObject .item.active,
@@ -2281,9 +2295,12 @@ html.themeDark .sidebar .sidebarPage.pageWidget .widgetSection.section-type {
 }
 
 .sidebar .sidebarPage.pageWidget .widgetSection.section-type>.nameWrap .name {
-    flex: 1 1 auto !important;
+    /* prevent the name block from stretching to full width (new Anytype layout changed sizing) */
+    flex: 0 0 auto !important;
+    display: inline-flex !important;
+    align-items: center !important;
     min-width: 0 !important;
-    padding: 8px 10px !important;
+    padding: 8px 24px 8px 10px !important;
     border-radius: 16px !important;
     font-size: 13px !important;
     font-weight: 600 !important;
@@ -2358,6 +2375,33 @@ html.themeDark .sidebar .sidebarPage.pageWidget .widgetSection.section-type>.nam
     transition: transform 0.2s cubic-bezier(0.22, 1, 0.36, 1) !important;
 }
 
+/* tighten arrow icon so it only uses its content width and doesn't expand */
+.sidebar .sidebarPage.pageWidget .widgetSection.section-type>.nameWrap .name .icon.arrowButton,
+.sidebar .sidebarPage.pageWidget .widgetSection.section-type>.nameWrap .name .icon.arrow {
+    width: 18px !important;
+    height: 18px !important;
+    min-width: 18px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+/* hide the textual label inside the add/new button and leave only the icon */
+.sidebar .sidebarPage.pageWidget .widgetSection.section-type>.nameWrap .buttons .button.blank.size28 .txt,
+.sidebar .sidebarPage.pageWidget .widgetSection.section-type>.nameWrap .buttons .button.blank.c28 .txt,
+.sidebar .sidebarPage.pageWidget .widgetSection.section-type>.nameWrap .buttons .button.blank.size28 .name,
+.sidebar .sidebarPage.pageWidget .widgetSection.section-type>.nameWrap .buttons .button.blank.c28 .name {
+    display: none !important;
+}
+
+/* ensure the add button remains square and centred when text hidden */
+.sidebar .sidebarPage.pageWidget .widgetSection.section-type>.nameWrap .buttons .button.blank.size28,
+.sidebar .sidebarPage.pageWidget .widgetSection.section-type>.nameWrap .buttons .button.blank.c28,
+.sidebar .sidebarPage.pageWidget .widgetSection.section-type>.nameWrap .buttons .button.blank {
+    padding: 6px 8px !important;
+    width: auto !important;
+}
+
 .sidebar .sidebarPage.pageWidget .widgetSection.section-type>.nameWrap .buttons {
     opacity: 1 !important;
     gap: 6px !important;
@@ -2368,12 +2412,92 @@ html.themeDark .sidebar .sidebarPage.pageWidget .widgetSection.section-type>.nam
     align-items: center !important;
     gap: 6px !important;
     height: 34px !important;
-    padding: 0 12px !important;
+    padding: 0 8px !important;
     border-radius: 999px !important;
     font-size: 12px !important;
     font-weight: 600 !important;
     line-height: 1 !important;
     transition: background-color 0.22s ease, border-color 0.22s ease, box-shadow 0.22s ease !important;
+}
+
+/* ==================================================
+   Unify recent edits widget visuals (section-recentedit)
+   Match padding, icon sizing and hover affordances
+   ================================================== */
+.sidebar .sidebarPage.pageWidget .widgetSection.section-recentedit>.nameWrap {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 8px !important;
+    padding: 2px !important;
+}
+
+.sidebar .sidebarPage.pageWidget .widgetSection.section-recentedit>.nameWrap .name {
+    flex: 0 0 auto !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    min-width: 0 !important;
+    padding: 8px 24px 8px 10px !important;
+    border-radius: 16px !important;
+    font-size: 13px !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.01em !important;
+    transition: background-color 0.18s ease, transform 0.12s ease !important;
+}
+
+/* Constrain the chevron/arrow so it doesn't expand */
+.sidebar .sidebarPage.pageWidget .widgetSection.section-recentedit>.nameWrap .name .icon.arrow,
+.sidebar .sidebarPage.pageWidget .widgetSection.section-recentedit>.nameWrap .name .icon.arrowButton {
+    width: 18px !important;
+    height: 18px !important;
+    min-width: 18px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin-right: 6px !important;
+}
+
+/* Size and hover for the `more` icon to match other widget buttons */
+.sidebar .sidebarPage.pageWidget .widgetSection.section-recentedit>.nameWrap .buttons .icon.commonMore,
+.sidebar .sidebarPage.pageWidget .widgetSection.section-recentedit>.nameWrap .buttons .icon.more {
+    width: 20px !important;
+    height: 20px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    transition: transform .12s ease, filter .12s ease !important;
+}
+
+.sidebar .sidebarPage.pageWidget .widgetSection.section-recentedit>.nameWrap .buttons .icon.commonMore:hover,
+.sidebar .sidebarPage.pageWidget .widgetSection.section-recentedit>.nameWrap .buttons .icon.more:hover {
+    transform: translateY(-1px) scale(1.08) !important;
+    filter: drop-shadow(0 6px 12px rgba(0,0,0,0.08)) !important;
+}
+
+/* subtle background on hover for the whole name area */
+.sidebar .sidebarPage.pageWidget .widgetSection.section-recentedit>.nameWrap .name:hover {
+    background: rgba(0,0,0,0.04) !important;
+}
+
+/* Make the "more" (three-dots) icon slightly larger and add right spacing */
+.sidebar .sidebarPage.pageWidget .widgetSection .nameWrap .buttons .icon.commonMore,
+.sidebar .sidebarPage.pageWidget .widgetSection .nameWrap .buttons .icon.commonMore.more,
+.sidebar .sidebarPage.pageWidget .widgetSection .nameWrap .buttons .icon.more {
+    width: 18px !important;
+    height: 18px !important;
+    min-width: 18px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin-right: 14px !important;
+    transition: transform .12s ease, filter .12s ease !important; rotate: 90deg !important;
+}
+
+/* Ensure SVG fills the larger container */
+.sidebar .sidebarPage.pageWidget .widgetSection .nameWrap .buttons .icon.commonMore svg,
+.sidebar .sidebarPage.pageWidget .widgetSection .nameWrap .buttons .icon.more svg {
+    width: 100% !important;
+    height: 100% !important;
 }
 
 .sidebar .sidebarPage.pageWidget .widgetSection.section-type>.nameWrap .buttons .button.blank.c28 .txt {
@@ -2391,8 +2515,9 @@ html:not(.themeDark) .sidebar .sidebarPage.pageWidget .widgetSection.section-typ
 html:not(.themeDark) .sidebar .sidebarPage.pageWidget .widgetSection.section-type>.nameWrap .buttons .button.blank.c28:hover {
     background: var(--glass-active-light-hover) !important;
     border-color: var(--glass-active-light-border-hover) !important;
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.24) !important;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.24), 0 8px 20px rgba(0,0,0,0.08) !important;
     color: #ffffff !important;
+    transform: translateY(-2px) scale(1.02) !important;
 }
 
 html:not(.themeDark) .sidebar .sidebarPage.pageWidget .widgetSection.section-type>.nameWrap .buttons .button.blank.c28:hover .icon.plus {
@@ -2409,12 +2534,39 @@ html.themeDark .sidebar .sidebarPage.pageWidget .widgetSection.section-type>.nam
 html.themeDark .sidebar .sidebarPage.pageWidget .widgetSection.section-type>.nameWrap .buttons .button.blank.c28:hover {
     background: var(--glass-active-dark-hover) !important;
     border-color: var(--glass-active-dark-border-hover) !important;
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.12) !important;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.12) !important, 0 8px 20px rgba(0,0,0,0.28) !important;
     color: #ffffff !important;
+    transform: translateY(-2px) scale(1.02) !important;
 }
 
 html.themeDark .sidebar .sidebarPage.pageWidget .widgetSection.section-type>.nameWrap .buttons .button.blank.c28:hover .icon.plus {
     filter: brightness(0) invert(1) !important;
+}
+
+/* plus icon hover/enhancement: target common plus icon classes used in markup */
+.sidebar .sidebarPage.pageWidget .widgetSection.section-type>.nameWrap .buttons .button.blank.c28 .icon.plus,
+.sidebar .sidebarPage.pageWidget .widgetSection.section-type>.nameWrap .buttons .button.blank.c28 .icon.plusWidgetSection,
+.sidebar .sidebarPage.pageWidget .widgetSection.section-type>.nameWrap .buttons .icon.plusMenu,
+.sidebar .sidebarPage.pageWidget .widgetSection.section-type>.nameWrap .buttons .icon.plus {
+    transition: transform 0.14s ease, filter 0.14s ease !important;
+    will-change: transform, filter !important;
+}
+
+.sidebar .sidebarPage.pageWidget .widgetSection.section-type>.nameWrap .buttons .button.blank.c28:hover .icon.plus,
+.sidebar .sidebarPage.pageWidget .widgetSection.section-type>.nameWrap .buttons .button.blank.c28:hover .icon.plusWidgetSection,
+.sidebar .sidebarPage.pageWidget .widgetSection.section-type>.nameWrap .buttons .icon.plusMenu:hover {
+    transform: scale(1.12) !important;
+    filter: drop-shadow(0 4px 10px rgba(0,0,0,0.12)) !important;
+}
+
+/* example: style for the provided + icon wrapper .iconWrap.create to match button look */
+.buttons .iconWrap.create .icon.plusMenu,
+.buttons .iconWrap.create .icon {
+    width: 20px !important;
+    height: 20px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
 }
 
 .sidebar .sidebarPage.pageWidget .widgetSection.section-type>.items {
@@ -2634,7 +2786,7 @@ html.themeDark #item-bin:hover {
     padding: 0 16px !important;
     transition: all 0.2s cubic-bezier(0.2, 0.8, 0.2, 1) !important;
     border: var(--glass-panel-border-light) !important;
-    background: #ffffff !important;
+    background: var(--white) !important;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04), 0 2px 4px rgba(0, 0, 0, 0.02) !important;
 }
 
@@ -2645,7 +2797,7 @@ html.themeDark .editorControls .btn.white.withIcon {
 }
 
 .editorControls .btn.white.withIcon:hover {
-    background: #ffffff !important;
+    background: var(--white) !important;
     transform: translateY(-1px) !important;
     /* Float effect */
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06), 0 2px 4px rgba(0, 0, 0, 0.02) !important;
@@ -3424,7 +3576,7 @@ html.themeDark .resize-h:hover .resize-handle {
     position: relative !important;
     left: 0 !important;
     right: 0 !important;
-    background-color: rgba(0, 0, 0, 0.1) !important;
+    background-color: rgba(0, 0, 0, 0.0) !important;
     border-radius: 2px !important;
     border: none !important;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
@@ -3438,19 +3590,6 @@ html.themeDark .resize-h:hover .resize-handle {
     text-align: center !important;
 }
 
-.line:hover {
-    background-color: rgba(0, 0, 0, 0.3) !important;
-    width: 460px !important;
-    box-shadow: none !important;
-}
-
-html.themeDark .line {
-    background-color: rgba(255, 255, 255, 0.1) !important;
-}
-
-html.themeDark .line:hover {
-    background-color: rgba(255, 255, 255, 0.3) !important;
-}
 
 /* --- 15. ЦИТАТА: ULTRA STABLE + PERFECT CENTERING --- */
 div.blockText.textQuote>.wrapContent {
@@ -4630,7 +4769,7 @@ html.themeDark input:focus {
     line-height: 22px !important;
     padding: 0 10px !important;
     margin: 2px 4px 2px 0 !important;
-    border-radius: var(--rounded-panel-radius) !important;
+    border-radius: 8px !important;
     font-size: 12px !important;
     font-weight: 500 !important;
     white-space: nowrap !important;
@@ -6106,7 +6245,7 @@ html.themeDark .pageAuthPinCheck .pin .input:hover {
 /* --- FOCUS / ACTIVE STATE (Блакитне сяйво) --- */
 .pageAuthPinCheck .pin .input:focus,
 .pageAuthPinCheck .pin .input.isFocused {
-    background: #ffffff !important;
+    background: var(--white) !important;
     border-color: #007AFF !important;
     transform: scale(1.02) !important;
     /* Легке збільшення замість зміщення */
@@ -8186,4 +8325,286 @@ html.themeDark .card.isHuman .name {
 .card.isHuman:hover .name,
 html.themeDark .card.isHuman:hover .name {
     opacity: 1 !important;
+}
+
+
+/* ============================================================
+   DATAVIEW: viewList isRegular — Новий вид «Список»
+   Структура: .regularContent > .iconObject.c48 + .sides > .line.first > .side.left + .side.right
+   ============================================================ */
+
+/* --- Рядок (.row): flex щоб drag handle + контент стояли поряд --- */
+.viewContent.viewList.isRegular .row {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+/* --- .dropTarget займає всю залишкову ширину рядка --- */
+.viewContent.viewList.isRegular .dropTarget.viewList {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    flex: 1 1 auto !important;
+    min-width: 0 !important;
+    width: 100% !important;
+    min-height: 64px !important;
+    box-sizing: border-box !important;
+    border-radius: 10px !important;
+    transition: background 0.15s ease !important;
+}
+
+/* --- .selectionTarget: повна ширина і flex --- */
+.viewContent.viewList.isRegular .selectionTarget {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+}
+
+/* --- .regularContent: grid з максимальною специфічністю --- */
+.viewContent.viewList.isRegular .regularContent,
+.blocks .block.blockDataview .viewContent.viewList.isRegular .regularContent {
+    display: grid !important;
+    grid-template-columns: 44px 1fr !important;
+    align-items: center !important;
+    gap: 12px !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    height: 64px !important;
+    padding: 0 12px 0 8px !important;
+    box-sizing: border-box !important;
+    overflow: visible !important;
+}
+
+/* --- .sides займає другу колонку грід --- */
+.viewContent.viewList.isRegular .regularContent>.sides,
+.blocks .block.blockDataview .viewContent.viewList.isRegular .regularContent>.sides {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-self: center !important;
+    min-width: 0 !important;
+    width: 100% !important;
+    overflow: visible !important;
+}
+
+/* --- Перший (і єдиний) рядок: ім'я ліворуч, теги праворуч --- */
+.viewContent.viewList.isRegular .line.first {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 8px !important;
+    width: 100% !important;
+    min-width: 0 !important;
+}
+
+/* --- Ліва частина: ім'я + кнопка edit --- */
+.viewContent.viewList.isRegular .side.left {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 6px !important;
+    flex-shrink: 1 !important;
+    min-width: 0 !important;
+    overflow: hidden !important;
+}
+
+/* --- Права частина: теги в один рядок --- */
+.viewContent.viewList.isRegular .side.right {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 6px !important;
+    flex-shrink: 0 !important;
+    flex-wrap: nowrap !important;
+    overflow: hidden !important;
+    max-width: 50% !important;
+}
+
+/* --- Аватар: не стискати --- */
+.viewContent.viewList.isRegular .iconObject.c48 {
+    flex-shrink: 0 !important;
+}
+
+/* --- Ім'я: обрізати якщо довге --- */
+.viewContent.viewList.isRegular .cellContent.isName .name {
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    line-height: 1.4 !important;
+}
+
+/* --- Кнопка редагування: прихована, з'являється при ховері --- */
+.viewContent.viewList.isRegular .icon.commonEdit.edit {
+    opacity: 0 !important;
+    transition: opacity 0.15s ease !important;
+    flex-shrink: 0 !important;
+    pointer-events: none !important;
+}
+
+.viewContent.viewList.isRegular .selectionTarget:hover .icon.commonEdit.edit {
+    opacity: 0.5 !important;
+    pointer-events: auto !important;
+}
+
+.viewContent.viewList.isRegular .icon.commonEdit.edit:hover {
+    opacity: 1 !important;
+}
+
+/* --- Drag Handle: аналогічно --- */
+.viewContent.viewList.isRegular .icon.controlDataviewDnd.drag {
+    opacity: 0 !important;
+    transition: opacity 0.15s ease !important;
+}
+
+.viewContent.viewList.isRegular .selectionTarget:hover .icon.controlDataviewDnd.drag {
+    opacity: 0.3 !important;
+}
+
+/* --- Порожні поля ховаємо --- */
+.viewContent.viewList.isRegular .cellWrapper.isEmpty {
+    display: none !important;
+}
+
+/* --- Теги у правій частині: суворо в один рядок --- */
+.viewContent.viewList.isRegular .side.right .wrap .over {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    align-items: center !important;
+    gap: 4px !important;
+    overflow: hidden !important;
+}
+
+/* --- Ховер на рядок (Світла тема) --- */
+html:not(.themeDark) .viewContent.viewList.isRegular .selectionTarget {
+    border-radius: 10px !important;
+    transition: background 0.15s ease !important;
+}
+
+html:not(.themeDark) .viewContent.viewList.isRegular .selectionTarget:hover {
+    background: rgba(0, 0, 0, 0.03) !important;
+}
+
+/* --- Ховер на рядок (Темна тема) --- */
+html.themeDark .viewContent.viewList.isRegular .selectionTarget {
+    border-radius: 10px !important;
+    transition: background 0.15s ease !important;
+}
+
+html.themeDark .viewContent.viewList.isRegular .selectionTarget:hover {
+    background: rgba(255, 255, 255, 0.05) !important;
+}
+
+/* --- Роздільники між рядками --- */
+html:not(.themeDark) .viewContent.viewList.isRegular .row+.row .selectionTarget {
+    border-top: 1px solid rgba(0, 0, 0, 0.00) !important;
+}
+
+html.themeDark .viewContent.viewList.isRegular .row+.row .selectionTarget {
+    border-top: 1px solid rgba(255, 255, 255, 0.00) !important;
+}
+
+/* --- Прибираємо лінію між назвою та тегом --- */
+.viewContent.viewList.isRegular .line.first {
+    border-bottom: none !important;
+    box-shadow: none !important;
+}
+
+.viewContent.viewList.isRegular .cellContent.isName {
+    border-bottom: none !important;
+    box-shadow: none !important;
+}
+
+.viewContent.viewList.isRegular .cellContent.c-shortText {
+    border-bottom: none !important;
+}
+
+/* --- Apple-style zoom hover --- */
+.viewContent.viewList.isRegular .dropTarget.viewList {
+    transform-origin: center center !important;
+    transition:
+        background 0.15s ease,
+        transform 0.28s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+    will-change: transform !important;
+}
+
+.viewContent.viewList.isRegular .dropTarget.viewList {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+.viewContent.viewList.isRegular .cellContent.isName .name {
+    padding-left: 6px !important;
+}
+
+/* --- Ланцюжок батьківських елементів тегу --- */
+.viewContent.viewList.isRegular .side.right .cellWrapper,
+.viewContent.viewList.isRegular .side.right .cellContent,
+.viewContent.viewList.isRegular .side.right .wrap,
+.viewContent.viewList.isRegular .side.right .over {
+    display: flex !important;
+    align-items: center !important;
+    overflow: visible !important;
+    min-width: 0 !important;
+    height: 100% !important;
+}
+
+/* --- Сам тег --- */
+.viewContent.viewList.isRegular .side.right .element .flex {
+    display: flex !important;
+    align-items: center !important;
+    gap: 0px !important;
+    padding: 4px 6px !important;
+    border-radius: 8px !important;
+    background: transparent !important;
+    transition: background 0.2s ease !important;
+    cursor: pointer !important;
+    overflow: visible !important;
+}
+
+.viewContent.viewList.isRegular .side.right .element .flex:hover {
+    background: rgba(255, 255, 255, 0.14) !important;
+}
+
+.viewContent.viewList.isRegular .side.right .element .name {
+    font-size: 13px !important;
+    font-weight: 500 !important;
+    opacity: 0.85 !important;
+    white-space: nowrap !important;
+}
+
+.viewContent.viewList.isRegular .side.right .element .name span {
+    padding-left: 12px !important;
+}
+.viewContent.viewList.isRegular .side.right .element .iconObject.c16 {
+    transform: scale(1.4) !important;
+    transform-origin: center center !important;
+}
+
+/* Посилений селектор для тегів, щоб перебити системні 24px та 12px */
+.viewBoard .column .body .tagItem,
+.viewBoard .column .body .tagItem.isSmall,
+.tagItem.isSelect,
+.tagItem {
+    border-radius: 8px !important;
+}
+
+
+
+
+/* Start a discussion SECTION - HIDE */
+
+.commentSection,
+.socialBlockWrap {
+    display: none;
 }
