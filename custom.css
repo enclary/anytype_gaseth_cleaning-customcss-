@@ -7,25 +7,42 @@
     /* Derived common literals (used to replace repeated raw values) */
     --white: #ffffff;
     --black: #000000;
-    --muted-black-05: rgba(0, 0, 0, 0.05);
     --muted-black-04: rgba(0, 0, 0, 0.04);
+    --muted-black-05: rgba(0, 0, 0, 0.05);
     --muted-black-06: rgba(0, 0, 0, 0.06);
+    --muted-black-08: rgba(0, 0, 0, 0.08);
+    --muted-black-10: rgba(0, 0, 0, 0.1);
+    --muted-black-20: rgba(0, 0, 0, 0.2);
+    --muted-black-22: rgba(0, 0, 0, 0.22);
+    --muted-black-28: rgba(0, 0, 0, 0.28);
+    --muted-black-30: rgba(0, 0, 0, 0.3);
+    --muted-white-03: rgba(255, 255, 255, 0.03);
+    --muted-white-04: rgba(255, 255, 255, 0.04);
+    --muted-white-05: rgba(255, 255, 255, 0.05);
+    --muted-white-06: rgba(255, 255, 255, 0.06);
+    --muted-white-08: rgba(255, 255, 255, 0.08);
+    --muted-white-10: rgba(255, 255, 255, 0.1);
+    --muted-white-12: rgba(255, 255, 255, 0.12);
+    --muted-white-14: rgba(255, 255, 255, 0.14);
+    --muted-white-15: rgba(255, 255, 255, 0.15);
+    --muted-white-22: rgba(255, 255, 255, 0.22);
+    --muted-white-24: rgba(255, 255, 255, 0.24);
+    --muted-white-40: rgba(255, 255, 255, 0.4);
     --muted-white-42: rgba(255, 255, 255, 0.42);
     --muted-white-52: rgba(255, 255, 255, 0.52);
+    --muted-white-60: rgba(255, 255, 255, 0.6);
     --muted-white-72: rgba(255, 255, 255, 0.72);
     --muted-white-78: rgba(255, 255, 255, 0.78);
 
-
-
     /* Document Backgrounds */
-    --app-bg-light: #ffffff;
+    --app-bg-light: var(--white);
     --app-bg-dark: #121214;
-    --card-bg-light: #ffffff;
+    --card-bg-light: var(--white);
     --card-bg-dark: #1e1e20;
     --element-color-light: #F6F6F7;
     --element-color-dark: rgba(29, 29, 31, 0.5);
     --element-border-light: rgba(255, 255, 255, 0.3);
-    --element-border-dark: rgba(255, 255, 255, 0.05);
+    --element-border-dark: var(--muted-white-05);
     --element-border-light-hover: rgba(0, 0, 0, 0.07);
     --element-border-dark-hover: rgba(255, 255, 255, 0.16);
 
@@ -34,7 +51,7 @@
     --header-pill-bg-light-hover: rgba(239, 239, 244, 0.92);
     --header-pill-border-light: rgba(0, 0, 0, 0.07);
     --header-pill-bg-dark: rgba(26, 26, 30, 0.75);
-    --header-pill-border-dark: rgba(255, 255, 255, 0.12);
+    --header-pill-border-dark: var(--muted-white-12);
 
 
 
@@ -87,26 +104,26 @@
     /* Soft Pastel / Glassmorphism Variables */
     --glass-bg-light: rgba(255, 255, 255, 0.85);
     --glass-bg-dark: rgba(28, 28, 30, 0.85);
-    --glass-border-light: rgba(255, 255, 255, 0.42);
-    --glass-border-dark: rgba(255, 255, 255, 0.08);
-    --glass-shadow: 0 12px 40px rgba(0, 0, 0, 0.06);
+    --glass-border-light: var(--muted-white-42);
+    --glass-border-dark: var(--muted-white-08);
+    --glass-shadow: 0 12px 40px var(--muted-black-06);
     --glass-blur: blur(32px) saturate(180%);
     --glass-item-bg-light: rgba(255, 255, 255, 0.48);
-    --glass-item-bg-light-hover: rgba(255, 255, 255, 0.72);
+    --glass-item-bg-light-hover: var(--muted-white-72);
     --glass-item-bg-light-active: rgba(255, 255, 255, 0.82);
     --glass-item-border-light: rgba(255, 255, 255, 0.58);
-    --glass-item-shadow-light: 0 6px 18px rgba(0, 0, 0, 0.05);
+    --glass-item-shadow-light: 0 6px 18px var(--muted-black-05);
     --glass-active-light: rgba(52, 120, 246, 0.30);
     --glass-active-light-hover: rgba(52, 120, 246, 0.84);
     --glass-active-light-border: rgba(52, 120, 246, 0.22);
     --glass-active-light-border-hover: rgba(52, 120, 246, 0.42);
     --glass-panel-bg-light: rgba(242, 242, 247, 0.75);
     --glass-panel-bg-dark: rgba(36, 36, 40, 0.85);
-    --glass-panel-border-light: 1px solid rgba(0, 0, 0, 0.04);
-    --glass-panel-border-dark: 1px solid rgba(255, 255, 255, 0.08);
-    --glass-panel-border-right-light: 1px solid rgba(0, 0, 0, 0.08);
+    --glass-panel-border-light: 1px solid var(--muted-black-04);
+    --glass-panel-border-dark: 1px solid var(--muted-white-08);
+    --glass-panel-border-right-light: 1px solid var(--muted-black-08);
     --glass-panel-border-right-dark: 1px solid rgba(255, 255, 255, 0.16);
-    --glass-panel-shadow: inset 1px 1px 0 rgba(255, 255, 255, 0.6);
+    --glass-panel-shadow: inset 1px 1px 0 var(--muted-white-60);
     --glass-panel-blur: blur(40px) saturate(150%);
     --glass-active-dark: rgba(252, 184, 39, 0.42);
     --glass-active-dark-hover: rgba(252, 184, 39, 0.88);
@@ -321,44 +338,84 @@ html.themeDark {
     background-color: rgba(var(--c-lime), 0.1) !important;
 }
 
-/* Фон тегу при наведенні миші (20% прозорості — стає яскравішим) */
-.tagItem.tagColor-grey:hover {
+/* Фон тегу при наведенні миші (динамічний акцент) */
+html .tagItem.bgColor-grey:hover,
+html .tagItem.isSmall.bgColor-grey:hover,
+html .tagItem.isSelect.bgColor-grey:hover,
+html .item.hover .tagItem.bgColor-grey,
+html .item.isSelected .tagItem.bgColor-grey {
     background-color: rgba(var(--c-grey), 0.2) !important;
 }
 
-.tagItem.tagColor-yellow:hover {
+html .tagItem.bgColor-yellow:hover,
+html .tagItem.isSmall.bgColor-yellow:hover,
+html .tagItem.isSelect.bgColor-yellow:hover,
+html .item.hover .tagItem.bgColor-yellow,
+html .item.isSelected .tagItem.bgColor-yellow {
     background-color: rgba(var(--c-yellow), 0.1) !important;
 }
 
-.tagItem.tagColor-orange:hover {
+html .tagItem.bgColor-orange:hover,
+html .tagItem.isSmall.bgColor-orange:hover,
+html .tagItem.isSelect.bgColor-orange:hover,
+html .item.hover .tagItem.bgColor-orange,
+html .item.isSelected .tagItem.bgColor-orange {
     background-color: rgba(var(--c-orange), 0.2) !important;
 }
 
-.tagItem.tagColor-red:hover {
+html .tagItem.bgColor-red:hover,
+html .tagItem.isSmall.bgColor-red:hover,
+html .tagItem.isSelect.bgColor-red:hover,
+html .item.hover .tagItem.bgColor-red,
+html .item.isSelected .tagItem.bgColor-red {
     background-color: rgba(var(--c-red), 0.2) !important;
 }
 
-.tagItem.tagColor-pink:hover {
+html .tagItem.bgColor-pink:hover,
+html .tagItem.isSmall.bgColor-pink:hover,
+html .tagItem.isSelect.bgColor-pink:hover,
+html .item.hover .tagItem.bgColor-pink,
+html .item.isSelected .tagItem.bgColor-pink {
     background-color: rgba(var(--c-pink), 0.2) !important;
 }
 
-.tagItem.tagColor-purple:hover {
+html .tagItem.bgColor-purple:hover,
+html .tagItem.isSmall.bgColor-purple:hover,
+html .tagItem.isSelect.bgColor-purple:hover,
+html .item.hover .tagItem.bgColor-purple,
+html .item.isSelected .tagItem.bgColor-purple {
     background-color: rgba(var(--c-purple), 0.2) !important;
 }
 
-.tagItem.tagColor-blue:hover {
+html .tagItem.bgColor-blue:hover,
+html .tagItem.isSmall.bgColor-blue:hover,
+html .tagItem.isSelect.bgColor-blue:hover,
+html .item.hover .tagItem.bgColor-blue,
+html .item.isSelected .tagItem.bgColor-blue {
     background-color: rgba(var(--c-blue), 0.2) !important;
 }
 
-.tagItem.tagColor-ice:hover {
+html .tagItem.bgColor-ice:hover,
+html .tagItem.isSmall.bgColor-ice:hover,
+html .tagItem.isSelect.bgColor-ice:hover,
+html .item.hover .tagItem.bgColor-ice,
+html .item.isSelected .tagItem.bgColor-ice {
     background-color: rgba(var(--c-ice), 0.2) !important;
 }
 
-.tagItem.tagColor-teal:hover {
+html .tagItem.bgColor-teal:hover,
+html .tagItem.isSmall.bgColor-teal:hover,
+html .tagItem.isSelect.bgColor-teal:hover,
+html .item.hover .tagItem.bgColor-teal,
+html .item.isSelected .tagItem.bgColor-teal {
     background-color: rgba(var(--c-teal), 0.2) !important;
 }
 
-.tagItem.tagColor-lime:hover {
+html .tagItem.bgColor-lime:hover,
+html .tagItem.isSmall.bgColor-lime:hover,
+html .tagItem.isSelect.bgColor-lime:hover,
+html .item.hover .tagItem.bgColor-lime,
+html .item.isSelected .tagItem.bgColor-lime {
     background-color: rgba(var(--c-lime), 0.2) !important;
 }
 
@@ -408,197 +465,94 @@ html.themeDark {
     color: rgb(var(--c-lime)) !important;
 }
 
-
 /* --- Colored Board - Light Theme Background Color --- */
 html:not(.themeDark) .viewBoard .column.withColor .bgColor.bgColor-grey {
-    background-color: rgba(142, 142, 147, 0.3) !important;
+    background-color: rgba(142, 142, 147, 0.12) !important;
 }
 
 html:not(.themeDark) .viewBoard .column.withColor .bgColor.bgColor-yellow {
-    background-color: rgba(255, 236, 139, 0.5) !important;
+    background-color: rgba(255, 204, 0, 0.12) !important;
 }
 
 html:not(.themeDark) .viewBoard .column.withColor .bgColor.bgColor-orange {
-    background-color: rgba(255, 149, 0, 0.3) !important;
+    background-color: rgba(255, 149, 0, 0.12) !important;
 }
 
 html:not(.themeDark) .viewBoard .column.withColor .bgColor.bgColor-red {
-    background-color: rgba(255, 59, 48, 0.3) !important;
+    background-color: rgba(255, 59, 48, 0.12) !important;
 }
 
 html:not(.themeDark) .viewBoard .column.withColor .bgColor.bgColor-pink {
-    background-color: rgba(255, 45, 85, 0.3) !important;
+    background-color: rgba(255, 45, 85, 0.12) !important;
 }
 
 html:not(.themeDark) .viewBoard .column.withColor .bgColor.bgColor-purple {
-    background-color: rgba(175, 82, 222, 0.3) !important;
+    background-color: rgba(175, 82, 222, 0.12) !important;
 }
 
 html:not(.themeDark) .viewBoard .column.withColor .bgColor.bgColor-blue {
-    background-color: rgba(0, 122, 255, 0.3) !important;
+    background-color: rgba(0, 122, 255, 0.12) !important;
 }
 
 html:not(.themeDark) .viewBoard .column.withColor .bgColor.bgColor-ice {
-    background-color: rgba(90, 200, 250, 0.3) !important;
+    background-color: rgba(50, 173, 230, 0.12) !important;
+    /* Apple Cyan */
 }
 
 html:not(.themeDark) .viewBoard .column.withColor .bgColor.bgColor-teal {
-    background-color: #dffff4 !important;
+    background-color: rgba(0, 199, 190, 0.12) !important;
+    /* Apple Mint */
 }
 
 html:not(.themeDark) .viewBoard .column.withColor .bgColor.bgColor-lime {
-    background-color: #c7eabb !important;
+    background-color: rgba(52, 199, 89, 0.12) !important;
+    /* Apple Green */
 }
+
 
 /* --- Colored Board - Dark Theme Background Color --- */
 html.themeDark .viewBoard .column.withColor .bgColor.bgColor-grey {
-    background-color: rgba(109, 109, 109, 0.5) !important;
+    background-color: rgba(152, 152, 157, 0.18) !important;
 }
 
 html.themeDark .viewBoard .column.withColor .bgColor.bgColor-yellow {
-    background-color: rgba(255, 205, 80, 0.40) !important;
+    background-color: rgba(255, 214, 10, 0.18) !important;
 }
 
 html.themeDark .viewBoard .column.withColor .bgColor.bgColor-orange {
-    background-color: rgba(255, 135, 70, 0.40) !important;
+    background-color: rgba(255, 159, 10, 0.18) !important;
 }
 
 html.themeDark .viewBoard .column.withColor .bgColor.bgColor-red {
-    background-color: rgba(220, 80, 90, 0.45) !important;
+    background-color: rgba(255, 69, 58, 0.18) !important;
 }
 
 html.themeDark .viewBoard .column.withColor .bgColor.bgColor-pink {
-    background-color: rgba(240, 110, 170, 0.35) !important;
+    background-color: rgba(255, 55, 95, 0.18) !important;
 }
 
 html.themeDark .viewBoard .column.withColor .bgColor.bgColor-purple {
-    background-color: rgba(140, 100, 230, 0.35) !important;
+    background-color: rgba(191, 90, 242, 0.18) !important;
 }
 
 html.themeDark .viewBoard .column.withColor .bgColor.bgColor-blue {
-    background-color: rgba(70, 140, 230, 0.45) !important;
+    background-color: rgba(10, 132, 255, 0.18) !important;
 }
 
 html.themeDark .viewBoard .column.withColor .bgColor.bgColor-ice {
-    background-color: rgba(120, 190, 200, 0.55) !important;
+    background-color: rgba(100, 210, 255, 0.18) !important;
+    /* Apple Cyan Dark */
 }
 
 html.themeDark .viewBoard .column.withColor .bgColor.bgColor-teal {
-    background-color: rgba(100, 210, 180, 0.45) !important;
+    background-color: rgba(99, 230, 226, 0.18) !important;
+    /* Apple Mint Dark */
 }
 
 html.themeDark .viewBoard .column.withColor .bgColor.bgColor-lime {
-    background-color: rgba(140, 255, 120, 0.35) !important;
+    background-color: rgba(48, 209, 88, 0.18) !important;
+    /* Apple Green Dark */
 }
-
-/* =========================================
-   Colored Board - Add button Light (Світла тема - macOS Style)
-   Легке кольорове тонування (10%), ледь помітна кольорова рамка (25%) і м'яка нейтральна тінь
-   ========================================= */
-html:not(.themeDark) .viewBoard .column.withColor:has(.bgColor-grey) .card.add:hover {
-    background-color: rgba(158, 158, 158, 0.1) !important;
-    border-color: rgba(158, 158, 158, 0.25) !important;
-}
-
-html:not(.themeDark) .viewBoard .column.withColor:has(.bgColor-yellow) .card.add:hover {
-    background-color: rgba(255, 193, 7, 0.1) !important;
-    border-color: rgba(255, 193, 7, 0.3) !important;
-}
-
-html:not(.themeDark) .viewBoard .column.withColor:has(.bgColor-orange) .card.add:hover {
-    background-color: rgba(255, 152, 0, 0.1) !important;
-    border-color: rgba(255, 152, 0, 0.3) !important;
-}
-
-html:not(.themeDark) .viewBoard .column.withColor:has(.bgColor-red) .card.add:hover {
-    background-color: rgba(244, 67, 54, 0.08) !important;
-    border-color: rgba(244, 67, 54, 0.25) !important;
-}
-
-html:not(.themeDark) .viewBoard .column.withColor:has(.bgColor-pink) .card.add:hover {
-    background-color: rgba(233, 30, 99, 0.08) !important;
-    border-color: rgba(233, 30, 99, 0.25) !important;
-}
-
-html:not(.themeDark) .viewBoard .column.withColor:has(.bgColor-purple) .card.add:hover {
-    background-color: rgba(156, 39, 176, 0.08) !important;
-    border-color: rgba(156, 39, 176, 0.25) !important;
-}
-
-html:not(.themeDark) .viewBoard .column.withColor:has(.bgColor-blue) .card.add:hover {
-    background-color: rgba(3, 169, 244, 0.1) !important;
-    border-color: rgba(3, 169, 244, 0.25) !important;
-}
-
-html:not(.themeDark) .viewBoard .column.withColor:has(.bgColor-ice) .card.add:hover {
-    background-color: rgba(0, 188, 212, 0.1) !important;
-    border-color: rgba(0, 188, 212, 0.25) !important;
-}
-
-html:not(.themeDark) .viewBoard .column.withColor:has(.bgColor-teal) .card.add:hover {
-    background-color: rgba(0, 150, 136, 0.1) !important;
-    border-color: rgba(0, 150, 136, 0.25) !important;
-}
-
-html:not(.themeDark) .viewBoard .column.withColor:has(.bgColor-lime) .card.add:hover {
-    background-color: rgba(139, 195, 74, 0.1) !important;
-    border-color: rgba(139, 195, 74, 0.3) !important;
-}
-
-/* =========================================
-   Colored Board - Add button Dark (Темна тема - macOS Style)
-   Легкий відтінок (15%), напівпрозора рамка і блік по верхній грані (inset біла тінь)
-   ========================================= */
-html.themeDark .blocks .block.blockDataview .viewContent.viewBoard .column.withColor:has(.bgColor-grey) .card.add:hover {
-    background-color: rgba(158, 158, 158, 0.15) !important;
-    border-color: rgba(158, 158, 158, 0.3) !important;
-}
-
-html.themeDark .blocks .block.blockDataview .viewContent.viewBoard .column.withColor:has(.bgColor-yellow) .card.add:hover {
-    background-color: rgba(255, 193, 7, 0.15) !important;
-    border-color: rgba(255, 193, 7, 0.3) !important;
-}
-
-html.themeDark .blocks .block.blockDataview .viewContent.viewBoard .column.withColor:has(.bgColor-orange) .card.add:hover {
-    background-color: rgba(255, 152, 0, 0.15) !important;
-    border-color: rgba(255, 152, 0, 0.3) !important;
-}
-
-html.themeDark .blocks .block.blockDataview .viewContent.viewBoard .column.withColor:has(.bgColor-red) .card.add:hover {
-    background-color: rgba(244, 67, 54, 0.15) !important;
-    border-color: rgba(244, 67, 54, 0.3) !important;
-}
-
-html.themeDark .blocks .block.blockDataview .viewContent.viewBoard .column.withColor:has(.bgColor-pink) .card.add:hover {
-    background-color: rgba(233, 30, 99, 0.15) !important;
-    border-color: rgba(233, 30, 99, 0.3) !important;
-}
-
-html.themeDark .blocks .block.blockDataview .viewContent.viewBoard .column.withColor:has(.bgColor-purple) .card.add:hover {
-    background-color: rgba(171, 71, 188, 0.15) !important;
-    border-color: rgba(171, 71, 188, 0.3) !important;
-}
-
-html.themeDark .blocks .block.blockDataview .viewContent.viewBoard .column.withColor:has(.bgColor-blue) .card.add:hover {
-    background-color: rgba(3, 169, 244, 0.15) !important;
-    border-color: rgba(3, 169, 244, 0.3) !important;
-}
-
-html.themeDark .blocks .block.blockDataview .viewContent.viewBoard .column.withColor:has(.bgColor-ice) .card.add:hover {
-    background-color: rgba(0, 188, 212, 0.15) !important;
-    border-color: rgba(0, 188, 212, 0.3) !important;
-}
-
-html.themeDark .blocks .block.blockDataview .viewContent.viewBoard .column.withColor:has(.bgColor-teal) .card.add:hover {
-    background-color: rgba(0, 150, 136, 0.15) !important;
-    border-color: rgba(0, 150, 136, 0.3) !important;
-}
-
-html.themeDark .blocks .block.blockDataview .viewContent.viewBoard .column.withColor:has(.bgColor-lime) .card.add:hover {
-    background-color: rgba(139, 195, 74, 0.15) !important;
-    border-color: rgba(139, 195, 74, 0.3) !important;
-}
-
 
 /* Тотальна примусова заміна шрифту для всіх текстових блоків */
 div.block div.editable.value,
@@ -749,6 +703,12 @@ html:not(.themeDark) .header.mainObject {
     box-shadow: none !important;
 }
 
+.sidebar .sidebarPage .spaceName {
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
+
 /* 1.1. Сайдбарне меню — світло-сірий фон */
 html:not(.themeDark) .navigationBar,
 html:not(.themeDark) .sidebar,
@@ -793,8 +753,8 @@ html:not(.themeDark) .CollectionView {
 /* 3. Опціонально: робимо самі картки Канбану білими для контрасту (як у macOS) */
 html:not(.themeDark) .boardCard {
     background: var(--white) !important;
-    border: 1px solid rgba(0, 0, 0, 0.05) !important;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05) !important;
+    border: 1px solid var(--muted-black-05) !important;
+    box-shadow: 0 1px 3px var(--muted-black-05) !important;
 }
 
 body,
@@ -929,7 +889,7 @@ html.themeDark .header.mainObject .side.center .path {
     background: rgba(26, 26, 30, 0.75) !important;
     backdrop-filter: blur(16px) saturate(180%) brightness(1.02) !important;
     -webkit-backdrop-filter: blur(16px) saturate(180%) brightness(1.02) !important;
-    border: 1px solid rgba(255, 255, 255, 0.12) !important;
+    border: 1px solid var(--muted-white-12) !important;
 }
 
 #header.mainObject .side.left,
@@ -1002,7 +962,7 @@ html.themeDark .header.mainObject .side.center .path {
 /* Icons inside the pill: Use background-color to NOT overwrite SVG data in 'background' */
 #header.mainObject .icon.withBackground,
 .header.mainObject .icon.withBackground {
-    background-color: rgba(0, 0, 0, 0.04) !important;
+    background-color: var(--muted-black-04) !important;
     border-radius: 50% !important;
     transition: background-color 0.15s ease, transform 0.15s ease !important;
 }
@@ -1033,12 +993,12 @@ html.themeDark .header.mainObject .side.center .path {
 
 html.themeDark #header.mainObject .icon.withBackground,
 html.themeDark .header.mainObject .icon.withBackground {
-    background-color: rgba(255, 255, 255, 0.06) !important;
+    background-color: var(--muted-white-06) !important;
 }
 
 html.themeDark #header.mainObject .icon.withBackground:hover,
 html.themeDark .header.mainObject .icon.withBackground:hover {
-    background-color: rgba(255, 255, 255, 0.15) !important;
+    background-color: var(--muted-white-15) !important;
 }
 
 /* Center breadcrumb path pill */
@@ -1089,8 +1049,8 @@ html:not(.themeDark) .header.mainObject .side.center .path .name span {
 #header.mainObject .headerBanner:hover,
 .header.mainObject .headerBanner:hover {
     background: linear-gradient(180deg, rgba(255, 255, 255, 0.92) 0%, rgba(242, 242, 246, 0.98) 100%) !important;
-    border-color: rgba(0, 0, 0, 0.1) !important;
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.78), 0 10px 24px rgba(0, 0, 0, 0.06) !important;
+    border-color: var(--muted-black-10) !important;
+    box-shadow: inset 0 1px 0 var(--muted-white-78), 0 10px 24px var(--muted-black-06) !important;
     transform: translateY(-1px) !important;
 }
 
@@ -1143,7 +1103,7 @@ html:not(.themeDark) .header.mainObject .side.center .path .name span {
     height: 18px !important;
     margin-top: -9px !important;
     border-radius: var(--rounded-panel-radius) !important;
-    background-color: rgba(0, 0, 0, 0.05) !important;
+    background-color: var(--muted-black-05) !important;
     background-position: center !important;
     background-repeat: no-repeat !important;
     transition: transform 0.18s ease, background-color 0.18s ease !important;
@@ -1151,7 +1111,7 @@ html:not(.themeDark) .header.mainObject .side.center .path .name span {
 
 #header.mainObject .headerBanner.withMenu:hover::after,
 .header.mainObject .headerBanner.withMenu:hover::after {
-    background-color: rgba(0, 0, 0, 0.08) !important;
+    background-color: var(--muted-black-08) !important;
 }
 
 #header.mainObject .headerBanner.withMenu.active::after,
@@ -1162,15 +1122,15 @@ html:not(.themeDark) .header.mainObject .side.center .path .name span {
 html.themeDark #header.mainObject .headerBanner,
 html.themeDark .header.mainObject .headerBanner {
     background: linear-gradient(180deg, rgba(33, 33, 38, 0.84) 0%, rgba(26, 26, 30, 0.94) 100%) !important;
-    border: 1px solid rgba(255, 255, 255, 0.1) !important;
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05), 0 10px 24px rgba(0, 0, 0, 0.24) !important;
+    border: 1px solid var(--muted-white-10) !important;
+    box-shadow: inset 0 1px 0 var(--muted-white-05), 0 10px 24px rgba(0, 0, 0, 0.24) !important;
 }
 
 html.themeDark #header.mainObject .headerBanner:hover,
 html.themeDark .header.mainObject .headerBanner:hover {
     background: linear-gradient(180deg, rgba(39, 39, 44, 0.92) 0%, rgba(30, 30, 34, 0.98) 100%) !important;
-    border-color: rgba(255, 255, 255, 0.14) !important;
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.07), 0 12px 28px rgba(0, 0, 0, 0.28) !important;
+    border-color: var(--muted-white-14) !important;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.07), 0 12px 28px var(--muted-black-28) !important;
 }
 
 html.themeDark #header.mainObject .headerBanner .content::before,
@@ -1196,12 +1156,12 @@ html.themeDark .header.mainObject .headerBanner:hover .label {
 
 html.themeDark #header.mainObject .headerBanner.withMenu::after,
 html.themeDark .header.mainObject .headerBanner.withMenu::after {
-    background-color: rgba(255, 255, 255, 0.08) !important;
+    background-color: var(--muted-white-08) !important;
 }
 
 html.themeDark #header.mainObject .headerBanner.withMenu:hover::after,
 html.themeDark .header.mainObject .headerBanner.withMenu:hover::after {
-    background-color: rgba(255, 255, 255, 0.12) !important;
+    background-color: var(--muted-white-12) !important;
 }
 
 /* Header buttons pill style */
@@ -1209,7 +1169,7 @@ html.themeDark .header.mainObject .headerBanner.withMenu:hover::after {
 .header.mainObject .label.btn {
     border-radius: var(--rounded-panel-radius) !important;
     padding: 4px 14px !important;
-    background-color: rgba(0, 0, 0, 0.06) !important;
+    background-color: var(--muted-black-06) !important;
     font-size: 13px !important;
     font-weight: 500 !important;
     border: none !important;
@@ -1219,7 +1179,7 @@ html.themeDark .header.mainObject .headerBanner.withMenu:hover::after {
 
 html.themeDark #header.mainObject .label.btn,
 html.themeDark .header.mainObject .label.btn {
-    background-color: rgba(255, 255, 255, 0.1) !important;
+    background-color: var(--muted-white-10) !important;
 }
 
 /* Share/action button in pill style */
@@ -1228,7 +1188,7 @@ html.themeDark .header.mainObject .label.btn {
     border-radius: var(--rounded-panel-radius) !important;
     padding: 4px 14px !important;
     height: 30px !important;
-    background: rgba(0, 0, 0, 0.06) !important;
+    background: var(--muted-black-06) !important;
     font-size: 13px !important;
     font-weight: 500 !important;
     border: none !important;
@@ -1238,19 +1198,19 @@ html.themeDark .header.mainObject .label.btn {
 
 #header.mainObject .label.btn:hover,
 .header.mainObject .label.btn:hover {
-    background: rgba(0, 0, 0, 0.1) !important;
+    background: var(--muted-black-10) !important;
     transform: none !important;
     box-shadow: none !important;
 }
 
 html.themeDark #header.mainObject .label.btn,
 html.themeDark .header.mainObject .label.btn {
-    background: rgba(255, 255, 255, 0.05) !important;
+    background: var(--muted-white-05) !important;
 }
 
 html.themeDark #header.mainObject .label.btn:hover,
 html.themeDark .header.mainObject .label.btn:hover {
-    background: rgba(255, 255, 255, 0.14) !important;
+    background: var(--muted-white-14) !important;
 }
 
 
@@ -1266,21 +1226,21 @@ html.themeDark .header.mainObject .label.btn:hover {
     padding: 6px 12px;
 
     box-shadow:
-        0 4px 14px -2px rgba(0, 0, 0, 0.06),
+        0 4px 14px -2px var(--muted-black-06),
         0 0 1px 0 rgba(0, 0, 0, 0.15);
 
     /* Твоя змінна для зовнішньої рамки */
-    border: 1px solid var(--glass-border-light, rgba(255, 255, 255, 0.42));
+    border: 1px solid var(--glass-border-light, var(--muted-white-42));
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 html.themeDark #menuSearchText.menuSearchText {
     background: rgba(30, 30, 32, 0.65);
     /* Твоя змінна для зовнішньої рамки (темна тема) */
-    border: 1px solid var(--glass-border-dark, rgba(255, 255, 255, 0.08));
+    border: 1px solid var(--glass-border-dark, var(--muted-white-08));
     box-shadow:
-        0 4px 20px rgba(0, 0, 0, 0.3),
-        0 0 1px 0 rgba(255, 255, 255, 0.1);
+        0 4px 20px var(--muted-black-30),
+        0 0 1px 0 var(--muted-white-10);
 }
 
 #menuSearchText .filterContainer {
@@ -1354,7 +1314,7 @@ html.themeDark #menuSearchText .input.input-text {
 /* --- Світла тема: активний стан (Focus) --- */
 html:not(.themeDark) #menuSearchText .input.input-text:focus {
     background: rgba(255, 255, 255, 0.8);
-    color: #000000 !important;
+    color: var(--black) !important;
     /* Абсолютно чорний при кліку */
     border-color: rgba(0, 122, 255, 0.4);
     box-shadow: 0 0 0 3px rgba(0, 122, 255, 0.15);
@@ -1363,9 +1323,9 @@ html:not(.themeDark) #menuSearchText .input.input-text:focus {
 /* --- Темна тема: активний стан (Focus) --- */
 html.themeDark #menuSearchText .input.input-text:focus {
     background: rgba(40, 40, 40, 0.8);
-    color: #ffffff;
-    border-color: rgba(255, 255, 255, 0.15);
-    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.05);
+    color: var(--white);
+    border-color: var(--muted-white-15);
+    box-shadow: 0 0 0 3px var(--muted-white-05);
 }
 
 /* --- Інтерактивні іконки (стрілки, хрестик тощо) --- */
@@ -1381,7 +1341,7 @@ html.themeDark #menuSearchText .input.input-text:focus {
 /* Ховери без transform: scale/rotate, щоб не ламати стрілки Anytype */
 #menuSearchText .icon:not(.search):hover {
     opacity: 1;
-    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+    filter: drop-shadow(0 2px 4px var(--muted-black-20));
 }
 
 html.themeDark #menuSearchText .icon:not(.search):hover {
@@ -1402,9 +1362,9 @@ html:not(.themeDark) #menuSearchText .input.input-text::placeholder {
 
 /* --- Світла тема: активний стан (Focus) --- */
 html:not(.themeDark) #menuSearchText .input.input-text:focus {
-    background: rgba(255, 255, 255, 0.6);
+    background: var(--muted-white-60);
     color: #2c2c2e !important;
-    /* Трохи темніший за пасивний, але БЕЗ чистого #000000 */
+    /* Трохи темніший за пасивний, але БЕЗ чистого var(--black) */
     border-color: rgba(0, 122, 255, 0.4);
     box-shadow: 0 0 0 3px rgba(0, 122, 255, 0.15);
 }
@@ -1431,13 +1391,13 @@ html:not(.themeDark) #menuSearchText .input.input-text:focus {
     min-height: 32px !important;
 
     /* Об'єм за допомогою бордерів та тіней */
-    border: 1px solid var(--glass-border-light, rgba(255, 255, 255, 0.42)) !important;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important;
+    border: 1px solid var(--glass-border-light, var(--muted-white-42)) !important;
+    border-bottom: 1px solid var(--muted-black-10) !important;
 
     box-shadow:
         inset 0 1px 0 rgba(255, 255, 255, 0.5),
         /* Світло зверху */
-        0 2px 6px rgba(0, 0, 0, 0.04) !important;
+        0 2px 6px var(--muted-black-04) !important;
 
     display: flex !important;
     align-items: center !important;
@@ -1456,12 +1416,12 @@ html:not(.themeDark) #menuSearchText .input.input-text:focus {
 
 /* Dark Mode версія */
 html.themeDark .headSimple .side.right .button.blank.c28 {
-    background: rgba(255, 255, 255, 0.06) !important;
-    border: 1px solid var(--glass-border-dark, rgba(255, 255, 255, 0.08)) !important;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.3) !important;
+    background: var(--muted-white-06) !important;
+    border: 1px solid var(--glass-border-dark, var(--muted-white-08)) !important;
+    border-bottom: 1px solid var(--muted-black-30) !important;
     box-shadow:
-        inset 0 1px 0 rgba(255, 255, 255, 0.05),
-        0 4px 12px rgba(0, 0, 0, 0.2) !important;
+        inset 0 1px 0 var(--muted-white-05),
+        0 4px 12px var(--muted-black-20) !important;
 }
 
 html.themeDark .headSimple .side.right .button.blank.c28 .txt {
@@ -1470,15 +1430,15 @@ html.themeDark .headSimple .side.right .button.blank.c28 .txt {
 
 /* Hover стани */
 .headSimple .side.right .button.blank.c28:hover {
-    background: var(--glass-item-bg-light-hover, rgba(255, 255, 255, 0.72)) !important;
+    background: var(--glass-item-bg-light-hover, var(--muted-white-72)) !important;
     transform: translateY(-0.5px) !important;
     box-shadow:
-        inset 0 1px 0 rgba(255, 255, 255, 0.6),
-        0 4px 12px rgba(0, 0, 0, 0.08) !important;
+        inset 0 1px 0 var(--muted-white-60),
+        0 4px 12px var(--muted-black-08) !important;
 }
 
 html.themeDark .headSimple .side.right .button.blank.c28:hover {
-    background: rgba(255, 255, 255, 0.12) !important;
+    background: var(--muted-white-12) !important;
     border-color: rgba(255, 255, 255, 0.2) !important;
 }
 
@@ -1543,7 +1503,7 @@ select:focus {
     backdrop-filter: var(--glass-blur) !important;
     -webkit-backdrop-filter: var(--glass-blur) !important;
     border: 1px solid var(--glass-border-light) !important;
-    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.08), 0 4px 16px rgba(0, 0, 0, 0.04) !important;
+    box-shadow: 0 16px 48px var(--muted-black-08), 0 4px 16px var(--muted-black-04) !important;
     border-radius: var(--m-panel-radius) !important;
     /* CRITICAL: Crops inner scrolling/hover backgrounds */
     overflow: hidden !important;
@@ -1581,7 +1541,7 @@ html.themeDark :is(.context-menu, .dropdown, .menu-container, .modal, .popover, 
     background: rgba(28, 28, 30, 0.5) !important;
     border: none !important;
     margin-top: 10px !important;
-    box-shadow: inset 0 0 0 1px var(--glass-border-dark), 0 16px 48px rgba(0, 0, 0, 0.4), 0 4px 16px rgba(0, 0, 0, 0.2) !important;
+    box-shadow: inset 0 0 0 1px var(--glass-border-dark), 0 16px 48px rgba(0, 0, 0, 0.4), 0 4px 16px var(--muted-black-20) !important;
 }
 
 /* Context Menu Items Hover & Spacing */
@@ -1630,7 +1590,7 @@ html.themeDark :is(.popup, .popover, .dropdown, .context-menu, .menu, .menu-cont
 html.themeDark :is(.popup, .popover, .dropdown, .context-menu, .menu, .menu-container, .wrapMenu) .item.hover,
 html.themeDark #popupSearch-innerWrap .ReactVirtualized__List .item:hover,
 html.themeDark #popupSearch-innerWrap .ReactVirtualized__List .item.hover {
-    background-color: rgba(255, 255, 255, 0.05) !important;
+    background-color: var(--muted-white-05) !important;
     /* Soft Dark Hover */
 }
 
@@ -1693,14 +1653,14 @@ img,
 .block.blockMedia.isImage .wrap {
     border-radius: var(--xxl-panel-radius) !important;
     overflow: hidden !important;
-    padding: 2px !important;
+    padding: 0px !important;
     background: var(--glass-bg-light) !important;
     backdrop-filter: var(--glass-blur) !important;
     -webkit-backdrop-filter: var(--glass-blur) !important;
-    border: 1px solid rgba(0, 0, 0, 0.08) !important;
+    border: 1px solid var(--muted-black-08) !important;
     box-shadow:
         var(--glass-shadow),
-        inset 0 1px 0 rgba(255, 255, 255, 0.72) !important;
+        inset 0 1px 0 var(--muted-white-72) !important;
 }
 
 .block.blockMedia.isImage .wrap .mediaImage {
@@ -1729,7 +1689,7 @@ html.themeDark .block.blockMedia.isImage .wrap {
     outline-offset: 0 !important;
     backdrop-filter: var(--glass-blur) !important;
     -webkit-backdrop-filter: var(--glass-blur) !important;
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6) !important;
+    box-shadow: inset 0 1px 0 var(--muted-white-60) !important;
     overflow: hidden !important;
     margin: 6px 0 !important;
     padding: 16px 20px 16px 16px !important;
@@ -1741,7 +1701,7 @@ html.themeDark .block.blockMedia.isImage .wrap {
 
 html.themeDark .blockText.textCallout>.wrapContent {
     border: 1px solid var(--glass-border-dark) !important;
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1) !important;
+    box-shadow: inset 0 1px 0 var(--muted-white-10) !important;
 }
 
 .blockText.textCallout>.wrapContent:not(.bgColor) {
@@ -1883,7 +1843,7 @@ html:not(.themeDark) .widget.widgetLink {
 html.themeDark .widget.widgetLink {
     background: rgba(42, 42, 46, 0.32) !important;
     border: var(--glass-panel-border-dark) !important;
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05), 0 12px 30px rgba(0, 0, 0, 0.28) !important;
+    box-shadow: inset 0 1px 0 var(--muted-white-05), 0 12px 30px var(--muted-black-28) !important;
     backdrop-filter: var(--glass-blur) !important;
     -webkit-backdrop-filter: var(--glass-blur) !important;
 }
@@ -1891,21 +1851,21 @@ html.themeDark .widget.widgetLink {
 html:not(.themeDark) .widget.widgetLink:hover {
     background-color: #fff !important;
     transform: scale(1.04) !important;
-    border-color: rgba(0, 0, 0, 0.06) !important;
+    border-color: var(--muted-black-06) !important;
     box-shadow: none !important;
-    border: 1px solid rgba(0, 0, 0, 0.05) !important;
+    border: 1px solid var(--muted-black-05) !important;
 
 }
 
 html.themeDark .widget.widgetLink:hover {
     background: rgba(32, 32, 36, 0.82) !important;
     transform: scale(1.04) !important;
-    border: 1px solid rgba(255, 255, 255, 0.03) !important;
+    border: 1px solid var(--muted-white-03) !important;
 
-    border-color: rgba(255, 255, 255, 0.08) !important;
-    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.05), 0 8px 20px rgba(0, 0, 0, 0.28) !important;
+    border-color: var(--muted-white-08) !important;
+    box-shadow: inset 0 0 0 1px var(--muted-white-05), 0 8px 20px var(--muted-black-28) !important;
 
-    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.05), 0 8px 20px rgba(0, 0, 0, 0.28) !important;
+    box-shadow: inset 0 0 0 1px var(--muted-white-05), 0 8px 20px var(--muted-black-28) !important;
 }
 
 .widget.widgetLink *:hover,
@@ -2004,8 +1964,8 @@ html:not(.themeDark) .widget.widgetView .head .side.left .iconWrap.collapse {
     background-color: rgba(255, 255, 255, 0.30) !important;
     backdrop-filter: var(--glass-blur) !important;
     -webkit-backdrop-filter: var(--glass-blur) !important;
-    border: 1px solid rgba(255, 255, 255, 0.42) !important;
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.52), 0 6px 18px rgba(0, 0, 0, 0.05) !important;
+    border: 1px solid var(--muted-white-42) !important;
+    box-shadow: inset 0 1px 0 var(--muted-white-52), 0 6px 18px var(--muted-black-05) !important;
 
 }
 
@@ -2016,7 +1976,7 @@ html.themeDark .widget.widgetView .head .side.left .iconWrap.collapse {
     backdrop-filter: var(--glass-blur) !important;
     -webkit-backdrop-filter: var(--glass-blur) !important;
     border: var(--glass-panel-border-dark) !important;
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06), 0 8px 22px rgba(0, 0, 0, 0.22) !important;
+    box-shadow: inset 0 1px 0 var(--muted-white-06), 0 8px 22px var(--muted-black-22) !important;
 }
 
 .widget.widgetLink .iconImage {
@@ -2109,8 +2069,8 @@ div#pageWrapper:has(#sidebarPageVault) {
     border-radius: var(--l-panel-radius) !important;
     border: 1px solid var(--glass-border-light) !important;
     box-shadow:
-        0 8px 32px rgba(0, 0, 0, 0.08),
-        0 2px 8px rgba(0, 0, 0, 0.04) !important;
+        0 8px 32px var(--muted-black-08),
+        0 2px 8px var(--muted-black-04) !important;
 
     /* Прибираємо жорсткі марджини, бо Anytype контролює позицію через зовнішні контейнери */
     /* Мінімальний відступ зверху, щоб не прилипало */
@@ -2211,7 +2171,7 @@ html.themeDark #sidebarPageVault {
 
 /* 4. Лінія-розділювач між просторами (лишаємо її акуратною) */
 #sidebarPageVault .separator .inner {
-    background: rgba(0, 0, 0, 0.08) !important;
+    background: var(--muted-black-08) !important;
     height: 2px !important;
     border-radius: 2px !important;
     width: 32px !important;
@@ -2219,7 +2179,7 @@ html.themeDark #sidebarPageVault {
 }
 
 html.themeDark #sidebarPageVault .separator .inner {
-    background: rgba(255, 255, 255, 0.12) !important;
+    background: var(--muted-white-12) !important;
 }
 
 /* --- 5. ОБ'ЄКТИ ТА СПИСКИ (ЗАКРУГЛЕННЯ + ПУХКІСТЬ) --- */
@@ -2255,11 +2215,11 @@ html:not(.themeDark) .sidebarPage .item.selected {
     -webkit-backdrop-filter: blur(22px) saturate(180%) brightness(1.03) !important;
     border: 1px solid var(--glass-item-border-light) !important;
     transform: scale(1.02) !important;
-    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.52), var(--glass-item-shadow-light) !important;
+    box-shadow: inset 0 0 0 1px var(--muted-white-52), var(--glass-item-shadow-light) !important;
 }
 
 .sidebar .sidebarPage>.body {
-    padding: 0 8px 20px;
+    padding: 0 6px 10px;
 }
 
 html.themeDark .widgetObject .item:hover,
@@ -2271,9 +2231,9 @@ html.themeDark .sidebarPage .item.active,
 html.themeDark .sidebarPage .item.hover,
 html.themeDark .sidebarPage .item.isSelected,
 html.themeDark .sidebarPage .item.selected {
-    background-color: rgba(255, 255, 255, 0.03) !important;
+    background-color: var(--muted-white-03) !important;
     border: var(--glass-panel-border-dark) !important;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2) !important;
+    box-shadow: 0 4px 12px var(--muted-black-20) !important;
 }
 
 /* --- 5A. ОБ'ЄКТИ: ГРУПОВИЙ РЕДИЗАЙН СЕКЦІЇ ТИПІВ --- */
@@ -2286,9 +2246,9 @@ html.themeDark .sidebarPage .item.selected {
 }
 
 html:not(.themeDark) .sidebar .sidebarPage.pageWidget .widgetSection.section-type {
-    background-color: rgba(255, 255, 255, 0.4) !important;
-    border: 1px solid rgba(255, 255, 255, 0.42) !important;
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.52), 0 10px 28px rgba(0, 0, 0, 0.06) !important;
+    background-color: var(--muted-white-40) !important;
+    border: 1px solid var(--muted-white-42) !important;
+    box-shadow: inset 0 1px 0 var(--muted-white-52), 0 10px 28px var(--muted-black-06) !important;
     backdrop-filter: var(--glass-blur) !important;
     -webkit-backdrop-filter: var(--glass-blur) !important;
 }
@@ -2296,7 +2256,7 @@ html:not(.themeDark) .sidebar .sidebarPage.pageWidget .widgetSection.section-typ
 html.themeDark .sidebar .sidebarPage.pageWidget .widgetSection.section-type {
     background: rgba(42, 42, 46, 0.32) !important;
     border: var(--glass-panel-border-dark) !important;
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05), 0 12px 30px rgba(0, 0, 0, 0.28) !important;
+    box-shadow: inset 0 1px 0 var(--muted-white-05), 0 12px 30px var(--muted-black-28) !important;
     backdrop-filter: var(--glass-blur) !important;
     -webkit-backdrop-filter: var(--glass-blur) !important;
 }
@@ -2334,13 +2294,13 @@ html:not(.themeDark) .sidebar .sidebarPage.pageWidget .widgetSection.section-typ
 html:not(.themeDark) .sidebar .sidebarPage.pageWidget .widgetSection.section-type>.nameWrap .name:hover {
     background: rgba(255, 255, 255, 0.48) !important;
     border: 1px solid rgba(255, 255, 255, 0.46) !important;
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.52), 0 6px 16px rgba(0, 0, 0, 0.04) !important;
+    box-shadow: inset 0 1px 0 var(--muted-white-52), 0 6px 16px var(--muted-black-04) !important;
     color: rgba(43, 43, 45, 0.78) !important;
 }
 
 html:not(.themeDark) .sidebar .sidebarPage.pageWidget .widgetSection.section-type.isOpen>.nameWrap .name,
 html:not(.themeDark) .sidebar .sidebarPage.pageWidget .widgetSection.section-type>.nameWrap.active .name {
-    background: rgba(255, 255, 255, 0.24) !important;
+    background: var(--muted-white-24) !important;
     border: 1px solid rgba(255, 255, 255, 0.35) !important;
     box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.38) !important;
     color: rgba(43, 43, 45, 0.8) !important;
@@ -2350,29 +2310,29 @@ html:not(.themeDark) .sidebar .sidebarPage.pageWidget .widgetSection.section-typ
 html:not(.themeDark) .sidebar .sidebarPage.pageWidget .widgetSection.section-type.isOpen>.nameWrap .name:hover,
 html:not(.themeDark) .sidebar .sidebarPage.pageWidget .widgetSection.section-type>.nameWrap.active .name:hover {
     background: rgba(255, 255, 255, 0.32) !important;
-    border: 1px solid rgba(255, 255, 255, 0.42) !important;
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.46), 0 6px 16px rgba(0, 0, 0, 0.04) !important;
+    border: 1px solid var(--muted-white-42) !important;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.46), 0 6px 16px var(--muted-black-04) !important;
     color: rgba(43, 43, 45, 0.88) !important;
 }
 
 html.themeDark .sidebar .sidebarPage.pageWidget .widgetSection.section-type>.nameWrap .name {
-    background: rgba(255, 255, 255, 0.04) !important;
-    border: 1px solid rgba(255, 255, 255, 0.06) !important;
+    background: var(--muted-white-04) !important;
+    border: 1px solid var(--muted-white-06) !important;
     color: rgba(255, 255, 255, 0.62) !important;
 
 }
 
 html.themeDark .sidebar .sidebarPage.pageWidget .widgetSection.section-type>.nameWrap .name:hover {
     background: rgba(255, 255, 255, 0.07) !important;
-    border: 1px solid rgba(255, 255, 255, 0.1) !important;
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05), 0 6px 16px rgba(0, 0, 0, 0.18) !important;
-    color: rgba(255, 255, 255, 0.78) !important;
+    border: 1px solid var(--muted-white-10) !important;
+    box-shadow: inset 0 1px 0 var(--muted-white-05), 0 6px 16px rgba(0, 0, 0, 0.18) !important;
+    color: var(--muted-white-78) !important;
 }
 
 html.themeDark .sidebar .sidebarPage.pageWidget .widgetSection.section-type.isOpen>.nameWrap .name,
 html.themeDark .sidebar .sidebarPage.pageWidget .widgetSection.section-type>.nameWrap.active .name {
-    background: rgba(255, 255, 255, 0.08) !important;
-    border: 1px solid rgba(255, 255, 255, 0.06) !important;
+    background: var(--muted-white-08) !important;
+    border: 1px solid var(--muted-white-06) !important;
     color: rgba(255, 255, 255, 0.82) !important;
 
 }
@@ -2381,7 +2341,7 @@ html.themeDark .sidebar .sidebarPage.pageWidget .widgetSection.section-type.isOp
 html.themeDark .sidebar .sidebarPage.pageWidget .widgetSection.section-type>.nameWrap.active .name:hover {
     background: rgba(255, 255, 255, 0.11) !important;
     border: 1px solid rgba(255, 255, 255, 0.11) !important;
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06), 0 6px 16px rgba(0, 0, 0, 0.18) !important;
+    box-shadow: inset 0 1px 0 var(--muted-white-06), 0 6px 16px rgba(0, 0, 0, 0.18) !important;
     color: rgba(255, 255, 255, 0.92) !important;
 }
 
@@ -2486,12 +2446,12 @@ html.themeDark .sidebar .sidebarPage.pageWidget .widgetSection.section-type>.nam
 .sidebar .sidebarPage.pageWidget .widgetSection.section-recentedit>.nameWrap .buttons .icon.commonMore:hover,
 .sidebar .sidebarPage.pageWidget .widgetSection.section-recentedit>.nameWrap .buttons .icon.more:hover {
     transform: translateY(-1px) scale(1.08) !important;
-    filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.08)) !important;
+    filter: drop-shadow(0 6px 12px var(--muted-black-08)) !important;
 }
 
 /* subtle background on hover for the whole name area */
 .sidebar .sidebarPage.pageWidget .widgetSection.section-recentedit>.nameWrap .name:hover {
-    background: rgba(0, 0, 0, 0.04) !important;
+    background: var(--muted-black-04) !important;
 }
 
 /* Make the "more" (three-dots) icon slightly larger and add right spacing */
@@ -2524,15 +2484,15 @@ html.themeDark .sidebar .sidebarPage.pageWidget .widgetSection.section-type>.nam
 html:not(.themeDark) .sidebar .sidebarPage.pageWidget .widgetSection.section-type>.nameWrap .buttons .button.blank.c28 {
     background: rgba(255, 255, 255, 0.62) !important;
     border: 1px solid rgba(255, 255, 255, 0.48) !important;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05) !important;
+    box-shadow: 0 6px 18px var(--muted-black-05) !important;
     color: rgba(43, 43, 45, 0.5) !important;
 }
 
 html:not(.themeDark) .sidebar .sidebarPage.pageWidget .widgetSection.section-type>.nameWrap .buttons .button.blank.c28:hover {
     background: var(--glass-active-light-hover) !important;
     border-color: var(--glass-active-light-border-hover) !important;
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.24), 0 8px 20px rgba(0, 0, 0, 0.08) !important;
-    color: #ffffff !important;
+    box-shadow: inset 0 1px 0 var(--muted-white-24), 0 8px 20px var(--muted-black-08) !important;
+    color: var(--white) !important;
     transform: translateY(-2px) scale(1.02) !important;
 }
 
@@ -2541,17 +2501,17 @@ html:not(.themeDark) .sidebar .sidebarPage.pageWidget .widgetSection.section-typ
 }
 
 html.themeDark .sidebar .sidebarPage.pageWidget .widgetSection.section-type>.nameWrap .buttons .button.blank.c28 {
-    background: rgba(255, 255, 255, 0.06) !important;
+    background: var(--muted-white-06) !important;
     border: var(--glass-panel-border-dark) !important;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.22) !important;
+    box-shadow: 0 8px 20px var(--muted-black-22) !important;
     color: rgba(255, 255, 255, 0.88) !important;
 }
 
 html.themeDark .sidebar .sidebarPage.pageWidget .widgetSection.section-type>.nameWrap .buttons .button.blank.c28:hover {
     background: var(--glass-active-dark-hover) !important;
     border-color: var(--glass-active-dark-border-hover) !important;
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.12) !important, 0 8px 20px rgba(0, 0, 0, 0.28) !important;
-    color: #ffffff !important;
+    box-shadow: inset 0 1px 0 var(--muted-white-12) !important, 0 8px 20px var(--muted-black-28) !important;
+    color: var(--white) !important;
     transform: translateY(-2px) scale(1.02) !important;
 }
 
@@ -2623,9 +2583,9 @@ html:not(.themeDark) .sidebar .sidebarPage.pageWidget .widgetSection.section-typ
 
 html:not(.themeDark) .sidebar .sidebarPage.pageWidget .widgetSection.section-type .widget.widgetObject .item:hover,
 html:not(.themeDark) .sidebar .sidebarPage.pageWidget .widgetSection.section-type .widget.widgetObject .item.active {
-    background: rgba(255, 255, 255, 0.72) !important;
+    background: var(--muted-white-72) !important;
     border-color: rgba(255, 255, 255, 0.58) !important;
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.52), 0 6px 18px rgba(0, 0, 0, 0.05) !important;
+    box-shadow: inset 0 1px 0 var(--muted-white-52), 0 6px 18px var(--muted-black-05) !important;
 }
 
 html.themeDark .sidebar .sidebarPage.pageWidget .widgetSection.section-type .widget.widgetObject .item {
@@ -2635,9 +2595,9 @@ html.themeDark .sidebar .sidebarPage.pageWidget .widgetSection.section-type .wid
 
 html.themeDark .sidebar .sidebarPage.pageWidget .widgetSection.section-type .widget.widgetObject .item:hover,
 html.themeDark .sidebar .sidebarPage.pageWidget .widgetSection.section-type .widget.widgetObject .item.active {
-    background: rgba(255, 255, 255, 0.08) !important;
-    border-color: rgba(255, 255, 255, 0.1) !important;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.22) !important;
+    background: var(--muted-white-08) !important;
+    border-color: var(--muted-white-10) !important;
+    box-shadow: 0 6px 18px var(--muted-black-22) !important;
 }
 
 .sidebar .sidebarPage.pageWidget .widgetSection.section-type .widget.widgetObject .item .side.left {
@@ -2663,7 +2623,7 @@ html:not(.themeDark) .sidebar .sidebarPage.pageWidget .widgetSection.section-typ
 }
 
 html.themeDark .sidebar .sidebarPage.pageWidget .widgetSection.section-type .widget.widgetObject .item .buttons .icon {
-    background-color: rgba(255, 255, 255, 0.06) !important;
+    background-color: var(--muted-white-06) !important;
 }
 
 .widgetView .body.isCompact .item .dropTarget,
@@ -2682,13 +2642,13 @@ html:not(.themeDark) .widgetView .body.isCompact .item.active .inner {
     backdrop-filter: blur(22px) saturate(180%) brightness(1.03) !important;
     -webkit-backdrop-filter: blur(22px) saturate(180%) brightness(1.03) !important;
     border: 1px solid var(--glass-item-border-light) !important;
-    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.52), var(--glass-item-shadow-light) !important;
+    box-shadow: inset 0 0 0 1px var(--muted-white-52), var(--glass-item-shadow-light) !important;
 }
 
 html.themeDark .widgetView .body.isCompact .item:hover .dropTarget,
 html.themeDark .widgetView .body.isCompact .item:hover .inner {
-    background-color: rgba(255, 255, 255, 0.03) !important;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2) !important;
+    background-color: var(--muted-white-03) !important;
+    box-shadow: 0 4px 12px var(--muted-black-20) !important;
 }
 
 /* --- 6. КОШИК --- */
@@ -2738,7 +2698,7 @@ html.themeDark #item-bin:hover {
     backdrop-filter: var(--glass-blur) !important;
     -webkit-backdrop-filter: var(--glass-blur) !important;
     border: 1px solid rgba(255, 122, 122, 0.34) !important;
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08) !important;
+    box-shadow: inset 0 1px 0 var(--muted-white-08) !important;
 }
 
 #item-bin .side,
@@ -2803,11 +2763,11 @@ html.themeDark #item-bin:hover {
     transition: all 0.2s cubic-bezier(0.2, 0.8, 0.2, 1) !important;
     border: var(--glass-panel-border-light) !important;
     background: var(--white) !important;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04), 0 2px 4px rgba(0, 0, 0, 0.02) !important;
+    box-shadow: 0 4px 12px var(--muted-black-04), 0 2px 4px rgba(0, 0, 0, 0.02) !important;
 }
 
 html.themeDark .editorControls .btn.white.withIcon {
-    border: 1px solid rgba(255, 255, 255, 0.06) !important;
+    border: 1px solid var(--muted-white-06) !important;
     background: #2a2a2c !important;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
 }
@@ -2816,7 +2776,7 @@ html.themeDark .editorControls .btn.white.withIcon {
     background: var(--white) !important;
     transform: translateY(-1px) !important;
     /* Float effect */
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06), 0 2px 4px rgba(0, 0, 0, 0.02) !important;
+    box-shadow: 0 6px 16px var(--muted-black-06), 0 2px 4px rgba(0, 0, 0, 0.02) !important;
 }
 
 
@@ -2859,15 +2819,15 @@ body .swiper-zoom-container img {
 
 /* Popup search is a fullscreen overlay, not a small popup card */
 #popupSearch {
-    --popup-search-dimmer-bg: rgba(255, 255, 255, 0.22);
-    --popup-search-panel-bg: rgba(255, 255, 255, 0.72);
-    --popup-search-panel-outline: rgba(0, 0, 0, 0.08);
-    --popup-search-panel-shadow: 0 24px 64px rgba(0, 0, 0, 0.14), 0 6px 18px rgba(0, 0, 0, 0.08);
+    --popup-search-dimmer-bg: var(--muted-white-22);
+    --popup-search-panel-bg: var(--muted-white-72);
+    --popup-search-panel-outline: var(--muted-black-08);
+    --popup-search-panel-shadow: 0 24px 64px rgba(0, 0, 0, 0.14), 0 6px 18px var(--muted-black-08);
     --popup-search-text-primary: rgba(26, 26, 28, 0.92);
     --popup-search-text-secondary: rgba(66, 66, 72, 0.88);
     --popup-search-text-tertiary: rgba(110, 110, 118, 0.9);
     --popup-search-placeholder: rgba(124, 124, 132, 0.92);
-    --popup-search-key-bg: rgba(0, 0, 0, 0.06);
+    --popup-search-key-bg: var(--muted-black-06);
     --popup-search-key-text: rgba(58, 58, 64, 0.92);
     position: fixed !important;
     inset: 0 !important;
@@ -2890,13 +2850,13 @@ body .swiper-zoom-container img {
 html.themeDark #popupSearch {
     --popup-search-dimmer-bg: rgba(8, 8, 10, 0.34);
     --popup-search-panel-bg: rgba(24, 24, 28, 0.78);
-    --popup-search-panel-outline: rgba(255, 255, 255, 0.1);
-    --popup-search-panel-shadow: 0 24px 64px rgba(0, 0, 0, 0.45), 0 6px 18px rgba(0, 0, 0, 0.28);
+    --popup-search-panel-outline: var(--muted-white-10);
+    --popup-search-panel-shadow: 0 24px 64px rgba(0, 0, 0, 0.45), 0 6px 18px var(--muted-black-28);
     --popup-search-text-primary: rgba(245, 245, 247, 0.94);
     --popup-search-text-secondary: rgba(205, 205, 214, 0.88);
     --popup-search-text-tertiary: rgba(168, 168, 176, 0.84);
     --popup-search-placeholder: rgba(152, 152, 160, 0.9);
-    --popup-search-key-bg: rgba(255, 255, 255, 0.08);
+    --popup-search-key-bg: var(--muted-white-08);
     --popup-search-key-text: rgba(228, 228, 236, 0.92);
 }
 
@@ -3121,7 +3081,7 @@ html:not(.themeDark) #popupSearch-innerWrap .items .item.isSelected {
 
 html.themeDark .blocks .block.blockTable .table {
     background: #1d1d1f !important;
-    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border: 1px solid var(--muted-white-10) !important;
 }
 
 .blocks .block.blockTable .row {
@@ -3144,7 +3104,7 @@ html.themeDark .blocks .block.blockTable .row+.row .cell {
 }
 
 html.themeDark .blocks .block.blockTable .row.isHeader {
-    background: rgba(255, 255, 255, 0.04) !important;
+    background: var(--muted-white-04) !important;
 }
 
 .blocks .block.blockTable .row.isHeader .cell,
@@ -3173,7 +3133,7 @@ html.themeDark .blocks .block.blockTable .cell {
 }
 
 .blocks .block.blockTable .row:not(.isHeader) .cell:hover {
-    background: rgba(255, 255, 255, 0.4) !important;
+    background: var(--muted-white-40) !important;
 }
 
 html.themeDark .blocks .block.blockTable .row:not(.isHeader) .cell:hover {
@@ -3266,7 +3226,7 @@ html.themeDark .blocks .block.blockTable .handle .inner::after {
     width: 16px !important;
     height: 16px !important;
     border-radius: var(--rounded-panel-radius) !important;
-    background-color: rgba(0, 0, 0, 0.05) !important;
+    background-color: var(--muted-black-05) !important;
     background-position: center center !important;
     background-repeat: no-repeat !important;
     background-size: 8px 16px !important;
@@ -3274,16 +3234,16 @@ html.themeDark .blocks .block.blockTable .handle .inner::after {
 }
 
 html.themeDark .blocks .block.blockTable .cell .icon.menu .inner {
-    background-color: rgba(255, 255, 255, 0.08) !important;
+    background-color: var(--muted-white-08) !important;
 }
 
 .blocks .block.blockTable .cell .icon.menu:hover .inner {
     box-shadow: none !important;
-    background-color: rgba(0, 0, 0, 0.1) !important;
+    background-color: var(--muted-black-10) !important;
 }
 
 html.themeDark .blocks .block.blockTable .cell .icon.menu:hover .inner {
-    background-color: rgba(255, 255, 255, 0.14) !important;
+    background-color: var(--muted-white-14) !important;
 }
 
 .blocks .block.blockTable .plusButton .icon {
@@ -3356,7 +3316,7 @@ html.themeDark .blocks .block.blockTable .cell .icon.menu:hover .inner {
 }
 
 html.themeDark .blocks .block.blockTable .plusButton .icon {
-    background-color: rgba(255, 255, 255, 0.12) !important;
+    background-color: var(--muted-white-12) !important;
 }
 
 .blocks .block.blockTable .plusButton:hover .icon,
@@ -3552,7 +3512,7 @@ html.themeDark #sidebar {
 }
 
 html.themeDark .resize-h .resize-handle {
-    background-color: rgba(255, 255, 255, 0.15) !important;
+    background-color: var(--muted-white-15) !important;
 }
 
 html.themeDark .resize-h:hover .resize-handle {
@@ -3571,7 +3531,7 @@ html.themeDark .resize-h:hover .resize-handle {
 .dots .dot {
     width: 6px !important;
     height: 6px !important;
-    background-color: rgba(0, 0, 0, 0.2) !important;
+    background-color: var(--muted-black-20) !important;
     border-radius: 50% !important;
     flex-shrink: 0 !important;
     transition: background-color 0.2s ease !important;
@@ -3616,7 +3576,7 @@ div.blockText.textQuote>.wrapContent {
     margin: 6px 0 !important;
     background-color: rgba(120, 120, 128, 0.05) !important;
     border: 1px solid var(--glass-border-light) !important;
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6) !important;
+    box-shadow: inset 0 1px 0 var(--muted-white-60) !important;
     backdrop-filter: var(--glass-blur) !important;
     -webkit-backdrop-filter: var(--glass-blur) !important;
     overflow: visible !important;
@@ -3681,26 +3641,26 @@ div.blockText.textQuote .line {
 }
 
 html.themeDark div.blockText.textQuote>.wrapContent {
-    background-color: rgba(255, 255, 255, 0.05) !important;
+    background-color: var(--muted-white-05) !important;
     border: 1px solid var(--glass-border-dark) !important;
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1) !important;
+    box-shadow: inset 0 1px 0 var(--muted-white-10) !important;
 }
 
 html.themeDark div.blockText.textQuote>.wrapContent::before {
-    background-color: rgba(255, 255, 255, 0.4) !important;
+    background-color: var(--muted-white-40) !important;
 }
 
 html.themeDark div.blockText.textQuote>.wrapContent::after {
-    background-color: rgba(255, 255, 255, 0.1) !important;
+    background-color: var(--muted-white-10) !important;
     color: rgba(255, 255, 255, 0.7) !important;
 }
 
 html:not(.themeDark) div.blockText.textQuote>.wrapContent {
-    background-color: rgba(0, 0, 0, 0.05) !important;
+    background-color: var(--muted-black-05) !important;
 }
 
 html:not(.themeDark) div.blockText.textQuote>.wrapContent::before {
-    background-color: rgba(0, 0, 0, 0.1) !important;
+    background-color: var(--muted-black-10) !important;
 }
 
 
@@ -3736,7 +3696,7 @@ html.themeDark ::-webkit-scrollbar-thumb {
 }
 
 html.themeDark ::-webkit-scrollbar-thumb:hover {
-    background-color: rgba(255, 255, 255, 0.4) !important;
+    background-color: var(--muted-white-40) !important;
 }
 
 
@@ -3773,7 +3733,7 @@ html.themeDark ::-webkit-scrollbar-thumb:hover {
 html:not(.themeDark) .editorWrapper.isType .headSimple.isType .side.right .button.blank {
     background: rgba(242, 242, 247, 0.92) !important;
     border: 1px solid rgba(60, 60, 67, 0.08) !important;
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.72) !important;
+    box-shadow: inset 0 1px 0 var(--muted-white-72) !important;
 }
 
 html:not(.themeDark) .editorWrapper.isType .headSimple.isType .side.right .button.blank:hover {
@@ -3791,13 +3751,13 @@ html:not(.themeDark) .editorWrapper.isType .headSimple.isType .side.right .butto
 
 html.themeDark .editorWrapper.isType .headSimple.isType .side.right .button.blank {
     background: rgba(32, 32, 36, 0.92) !important;
-    border: 1px solid rgba(255, 255, 255, 0.05) !important;
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.03), 0 1px 2px rgba(0, 0, 0, 0.18) !important;
+    border: 1px solid var(--muted-white-05) !important;
+    box-shadow: inset 0 1px 0 var(--muted-white-03), 0 1px 2px rgba(0, 0, 0, 0.18) !important;
 }
 
 html.themeDark .editorWrapper.isType .headSimple.isType .side.right .button.blank:hover {
     background: rgba(40, 40, 44, 0.96) !important;
-    border-color: rgba(255, 255, 255, 0.08) !important;
+    border-color: var(--muted-white-08) !important;
 }
 
 /* ==========================================================
@@ -3830,14 +3790,14 @@ html.themeDark .editorWrapper.isType .headSimple.isType .side.right .button.blan
 
 /* The popup glass now correctly blurs the actual app content behind it */
 :is(.context-menu, .dropdown, .menu, .menu-container, .modal, .popover, .popup, .ReactModal__Content) {
-    background: rgba(255, 255, 255, 0.6) !important;
+    background: var(--muted-white-60) !important;
     backdrop-filter: blur(32px) saturate(200%) !important;
     -webkit-backdrop-filter: blur(32px) saturate(200%) !important;
     /* Use outline instead of border to prevent WebKit corner cutoff */
-    outline: 1px solid rgba(0, 0, 0, 0.06) !important;
+    outline: 1px solid var(--muted-black-06) !important;
     border: none !important;
     border-radius: 20px !important;
-    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.04) !important;
+    box-shadow: 0 16px 48px var(--muted-black-08), 0 4px 12px var(--muted-black-04) !important;
     transform: translateZ(0) !important;
     overflow: hidden !important;
 }
@@ -3845,7 +3805,7 @@ html.themeDark .editorWrapper.isType .headSimple.isType .side.right .button.blan
 html.themeDark :is(.context-menu, .dropdown, .menu, .menu-container, .modal, .popover, .popup, .ReactModal__Content) {
     background: rgba(20, 20, 22, 0.6) !important;
     outline: var(--glass-panel-border-dark) !important;
-    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.45), 0 4px 12px rgba(0, 0, 0, 0.3) !important;
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.45), 0 4px 12px var(--muted-black-30) !important;
 }
 
 /* Inner elements inside popups must NOT be glass themselves (chain effect removal) */
@@ -3871,7 +3831,7 @@ html.themeDark :is(.context-menu, .dropdown, .menu, .menu-container, .modal, .po
     margin-top: 80px !important;
     margin-bottom: 20px !important;
     /* Gap between cover card and editor body */
-    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.04), 0 1px 4px rgba(0, 0, 0, 0.03) !important;
+    box-shadow: 0 4px 24px var(--muted-black-04), 0 1px 4px rgba(0, 0, 0, 0.03) !important;
 }
 
 /* ============================================================
@@ -3950,7 +3910,7 @@ html.themeDark #elements.editorControlElements {
     background: var(--glass-bg-light) !important;
     backdrop-filter: var(--glass-blur) !important;
     -webkit-backdrop-filter: var(--glass-blur) !important;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06), inset 0 1px 0 rgba(255, 255, 255, 0.55) !important;
+    box-shadow: 0 6px 18px var(--muted-black-06), inset 0 1px 0 rgba(255, 255, 255, 0.55) !important;
     border: 1px solid var(--glass-border-light) !important;
     outline: none !important;
     color: rgba(28, 28, 32, 0.72) !important;
@@ -3961,10 +3921,10 @@ html.themeDark #elements.editorControlElements {
 .elements.editorControlElements .btn:hover,
 #elements.editorControlElements .btn:hover {
     background: rgba(255, 255, 255, 0.94) !important;
-    border-color: rgba(0, 0, 0, 0.08) !important;
+    border-color: var(--muted-black-08) !important;
     color: rgba(28, 28, 32, 0.92) !important;
     transform: none !important;
-    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.72) !important;
+    box-shadow: 0 8px 22px var(--muted-black-08), inset 0 1px 0 var(--muted-white-72) !important;
 }
 
 html.themeDark .elements.editorControlElements .btn,
@@ -3973,16 +3933,16 @@ html.themeDark #elements.editorControlElements .btn {
     backdrop-filter: var(--glass-blur) !important;
     -webkit-backdrop-filter: var(--glass-blur) !important;
     border: var(--glass-panel-border-dark) !important;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.05) !important;
-    color: rgba(255, 255, 255, 0.72) !important;
+    box-shadow: 0 8px 24px var(--muted-black-30), inset 0 1px 0 var(--muted-white-05) !important;
+    color: var(--muted-white-72) !important;
 }
 
 html.themeDark .elements.editorControlElements .btn:hover,
 html.themeDark #elements.editorControlElements .btn:hover {
     background: rgba(34, 34, 38, 0.78) !important;
-    border-color: rgba(255, 255, 255, 0.12) !important;
+    border-color: var(--muted-white-12) !important;
     color: rgba(255, 255, 255, 0.9) !important;
-    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.34), inset 0 1px 0 rgba(255, 255, 255, 0.06) !important;
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.34), inset 0 1px 0 var(--muted-white-06) !important;
 }
 
 /* =========================================
@@ -4262,7 +4222,7 @@ html.themeDark .blockText.textCallout>.wrapContent.bgColor.bgColor-gray {
     background: #f8f8fb !important;
     box-shadow:
         inset 0 0 0 1px var(--element-border-light-hover),
-        0 8px 20px rgba(0, 0, 0, 0.06) !important;
+        0 8px 20px var(--muted-black-06) !important;
     transform: translateY(-1.5px) !important;
 }
 
@@ -4272,7 +4232,7 @@ html.themeDark .card.isPage {
     border: none !important;
     box-shadow:
         inset 0 0 0 1px var(--element-border-dark),
-        0 4px 12px rgba(0, 0, 0, 0.22) !important;
+        0 4px 12px var(--muted-black-22) !important;
 }
 
 html.themeDark .card.isPage:hover {
@@ -4341,7 +4301,7 @@ html:not(.themeDark) .blocks .block.blockDataview .viewContent.viewBoard .column
 html.themeDark .blocks .block.blockDataview .viewContent.viewBoard .column:not(.withColor) .card.add {
     border: 1px solid var(--element-border-dark) !important;
     background: var(--element-color-dark) !important;
-    box-shadow: inset 0 0 0 1px var(--element-border-dark), 0 4px 12px rgba(0, 0, 0, 0.22) !important;
+    box-shadow: inset 0 0 0 1px var(--element-border-dark), 0 4px 12px var(--muted-black-22) !important;
 }
 
 /* Темна тема - Ховер */
@@ -4366,15 +4326,15 @@ html.themeDark .blocks .block.blockDataview .viewContent.viewBoard .column:not(.
     border: 1px solid var(--header-pill-border-light) !important;
     background: #f2f2f7 !important;
     opacity: 0.28 !important;
-    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.12), 0 2px 8px rgba(0, 0, 0, 0.03) !important;
+    box-shadow: inset 0 0 0 1px var(--muted-white-12), 0 2px 8px rgba(0, 0, 0, 0.03) !important;
     transition: transform 0.28s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.28s cubic-bezier(0.22, 1, 0.36, 1), background-color 0.28s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.28s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.22s ease !important;
     will-change: transform, box-shadow !important;
 }
 
 html.themeDark .blocks .block.blockDataview .viewContent.viewGallery .card.add {
-    border: 1px solid rgba(255, 255, 255, 0.12) !important;
+    border: 1px solid var(--muted-white-12) !important;
     background: #1d1d1f !important;
-    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.04), 0 4px 12px rgba(0, 0, 0, 0.22) !important;
+    box-shadow: inset 0 0 0 1px var(--muted-white-04), 0 4px 12px var(--muted-black-22) !important;
 }
 
 .blocks .block.blockDataview .viewContent.viewGallery .card.add::before {
@@ -4388,7 +4348,7 @@ html.themeDark .blocks .block.blockDataview .viewContent.viewGallery .card.add {
     background: #f8f8fb !important;
     border-color: var(--header-pill-border-light) !important;
     opacity: 1 !important;
-    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.2), 0 8px 20px rgba(0, 0, 0, 0.06) !important;
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.2), 0 8px 20px var(--muted-black-06) !important;
     transform: translateY(-1.5px) scale(1.01) !important;
 }
 
@@ -4396,7 +4356,7 @@ html.themeDark .blocks .block.blockDataview .viewContent.viewGallery .card.add:h
     background: #232326 !important;
     border-color: rgba(255, 255, 255, 0.16) !important;
     opacity: 1 !important;
-    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.08), 0 10px 24px rgba(0, 0, 0, 0.32) !important;
+    box-shadow: inset 0 0 0 1px var(--muted-white-08), 0 10px 24px rgba(0, 0, 0, 0.32) !important;
     transform: translateY(-1.5px) scale(1.01) !important;
 }
 
@@ -4419,6 +4379,7 @@ html.themeDark .blocks .block.blockDataview .viewContent.viewGallery .card.add:h
 .blocks .block.blockDataview .viewContent.viewGallery .ReactVirtualized__Grid__innerScrollContainer,
 .blocks .block.blockDataview .viewContent.viewGallery .row {
     overflow: visible !important;
+    padding: 0 0 16px 0px !important;
 }
 
 .blocks .block.blockDataview .viewContent.viewGallery .card.isPage {
@@ -4429,6 +4390,18 @@ html.themeDark .blocks .block.blockDataview .viewContent.viewGallery .card.add:h
 .blocks .block.blockDataview .viewContent.viewGallery .card.isPage:hover {
     z-index: 12 !important;
 }
+
+.blocks .block.blockDataview .viewContent.viewGallery,
+.blocks .block.blockDataview .viewContent.viewGallery .galleryWrap,
+.blocks .block.blockDataview .viewContent.viewGallery .galleryWrap>div,
+.blocks .block.blockDataview .viewContent.viewGallery .galleryWrap>div>div,
+.blocks .block.blockDataview .viewContent.viewGallery .ReactVirtualized__Grid,
+.blocks .block.blockDataview .viewContent.viewGallery .ReactVirtualized__Grid__innerScrollContainer,
+.blocks .block.blockDataview .viewContent.viewGallery .row {
+    padding: 0px 0px 8px 0px !important;
+    grid-column-gap: 8px !important;
+}
+
 
 /* List view add-row button */
 .blocks .block.blockDataview .dataviewControls.viewList::after {
@@ -4478,7 +4451,7 @@ html.themeDark .blocks .block.blockDataview .viewContent.viewGallery .card.add:h
 }
 
 html.themeDark .blocks .block.blockDataview .viewContent.viewList .row.add .btn {
-    border: 1px solid rgba(255, 255, 255, 0.12) !important;
+    border: 1px solid var(--muted-white-12) !important;
     background: rgba(29, 29, 31, 0.84) !important;
     box-shadow: none !important;
 }
@@ -4520,6 +4493,10 @@ html.themeDark .blocks .block.blockDataview .viewContent.viewList .row.add .btn:
 
 html.themeDark .blocks .block.blockDataview .viewContent.viewList .row.add .btn:hover .icon.plus {
     filter: brightness(1.18) !important;
+}
+
+.blocks .block.blockDataview .viewContent.viewList .row {
+    padding-left: 0px !important;
 }
 
 /* Grid view add-row button */
@@ -4588,7 +4565,7 @@ html.themeDark .blocks .block.blockDataview .viewContent.viewGrid .row.add .btn 
 .blocks .block.blockDataview .viewContent.viewGrid .row.add .btn:hover {
     color: var(--color-text-primary) !important;
     background: rgba(242, 242, 247, 0.82) !important;
-    border-color: rgba(0, 0, 0, 0.06) !important;
+    border-color: var(--muted-black-06) !important;
     box-shadow: none !important;
     opacity: 1 !important;
     transform: none !important;
@@ -4596,8 +4573,8 @@ html.themeDark .blocks .block.blockDataview .viewContent.viewGrid .row.add .btn 
 
 html.themeDark .blocks .block.blockDataview .viewContent.viewGrid .row.add .btn:hover {
     color: var(--color-text-primary) !important;
-    background: rgba(255, 255, 255, 0.06) !important;
-    border-color: rgba(255, 255, 255, 0.08) !important;
+    background: var(--muted-white-06) !important;
+    border-color: var(--muted-white-08) !important;
     box-shadow: none !important;
     opacity: 1 !important;
 }
@@ -4652,11 +4629,19 @@ html.themeDark .card.isPage .cellContent.c-name .name {
 }
 
 /* Обгортка для тегів (щоб вони не зламалися) */
-.card.isPage .cellContent.c-object {
+.card.isPage .cellContent.c-object,
+.card.isPage .cellContent.c-select,
+.card.isPage .cellContent.isSelect {
     margin-top: 4px !important;
+    margin-bottom: 0 !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    min-height: 0 !important;
 }
 
-.card.isPage .cellContent.c-object .wrap {
+.card.isPage .cellContent.c-object .wrap,
+.card.isPage .cellContent.c-select .wrap,
+.card.isPage .cellContent.isSelect .wrap {
     display: flex !important;
     flex-wrap: wrap !important;
     /* Дозволяємо тегам переноситись, якщо їх багато */
@@ -4667,14 +4652,17 @@ html.themeDark .card.isPage .cellContent.c-name .name {
 .card.isPage .cellContent.c-object .element {
     display: inline-flex !important;
     align-items: center !important;
-    gap: 4px !important;
+    gap: 6px !important;
     max-width: 100% !important;
+    min-width: 0 !important;
 
-    background: rgba(255, 255, 255, 0.42) !important;
+    background: var(--muted-white-42) !important;
     border: 1px solid rgba(255, 255, 255, 0.58) !important;
-    border-radius: var(--rounded-panel-radius) !important;
+    border-radius: 8px !important;
+    /* Явний радіус 8px для уніфікації з .tagItem та Омнібусом */
 
-    padding: 2px 6px !important;
+    padding: 0 8px !important;
+    height: 24px !important;
     font-size: 12px !important;
     font-weight: 500 !important;
     color: rgba(66, 66, 72, 0.86) !important;
@@ -4709,14 +4697,14 @@ html.themeDark .card.isPage .cellContent.c-name .name {
 
 /* Темна тема для тегів */
 html.themeDark .card.isPage .cellContent.c-object .element {
-    background: rgba(255, 255, 255, 0.06) !important;
-    border-color: rgba(255, 255, 255, 0.1) !important;
+    background: var(--muted-white-06) !important;
+    border-color: var(--muted-white-10) !important;
     color: rgba(230, 230, 235, 0.62) !important;
 }
 
 html.themeDark .card.isPage .cellContent.c-object .element:hover {
     background: rgba(255, 255, 255, 0.09) !important;
-    border-color: rgba(255, 255, 255, 0.14) !important;
+    border-color: var(--muted-white-14) !important;
     color: rgba(245, 245, 247, 0.82) !important;
 }
 
@@ -4777,15 +4765,19 @@ html.themeDark input:focus {
 }
 */
 /* --- TAGS (CHIPS) — UNIFIED CANONICAL STYLES --- */
-.tagItem {
+.tagItem,
+.tagItem.isSmall,
+.tagItem.isSelect {
     display: inline-flex !important;
     align-items: center !important;
     max-width: 100% !important;
-    height: 22px !important;
-    line-height: 22px !important;
-    padding: 0 10px !important;
-    margin: 2px 4px 2px 0 !important;
+
+    /* Уніфікація з object chips (Омнібус) */
+    padding: 0 8px !important;
+    height: 24px !important;
+    margin: 0 !important;
     border-radius: 8px !important;
+
     font-size: 12px !important;
     font-weight: 500 !important;
     white-space: nowrap !important;
@@ -4804,35 +4796,124 @@ html.themeDark input:focus {
     padding-right: 24px !important;
 }
 
-/* --- ПАСИВНИЙ СТАН (Сірий та чорно-білий) --- */
-/* Застосовуємо ТІЛЬКИ якщо: 
-   1. Немає наведення (:not(:hover))
-   2. ТЕГ НЕ знаходиться в рядку з класом .hover або .isSelected (:not(:is(...))) 
-*/
-.tagItem:not(:hover):not(:is(.item.hover *, .item.isSelected *)) {
-    background-color: rgba(0, 0, 0, 0.04) !important;
-    color: #666666 !important;
-    border: 1px solid var(--glass-border-light) !important;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02) !important;
-    backdrop-filter: blur(10px) !important;
-    -webkit-backdrop-filter: blur(10px) !important;
-    filter: grayscale(100%) opacity(0.7) !important;
+/* --- ПАСИВНИЙ СТАН (Форсована заміна кольору без грейскейлу) --- */
+/* Світла тема */
+html:not(.themeDark) .tagItem:not(:hover):not(:is(.item.hover *, .item.isSelected *)),
+html:not(.themeDark) .tagItem:not(:hover):not(:is(.item.hover *, .item.isSelected *)) .inner,
+html:not(.themeDark) .tagItem:not(:hover):not(:is(.item.hover *, .item.isSelected *)) * {
+    color: rgba(66, 66, 72, 0.86) !important;
+}
+
+html:not(.themeDark) .tagItem:not(:hover):not(:is(.item.hover *, .item.isSelected *)) {
+    background-color: var(--muted-white-42) !important;
+    border: 1px solid rgba(255, 255, 255, 0.58) !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    filter: none !important;
+}
+
+/* Пряме перевизначення акцентних класів у пасивному стані (висока специфічність) */
+html:not(.themeDark) .tagItem[class*="textColor-"]:not(:hover):not(:is(.item.hover *, .item.isSelected *)),
+html:not(.themeDark) .tagItem[class*="textColor-"]:not(:hover):not(:is(.item.hover *, .item.isSelected *)) .inner,
+html:not(.themeDark) .tagItem[class*="textColor-"]:not(:hover):not(:is(.item.hover *, .item.isSelected *)) * {
+    color: rgba(66, 66, 72, 0.86) !important;
+}
+
+html:not(.themeDark) .tagItem[class*="bgColor-"]:not(:hover):not(:is(.item.hover *, .item.isSelected *)) {
+    background-color: var(--muted-white-42) !important;
+}
+
+/* Темна тема */
+html.themeDark .tagItem:not(:hover):not(:is(.item.hover *, .item.isSelected *)),
+html.themeDark .tagItem:not(:hover):not(:is(.item.hover *, .item.isSelected *)) .inner,
+html.themeDark .tagItem:not(:hover):not(:is(.item.hover *, .item.isSelected *)) * {
+    color: rgba(230, 230, 235, 0.62) !important;
 }
 
 html.themeDark .tagItem:not(:hover):not(:is(.item.hover *, .item.isSelected *)) {
-    background-color: rgba(255, 255, 255, 0.06) !important;
-    color: #a0a0a5 !important;
-    border: 1px solid var(--glass-border-dark) !important;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2) !important;
+    background-color: var(--muted-white-06) !important;
+    border: 1px solid var(--muted-white-10) !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    filter: none !important;
+}
+
+html.themeDark .tagItem[class*="textColor-"]:not(:hover):not(:is(.item.hover *, .item.isSelected *)),
+html.themeDark .tagItem[class*="textColor-"]:not(:hover):not(:is(.item.hover *, .item.isSelected *)) .inner,
+html.themeDark .tagItem[class*="textColor-"]:not(:hover):not(:is(.item.hover *, .item.isSelected *)) * {
+    color: rgba(230, 230, 235, 0.62) !important;
+}
+
+html.themeDark .tagItem[class*="bgColor-"]:not(:hover):not(:is(.item.hover *, .item.isSelected *)) {
+    background-color: var(--muted-white-06) !important;
 }
 
 /* --- АКТИВНИЙ СТАН: ПРИ НАВЕДЕННІ ТА ПРИ ВІДКРИТОМУ МЕНЮ (.isSelected / .hover) --- */
+/* 1. Звичайний контекст: показуємо акцентні кольори (зняття override) */
 .tagItem:hover,
 .item.hover .tagItem,
 .item.isSelected .tagItem {
-    border: 1px solid transparent !important;
+    border-color: transparent !important;
     box-shadow: none !important;
-    filter: grayscale(0%) opacity(1) !important;
+    filter: none !important;
+}
+
+/* 2. Контекст Kanban з кольоровою колонкою (.column.withColor): 
+   Ховер НЕ показує акцентний колір, а виглядає як ховер звичайних object chips! */
+/* Світла тема */
+html:not(.themeDark) .column.withColor .tagItem:hover,
+html:not(.themeDark) .column.withColor .item.hover .tagItem,
+html:not(.themeDark) .column.withColor .item.isSelected .tagItem {
+    background-color: rgba(255, 255, 255, 0.58) !important;
+    border-color: rgba(255, 255, 255, 0.7) !important;
+    color: #000000 !important;
+}
+
+html:not(.themeDark) .column.withColor .tagItem[class*="textColor-"]:hover,
+html:not(.themeDark) .column.withColor .tagItem[class*="textColor-"]:hover .inner,
+html:not(.themeDark) .column.withColor .tagItem[class*="textColor-"]:hover *,
+html:not(.themeDark) .column.withColor .item.hover .tagItem[class*="textColor-"],
+html:not(.themeDark) .column.withColor .item.hover .tagItem[class*="textColor-"] .inner,
+html:not(.themeDark) .column.withColor .item.hover .tagItem[class*="textColor-"] *,
+html:not(.themeDark) .column.withColor .item.isSelected .tagItem[class*="textColor-"],
+html:not(.themeDark) .column.withColor .item.isSelected .tagItem[class*="textColor-"] .inner,
+html:not(.themeDark) .column.withColor .item.isSelected .tagItem[class*="textColor-"] * {
+    color: #000000 !important;
+}
+
+html:not(.themeDark) .column.withColor .tagItem[class*="bgColor-"]:hover,
+html:not(.themeDark) .column.withColor .item.hover .tagItem[class*="bgColor-"],
+html:not(.themeDark) .column.withColor .item.isSelected .tagItem[class*="bgColor-"] {
+    background-color: rgba(255, 255, 255, 0.58) !important;
+}
+
+/* Темна тема */
+html.themeDark .column.withColor .tagItem:hover,
+html.themeDark .column.withColor .item.hover .tagItem,
+html.themeDark .column.withColor .item.isSelected .tagItem {
+    background-color: rgba(255, 255, 255, 0.09) !important;
+    border-color: var(--muted-white-14) !important;
+    color: #ffffff !important;
+}
+
+html.themeDark .column.withColor .tagItem[class*="textColor-"]:hover,
+html.themeDark .column.withColor .tagItem[class*="textColor-"]:hover .inner,
+html.themeDark .column.withColor .tagItem[class*="textColor-"]:hover *,
+html.themeDark .column.withColor .item.hover .tagItem[class*="textColor-"],
+html.themeDark .column.withColor .item.hover .tagItem[class*="textColor-"] .inner,
+html.themeDark .column.withColor .item.hover .tagItem[class*="textColor-"] *,
+html.themeDark .column.withColor .item.isSelected .tagItem[class*="textColor-"],
+html.themeDark .column.withColor .item.isSelected .tagItem[class*="textColor-"] .inner,
+html.themeDark .column.withColor .item.isSelected .tagItem[class*="textColor-"] * {
+    color: #ffffff !important;
+}
+
+html.themeDark .column.withColor .tagItem[class*="bgColor-"]:hover,
+html.themeDark .column.withColor .item.hover .tagItem[class*="bgColor-"],
+html.themeDark .column.withColor .item.isSelected .tagItem[class*="bgColor-"] {
+    background-color: rgba(255, 255, 255, 0.09) !important;
 }
 
 .tagItem.isSelect {
@@ -4912,7 +4993,7 @@ html.themeDark .tagItem:not(:hover):not(:is(.item.hover *, .item.isSelected *)) 
 .tagItem .icon.objectRemove:hover,
 .tagItem .remove:hover {
     opacity: 1 !important;
-    background-color: rgba(0, 0, 0, 0.1) !important;
+    background-color: var(--muted-black-10) !important;
     border-radius: 50% !important;
 }
 
@@ -5102,13 +5183,13 @@ html.themeDark .tagItem:not(:hover):not(:is(.item.hover *, .item.isSelected *)) 
     color: inherit !important;
     white-space: nowrap !important;
     transition: all 0.2s ease !important;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05) !important;
+    box-shadow: 0 2px 8px var(--muted-black-05) !important;
 }
 
 html.themeDark .btn {
     background: var(--glass-bg-dark) !important;
     border: 1px solid var(--glass-border-dark) !important;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2) !important;
+    box-shadow: 0 4px 12px var(--muted-black-20) !important;
 }
 
 /* Вирівнювання іконки "+" всередині кнопки */
@@ -5146,6 +5227,10 @@ html.themeDark .btn:hover {
    ACTION BLOCK (CREATE/SEARCH) — СТИЛЬ УНІФІКОВАНО
    ============================================================ */
 
+.widget.widgetSpace:after {
+    background: none !important
+}
+
 .widget.widgetSpace .spaceData {
     display: flex !important;
     flex-direction: column !important;
@@ -5180,8 +5265,8 @@ html:not(.themeDark) .widgetSpace .spaceData>.buttons {
     -webkit-backdrop-filter: none !important;
     box-shadow: none !important;
     background-color: rgba(255, 255, 255, 0.40) !important;
-    border: 1px solid rgba(255, 255, 255, 0.42) !important;
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.52), 0 10px 28px rgba(0, 0, 0, 0.06) !important;
+    border: 1px solid var(--muted-white-42) !important;
+    box-shadow: inset 0 1px 0 var(--muted-white-52), 0 10px 28px var(--muted-black-06) !important;
     backdrop-filter: var(--glass-blur) !important;
     -webkit-backdrop-filter: var(--glass-blur) !important;
 }
@@ -5190,7 +5275,7 @@ html:not(.themeDark) .widgetSpace .spaceData>.buttons {
 html.themeDark .widgetSpace .spaceData>.buttons {
     background: rgba(42, 42, 46, 0.32) !important;
     border: var(--glass-panel-border-dark) !important;
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05), 0 12px 30px rgba(0, 0, 0, 0.28) !important;
+    box-shadow: inset 0 1px 0 var(--muted-white-05), 0 12px 30px var(--muted-black-28) !important;
     backdrop-filter: var(--glass-blur) !important;
     -webkit-backdrop-filter: var(--glass-blur) !important;
     backdrop-filter: none !important;
@@ -5247,7 +5332,7 @@ html:not(.themeDark) .widgetSpace .spaceData>.buttons .item.active {
     backdrop-filter: var(--glass-blur) !important;
     -webkit-backdrop-filter: var(--glass-blur) !important;
     border: 1px solid var(--glass-item-border-light) !important;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04) !important;
+    box-shadow: 0 4px 12px var(--muted-black-04) !important;
 }
 
 html.themeDark .widgetSpace .spaceData>.buttons .item:hover,
@@ -5255,7 +5340,7 @@ html.themeDark .widgetSpace .spaceData>.buttons .item.hover,
 html.themeDark .widgetSpace .spaceData>.buttons .item.active {
     background: rgba(32, 32, 36, 0.82) !important;
     border: var(--glass-panel-border-dark) !important;
-    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.05), 0 6px 16px rgba(0, 0, 0, 0.24) !important;
+    box-shadow: inset 0 0 0 1px var(--muted-white-05), 0 6px 16px rgba(0, 0, 0, 0.24) !important;
 }
 
 
@@ -5276,8 +5361,8 @@ html.themeDark .widgetSpace .spaceData>.buttons .item.active {
 
 html:not(.themeDark) .widget.widgetView {
     background-color: rgba(255, 255, 255, 0.40) !important;
-    border: 1px solid rgba(255, 255, 255, 0.42) !important;
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.52), 0 10px 28px rgba(0, 0, 0, 0.06) !important;
+    border: 1px solid var(--muted-white-42) !important;
+    box-shadow: inset 0 1px 0 var(--muted-white-52), 0 10px 28px var(--muted-black-06) !important;
     backdrop-filter: var(--glass-blur) !important;
     -webkit-backdrop-filter: var(--glass-blur) !important;
 }
@@ -5285,7 +5370,7 @@ html:not(.themeDark) .widget.widgetView {
 html.themeDark .widget.widgetView {
     background: rgba(42, 42, 46, 0.32) !important;
     border: var(--glass-panel-border-dark) !important;
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05), 0 12px 30px rgba(0, 0, 0, 0.28) !important;
+    box-shadow: inset 0 1px 0 var(--muted-white-05), 0 12px 30px var(--muted-black-28) !important;
     backdrop-filter: var(--glass-blur) !important;
     -webkit-backdrop-filter: var(--glass-blur) !important;
 }
@@ -5300,8 +5385,8 @@ html:not(.themeDark) .widget.widgetView:hover {
 html.themeDark .widget.widgetView:hover {
     background: rgba(32, 32, 36, 0.82) !important;
     transform: scale(1.01) !important;
-    border-color: rgba(255, 255, 255, 0.08) !important;
-    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.05), 0 8px 20px rgba(0, 0, 0, 0.28) !important;
+    border-color: var(--muted-white-08) !important;
+    box-shadow: inset 0 0 0 1px var(--muted-white-05), 0 8px 20px var(--muted-black-28) !important;
     z-index: 20 !important;
 }
 
@@ -5310,7 +5395,7 @@ html:not(.themeDark) .widget.widgetView.isPreview.hover,
 html:not(.themeDark) .widget.widgetView.isPreview.active {
     background-color: #f2f2f7 !important;
     transform: none !important;
-    border-color: rgba(0, 0, 0, 0.05) !important;
+    border-color: var(--muted-black-05) !important;
     box-shadow: none !important;
     z-index: 20 !important;
 }
@@ -5320,15 +5405,15 @@ html.themeDark .widget.widgetView.isPreview.hover,
 html.themeDark .widget.widgetView.isPreview.active {
     background: rgba(26, 26, 30, 0.75) !important;
     transform: none !important;
-    border-color: rgba(255, 255, 255, 0.03) !important;
-    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.04), 0 4px 14px rgba(0, 0, 0, 0.22) !important;
+    border-color: var(--muted-white-03) !important;
+    box-shadow: inset 0 0 0 1px var(--muted-white-04), 0 4px 14px var(--muted-black-22) !important;
     z-index: 20 !important;
 }
 
 html:not(.themeDark) .widget.widgetView:not(.isPreview):not(.isClosed) {
     background-color: rgba(255, 255, 255, 0.50) !important;
-    border: 1px solid rgba(255, 255, 255, 0.42) !important;
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.52), 0 10px 28px rgba(0, 0, 0, 0.06) !important;
+    border: 1px solid var(--muted-white-42) !important;
+    box-shadow: inset 0 1px 0 var(--muted-white-52), 0 10px 28px var(--muted-black-06) !important;
     backdrop-filter: var(--glass-blur) !important;
     -webkit-backdrop-filter: var(--glass-blur) !important;
 }
@@ -5336,7 +5421,7 @@ html:not(.themeDark) .widget.widgetView:not(.isPreview):not(.isClosed) {
 html.themeDark .widget.widgetView:not(.isPreview):not(.isClosed) {
     background: rgba(42, 42, 46, 0.40) !important;
     border: var(--glass-panel-border-dark) !important;
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05), 0 12px 30px rgba(0, 0, 0, 0.28) !important;
+    box-shadow: inset 0 1px 0 var(--muted-white-05), 0 12px 30px var(--muted-black-28) !important;
     backdrop-filter: var(--glass-blur) !important;
     -webkit-backdrop-filter: var(--glass-blur) !important;
 }
@@ -5611,9 +5696,9 @@ html:not(.themeDark) .widget.widgetView .body.isCompact .item:hover .inner,
 html:not(.themeDark) .widget.widgetView .body.isCompact .item.active .inner,
 html:not(.themeDark) .widget.widgetView .body.isCompact .item.isSelected .inner,
 html:not(.themeDark) .widget.widgetView .body.isCompact .item.selected .inner {
-    background: rgba(255, 255, 255, 0.22) !important;
-    background-color: rgba(255, 255, 255, 0.22) !important;
-    border-color: rgba(255, 255, 255, 0.24) !important;
+    background: var(--muted-white-22) !important;
+    background-color: var(--muted-white-22) !important;
+    border-color: var(--muted-white-24) !important;
     box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.18) !important;
 }
 
@@ -5624,7 +5709,7 @@ html.themeDark .widget.widgetView .body.isCompact .item.selected .inner {
     background: rgba(255, 255, 255, 0.025) !important;
     background-color: rgba(255, 255, 255, 0.025) !important;
     border-color: rgba(255, 255, 255, 0.045) !important;
-    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.03) !important;
+    box-shadow: inset 0 0 0 1px var(--muted-white-03) !important;
 }
 
 .widget.widgetView .body.isCompact .item .iconObject.c20,
@@ -5757,13 +5842,13 @@ html:not(.themeDark) .widget.widgetView #button-show-all:hover {
 
 html.themeDark .widget.widgetView #button-show-all {
     background: rgba(26, 26, 30, 0.75) !important;
-    border: 1px solid rgba(255, 255, 255, 0.03) !important;
-    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.04), 0 4px 14px rgba(0, 0, 0, 0.22) !important;
+    border: 1px solid var(--muted-white-03) !important;
+    box-shadow: inset 0 0 0 1px var(--muted-white-04), 0 4px 14px var(--muted-black-22) !important;
 }
 
 html.themeDark .widget.widgetView #button-show-all:hover {
     background: rgba(32, 32, 36, 0.82) !important;
-    border-color: rgba(255, 255, 255, 0.08) !important;
+    border-color: var(--muted-white-08) !important;
 }
 
 .widget.widgetView.isPreview .viewList .body .item,
@@ -5808,9 +5893,9 @@ html:not(.themeDark) .widget.widgetView.isPreview .viewList .body .item.active .
 html:not(.themeDark) .widget.widgetView.isPreview .viewList .body .item.isSelected .inner,
 html:not(.themeDark) .widget.widgetView.isPreview .viewList .body .item.selected .inner,
 html:not(.themeDark) .widget.widgetView.isPreview .viewList .body .item .dropTarget:hover .inner {
-    background: rgba(255, 255, 255, 0.22) !important;
-    background-color: rgba(255, 255, 255, 0.22) !important;
-    border-color: rgba(255, 255, 255, 0.24) !important;
+    background: var(--muted-white-22) !important;
+    background-color: var(--muted-white-22) !important;
+    border-color: var(--muted-white-24) !important;
     box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.18) !important;
 }
 
@@ -5823,7 +5908,7 @@ html.themeDark .widget.widgetView.isPreview .viewList .body .item .dropTarget:ho
     background: rgba(255, 255, 255, 0.025) !important;
     background-color: rgba(255, 255, 255, 0.025) !important;
     border-color: rgba(255, 255, 255, 0.045) !important;
-    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.03) !important;
+    box-shadow: inset 0 0 0 1px var(--muted-white-03) !important;
 }
 
 
@@ -5860,7 +5945,7 @@ html:not(.themeDark) .widgetView .head .side.right .iconWrap.create {
     backdrop-filter: var(--glass-blur) !important;
     -webkit-backdrop-filter: var(--glass-blur) !important;
     border: 1px solid var(--glass-item-border-light) !important;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04) !important;
+    box-shadow: 0 4px 12px var(--muted-black-04) !important;
 }
 
 html.themeDark .widgetView .head .side.right .iconWrap.create {
@@ -5868,7 +5953,7 @@ html.themeDark .widgetView .head .side.right .iconWrap.create {
     backdrop-filter: var(--glass-blur) !important;
     -webkit-backdrop-filter: var(--glass-blur) !important;
     border: var(--glass-panel-border-dark) !important;
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06), 0 8px 22px rgba(0, 0, 0, 0.22) !important;
+    box-shadow: inset 0 1px 0 var(--muted-white-06), 0 8px 22px var(--muted-black-22) !important;
 }
 
 html:not(.themeDark) .widgetView .head .side.right .iconWrap.create:hover,
@@ -5895,7 +5980,7 @@ html.themeDark .widgetView .head .side.right .iconWrap.create.active {
     transform: scale(1.1) !important;
     background-color: var(--glass-active-dark-hover) !important;
     border-color: var(--glass-active-dark-border-hover) !important;
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.12) !important;
+    box-shadow: inset 0 1px 0 var(--muted-white-12) !important;
 }
 
 .widget.widgetView #viewSelect .select,
@@ -5913,7 +5998,7 @@ html:not(.themeDark) .widget.widgetView .tabs .tab.active {
     backdrop-filter: var(--glass-blur) !important;
     -webkit-backdrop-filter: var(--glass-blur) !important;
     border-color: var(--glass-item-border-light) !important;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04) !important;
+    box-shadow: 0 4px 12px var(--muted-black-04) !important;
 }
 
 
@@ -5933,8 +6018,8 @@ html:not(.themeDark) .widget.widgetView .tabs .tab.active {
 /* Світла тема: Glassmorphism */
 html:not(.themeDark) .widget.widgetTree {
     background-color: rgba(255, 255, 255, 0.40) !important;
-    border: 1px solid rgba(255, 255, 255, 0.42) !important;
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.52), 0 10px 28px rgba(0, 0, 0, 0.06) !important;
+    border: 1px solid var(--muted-white-42) !important;
+    box-shadow: inset 0 1px 0 var(--muted-white-52), 0 10px 28px var(--muted-black-06) !important;
     backdrop-filter: var(--glass-blur) !important;
     -webkit-backdrop-filter: var(--glass-blur) !important;
 }
@@ -5943,7 +6028,7 @@ html:not(.themeDark) .widget.widgetTree {
 html.themeDark .widget.widgetTree {
     background: rgba(42, 42, 46, 0.32) !important;
     border: var(--glass-panel-border-dark) !important;
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05), 0 12px 30px rgba(0, 0, 0, 0.28) !important;
+    box-shadow: inset 0 1px 0 var(--muted-white-05), 0 12px 30px var(--muted-black-28) !important;
     backdrop-filter: var(--glass-blur) !important;
     -webkit-backdrop-filter: var(--glass-blur) !important;
 }
@@ -6011,15 +6096,15 @@ html.themeDark .widget.widgetTree .head .side.right .iconWrap.create {
 /* Ховер на рядки в дереві */
 .widget.widgetTree .item:hover>.inner,
 .widget.widgetTree .item:hover>.dropTarget>.inner {
-    border-color: rgba(255, 255, 255, 0.1) !important;
+    border-color: var(--muted-white-10) !important;
 }
 
 html:not(.themeDark) .widget.widgetTree .item:hover>.inner {
-    background: rgba(0, 0, 0, 0.04) !important;
+    background: var(--muted-black-04) !important;
 }
 
 html.themeDark .widget.widgetTree .item:hover>.inner {
-    background: rgba(255, 255, 255, 0.05) !important;
+    background: var(--muted-white-05) !important;
 }
 
 /* 5. ІКОНКИ ОБ'ЄКТІВ (Squircle) */
@@ -6090,7 +6175,7 @@ html.themeDark .widget.widgetTree .item:hover>.inner {
 html:not(.themeDark) .buttonWrap.withSelect:has(#button-dataview-add-record) {
     background-color: var(--glass-active-light-hover) !important;
     border: 1px solid var(--glass-active-light-border-hover) !important;
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.28), 0 6px 16px rgba(0, 0, 0, 0.06) !important;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.28), 0 6px 16px var(--muted-black-06) !important;
 }
 
 html:not(.themeDark) .buttonWrap.withSelect #button-dataview-add-record,
@@ -6101,7 +6186,7 @@ html:not(.themeDark) .buttonWrap.withSelect #button-dataview-add-record-select {
 html:not(.themeDark) .buttonWrap.withSelect #button-dataview-add-record .txt,
 html:not(.themeDark) .buttonWrap.withSelect #button-dataview-add-record-select .txt {
     color: rgba(255, 255, 255, 0.98) !important;
-    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.08) !important;
+    text-shadow: 0 1px 0 var(--muted-black-08) !important;
 }
 
 html:not(.themeDark) .buttonWrap.withSelect #button-dataview-add-record-select::before {
@@ -6112,7 +6197,7 @@ html:not(.themeDark) .buttonWrap.withSelect #button-dataview-add-record:hover,
 html:not(.themeDark) .buttonWrap.withSelect #button-dataview-add-record.hover,
 html:not(.themeDark) .buttonWrap.withSelect #button-dataview-add-record-select:hover,
 html:not(.themeDark) .buttonWrap.withSelect #button-dataview-add-record-select.hover {
-    background-color: rgba(255, 255, 255, 0.08) !important;
+    background-color: var(--muted-white-08) !important;
     box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.20) !important;
 }
 
@@ -6120,14 +6205,14 @@ html:not(.themeDark) .buttonWrap.withSelect #button-dataview-add-record:active,
 html:not(.themeDark) .buttonWrap.withSelect #button-dataview-add-record.active,
 html:not(.themeDark) .buttonWrap.withSelect #button-dataview-add-record-select:active,
 html:not(.themeDark) .buttonWrap.withSelect #button-dataview-add-record-select.active {
-    background-color: rgba(0, 0, 0, 0.08) !important;
+    background-color: var(--muted-black-08) !important;
     transform: translateY(0.5px) !important;
 }
 
 html.themeDark .buttonWrap.withSelect:has(#button-dataview-add-record) {
     background-color: var(--glass-active-dark-hover) !important;
     border: 1px solid var(--glass-active-dark-border-hover) !important;
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.14), 0 8px 18px rgba(0, 0, 0, 0.22) !important;
+    box-shadow: inset 0 1px 0 var(--muted-white-14), 0 8px 18px var(--muted-black-22) !important;
 }
 
 html.themeDark .buttonWrap.withSelect #button-dataview-add-record,
@@ -6222,8 +6307,8 @@ html.themeDark .pageAuthPinCheck .title {
 
     /* Складний ефект: Зовнішня тінь + Внутрішній блік зверху */
     box-shadow:
-        inset 0 1px 1px rgba(255, 255, 255, 0.6),
-        0 4px 12px rgba(0, 0, 0, 0.04) !important;
+        inset 0 1px 1px var(--muted-white-60),
+        0 4px 12px var(--muted-black-04) !important;
 
     color: var(--element-color-dark) !important;
     font-size: 32px !important;
@@ -6239,23 +6324,23 @@ html.themeDark .pageAuthPinCheck .title {
 html.themeDark .pageAuthPinCheck .pin .input {
     background: var(--glass-bg-dark, rgba(30, 30, 32, 0.75)) !important;
     border: 1px solid var(--glass-border-dark) !important;
-    color: #ffffff !important;
+    color: var(--white) !important;
 
     box-shadow:
-        inset 0 1px 1px rgba(255, 255, 255, 0.1),
-        0 8px 24px rgba(0, 0, 0, 0.3) !important;
+        inset 0 1px 1px var(--muted-white-10),
+        0 8px 24px var(--muted-black-30) !important;
 }
 
 /* --- HOVER STATE --- */
 .pageAuthPinCheck .pin .input:hover {
     background: rgba(255, 255, 255, 0.9) !important;
     transform: translateY(-1px) !important;
-    border-color: rgba(0, 0, 0, 0.1) !important;
+    border-color: var(--muted-black-10) !important;
 }
 
 html.themeDark .pageAuthPinCheck .pin .input:hover {
     background: rgba(45, 45, 48, 0.9) !important;
-    border-color: rgba(255, 255, 255, 0.15) !important;
+    border-color: var(--muted-white-15) !important;
 }
 
 /* --- FOCUS / ACTIVE STATE (Блакитне сяйво) --- */
@@ -6269,7 +6354,7 @@ html.themeDark .pageAuthPinCheck .pin .input:hover {
     /* М'яке блакитне сяйво (Halo effect) */
     box-shadow:
         0 0 0 4px rgba(0, 122, 255, 0.15),
-        0 12px 28px rgba(0, 0, 0, 0.08) !important;
+        0 12px 28px var(--muted-black-08) !important;
     outline: none !important;
 }
 
@@ -6398,11 +6483,11 @@ html.themeDark .pageAuthPinCheck .pin .input.isFocused {
 
 /* Ефект наведення на контейнер */
 html:not(.themeDark) #headerSync.sync:hover {
-    background-color: rgba(0, 0, 0, 0.05) !important;
+    background-color: var(--muted-black-05) !important;
 }
 
 html.themeDark #headerSync.sync:hover {
-    background-color: rgba(255, 255, 255, 0.1) !important;
+    background-color: var(--muted-white-10) !important;
 }
 
 /* Сама іконка — повертаємо їй життя */
@@ -6435,14 +6520,14 @@ html:not(.themeDark) #head .side .icon:hover,
 html:not(.themeDark) #button-recently-open:hover,
 html:not(.themeDark) #dataviewControlsSideRight .icon:hover,
 html:not(.themeDark) [id^="button-dataview-"]:hover {
-    background-color: rgba(0, 0, 0, 0.05) !important;
+    background-color: var(--muted-black-05) !important;
 }
 
 html.themeDark #head .side .icon:hover,
 html.themeDark #button-recently-open:hover,
 html.themeDark #dataviewControlsSideRight .icon:hover,
 html.themeDark [id^="button-dataview-"]:hover {
-    background-color: rgba(255, 255, 255, 0.1) !important;
+    background-color: var(--muted-white-10) !important;
 }
 
 /* 1. Гарантовано показуємо контейнер кнопок при наведенні на рядок */
@@ -6498,7 +6583,7 @@ html.themeDark .menuDataviewOptionList .item .buttons .icon.more {
 }
 
 html.themeDark .menuDataviewOptionList .item .buttons .icon.more:hover {
-    background-color: #ffffff !important;
+    background-color: var(--white) !important;
 }
 
 /* =========================================
@@ -6572,13 +6657,13 @@ html.themeDark .menuDataviewOptionList .item .buttons .icon.more:hover {
     min-width: unset !important;
     /* Скидаємо прямокутну ширину Anytype */
     margin: 0 !important;
-    border: 1px solid rgba(0, 0, 0, 0.05) !important;
+    border: 1px solid var(--muted-black-05) !important;
     /* Легкий контур, щоб світлі кольори не зливалися */
     transition: transform 0.2s ease, box-shadow 0.2s ease !important;
 }
 
 html.themeDark .menuDataviewOptionEdit .section.colorPicker .item.color {
-    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border: 1px solid var(--muted-white-10) !important;
 }
 
 /* 4. Гарний "скляний" ефект для АКТИВНОГО (selected) кольору */
@@ -6586,7 +6671,7 @@ html.themeDark .menuDataviewOptionEdit .section.colorPicker .item.color {
     transform: scale(1.1) !important;
     /* Трішки збільшуємо активний */
     /* Створюємо напівпрозоре скляне кільце навколо кружечка */
-    box-shadow: 0 0 0 4px var(--element-border-light-hover), 0 2px 6px rgba(0, 0, 0, 0.1) !important;
+    box-shadow: 0 0 0 4px var(--element-border-light-hover), 0 2px 6px var(--muted-black-10) !important;
 }
 
 html.themeDark .menuDataviewOptionEdit .section.colorPicker .item.color.selected {
@@ -6605,25 +6690,45 @@ html.themeDark .menuDataviewOptionEdit .section.colorPicker .item.color:hover:no
 
 
 
+
+
 /* =========================================
    КАНБАН ДОШКА: Кольорові підкладки колонок
    ========================================= */
 
 /* 1. Шапка колонки (верхня частина підкладки) */
-.viewBoard .column .head .bgColor {
+/* 24px для кольорових пігулок */
+.viewBoard .column.withColor .head .bgColor {
     border-top-left-radius: 24px !important;
     border-top-right-radius: 24px !important;
     opacity: 1 !important;
-    /* Підвищуємо контрастність (за замовчуванням вона дуже бліда) */
     transition: opacity 0.3s ease !important;
 }
 
+/* 8px для звичайних колонок (Omnibus стиль) */
+.viewBoard .column:not(.withColor) .head .bgColor {
+    border-top-left-radius: 8px !important;
+    border-top-right-radius: 8px !important;
+    opacity: 1 !important;
+    transition: opacity 0.3s ease !important;
+}
+
+
+
 /* 2. Тіло колонки (нижня частина підкладки) */
-.viewBoard .column .body .bg .bgColor {
+/* 24px для кольорових пігулок */
+.viewBoard .column.withColor .body .bg .bgColor {
     border-bottom-left-radius: 24px !important;
     border-bottom-right-radius: 24px !important;
     opacity: 1 !important;
-    /* Тіло робимо ледь світлішим за шапку для візуального об'єму */
+    transition: opacity 0.3s ease !important;
+}
+
+/* 8px для звичайних колонок (Omnibus стиль) */
+.viewBoard .column:not(.withColor) .body .bg .bgColor {
+    border-bottom-left-radius: 8px !important;
+    border-bottom-right-radius: 8px !important;
+    opacity: 1 !important;
     transition: opacity 0.3s ease !important;
 }
 
@@ -6668,7 +6773,7 @@ html.themeDark .viewBoard .column:hover .body .bg .bgColor {
 html:not(.themeDark) .viewBoard .column.withColor .card.isPage {
     background-color: rgba(255, 255, 255, 0.45) !important;
     /* Трохи прозоріше для кращого скла */
-    border: 1px solid rgba(255, 255, 255, 0.4) !important;
+    border: 1px solid var(--muted-white-40) !important;
     /* Світлий відблиск на краях */
 
     /* Додаємо ефект матового скла */
@@ -6678,7 +6783,6 @@ html:not(.themeDark) .viewBoard .column.withColor .card.isPage {
     /* Тіні вимкнено за замовчуванням */
     box-shadow: none !important;
 
-    isolation: isolate;
     transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, backdrop-filter 0.3s ease !important;
 }
 
@@ -6692,7 +6796,7 @@ html:not(.themeDark) .viewBoard .column.withColor .card.isPage:hover {
     border-color: rgba(255, 255, 255, 0.8) !important;
 
     /* Додаємо м'яку, багатошарову "яблучну" тінь тільки тут */
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.04) !important;
+    box-shadow: 0 10px 30px var(--muted-black-08), 0 4px 12px var(--muted-black-04) !important;
 
     backdrop-filter: blur(20px) saturate(160%) !important;
     -webkit-backdrop-filter: blur(20px) saturate(160%) !important;
@@ -6702,7 +6806,7 @@ html:not(.themeDark) .viewBoard .column.withColor .card.isPage:hover {
 /* --- ТЕМНА ТЕМА (Базовий стан) --- */
 html.themeDark .viewBoard .column.withColor .card.isPage {
     background: rgba(42, 42, 46, 0.3) !important;
-    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    border: 1px solid var(--muted-white-08) !important;
     /* Замінив змінну на статичне значення для консистентності, можете повернути var(--glass-panel-border-dark) якщо треба */
 
     /* Скломорфізм */
@@ -6712,20 +6816,19 @@ html.themeDark .viewBoard .column.withColor .card.isPage {
     /* Тіні вимкнено */
     box-shadow: none !important;
 
-    isolation: isolate;
     transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, backdrop-filter 0.3s ease !important;
 }
 
 /* --- ТЕМНА ТЕМА (Ховер) --- */
 html.themeDark .viewBoard .column.withColor .card.isPage:hover {
-    background: rgba(255, 255, 255, 0.08) !important;
+    background: var(--muted-white-08) !important;
     /* Світліший, скляний відблиск замість глухого сірого */
     transform: scale(1.02) translateY(-2px) !important;
 
-    border-color: rgba(255, 255, 255, 0.15) !important;
+    border-color: var(--muted-white-15) !important;
 
     /* Тінь тільки при наведенні (трохи інтенсивніша, щоб її було видно на темному) */
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3), 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+    box-shadow: 0 10px 30px var(--muted-black-30), 0 4px 12px rgba(0, 0, 0, 0.15) !important;
 
     backdrop-filter: blur(20px) saturate(160%) !important;
     -webkit-backdrop-filter: blur(20px) saturate(160%) !important;
@@ -6747,7 +6850,7 @@ html.themeDark .viewBoard .column.withColor .card.isPage:hover {
 /* Світла тема - База (Скло) */
 html:not(.themeDark) .blocks .block.blockDataview .viewContent.viewBoard .column.withColor .card.add {
     background-color: rgba(255, 255, 255, 0.45) !important;
-    border: 1px solid rgba(255, 255, 255, 0.6) !important;
+    border: 1px solid var(--muted-white-60) !important;
     opacity: 1 !important;
     /* Перебиваємо стандартну прозорість */
 
@@ -6758,19 +6861,19 @@ html:not(.themeDark) .blocks .block.blockDataview .viewContent.viewBoard .column
 
 /* Світла тема - Ховер (Скло) */
 html:not(.themeDark) .blocks .block.blockDataview .viewContent.viewBoard .column.withColor .card.add:hover {
-    background-color: rgba(255, 255, 255, 0.6) !important;
+    background-color: var(--muted-white-60) !important;
     border-color: rgba(255, 255, 255, 0.8) !important;
     transform: translateY(-2px) scale(1.01) !important;
 
     backdrop-filter: blur(24px) saturate(180%) !important;
     -webkit-backdrop-filter: blur(24px) saturate(180%) !important;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05) !important;
+    box-shadow: 0 8px 24px var(--muted-black-05) !important;
 }
 
 /* Темна тема - База (Скло) */
 html.themeDark .blocks .block.blockDataview .viewContent.viewBoard .column.withColor .card.add {
     background-color: rgba(30, 30, 35, 0.4) !important;
-    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border: 1px solid var(--muted-white-10) !important;
     opacity: 1 !important;
 
     backdrop-filter: blur(16px) saturate(150%) !important;
@@ -6781,12 +6884,12 @@ html.themeDark .blocks .block.blockDataview .viewContent.viewBoard .column.withC
 /* Темна тема - Ховер (Скло) */
 html.themeDark .blocks .block.blockDataview .viewContent.viewBoard .column.withColor .card.add:hover {
     background-color: rgba(50, 50, 55, 0.5) !important;
-    border-color: rgba(255, 255, 255, 0.15) !important;
+    border-color: var(--muted-white-15) !important;
     transform: translateY(-2px) scale(1.01) !important;
 
     backdrop-filter: blur(24px) saturate(180%) !important;
     -webkit-backdrop-filter: blur(24px) saturate(180%) !important;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1) !important;
+    box-shadow: 0 8px 24px var(--muted-black-10) !important;
 }
 
 /* ==========================================================================
@@ -6844,14 +6947,14 @@ html.themeDark .viewBoard .column.withColor:hover .head .icon.more {
 .viewBoard .column.withColor:hover .icon.add:hover,
 .viewBoard .column.withColor:hover .head .icon.more:hover {
     opacity: 0.7 !important;
-    background-color: rgba(0, 0, 0, 0.05) !important;
+    background-color: var(--muted-black-05) !important;
 }
 
 /* Темна тема */
 html.themeDark .viewBoard .column.withColor:hover .icon.add:hover,
 html.themeDark .viewBoard .column.withColor:hover .head .icon.more:hover {
     opacity: 1 !important;
-    background-color: rgba(255, 255, 255, 0.15) !important;
+    background-color: var(--muted-white-15) !important;
 }
 
 /* 2.5. Стан при кліку/натисканні (Спільний для обох тем) */
@@ -6920,26 +7023,26 @@ html.themeDark .blocks .blockDataview .viewBoard .column.withColor .head .tagIte
    ========================================= */
 /* СВІТЛА ТЕМА: Пасивний стан */
 .viewBoard .column.withColor .body .tagItem {
-    background-color: rgba(0, 0, 0, 0.04) !important;
+    background-color: var(--muted-black-04) !important;
     color: #666666 !important;
 }
 
 /* СВІТЛА ТЕМА: Ховер (М'якший контраст, текст "вбирає" фон) */
 .viewBoard .column.withColor .body .tagItem:hover {
-    background-color: rgba(0, 0, 0, 0.05) !important;
+    background-color: var(--muted-black-05) !important;
     color: rgba(0, 0, 0, 0.7) !important;
     mix-blend-mode: multiply !important;
 }
 
 /* ТЕМНА ТЕМА: Пасивний стан */
 html.themeDark .viewBoard .column.withColor .body .tagItem {
-    background-color: rgba(255, 255, 255, 0.06) !important;
+    background-color: var(--muted-white-06) !important;
     color: #a0a0a5 !important;
 }
 
 /* ТЕМНА ТЕМА: Ховер (Світлий напівпрозорий текст, сатурація фону) */
 html.themeDark .viewBoard .column.withColor .body .tagItem:hover {
-    background-color: rgba(255, 255, 255, 0.08) !important;
+    background-color: var(--muted-white-08) !important;
     color: rgba(255, 255, 255, 0.8) !important;
     mix-blend-mode: overlay !important;
 }
@@ -7038,7 +7141,7 @@ html:not(.themeDark) body .widget.widgetView #button-show-all .txt {
 }
 
 html.themeDark body .widget.widgetView #button-show-all .txt {
-    color: rgba(255, 255, 255, 0.6) !important;
+    color: var(--muted-white-60) !important;
 }
 
 body .widget.widgetView #button-show-all:hover {
@@ -7101,9 +7204,9 @@ body .viewGallery .card.add::after {
 }
 
 html:not(.themeDark) .sidebar .sidebarPage.pageWidget .widgetSection.section-recentedit {
-    background-color: rgba(255, 255, 255, 0.4) !important;
-    border: 1px solid rgba(255, 255, 255, 0.42) !important;
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.52), 0 10px 28px rgba(0, 0, 0, 0.06) !important;
+    background-color: var(--muted-white-40) !important;
+    border: 1px solid var(--muted-white-42) !important;
+    box-shadow: inset 0 1px 0 var(--muted-white-52), 0 10px 28px var(--muted-black-06) !important;
     backdrop-filter: var(--glass-blur) !important;
     -webkit-backdrop-filter: var(--glass-blur) !important;
 }
@@ -7111,7 +7214,7 @@ html:not(.themeDark) .sidebar .sidebarPage.pageWidget .widgetSection.section-rec
 html.themeDark .sidebar .sidebarPage.pageWidget .widgetSection.section-recentedit {
     background: rgba(42, 42, 46, 0.32) !important;
     border: var(--glass-panel-border-dark) !important;
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05), 0 12px 30px rgba(0, 0, 0, 0.28) !important;
+    box-shadow: inset 0 1px 0 var(--muted-white-05), 0 12px 30px var(--muted-black-28) !important;
     backdrop-filter: var(--glass-blur) !important;
     -webkit-backdrop-filter: var(--glass-blur) !important;
 }
@@ -7184,15 +7287,15 @@ html.themeDark .sidebar .sidebarPage.pageWidget .widgetSection.section-recentedi
 html:not(.themeDark) .sidebar .sidebarPage.pageWidget .widgetSection.section-recentedit>.nameWrap .buttons .button.blank.c28 {
     background: rgba(255, 255, 255, 0.62) !important;
     border: 1px solid rgba(255, 255, 255, 0.48) !important;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05) !important;
+    box-shadow: 0 6px 18px var(--muted-black-05) !important;
     color: rgba(43, 43, 45, 0.0) !important;
 }
 
 html:not(.themeDark) .sidebar .sidebarPage.pageWidget .widgetSection.section-recentedit>.nameWrap .buttons .button.blank.c28:hover {
     background: var(--glass-active-light-hover) !important;
     border-color: var(--glass-active-light-border-hover) !important;
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.24) !important;
-    color: #ffffff !important;
+    box-shadow: inset 0 1px 0 var(--muted-white-24) !important;
+    color: var(--white) !important;
 }
 
 html:not(.themeDark) .sidebar .sidebarPage.pageWidget .widgetSection.section-recentedit>.nameWrap .buttons .button.blank.c28:hover .icon.plus {
@@ -7210,7 +7313,7 @@ html.themeDark .sidebar .sidebarPage.pageWidget .widgetSection.section-recentedi
     background: var(--glass-active-dark-hover) !important;
     border-color: var(--glass-active-dark-border-hover) !important;
     box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.0) !important;
-    color: #ffffff !important;
+    color: var(--white) !important;
 }
 
 html.themeDark .sidebar .sidebarPage.pageWidget .widgetSection.section-recentedit>.nameWrap .buttons .button.blank.c28:hover .icon.plus {
@@ -7255,9 +7358,9 @@ html:not(.themeDark) .sidebar .sidebarPage.pageWidget .widgetSection.section-rec
 
 html:not(.themeDark) .sidebar .sidebarPage.pageWidget .widgetSection.section-recentedit .widget.widgetObject .item:hover,
 html:not(.themeDark) .sidebar .sidebarPage.pageWidget .widgetSection.section-recentedit .widget.widgetObject .item.active {
-    background: rgba(255, 255, 255, 0.72) !important;
+    background: var(--muted-white-72) !important;
     border-color: rgba(255, 255, 255, 0.58) !important;
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.52), 0 6px 18px rgba(0, 0, 0, 0.05) !important;
+    box-shadow: inset 0 1px 0 var(--muted-white-52), 0 6px 18px var(--muted-black-05) !important;
 }
 
 html.themeDark .sidebar .sidebarPage.pageWidget .widgetSection.section-recentedit .widget.widgetObject .item {
@@ -7267,9 +7370,9 @@ html.themeDark .sidebar .sidebarPage.pageWidget .widgetSection.section-recentedi
 
 html.themeDark .sidebar .sidebarPage.pageWidget .widgetSection.section-recentedit .widget.widgetObject .item:hover,
 html.themeDark .sidebar .sidebarPage.pageWidget .widgetSection.section-recentedit .widget.widgetObject .item.active {
-    background: rgba(255, 255, 255, 0.08) !important;
-    border-color: rgba(255, 255, 255, 0.1) !important;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.22) !important;
+    background: var(--muted-white-08) !important;
+    border-color: var(--muted-white-10) !important;
+    box-shadow: 0 6px 18px var(--muted-black-22) !important;
 }
 
 .sidebar .sidebarPage.pageWidget .widgetSection.section-recentedit .widget.widgetObject .item .side.left {
@@ -7295,8 +7398,18 @@ html:not(.themeDark) .sidebar .sidebarPage.pageWidget .widgetSection.section-rec
 }
 
 html.themeDark .sidebar .sidebarPage.pageWidget .widgetSection.section-recentedit .widget.widgetObject .item .buttons .icon {
-    background-color: rgba(255, 255, 255, 0.06) !important;
+    background-color: var(--muted-white-06) !important;
 }
+
+.sidebar .sidebarPage.pageWidget>.head:after,
+.sidebar .sidebarPage.pageWidgetManage>.head:after {
+    background: none !important
+}
+
+.sidebar .sidebarPage.pageWidgetManage>.head:after {
+    background: none !important;
+}
+
 
 /* === AUTO-GENERATED WIDGET TREE STYLES === */
 .widget.widgetTree .head .side.left .iconWrap.collapse {
@@ -7316,8 +7429,8 @@ html:not(.themeDark) .widget.widgetTree .head .side.left .iconWrap.collapse {
     background-color: rgba(255, 255, 255, 0.30) !important;
     backdrop-filter: var(--glass-blur) !important;
     -webkit-backdrop-filter: var(--glass-blur) !important;
-    border: 1px solid rgba(255, 255, 255, 0.42) !important;
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.52), 0 6px 18px rgba(0, 0, 0, 0.05) !important;
+    border: 1px solid var(--muted-white-42) !important;
+    box-shadow: inset 0 1px 0 var(--muted-white-52), 0 6px 18px var(--muted-black-05) !important;
 }
 
 html.themeDark .widget.widgetTree .head .side.left .iconWrap.collapse {
@@ -7326,7 +7439,7 @@ html.themeDark .widget.widgetTree .head .side.left .iconWrap.collapse {
     backdrop-filter: var(--glass-blur) !important;
     -webkit-backdrop-filter: var(--glass-blur) !important;
     border: var(--glass-panel-border-dark) !important;
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06), 0 8px 22px rgba(0, 0, 0, 0.22) !important;
+    box-shadow: inset 0 1px 0 var(--muted-white-06), 0 8px 22px var(--muted-black-22) !important;
 }
 
 .widgetTree .body.isCompact .item .inner {
@@ -7341,12 +7454,12 @@ html:not(.themeDark) .widgetTree .body.isCompact .item.active .inner {
     backdrop-filter: blur(22px) saturate(180%) brightness(1.03) !important;
     -webkit-backdrop-filter: blur(22px) saturate(180%) brightness(1.03) !important;
     border: 1px solid var(--glass-item-border-light) !important;
-    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.52), var(--glass-item-shadow-light) !important;
+    box-shadow: inset 0 0 0 1px var(--muted-white-52), var(--glass-item-shadow-light) !important;
 }
 
 html.themeDark .widgetTree .body.isCompact .item:hover .inner {
-    background-color: rgba(255, 255, 255, 0.03) !important;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2) !important;
+    background-color: var(--muted-white-03) !important;
+    box-shadow: 0 4px 12px var(--muted-black-20) !important;
 }
 
 .widget.widgetTree {
@@ -7359,8 +7472,8 @@ html.themeDark .widgetTree .body.isCompact .item:hover .inner {
 
 html:not(.themeDark) .widget.widgetTree {
     background-color: rgba(255, 255, 255, 0.40) !important;
-    border: 1px solid rgba(255, 255, 255, 0.42) !important;
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.52), 0 10px 28px rgba(0, 0, 0, 0.06) !important;
+    border: 1px solid var(--muted-white-42) !important;
+    box-shadow: inset 0 1px 0 var(--muted-white-52), 0 10px 28px var(--muted-black-06) !important;
     backdrop-filter: var(--glass-blur) !important;
     -webkit-backdrop-filter: var(--glass-blur) !important;
 }
@@ -7368,7 +7481,7 @@ html:not(.themeDark) .widget.widgetTree {
 html.themeDark .widget.widgetTree {
     background: rgba(42, 42, 46, 0.32) !important;
     border: var(--glass-panel-border-dark) !important;
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05), 0 12px 30px rgba(0, 0, 0, 0.28) !important;
+    box-shadow: inset 0 1px 0 var(--muted-white-05), 0 12px 30px var(--muted-black-28) !important;
     backdrop-filter: var(--glass-blur) !important;
     -webkit-backdrop-filter: var(--glass-blur) !important;
 }
@@ -7383,15 +7496,15 @@ html:not(.themeDark) .widget.widgetTree:hover {
 html.themeDark .widget.widgetTree:hover {
     background: rgba(32, 32, 36, 0.82) !important;
     transform: scale(1.01) !important;
-    border-color: rgba(255, 255, 255, 0.08) !important;
-    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.05), 0 8px 20px rgba(0, 0, 0, 0.28) !important;
+    border-color: var(--muted-white-08) !important;
+    box-shadow: inset 0 0 0 1px var(--muted-white-05), 0 8px 20px var(--muted-black-28) !important;
     z-index: 20 !important;
 }
 
 html:not(.themeDark) .widget.widgetTree.isPreview.active {
     background-color: #f2f2f7 !important;
     transform: none !important;
-    border-color: rgba(0, 0, 0, 0.05) !important;
+    border-color: var(--muted-black-05) !important;
     box-shadow: none !important;
     z-index: 20 !important;
 }
@@ -7399,15 +7512,15 @@ html:not(.themeDark) .widget.widgetTree.isPreview.active {
 html.themeDark .widget.widgetTree.isPreview.active {
     background: rgba(26, 26, 30, 0.75) !important;
     transform: none !important;
-    border-color: rgba(255, 255, 255, 0.03) !important;
-    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.04), 0 4px 14px rgba(0, 0, 0, 0.22) !important;
+    border-color: var(--muted-white-03) !important;
+    box-shadow: inset 0 0 0 1px var(--muted-white-04), 0 4px 14px var(--muted-black-22) !important;
     z-index: 20 !important;
 }
 
 html:not(.themeDark) .widget.widgetTree:not(.isPreview):not(.isClosed) {
     background-color: rgba(255, 255, 255, 0.50) !important;
-    border: 1px solid rgba(255, 255, 255, 0.42) !important;
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.52), 0 10px 28px rgba(0, 0, 0, 0.06) !important;
+    border: 1px solid var(--muted-white-42) !important;
+    box-shadow: inset 0 1px 0 var(--muted-white-52), 0 10px 28px var(--muted-black-06) !important;
     backdrop-filter: var(--glass-blur) !important;
     -webkit-backdrop-filter: var(--glass-blur) !important;
 }
@@ -7415,7 +7528,7 @@ html:not(.themeDark) .widget.widgetTree:not(.isPreview):not(.isClosed) {
 html.themeDark .widget.widgetTree:not(.isPreview):not(.isClosed) {
     background: rgba(42, 42, 46, 0.40) !important;
     border: var(--glass-panel-border-dark) !important;
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05), 0 12px 30px rgba(0, 0, 0, 0.28) !important;
+    box-shadow: inset 0 1px 0 var(--muted-white-05), 0 12px 30px var(--muted-black-28) !important;
     backdrop-filter: var(--glass-blur) !important;
     -webkit-backdrop-filter: var(--glass-blur) !important;
 }
@@ -7663,9 +7776,9 @@ html.themeDark .widget.widgetTree .body.isCompact .item.active .dropTarget {
 }
 
 html:not(.themeDark) .widget.widgetTree .body.isCompact .item.selected .inner {
-    background: rgba(255, 255, 255, 0.22) !important;
-    background-color: rgba(255, 255, 255, 0.22) !important;
-    border-color: rgba(255, 255, 255, 0.24) !important;
+    background: var(--muted-white-22) !important;
+    background-color: var(--muted-white-22) !important;
+    border-color: var(--muted-white-24) !important;
     box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.18) !important;
 }
 
@@ -7673,7 +7786,7 @@ html.themeDark .widget.widgetTree .body.isCompact .item.selected .inner {
     background: rgba(255, 255, 255, 0.025) !important;
     background-color: rgba(255, 255, 255, 0.025) !important;
     border-color: rgba(255, 255, 255, 0.045) !important;
-    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.03) !important;
+    box-shadow: inset 0 0 0 1px var(--muted-white-03) !important;
 }
 
 .widget.widgetTree .body.isCompact .item .iconObject.c20 .iconImage {
@@ -7775,13 +7888,13 @@ html:not(.themeDark) .widget.widgetTree #button-show-all:hover {
 
 html.themeDark .widget.widgetTree #button-show-all {
     background: rgba(26, 26, 30, 0.75) !important;
-    border: 1px solid rgba(255, 255, 255, 0.03) !important;
-    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.04), 0 4px 14px rgba(0, 0, 0, 0.22) !important;
+    border: 1px solid var(--muted-white-03) !important;
+    box-shadow: inset 0 0 0 1px var(--muted-white-04), 0 4px 14px var(--muted-black-22) !important;
 }
 
 html.themeDark .widget.widgetTree #button-show-all:hover {
     background: rgba(32, 32, 36, 0.82) !important;
-    border-color: rgba(255, 255, 255, 0.08) !important;
+    border-color: var(--muted-white-08) !important;
 }
 
 .widget.widgetTree.isPreview .viewList .body .item .dropTarget {
@@ -7813,9 +7926,9 @@ html.themeDark .widget.widgetTree #button-show-all:hover {
 }
 
 html:not(.themeDark) .widget.widgetTree.isPreview .viewList .body .item .dropTarget:hover .inner {
-    background: rgba(255, 255, 255, 0.22) !important;
-    background-color: rgba(255, 255, 255, 0.22) !important;
-    border-color: rgba(255, 255, 255, 0.24) !important;
+    background: var(--muted-white-22) !important;
+    background-color: var(--muted-white-22) !important;
+    border-color: var(--muted-white-24) !important;
     box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.18) !important;
 }
 
@@ -7823,7 +7936,7 @@ html.themeDark .widget.widgetTree.isPreview .viewList .body .item .dropTarget:ho
     background: rgba(255, 255, 255, 0.025) !important;
     background-color: rgba(255, 255, 255, 0.025) !important;
     border-color: rgba(255, 255, 255, 0.045) !important;
-    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.03) !important;
+    box-shadow: inset 0 0 0 1px var(--muted-white-03) !important;
 }
 
 .widgetTree .head .side.right .buttons {
@@ -7857,7 +7970,7 @@ html:not(.themeDark) .widgetTree .head .side.right .iconWrap.create {
     backdrop-filter: var(--glass-blur) !important;
     -webkit-backdrop-filter: var(--glass-blur) !important;
     border: 1px solid var(--glass-item-border-light) !important;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04) !important;
+    box-shadow: 0 4px 12px var(--muted-black-04) !important;
 }
 
 html.themeDark .widgetTree .head .side.right .iconWrap.create {
@@ -7865,7 +7978,7 @@ html.themeDark .widgetTree .head .side.right .iconWrap.create {
     backdrop-filter: var(--glass-blur) !important;
     -webkit-backdrop-filter: var(--glass-blur) !important;
     border: var(--glass-panel-border-dark) !important;
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06), 0 8px 22px rgba(0, 0, 0, 0.22) !important;
+    box-shadow: inset 0 1px 0 var(--muted-white-06), 0 8px 22px var(--muted-black-22) !important;
 }
 
 html:not(.themeDark) .widgetTree .head .side.right .iconWrap.create.active {
@@ -7886,7 +7999,7 @@ html.themeDark .widgetTree .head .side.right .iconWrap.create.active {
     transform: scale(1.1) !important;
     background-color: var(--glass-active-dark-hover) !important;
     border-color: var(--glass-active-dark-border-hover) !important;
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.12) !important;
+    box-shadow: inset 0 1px 0 var(--muted-white-12) !important;
 }
 
 .widget.widgetTree .tabs .tab {
@@ -7900,7 +8013,7 @@ html:not(.themeDark) .widget.widgetTree .tabs .tab.active {
     backdrop-filter: var(--glass-blur) !important;
     -webkit-backdrop-filter: var(--glass-blur) !important;
     border-color: var(--glass-item-border-light) !important;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04) !important;
+    box-shadow: 0 4px 12px var(--muted-black-04) !important;
 }
 
 body .widgetTree .body.isCompact {
@@ -7918,11 +8031,11 @@ body .widget.widgetTree #button-show-all {
     flex: 0 0 auto !important;
     width: max-content !important;
 
-    background: rgba(255, 255, 255, 0.4) !important;
+    background: var(--muted-white-40) !important;
     backdrop-filter: blur(12px) !important;
     -webkit-backdrop-filter: blur(12px) !important;
     border: 1px solid rgba(255, 255, 255, 0.5) !important;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05), inset 0 1px 1px rgba(255, 255, 255, 0.8) !important;
+    box-shadow: 0 4px 12px var(--muted-black-05), inset 0 1px 1px rgba(255, 255, 255, 0.8) !important;
     border-radius: 99px !important;
     padding: 6px 20px !important;
     transition: all 0.25s cubic-bezier(0.2, 0.8, 0.2, 1) !important;
@@ -7934,16 +8047,16 @@ body .widget.widgetTree #button-show-all .txt {
 }
 
 body .widget.widgetTree #button-show-all:hover {
-    background: rgba(255, 255, 255, 0.6) !important;
+    background: var(--muted-white-60) !important;
     border-color: rgba(255, 255, 255, 0.8) !important;
     transform: scale(1.02) !important;
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08), inset 0 1px 1px rgba(255, 255, 255, 0.9) !important;
+    box-shadow: 0 6px 16px var(--muted-black-08), inset 0 1px 1px rgba(255, 255, 255, 0.9) !important;
 }
 
 html.themeDark body .widget.widgetTree #button-show-all {
-    background: rgba(255, 255, 255, 0.08) !important;
-    border: 1px solid rgba(255, 255, 255, 0.12) !important;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2), inset 0 1px 1px rgba(255, 255, 255, 0.05) !important;
+    background: var(--muted-white-08) !important;
+    border: 1px solid var(--muted-white-12) !important;
+    box-shadow: 0 4px 12px var(--muted-black-20), inset 0 1px 1px var(--muted-white-05) !important;
 }
 
 html.themeDark body .widget.widgetTree #button-show-all .txt {
@@ -7951,7 +8064,7 @@ html.themeDark body .widget.widgetTree #button-show-all .txt {
 }
 
 html.themeDark body .widget.widgetTree #button-show-all:hover {
-    background: rgba(255, 255, 255, 0.15) !important;
+    background: var(--muted-white-15) !important;
     border-color: rgba(255, 255, 255, 0.25) !important;
 }
 
@@ -8208,7 +8321,7 @@ html.themeDark div[data-type="div"] .dots .dot {
 html:not(.themeDark) .linkCard .sides:not(.withBgColor) {
     background-color: rgba(242, 242, 247, 0.7) !important;
     box-shadow:
-        inset 0 0 0 1px rgba(0, 0, 0, 0.08),
+        inset 0 0 0 1px var(--muted-black-08),
         0 4px 12px rgba(0, 0, 0, 0.03) !important;
 }
 
@@ -8217,7 +8330,7 @@ html.themeDark .linkCard .sides:not(.withBgColor) {
     background-color: var(--glass-bg-dark) !important;
     box-shadow:
         inset 0 0 0 1px var(--glass-border-dark),
-        0 8px 24px rgba(0, 0, 0, 0.3) !important;
+        0 8px 24px var(--muted-black-30) !important;
 }
 
 /* 4. ЛОГІКА КОЛЬОРОВИХ КАРТОК (.withBgColor) */
@@ -8230,11 +8343,11 @@ html.themeDark .linkCard .sides:not(.withBgColor) {
 
 /* Додаємо контур кольоровим карткам */
 html:not(.themeDark) .linkCard .sides.withBgColor {
-    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1) !important;
+    box-shadow: inset 0 0 0 1px var(--muted-black-10) !important;
 }
 
 html.themeDark .linkCard .sides.withBgColor {
-    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.15) !important;
+    box-shadow: inset 0 0 0 1px var(--muted-white-15) !important;
 }
 
 /* 5. ХОВЕР (Скромний та чіткий) */
@@ -8246,7 +8359,7 @@ html.themeDark .linkCard .sides.withBgColor {
     /* Підсилюємо межу та тінь при наведенні */
     box-shadow:
         inset 0 0 0 1px var(--glass-item-border-light),
-        0 12px 28px rgba(0, 0, 0, 0.1) !important;
+        0 12px 28px var(--muted-black-10) !important;
 }
 
 html.themeDark .linkCard:hover .sides {
@@ -8292,7 +8405,7 @@ html.themeDark .linkCard:hover .sides {
     position: absolute;
     inset: 0;
     border-radius: var(--l-panel-radius);
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+    background: linear-gradient(135deg, var(--muted-white-10) 0%, transparent 50%);
     pointer-events: none;
     z-index: 5;
     opacity: 0.6;
@@ -8577,7 +8690,7 @@ html.themeDark .viewContent.viewList.isRegular .selectionTarget {
 }
 
 html.themeDark .viewContent.viewList.isRegular .selectionTarget:hover {
-    background: rgba(255, 255, 255, 0.05) !important;
+    background: var(--muted-white-05) !important;
 }
 
 /* --- Роздільники між рядками --- */
@@ -8650,7 +8763,7 @@ html.themeDark .viewContent.viewList.isRegular .row+.row .selectionTarget {
 }
 
 .viewContent.viewList.isRegular .side.right .element .flex:hover {
-    background: rgba(255, 255, 255, 0.14) !important;
+    background: var(--muted-white-14) !important;
 }
 
 .viewContent.viewList.isRegular .side.right .element .name {
@@ -8675,4 +8788,469 @@ html.themeDark .viewContent.viewList.isRegular .row+.row .selectionTarget {
 .tagItem.isSelect,
 .tagItem {
     border-radius: 8px !important;
+}
+
+/* REMOVED: width: calc(100% - 70px) on .editorWrapper .blocks
+   This was breaking the kanban board — Anytype's JS calculates
+   #scroll width and margin-left from the real .blocks size.
+   Overriding the width caused the scroll container to go
+   beyond boundaries and lose vertical scroll. */
+
+/* ============================================================
+   WIDGET SPACE NAME — Create Group Button (.createGroup)
+   Scoped under .widget-space-name to avoid affecting other buttons.
+   Glassmorphic pill style aligned with the design system.
+   ============================================================ */
+
+/* --- Wrapper: flex row, no gap between the two halves --- */
+#widget-space-name .createGroup {
+    display: flex !important;
+    align-items: center !important;
+    gap: 0 !important;
+    border-radius: var(--rounded-panel-radius) !important;
+    overflow: hidden !important;
+    margin-left: 4px !important;
+    /* breathing room from the search icon */
+}
+
+/* --- Shared base for both halves --- */
+#widget-space-name .createGroup .createButton,
+#widget-space-name .createGroup .createArrow {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    cursor: pointer !important;
+
+    /* Glassmorphic surface */
+    background: var(--glass-item-bg-light) !important;
+    backdrop-filter: var(--glass-blur) !important;
+    -webkit-backdrop-filter: var(--glass-blur) !important;
+
+    /* Subtle border */
+    border: 1px solid var(--glass-border-light) !important;
+
+    /* Soft shadow for depth */
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.50),
+        0 2px 6px var(--muted-black-04) !important;
+
+    /* Smooth transitions */
+    transition:
+        background 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        transform 0.15s ease !important;
+}
+
+.sidebar .sidebarPage .spaceName {
+    padding: 0px !important;
+}
+
+/* --- Main button (pencil icon): tall pill, left side --- */
+#widget-space-name .createGroup .createButton {
+    height: 32px !important;
+    min-width: 32px !important;
+    padding: 0 10px !important;
+    border-radius: var(--rounded-panel-radius) 0 0 var(--rounded-panel-radius) !important;
+    border-right-color: transparent !important;
+}
+
+/* --- Arrow button: square-ish, right side --- */
+#widget-space-name .createGroup .createArrow {
+    height: 32px !important;
+    width: 24px !important;
+    padding: 0 6px !important;
+    border-radius: 0 var(--rounded-panel-radius) var(--rounded-panel-radius) 0 !important;
+    /* Visible divider between the two halves */
+    border-left: 1px solid rgba(0, 0, 0, 0.10) !important;
+}
+
+/* --- Icon colours (light theme) --- */
+html:not(.themeDark) #widget-space-name .createGroup .createButton .icon,
+html:not(.themeDark) #widget-space-name .createGroup .createArrow .icon {
+    color: rgba(28, 28, 32, 0.70) !important;
+    opacity: 1 !important;
+}
+
+/* --- Hover: both halves (light theme) --- */
+html:not(.themeDark) #widget-space-name .createGroup .createButton:hover,
+html:not(.themeDark) #widget-space-name .createGroup .createArrow:hover {
+    background: var(--glass-item-bg-light-hover) !important;
+    border-color: var(--element-border-light-hover) !important;
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.72),
+        0 4px 12px var(--muted-black-06) !important;
+    transform: translateY(-0.5px) !important;
+}
+
+html:not(.themeDark) #widget-space-name .createGroup .createButton:hover .icon,
+html:not(.themeDark) #widget-space-name .createGroup .createArrow:hover .icon {
+    color: rgba(28, 28, 32, 0.95) !important;
+}
+
+/* --- Active / pressed --- */
+html:not(.themeDark) #widget-space-name .createGroup .createButton:active,
+html:not(.themeDark) #widget-space-name .createGroup .createArrow:active {
+    background: var(--glass-item-bg-light-active) !important;
+    transform: scale(0.97) !important;
+    box-shadow: none !important;
+}
+
+/* ---- Dark Theme ---- */
+html.themeDark #widget-space-name .createGroup .createButton,
+html.themeDark #widget-space-name .createGroup .createArrow {
+    background: var(--muted-white-06) !important;
+    border: 1px solid var(--glass-border-dark) !important;
+    box-shadow:
+        inset 0 1px 0 var(--muted-white-05),
+        0 2px 8px var(--muted-black-20) !important;
+}
+
+html.themeDark #widget-space-name .createGroup .createButton {
+    border-right-color: transparent !important;
+}
+
+html.themeDark #widget-space-name .createGroup .createArrow {
+    border-left: 0px solid var(--muted-white-12) !important;
+}
+
+html.themeDark #widget-space-name .createGroup .createButton .icon,
+html.themeDark #widget-space-name .createGroup .createArrow .icon {
+    color: var(--muted-white-60) !important;
+    opacity: 1 !important;
+}
+
+html.themeDark #widget-space-name .createGroup .createButton:hover,
+html.themeDark #widget-space-name .createGroup .createArrow:hover {
+    background: var(--muted-white-12) !important;
+    border-color: var(--element-border-dark-hover) !important;
+    box-shadow:
+        inset 0 1px 0 var(--muted-white-10),
+        0 4px 14px var(--muted-black-20) !important;
+    transform: translateY(-0.5px) !important;
+}
+
+html.themeDark #widget-space-name .createGroup .createButton:hover .icon,
+html.themeDark #widget-space-name .createGroup .createArrow:hover .icon {
+    color: var(--muted-white-72) !important;
+}
+
+html.themeDark #widget-space-name .createGroup .createButton:active,
+html.themeDark #widget-space-name .createGroup .createArrow:active {
+    background: var(--muted-white-15) !important;
+    transform: scale(0.97) !important;
+    box-shadow: none !important;
+}
+
+/* ============================================================
+   DATAVIEW VIEW SWITCHER — Apple UISegmentedControl / Pill Style
+   Scoped to #dataviewControlsSideLeft to avoid side effects.
+   ============================================================ */
+
+/* 1. .dropTarget wrappers — strip visual noise, no display override */
+#dataviewControlsSideLeft #views .dropTarget {
+    background: transparent !important;
+    border: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    position: relative !important;
+    z-index: 1 !important;
+}
+
+/* 2. Pill TRACK — #views is transparent & overflow:visible.
+      The pill background is drawn by ::before which stops BEFORE
+      the + button (right: 38px = 8px gap + 30px button width).
+      This makes the + button appear visually OUTSIDE the pill.    */
+#dataviewControlsSideLeft #views {
+    align-items: center !important;
+    gap: 1px !important;
+    padding: 4px !important;
+    /* NO background/border/shadow here — ::before handles that */
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    overflow: visible !important;
+    position: relative !important;
+}
+
+/* Pill surface — light theme */
+html:not(.themeDark) #dataviewControlsSideLeft #views::before {
+    content: '' !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    bottom: 0 !important;
+    right: 38px !important;
+    /* 8px gap + 30px button = excludes the + */
+    background-color: var(--glass-panel-bg-light) !important;
+    backdrop-filter: var(--glass-panel-blur) !important;
+    -webkit-backdrop-filter: var(--glass-panel-blur) !important;
+
+    /* Периметр (світлий) */
+    border: var(--glass-panel-border-light) !important;
+
+    /* Права межа (чіткіший розділювач) */
+    border-right: var(--glass-panel-border-right-light) !important;
+    border-radius: var(--rounded-panel-radius) !important;
+    /* Додатковий блиск на гранях для ефекту товстого скла */
+    box-shadow: var(--glass-panel-shadow) !important;
+    pointer-events: none !important;
+    z-index: 0 !important;
+}
+
+/* Pill surface — dark theme */
+html.themeDark #dataviewControlsSideLeft #views::before {
+    content: '' !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    bottom: 0 !important;
+    right: 38px !important;
+    border-radius: var(--rounded-panel-radius) !important;
+    background: var(--element-color-dark) !important;
+    border: 1px solid var(--element-border-dark) !important;
+    box-shadow: none !important;
+    pointer-events: none !important;
+    z-index: 0 !important;
+}
+
+/* 3. Individual tab (inactive) */
+#dataviewControlsSideLeft #views .viewItem {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 4px 13px !important;
+    border-radius: calc(var(--rounded-panel-radius) - 3px) !important;
+    font-size: 13px !important;
+    font-weight: 500 !important;
+    letter-spacing: -0.01em !important;
+    white-space: nowrap !important;
+    user-select: none !important;
+    cursor: pointer !important;
+    color: rgba(28, 28, 32, 0.52) !important;
+    background: transparent !important;
+    border: 1px solid transparent !important;
+    box-shadow: none !important;
+    transition: color 0.18s ease, background 0.18s ease, box-shadow 0.18s ease !important;
+}
+
+html.themeDark #dataviewControlsSideLeft #views .viewItem {
+    color: var(--muted-white-40) !important;
+}
+
+/* 4. Hover on inactive tab */
+html:not(.themeDark) #dataviewControlsSideLeft #views .viewItem:not(.active):hover {
+    color: rgba(28, 28, 32, 0.80) !important;
+    background: var(--muted-black-04) !important;
+}
+
+html.themeDark #dataviewControlsSideLeft #views .viewItem:not(.active):hover {
+    color: var(--muted-white-60) !important;
+    background: var(--muted-white-05) !important;
+}
+
+/* 5. ACTIVE tab — floating glass pill inside the track */
+html:not(.themeDark) #dataviewControlsSideLeft #views .viewItem.active {
+    background-color: var(--glass-item-bg-light-hover) !important;
+    backdrop-filter: blur(22px) saturate(180%) brightness(1.03) !important;
+    -webkit-backdrop-filter: blur(22px) saturate(180%) brightness(1.03) !important;
+    border: 1px solid var(--glass-item-border-light) !important;
+    box-shadow: inset 0 0 0 1px var(--muted-white-52), var(--glass-item-shadow-light) !important;
+    color: rgba(0, 0, 0, 0.98) !important;
+}
+
+html.themeDark #dataviewControlsSideLeft #views .viewItem.active {
+    background: rgba(42, 42, 46, 0.32) !important;
+    border: var(--glass-panel-border-dark) !important;
+    box-shadow: inset 0 1px 0 var(--muted-white-05), 0 12px 30px var(--muted-black-28) !important;
+    backdrop-filter: var(--glass-blur) !important;
+    -webkit-backdrop-filter: var(--glass-blur) !important;
+    color: rgba(255, 255, 255, 0.8) !important;
+}
+
+/* ============================================================
+   FIX — Inline dataview (всередині запису, один таб)
+   ============================================================ */
+
+/* 1. Прибираємо фіксовану висоту — дозволяємо рости по контенту */
+.blocks .block.blockDataview.isInline .dataviewControls>.sides>.side {
+    height: auto !important;
+    min-height: 28px !important;
+}
+
+/* 2. #views в інлайн-контексті — shrink-to-content,
+      щоб ::before не тягнувся на всю ширину панелі */
+.blocks .block.blockDataview.isInline #dataviewControlsSideLeft #views {
+    display: inline-flex !important;
+    width: auto !important;
+    padding: 3px !important;
+    /* трохи тісніше ніж 4px для компактності */
+}
+
+/* 3. Таб — менший padding щоб вписатись у 28px зону */
+.blocks .block.blockDataview.isInline #dataviewControlsSideLeft #views .viewItem {
+    padding: 3px 10px !important;
+    font-size: 12px !important;
+}
+
+/* 4. Pill-фон (::before) — тепер відраховується від inline-flex ширини,
+      right:38px коректно відсікає + кнопку */
+.blocks .block.blockDataview.isInline #dataviewControlsSideLeft #views::before {
+    right: 36px !important;
+    /* трохи менше бо кнопка + у цьому контексті ближче */
+}
+
+/* 5. Overflow на батьківському контейнері — щоб pill не обрізався */
+.blocks .block.blockDataview.isInline .dataviewControls {
+    overflow: visible !important;
+}
+
+.blocks .block.blockDataview.isInline .dataviewControls>.sides {
+    overflow: visible !important;
+}
+
+
+
+/* 6. MOBILE dropdown (#view-selector) — NO display override, glassmorphic pill */
+html:not(.themeDark) #dataviewControlsSideLeft #view-selector {
+    align-items: center !important;
+    gap: 4px !important;
+    padding: 4px 10px 4px 12px !important;
+    border-radius: var(--rounded-panel-radius) !important;
+    background: var(--glass-panel-bg-light) !important;
+    backdrop-filter: var(--glass-panel-blur) !important;
+    -webkit-backdrop-filter: var(--glass-panel-blur) !important;
+    border: var(--glass-panel-border-light) !important;
+    box-shadow: var(--glass-panel-shadow) !important;
+    cursor: pointer !important;
+    font-size: 13px !important;
+    font-weight: 500 !important;
+    transition: background 0.18s ease, box-shadow 0.18s ease !important;
+}
+
+html:not(.themeDark) #dataviewControlsSideLeft #view-selector:hover {
+    background: var(--glass-item-bg-light-hover) !important;
+}
+
+html.themeDark #dataviewControlsSideLeft #view-selector {
+    align-items: center !important;
+    gap: 4px !important;
+    padding: 4px 10px 4px 12px !important;
+    border-radius: var(--rounded-panel-radius) !important;
+    background: var(--glass-panel-bg-dark) !important;
+    backdrop-filter: var(--glass-panel-blur) !important;
+    -webkit-backdrop-filter: var(--glass-panel-blur) !important;
+    border: var(--glass-panel-border-dark) !important;
+    cursor: pointer !important;
+    font-size: 13px !important;
+    font-weight: 500 !important;
+    transition: background 0.18s ease !important;
+}
+
+html.themeDark #dataviewControlsSideLeft #view-selector:hover {
+    background: var(--muted-white-10) !important;
+}
+
+/* 7. "+" button — visually OUTSIDE the pill track
+      Large margin-left breaks it out visually; own glass surface
+      makes it read as a separate floating button */
+html:not(.themeDark) #dataviewControlsSideLeft #button-dataview-view-add {
+    margin-left: 8px !important;
+    /* gap = visual break from the pill */
+    width: 30px !important;
+    height: 30px !important;
+    border-radius: var(--rounded-panel-radius) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-shrink: 0 !important;
+    cursor: pointer !important;
+
+    /* Own glass surface */
+    background: var(--glass-item-bg-light) !important;
+    backdrop-filter: var(--glass-blur) !important;
+    -webkit-backdrop-filter: var(--glass-blur) !important;
+    border: 1px solid var(--glass-border-light) !important;
+    box-shadow:
+        inset 0 1px 0 var(--muted-white-52),
+        var(--glass-item-shadow-light) !important;
+
+    transition: background 0.18s ease, transform 0.15s ease, box-shadow 0.18s ease !important;
+}
+
+html:not(.themeDark) #dataviewControlsSideLeft #button-dataview-view-add:hover {
+    background: var(--glass-item-bg-light-hover) !important;
+    transform: translateY(-0.5px) !important;
+    box-shadow:
+        inset 0 1px 0 var(--muted-white-60),
+        0 4px 12px var(--muted-black-06) !important;
+}
+
+html:not(.themeDark) #dataviewControlsSideLeft #button-dataview-view-add:active {
+    background: var(--glass-item-bg-light-active) !important;
+    transform: scale(0.96) !important;
+    box-shadow: none !important;
+}
+
+html.themeDark #dataviewControlsSideLeft #button-dataview-view-add {
+    margin-left: 6px !important;
+    width: 30px !important;
+    height: 30px !important;
+    border-radius: var(--rounded-panel-radius) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-shrink: 0 !important;
+    cursor: pointer !important;
+    background: var(--muted-white-08) !important;
+    backdrop-filter: var(--glass-blur) !important;
+    -webkit-backdrop-filter: var(--glass-blur) !important;
+    border: 1px solid var(--glass-border-dark) !important;
+    box-shadow: inset 0 1px 0 var(--muted-white-05), 0 2px 8px var(--muted-black-20) !important;
+
+    transition: background 0.18s ease, transform 0.15s ease, box-shadow 0.18s ease !important;
+}
+
+html.themeDark #dataviewControlsSideLeft #button-dataview-view-add:hover {
+    background: var(--muted-white-14) !important;
+    transform: translateY(-0.5px) !important;
+    box-shadow: inset 0 1px 0 var(--muted-white-10), 0 4px 12px var(--muted-black-20) !important;
+}
+
+html.themeDark #dataviewControlsSideLeft #button-dataview-view-add:active {
+    background: var(--muted-white-22) !important;
+    transform: scale(0.96) !important;
+    box-shadow: none !important;
+}
+
+.blocks .block.blockDataview .dataviewControls>.sides>.side {
+    padding: 6px 0px 14px 0px !important
+}
+
+/* ============================================================
+   CONTEXT-SPECIFIC ADAPTATIONS: Allow expansion in documents
+   Applies to view selector when used outside #dataviewControlsSideLeft
+   (e.g., embedded in columns with dynamic width constraints)
+   ============================================================ */
+
+/* Allow #views and #view-selector to expand beyond constrained parents */
+#views,
+#view-selector {
+    overflow: visible !important;
+    min-height: auto !important;
+    height: auto !important;
+}
+
+/* Ensure parent containers don't clip the content */
+.side.left {
+    overflow: visible !important;
+}
+
+.editorWrapper.isSet .blocks,
+.editorWrapper.isCollection .blocks,
+.editorWrapper.isType .blocks,
+.editorWrapper.isDate .blocks {
+    width: calc(100% - 46px);
 }
